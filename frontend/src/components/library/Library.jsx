@@ -171,12 +171,6 @@ export function Library() {
               <span>{t.show}</span>
               <MeltSelect label={t.show} options={SHOWS.map((value) => ({ value, label: t.shows[value] }))} value={show} onChange={setShow} />
             </div>
-            <div className={styles.actions}>
-              <Button variant="ghost" disabled={pair.length < 2} onClick={() => setComparing(true)}>
-                {t.compare.button(pair.length)}
-              </Button>
-              <Button onClick={() => playLocked()}>{era ? t.randomHere : t.random}</Button>
-            </div>
           </div>
           {group !== 'era' && <p className={styles.hint}>{t.undiscoveredNote}</p>}
           {note && (
@@ -186,6 +180,12 @@ export function Library() {
           )}
 
           <div className={styles.body} data-rail={railClosed ? 'closed' : 'open'}>
+            <div className={styles.actions}>
+              <Button onClick={() => playLocked()}>{era ? t.randomHere : t.random}</Button>
+              <Button variant="ghost" disabled={pair.length < 2} onClick={() => setComparing(true)}>
+                {t.compare.button(pair.length)}
+              </Button>
+            </div>
             <div className={styles.side}>
               <section className={styles.card} data-closed={!erasOpen || undefined}>
                 <button type="button" className={styles.fold} aria-expanded={erasOpen} onClick={() => setErasOpen((o) => !o)}>

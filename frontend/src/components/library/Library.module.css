@@ -116,8 +116,8 @@
 
 .body {
   display: grid;
-  grid-template-columns: 15rem minmax(0, 1fr);
-  gap: var(--space-4);
+  grid-template-columns: 12.5rem minmax(0, 1fr);
+  gap: var(--space-3) var(--space-4);
   align-items: start;
 }
 
@@ -141,7 +141,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
-  margin-left: auto;
+  justify-content: flex-end;
 }
 
 .eraMark {
@@ -269,13 +269,12 @@
 
 .tableWrap {
   min-width: 0;
-  overflow-x: auto;
+  overflow-x: hidden; /* the columns wrap instead of scrolling sideways */
   border: var(--hairline) solid var(--paper-rule);
 }
 
 .table {
   width: 100%;
-  min-width: 40rem;
   border-collapse: collapse;
   font-size: var(--text-xs);
 }
@@ -300,6 +299,7 @@
   vertical-align: middle;
   text-align: left;
   font-weight: 400;
+  overflow-wrap: anywhere;
 }
 
 .group th {
@@ -402,6 +402,10 @@ tr[data-locked] .mass {
   }
 
   .side {
+    grid-column: auto;
+  }
+
+  .side {
     grid-template-columns: minmax(0, 1fr) 15rem;
     align-items: start;
   }
@@ -441,13 +445,40 @@ tr[data-locked] .mass {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .actions {
-    width: 100%;
-    margin-left: 0;
+  /* The tools sit on a two-column grid so the menus line up. */
+  .tools {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+    align-items: end;
   }
 
-  .table {
+  .tools .field {
+    grid-column: 1 / -1;
+  }
+
+  .tools .field:nth-child(2),
+  .tools .field:nth-child(4) {
+    grid-column: auto;
+  }
+
+  /* Search, then Group by beside Country, then Era and Show on their own rows. */
+  .tools .field:nth-child(3) {
+    order: 1;
+  }
+
+  .tools .field:nth-child(5) {
+    order: 2;
+  }
+
+  .field input,
+  .field select {
+    width: 100%;
     min-width: 0;
+  }
+
+  .actions > * {
+    flex: 1 1 0;
   }
 
   .table thead th,
@@ -568,10 +599,45 @@ tr[data-locked] .mass {
     grid-template-columns: 2.75rem minmax(0, 1fr);
   }
 
+  .actions {
+    grid-column: 1;
+    grid-row: 1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .actions > * {
+    width: 100%;
+  }
+
   .side,
   .railDock {
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 2;
+  }
+
+  .tableWrap {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  /* With the rail folded, the buttons sit above the table's right edge and the tab runs beside it. */
+  .body[data-rail='closed'] .actions {
+    grid-column: 2;
+    flex-direction: row;
+    justify-self: end;
+  }
+
+  .body[data-rail='closed'] .actions > * {
+    width: auto;
+  }
+
+  .body[data-rail='closed'] .tableWrap {
+    grid-row: 2;
+  }
+
+  .body[data-rail='closed'] .railDock {
+    grid-row: 1 / span 2;
   }
 
   .body[data-rail='closed'] .side {
