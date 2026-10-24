@@ -102,6 +102,29 @@
 
 .field select {
   min-width: 9rem;
+  padding-right: 2rem;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 4.5L6 8l3.5-3.5' fill='none' stroke='%23bb9457' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  background-size: 0.75rem;
+  cursor: pointer;
+}
+
+.field input,
+.field select {
+  border-radius: var(--radius-sm);
+  transition: border-color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out);
+}
+
+.field input:hover,
+.field select:hover {
+  border-color: var(--camel);
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--accent);
 }
 
 .field :focus-visible {
@@ -612,5 +635,52 @@ tr[data-locked] .mass {
   .tableWrap {
     grid-column: 2;
     grid-row: 1 / span 2;
+  }
+}
+
+/* Wide screens: the five figures become one row of small chips, and the filters share one row under them. */
+@media (min-width: 1025px) {
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    border: 0;
+    background: none;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    gap: var(--space-2);
+    padding: var(--space-1) var(--space-3);
+    border: var(--hairline) solid var(--paper-hairline);
+    border-radius: 999px;
+    background: var(--paper-shade);
+  }
+
+  .stat:last-child {
+    border-right: var(--hairline) solid var(--paper-hairline);
+  }
+
+  .statValue {
+    font-size: var(--text-md);
+  }
+
+  .tools {
+    flex-wrap: nowrap;
+  }
+
+  .tools .field:first-child {
+    flex: 1 1 14rem;
+  }
+
+  .tools .field:first-child input {
+    width: 100%;
+  }
+
+  .tools .field select {
+    min-width: 0;
+    width: 9.5rem;
   }
 }
