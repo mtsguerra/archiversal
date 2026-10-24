@@ -599,6 +599,11 @@ tr[data-locked] .mass {
     grid-template-columns: 2.75rem minmax(0, 1fr);
   }
 
+  /* The table spans both rows; the spare height must go to the second so the globe stays under the buttons. */
+  .body {
+    grid-template-rows: auto 1fr;
+  }
+
   .actions {
     grid-column: 1;
     grid-row: 1;
