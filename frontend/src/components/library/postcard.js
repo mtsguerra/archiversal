@@ -171,8 +171,12 @@ export function loadPostmark() {
         new Promise((resolve, reject) => {
           const img = new Image()
           img.onload = () => resolve(img)
-          img.onerror = reject
-          img.src = URL.createObjectURL(new Blob([svg.replaceAll('#BF0000', OXBLOOD)], { type: 'image/svg+xml' }))
+          img.onerror = () => {
+            markImage = null // try again next time
+            reject(new Error('postmark'))
+          }
+          // a data: URL, because the site's CSP allows data: images but not blob: ones
+          img.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg.replaceAll('#BF0000', OXBLOOD))}`
         }),
     )
   return markImage

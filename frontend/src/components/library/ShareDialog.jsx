@@ -38,6 +38,7 @@ export function ShareDialog({ eras, stats, onClose }) {
   // The postcard writes itself: the note is penned and the stamps are glued on together, then the postmark comes down.
   const finish = useRef(() => {})
   const [playing, setPlaying] = useState(!isReduced())
+  const [chat, setChat] = useState(null) // the WhatsApp paste panel: null, 'copying', 'copied' or 'failed'
   useEffect(() => {
     const now = new Date()
     let postmark
@@ -81,10 +82,12 @@ export function ShareDialog({ eras, stats, onClose }) {
       paint()
     }
     frame = requestAnimationFrame(tick)
-    loadPostmark().then((img) => {
-      postmark = img
-      if (!running) paint()
-    })
+    loadPostmark()
+      .then((img) => {
+        postmark = img
+        if (!running) paint()
+      })
+      .catch(() => {}) // without the postmark the card is simply drawn without it
     // the handwriting and sans faces can arrive after the first paint
     document.fonts?.ready.then(() => !running && paint())
     return () => cancelAnimationFrame(frame)
@@ -116,19 +119,22 @@ export function ShareDialog({ eras, stats, onClose }) {
     showToast({ text: t.saved })
   }
   const download = async () => save(new File([await toBlob()], 'archiversal-library.png', { type: 'image/png' }))
-  // WhatsApp gets the picture with the shelf text and link under it: through the share sheet on touch devices, else WhatsApp opens with the text typed in and the picture goes on the clipboard (inside this click, which
-  // Safari requires) to be pasted above it. Nothing is downloaded.
+  // WhatsApp gets the picture with the shelf text and link under it: through the share sheet on touch devices, else
+  // WhatsApp opens with the text typed in and the picture goes on the clipboard (inside this click, which Safari
+  // requires) to be pasted above it; the panel under the postcard says so. Nothing is downloaded.
+  const openChat = () => window.open(`https://wa.me/?text=${encodeURIComponent(text())}`, '_blank', 'noopener')
   const whatsapp = () => {
     finish.current()
     const probe = new File([], 'archiversal-library.png', { type: 'image/png' })
     // a computer's share sheet has no WhatsApp in it, so only touch devices (phones, tablets) go through it
     if (matchMedia('(pointer: coarse)').matches && navigator.canShare?.({ files: [probe] })) return shareImage()
     const png = new Promise((resolve) => canvas.current.toBlob(resolve, 'image/png'))
-    navigator.clipboard
-      ?.write([new ClipboardItem({ 'image/png': png })])
-      .then(() => showToast({ text: t.imageCopied }))
-      .catch(() => {}) // the text and link still go through
-    window.open(`https://wa.me/?text=${encodeURIComponent(text())}`, '_blank', 'noopener')
+    setChat('copying')
+    const done = (state) => setChat(state)
+    if (navigator.clipboard && typeof ClipboardItem !== 'undefined') {
+      navigator.clipboard.write([new ClipboardItem({ 'image/png': png })]).then(() => done('copied'), () => done('failed'))
+    } else done('failed')
+    openChat()
   }
   const copy = async () => {
     try {
@@ -154,6 +160,17 @@ export function ShareDialog({ eras, stats, onClose }) {
           </button>
         )}
       </div>
+      {chat && (
+        <div className={styles.chatNote} role="status" data-state={chat}>
+          <p>
+            <b>{chat === 'failed' ? t.chatFailed : t.chatCopied}</b>
+            {chat === 'copied' && ` ${t.chatHow(/Mac|iPhone|iPad/.test(navigator.platform) ? '⌘V' : 'Ctrl+V')}`}
+          </p>
+          <Button variant="ghost" onClick={openChat}>
+            {t.chatOpen}
+          </Button>
+        </div>
+      )}
       <div className={styles.actions}>
         <Button className={styles.sendAction} icon={ShareIcon} onClick={shareImage} disabled={busy}>
           {t.shareImage}

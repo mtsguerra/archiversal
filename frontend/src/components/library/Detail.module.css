@@ -255,6 +255,32 @@
   cursor: pointer;
 }
 
+.chatNote {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border: var(--hairline) solid var(--paper-rule);
+  border-left: 0.25rem solid var(--accent);
+  background: var(--paper-shade);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  animation: skipIn 0.3s ease-out both;
+}
+
+.chatNote[data-state='failed'] {
+  border-left-color: var(--russet);
+}
+
+.chatNote p {
+  margin: 0;
+}
+
+.chatNote button {
+  flex: none;
+}
+
 .actions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
