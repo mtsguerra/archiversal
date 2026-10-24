@@ -335,6 +335,36 @@
   text-align: left;
 }
 
+.groupButton {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.groupButton:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.groupIcon {
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  margin-right: var(--space-2);
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.groupButton[aria-expanded='false'] .groupIcon {
+  transform: rotate(-90deg);
+}
+
 .groupCount {
   margin-left: var(--space-3);
   color: var(--ink-soft);

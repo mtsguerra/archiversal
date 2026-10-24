@@ -52,6 +52,8 @@ export function Library() {
   // On wide screens each card of the side rail folds in place.
   const [erasOpen, setErasOpen] = useState(true)
   const [globeOpen, setGlobeOpen] = useState(true)
+  const [folded, setFolded] = useState(() => new Set()) // group keys folded on the sheet
+  const toggleGroup = (key) => setFolded((f) => (f.has(key) ? new Set([...f].filter((k) => k !== key)) : new Set(f).add(key)))
 
   useEffect(() => {
     let current = true
@@ -249,17 +251,20 @@ export function Library() {
                     <tbody key={g.key}>
                       <tr className={styles.group}>
                         <th colSpan={8} scope="colgroup">
-                          {title(g)}
-                          <span className={styles.groupCount}>{group === 'era' ? t.of(progress[g.key].open, progress[g.key].total) : g.items.length}</span>
-                          {complete && (
-                            <span className={styles.done}>
-                              <EraDrawing era={g.key} small />
-                              {t.eraComplete}
-                            </span>
-                          )}
+                          <button type="button" className={styles.groupButton} aria-expanded={!folded.has(g.key)} onClick={() => toggleGroup(g.key)}>
+                            <ChevronDown className={styles.groupIcon} aria-hidden="true" strokeWidth={2} />
+                            {title(g)}
+                            <span className={styles.groupCount}>{group === 'era' ? t.of(progress[g.key].open, progress[g.key].total) : g.items.length}</span>
+                            {complete && (
+                              <span className={styles.done}>
+                                <EraDrawing era={g.key} small />
+                                {t.eraComplete}
+                              </span>
+                            )}
+                          </button>
                         </th>
                       </tr>
-                      {g.items.map((r) => (
+                      {(folded.has(g.key) ? [] : g.items).map((r) => (
                         <tr key={r.id} data-locked={!r.open || undefined} data-selected={selected === r.id || undefined} onClick={() => setSelected(r.id)}>
                           <td className={styles.no}>{r.no}</td>
                           <td className={styles.thumb}>
