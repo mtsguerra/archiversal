@@ -9,24 +9,26 @@ const dimension = (from, to) => ({
   tone: 'dimension',
 })
 
-// A civic front: steps, columns going up, entablature, pediment.
-const COLUMNS = Array.from({ length: 6 }, (_, i) => 92 + i * 43.2)
+// A civic front, after the Parthenon: two steps, eight fluted columns swelling slightly, a triglyph frieze, a low pediment.
+const COLUMNS = Array.from({ length: 8 }, (_, i) => 84 + i * 33.14)
+const column = (x) => `M${x - 7} 190Q${x - 7.6} 154 ${x - 5.5} 118V114H${x + 5.5}V118Q${x + 7.6} 154 ${x + 7} 190`
+const flutes = (x) => `M${x - 2.4} 186V122M${x + 2.4} 186V122`
+const TRIGLYPHS = Array.from({ length: 15 }, (_, i) => 84 + i * 16.57)
 const temple = {
-  mass: 'M70 98H330V190H70Z',
+  mass: 'M70 88L200 48L330 88V190H70Z',
   strokes: [
     GROUND,
     { d: 'M48 214V202H352V214', delay: 0.4, duration: 0.6 },
     { d: 'M62 202V190H338V202', delay: 0.6, duration: 0.6 },
-    ...COLUMNS.map((x, i) => ({
-      d: `M${x - 6} 190V112H${x + 6}V190`,
-      delay: 0.9 + i * 0.13,
-      duration: 0.55,
-      tone: 'column',
-    })),
-    { d: 'M70 112H330V98H70Z', delay: 1.65, duration: 0.6 },
-    { d: 'M70 98L200 42L330 98', delay: 1.9, duration: 0.7 },
-    { d: 'M178 84H222L200 62Z', delay: 2.3, duration: 0.5, tone: 'accent' },
-    dimension(24, 376),
+    ...COLUMNS.map((x, i) => ({ d: column(x), delay: 0.8 + i * 0.1, duration: 0.55, tone: 'column' })),
+    ...COLUMNS.map((x, i) => ({ d: flutes(x), delay: 1.45 + i * 0.05, duration: 0.4, tone: 'column' })),
+    { d: 'M66 114V104H334V114', delay: 1.7, duration: 0.4 },
+    { d: TRIGLYPHS.map((x) => `M${x} 104V92`).join(''), delay: 1.9, duration: 0.4, tone: 'column' },
+    { d: 'M62 92V86H338V92Z', delay: 2.0, duration: 0.4 },
+    { d: 'M66 86L200 46L334 86', delay: 2.1, duration: 0.6 },
+    { d: 'M96 84L200 54L304 84', delay: 2.35, duration: 0.4, tone: 'column' },
+    { d: 'M192 46C192 38 200 34 200 28C200 34 208 38 208 46', delay: 2.5, duration: 0.3, tone: 'accent' },
+    dimension(48, 352),
   ],
 }
 
@@ -83,41 +85,53 @@ const arch = (c, w, bottom, top, rise = w) =>
 const spread = (xs, make, start, step, duration, tone) =>
   xs.map((x, i) => ({ d: make(x), delay: start + i * step, duration, tone }))
 
-// Baroque: twin domed bell towers and a swelling façade with scrolls and a curved pediment.
+// Baroque: twin bell towers with bulbous caps around a swelling, two-storey façade (scrolls, broken pediment, oval window), a lantern dome behind.
 const baroque = {
-  mass: 'M96 214V70Q118 30 140 70V100Q200 56 260 100V70Q282 30 304 70V214Z',
+  mass: 'M90 214V74Q90 40 112 38Q134 40 134 74V104H170V68C170 24 230 24 230 68V104H266V74Q266 40 288 38Q310 40 310 74V214Z',
   strokes: [
     GROUND,
-    { d: 'M96 214V70H140V214', delay: 0.4, duration: 0.7 },
-    { d: 'M260 214V70H304V214', delay: 0.5, duration: 0.7 },
-    { d: 'M140 214V100H260V214', delay: 0.8, duration: 0.7 },
-    { d: arch(200, 40, 214, 178, 20), delay: 1.2, duration: 0.6, tone: 'column' },
-    { d: 'M190 134Q200 108 210 134Q200 146 190 134Z', delay: 1.5, duration: 0.5, tone: 'column' },
-    { d: arch(118, 12, 120, 100, 10), delay: 1.4, duration: 0.4 },
-    { d: arch(282, 12, 120, 100, 10), delay: 1.5, duration: 0.4 },
-    { d: 'M140 120Q128 116 128 128Q128 138 138 136', delay: 1.7, duration: 0.4 },
-    { d: 'M260 120Q272 116 272 128Q272 138 262 136', delay: 1.8, duration: 0.4 },
-    { d: 'M140 100Q200 56 260 100', delay: 1.9, duration: 0.6 },
-    { d: 'M96 70Q118 30 140 70', delay: 2.1, duration: 0.5 },
-    { d: 'M260 70Q282 30 304 70', delay: 2.2, duration: 0.5 },
-    { d: 'M118 44V32M282 44V32', delay: 2.5, duration: 0.2, tone: 'accent' },
-    dimension(96, 304),
+    { d: 'M90 214V74H134V214', delay: 0.4, duration: 0.6 },
+    { d: 'M266 214V74H310V214', delay: 0.5, duration: 0.6 },
+    { d: 'M134 214V142Q200 122 266 142V214', delay: 0.8, duration: 0.7 },
+    { d: 'M152 214V138M164 214V134M236 214V134M248 214V138', delay: 1.1, duration: 0.5, tone: 'column' },
+    { d: arch(200, 30, 214, 186, 15), delay: 1.3, duration: 0.5, tone: 'column' },
+    { d: 'M176 172Q190 162 197 169M203 169Q210 162 224 172', delay: 1.6, duration: 0.4 },
+    { d: 'M193 152Q200 142 207 152Q200 162 193 152Z', delay: 1.8, duration: 0.3, tone: 'accent' },
+    { d: 'M146 142V104H254V142', delay: 1.5, duration: 0.5 },
+    { d: 'M200 110C188 110 188 132 200 132C212 132 212 110 200 110Z', delay: 1.7, duration: 0.4, tone: 'column' },
+    { d: 'M134 142Q134 124 146 120Q140 112 146 106M266 142Q266 124 254 120Q260 112 254 106', delay: 1.8, duration: 0.4 },
+    { d: arch(112, 14, 120, 104, 8), delay: 1.4, duration: 0.4 },
+    { d: arch(288, 14, 120, 104, 8), delay: 1.45, duration: 0.4 },
+    { d: 'M106 170V154H118V170M282 170V154H294V170', delay: 1.5, duration: 0.3, tone: 'column' },
+    { d: 'M142 104Q200 70 258 104', delay: 1.9, duration: 0.5 },
+    { d: 'M86 74H138M262 74H314', delay: 1.95, duration: 0.3, tone: 'column' },
+    { d: 'M94 74Q94 44 112 40Q130 44 130 74', delay: 2.0, duration: 0.5 },
+    { d: 'M270 74Q270 44 288 40Q306 44 306 74', delay: 2.05, duration: 0.5 },
+    { d: 'M170 68C170 24 230 24 230 68', delay: 2.1, duration: 0.6 },
+    { d: 'M194 36V24H206V36M194 24Q200 14 206 24', delay: 2.4, duration: 0.3 },
+    { d: 'M200 14V6M112 40V28M108 33H116M288 40V28M284 33H292', delay: 2.55, duration: 0.25, tone: 'accent' },
+    dimension(90, 310),
   ],
 }
 
-// Neoclassical: a columned portico under a drum and dome.
+// Neoclassical: a six-column portico under a pediment, a colonnaded drum and a ribbed dome with a lantern.
+const PORTICO = Array.from({ length: 6 }, (_, i) => 120 + i * 32)
+const PERISTYLE = Array.from({ length: 7 }, (_, i) => 158 + i * 14.67)
 const domedPortico = {
-  mass: 'M100 108L165 74V46C165 14 235 14 235 46V74L300 108V190H100Z',
+  mass: 'M96 114L152 98V64C152 20 248 20 248 64V98L304 114V190H96Z',
   strokes: [
     GROUND,
     { d: 'M80 214V202H320V214', delay: 0.4, duration: 0.5 },
     { d: 'M92 202V190H308V202', delay: 0.55, duration: 0.5 },
-    ...spread([120, 173, 227, 280], (x) => `M${x - 6} 190V120H${x + 6}V190`, 0.8, 0.14, 0.5, 'column'),
-    { d: 'M100 120H300V108H100Z', delay: 1.4, duration: 0.5 },
-    { d: 'M100 108L200 70L300 108', delay: 1.6, duration: 0.6 },
-    { d: 'M165 74V46H235V74', delay: 1.9, duration: 0.4 },
-    { d: 'M165 46C165 14 235 14 235 46', delay: 2.1, duration: 0.6 },
-    { d: 'M196 25V14H204V25', delay: 2.6, duration: 0.2, tone: 'accent' },
+    ...PORTICO.map((x, i) => ({ d: `M${x - 6} 190V126H${x + 6}V190`, delay: 0.8 + i * 0.12, duration: 0.5, tone: 'column' })),
+    { d: `M104 126H296V114H104Z`, delay: 1.4, duration: 0.5 },
+    { d: 'M96 114L200 88L304 114', delay: 1.6, duration: 0.6 },
+    { d: 'M152 98V64H248V98', delay: 1.9, duration: 0.4 },
+    { d: PERISTYLE.map((x) => `M${x} 96V66`).join(''), delay: 2.0, duration: 0.4, tone: 'column' },
+    { d: 'M148 64H252', delay: 2.05, duration: 0.3 },
+    { d: 'M152 64C152 20 248 20 248 64', delay: 2.1, duration: 0.6 },
+    { d: 'M174 64Q182 34 200 28M188 64Q194 36 200 28M212 64Q206 36 200 28M226 64Q218 34 200 28', delay: 2.3, duration: 0.45, tone: 'column' },
+    { d: 'M193 28V18H207V28M193 18Q200 8 207 18', delay: 2.5, duration: 0.3, tone: 'accent' },
     dimension(80, 320),
   ],
 }
@@ -140,21 +154,26 @@ const brutalist = {
   ],
 }
 
-// Renaissance: a symmetric palazzo of arched windows in tiers, a dome rising behind.
+// Renaissance: a Florentine palazzo (rusticated base, arched windows in two tiers, a deep cornice) and Brunelleschi's ribbed, pointed dome rising behind.
+const BAYS = [88, 144, 200, 256, 312]
 const palazzo = {
-  mass: 'M70 214V108H170V84C170 40 230 40 230 84V108H330V214Z',
+  mass: 'M60 214V110H146V86C146 40 190 30 200 18C210 30 254 40 254 86V110H340V214Z',
   strokes: [
     GROUND,
-    { d: 'M70 214V108H330V214', delay: 0.4, duration: 0.8 },
-    { d: 'M62 108H338', delay: 0.9, duration: 0.5 },
-    { d: 'M70 160H330', delay: 1.0, duration: 0.5 },
-    ...spread([100, 150, 250, 300], (c) => arch(c, 18, 200, 176, 10), 1.1, 0.1, 0.4, 'column'),
-    { d: 'M188 214V184Q188 170 200 170Q212 170 212 184V214', delay: 1.3, duration: 0.5, tone: 'column' },
-    ...spread([100, 150, 200, 250, 300], (c) => arch(c, 16, 150, 128, 9), 1.5, 0.08, 0.35),
-    { d: 'M170 108V84H230V108', delay: 1.9, duration: 0.4 },
-    { d: 'M170 84C170 40 230 40 230 84', delay: 2.1, duration: 0.6 },
-    { d: 'M196 54V40H204V54M200 40V30', delay: 2.6, duration: 0.2, tone: 'accent' },
-    dimension(62, 338),
+    { d: 'M60 214V118H340V214', delay: 0.4, duration: 0.7 },
+    { d: 'M54 118V110H346V118', delay: 0.8, duration: 0.4 },
+    { d: 'M60 178H340M60 148H340', delay: 1.0, duration: 0.5 },
+    { d: 'M60 204H340M60 194H340', delay: 1.1, duration: 0.4, tone: 'column' },
+    ...spread([88, 144, 256, 312], (c) => `M${c - 6} 202V188H${c + 6}V202`, 1.2, 0.08, 0.35, 'column'),
+    { d: arch(200, 22, 214, 190, 11), delay: 1.3, duration: 0.5, tone: 'column' },
+    ...spread(BAYS, (c) => arch(c, 16, 172, 156, 8), 1.4, 0.08, 0.4),
+    ...spread(BAYS, (c) => arch(c, 16, 144, 128, 8), 1.55, 0.08, 0.4),
+    { d: 'M146 110V86H254V110', delay: 1.9, duration: 0.4 },
+    { d: 'M146 86C146 40 190 30 200 18C210 30 254 40 254 86', delay: 2.0, duration: 0.6 },
+    { d: 'M162 86C164 50 188 34 200 18M180 86C182 54 194 36 200 18M220 86C218 54 206 36 200 18M238 86C236 50 212 34 200 18', delay: 2.2, duration: 0.5, tone: 'column' },
+    { d: 'M200 100m-5 0a5 5 0 1 0 10 0a5 5 0 1 0-10 0', delay: 2.3, duration: 0.3, tone: 'column' },
+    { d: 'M196 24V14H204V24M200 14V6', delay: 2.5, duration: 0.3, tone: 'accent' },
+    dimension(54, 346),
   ],
 }
 
@@ -258,45 +277,57 @@ const shikhara = {
   ],
 }
 
-// Russian: a block crowned with onion domes on drums, a taller one at the centre.
+// Russian: after St Basil's, a tented tower ringed with kokoshnik arches among ribbed onion domes on drums.
 const onion = (cx, base, w, h) =>
   `M${cx - w / 2} ${base}C${cx - w * 0.9} ${base - h * 0.35} ${cx - w * 0.2} ${base - h * 0.55} ${cx} ${base - h}C${cx + w * 0.2} ${base - h * 0.55} ${cx + w * 0.9} ${base - h * 0.35} ${cx + w / 2} ${base}`
+const DOMES = [
+  { cx: 126, base: 128, w: 38, h: 44 },
+  { cx: 274, base: 128, w: 38, h: 44 },
+  { cx: 80, base: 142, w: 28, h: 30 },
+  { cx: 320, base: 142, w: 28, h: 30 },
+]
+const drum = ({ cx, base, w }, top = 150) => `M${cx - w / 2 + 2} ${top}V${base}H${cx + w / 2 - 2}V${top}`
 const russian = {
-  mass: 'M100 214V150H170V100H230V150H300V214Z',
+  mass: `M60 214V150H178V96L200 22L222 96V150H340V214Z${DOMES.map((o) => `${onion(o.cx, o.base, o.w, o.h)}Z`).join('')}`,
   strokes: [
     GROUND,
-    { d: 'M100 214V150H300V214', delay: 0.4, duration: 0.7 },
+    { d: 'M60 214V150H340V214', delay: 0.4, duration: 0.6 },
     { d: arch(200, 24, 214, 192, 12), delay: 0.8, duration: 0.4, tone: 'column' },
-    ...spread([130, 270], (c) => arch(c, 14, 196, 176, 8), 0.9, 0.1, 0.4),
-    { d: 'M175 150V100H225V150', delay: 1.1, duration: 0.5 },
-    { d: 'M113 150V124H137V150', delay: 1.2, duration: 0.4 },
-    { d: 'M263 150V124H287V150', delay: 1.3, duration: 0.4 },
-    { d: onion(200, 100, 56, 56), delay: 1.5, duration: 0.6 },
-    { d: onion(125, 124, 40, 38), delay: 1.7, duration: 0.5 },
-    { d: onion(275, 124, 40, 38), delay: 1.8, duration: 0.5 },
-    { d: 'M200 44V24M193 32H207M125 86V70M275 86V70', delay: 2.4, duration: 0.3, tone: 'accent' },
-    dimension(100, 300),
+    ...spread([100, 140, 260, 300], (c) => arch(c, 14, 196, 178, 7), 0.9, 0.08, 0.4),
+    { d: 'M178 150V96H222V150', delay: 1.0, duration: 0.5 },
+    { d: 'M186 142V112H194V142M206 142V112H214V142', delay: 1.2, duration: 0.3, tone: 'column' },
+    { d: 'M178 96Q184 86 189 96Q194 86 200 96Q206 86 211 96Q216 86 222 96', delay: 1.3, duration: 0.4 },
+    { d: 'M178 96L200 22L222 96', delay: 1.5, duration: 0.6 },
+    { d: 'M200 22V96M189 58L200 50L211 58', delay: 1.9, duration: 0.3, tone: 'column' },
+    ...DOMES.map((o, i) => ({ d: drum(o), delay: 1.2 + i * 0.08, duration: 0.4 })),
+    ...DOMES.map((o, i) => ({ d: onion(o.cx, o.base, o.w, o.h), delay: 1.6 + i * 0.1, duration: 0.55 })),
+    ...DOMES.map((o, i) => ({ d: onion(o.cx, o.base, o.w * 0.45, o.h), delay: 2.0 + i * 0.05, duration: 0.4, tone: 'column' })),
+    { d: 'M200 22V8M195 14H205M126 84V70M274 84V70M80 112V102M320 112V102', delay: 2.4, duration: 0.3, tone: 'accent' },
+    dimension(60, 340),
   ],
 }
 
-// Ottoman: domes cascading down from a great dome to half-domes, and two pencil minarets.
+// Ottoman: after the great mosques of Istanbul, a central dome on a windowed drum, half-domes either side, and two pencil minarets with balconies.
+const TICKS = Array.from({ length: 7 }, (_, i) => 166 + i * 11.33)
 const ottoman = {
-  mass: 'M100 214V170C100 140 150 140 150 140C150 62 250 62 250 140C250 140 300 140 300 170V214ZM70 214V50L74 24L78 50V214ZM322 214V50L326 24L330 50V214Z',
+  mass: 'M96 214V172H158V120C158 52 242 52 242 120V172H304V214ZM58 214L60 70L64 26L68 70L70 214ZM330 214L332 70L336 26L340 70L342 214Z',
   strokes: [
     GROUND,
-    { d: 'M100 214V170H300V214', delay: 0.4, duration: 0.6 },
-    ...spread([125, 200, 275], (c) => arch(c, 14, 208, 190, 8), 0.8, 0.1, 0.4, 'column'),
-    { d: 'M150 170V140H250V170', delay: 1.0, duration: 0.5 },
-    { d: 'M100 170C100 140 150 140 150 170', delay: 1.4, duration: 0.5 },
-    { d: 'M250 170C250 140 300 140 300 170', delay: 1.5, duration: 0.5 },
-    { d: 'M150 140C150 62 250 62 250 140', delay: 1.6, duration: 0.8 },
-    { d: 'M70 214V50H78V214', delay: 0.6, duration: 0.9 },
-    { d: 'M322 214V50H330V214', delay: 0.7, duration: 0.9 },
-    { d: 'M66 100H82M318 100H334', delay: 1.6, duration: 0.3, tone: 'column' },
-    { d: 'M70 50L74 24L78 50', delay: 1.9, duration: 0.3 },
-    { d: 'M322 50L326 24L330 50', delay: 2.0, duration: 0.3 },
-    { d: 'M200 66V44', delay: 2.4, duration: 0.2, tone: 'accent' },
-    dimension(66, 334),
+    { d: 'M58 214L60 70H68L70 214', delay: 0.4, duration: 0.9 },
+    { d: 'M330 214L332 70H340L342 214', delay: 0.5, duration: 0.9 },
+    { d: 'M96 214V172H304V214', delay: 0.6, duration: 0.6 },
+    ...spread([124, 162, 200, 238, 276], (c) => arch(c, 14, 208, 190, 8), 0.9, 0.08, 0.4, 'column'),
+    { d: 'M158 172V120H242V172', delay: 1.1, duration: 0.5 },
+    { d: TICKS.map((x) => `M${x} 152V132`).join(''), delay: 1.5, duration: 0.4, tone: 'column' },
+    { d: 'M96 172C100 138 130 126 158 124', delay: 1.5, duration: 0.5 },
+    { d: 'M304 172C300 138 270 126 242 124', delay: 1.6, duration: 0.5 },
+    { d: 'M54 92H74V98H54ZM326 92H346V98H326Z', delay: 1.6, duration: 0.4 },
+    { d: 'M54 124H74M326 124H346', delay: 1.7, duration: 0.3, tone: 'column' },
+    { d: 'M158 120C158 52 242 52 242 120', delay: 1.7, duration: 0.7 },
+    { d: 'M60 70L64 26L68 70M332 70L336 26L340 70', delay: 2.0, duration: 0.3 },
+    { d: 'M200 70V48M193 44Q200 34 207 44Q200 40 193 44Z', delay: 2.2, duration: 0.3, tone: 'accent' },
+    { d: 'M64 26V16M336 26V16', delay: 2.4, duration: 0.2, tone: 'accent' },
+    dimension(54, 346),
   ],
 }
 
