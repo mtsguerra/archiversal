@@ -6,8 +6,6 @@ import { dailyNumber } from '../../game/daily.js'
 import { FEATURES } from '../../game/features.js'
 import { loreFact, loreId } from '../../game/lore.js'
 import { readReading, toggleReading } from '../../game/readingList.js'
-import { shelfText } from '../../game/shelf.js'
-import { showToast } from '../ui/toast.js'
 import { playBuilding, readLibrary } from '../../game/library.js'
 import { collectionProgress, eraProgress, groupRows, joinRows, libraryStats, neighbourEras, passes, pickLocked } from '../../game/libraryView.js'
 import { libraryEraFrom } from '../../route.js'
@@ -23,6 +21,7 @@ import { EraDrawing } from './EraDrawing.jsx'
 import { LibraryGlobe } from './LibraryGlobe.jsx'
 import { thumb } from '../../game/thumb.js'
 import { Mass } from './Marks.jsx'
+import { ShareDialog } from './ShareDialog.jsx'
 import { EraSheet } from './EraSheet.jsx'
 import { EraStamp } from './EraStamp.jsx'
 import { Plate } from './Plate.jsx'
@@ -59,6 +58,7 @@ export function Library() {
   const [reading, setReading] = useState(readReading) // locked ids to find
   const [themesOf, setThemesOf] = useState({}) // building id -> theme ids (the collections)
   const [lore, setLore] = useState(null)
+  const [sharing, setSharing] = useState(false)
   const [sheetEra, setSheetEra] = useState('') // the era whose study sheet is open
   const [selected, setSelected] = useState(null) // the row whose panel is open
   const [pair, setPair] = useState([]) // ids picked for Compare, at most two
@@ -142,18 +142,6 @@ export function Library() {
     else setNote(t.noneLocked)
   }
   const eraDone = presentEras.filter((id) => progress[id].complete)
-  const share = async () => {
-    const text = shelfText(stats, eraDone.map(eraLabel), t.share, window.location.origin)
-    try {
-      if (navigator.share) await navigator.share({ text })
-      else {
-        await navigator.clipboard.writeText(text)
-        showToast({ text: t.share.copied })
-      }
-    } catch (error) {
-      if (error.name !== 'AbortError') showToast({ text: t.share.failed })
-    }
-  }
   const chooseEra = (id) => {
     setEra(id)
     setSelected(null)
@@ -277,7 +265,7 @@ export function Library() {
               <Button variant="ghost" disabled={pair.length < 2} onClick={() => setComparing(true)}>
                 {t.compare.button(pair.length)}
               </Button>
-              <Button variant="ghost" onClick={share}>
+              <Button variant="ghost" onClick={() => setSharing(true)}>
                 {t.share.button}
               </Button>
             </div>
@@ -438,6 +426,13 @@ export function Library() {
           onEra={chooseEra}
           onPlay={() => playLocked(open.era)}
           onClose={() => setSelected(null)}
+        />
+      )}
+      {sharing && (
+        <ShareDialog
+          eras={presentEras.map((id) => ({ id, label: eraLabel(id), earned: Boolean(progress[id].complete) }))}
+          stats={stats}
+          onClose={() => setSharing(false)}
         />
       )}
       {sheetEra && (

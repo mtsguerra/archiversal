@@ -284,3 +284,11 @@
 .pin[data-side='b']::before {
   background: var(--paper);
 }
+
+.postcard {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  box-shadow: 0 0.15rem 0 #d8c690, 0 0.6rem 1.4rem rgb(0 0 0 / 0.22);
+}
