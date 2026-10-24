@@ -4,6 +4,8 @@ import { dailyId, dailyNumber, readDaily } from '../../game/daily.js'
 import { useCountdown } from '../../game/useCountdown.js'
 import { useLanguage, useStrings } from '../../i18n.js'
 import { ArrowRightIcon } from '../ui/icons.jsx'
+import approved from './stampApproved.svg'
+import aprovado from './stampAprovado.svg'
 import styles from './DailyTeaser.module.css'
 
 const WHOLE = { x: 0, y: 0, w: 1, h: 1 }
@@ -72,11 +74,8 @@ export function DailyTeaser() {
         <>
           <div className={styles.full} role="img" aria-label={t.aria}>
             {image}
-            {/* Postmarked like the Library's postcard: the word and the date inside the ring. */}
-            <span className={styles.stamp}>
-              <b>{t.done}</b>
-              <time>{new Date().toLocaleDateString(lang, { day: '2-digit', month: 'short' })}</time>
-            </span>
+            {/* The Archiversal stamp, in the player's language (the artwork carries the word). */}
+            <img className={styles.stamp} src={lang === 'pt-BR' ? aprovado : approved} alt={t.done} />
           </div>
           <p className={styles.next}>{t.next(left)}</p>
           <a className={styles.secondary} href="#/daily">

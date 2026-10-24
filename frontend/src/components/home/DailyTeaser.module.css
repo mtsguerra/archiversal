@@ -118,47 +118,16 @@
   max-width: 100%;
 }
 
-/* The postmark drawing is a mask, so it takes the stamp's own red in both themes; the word sits in its ring below the little logo. */
+/* The stamp is the supplied artwork, in its own red; a cream disc behind its middle keeps the word readable over the photo. */
 .stamp {
   position: absolute;
-  right: var(--space-2);
-  bottom: var(--space-1);
-  display: grid;
-  align-content: center;
-  justify-items: center;
-  width: 10.5rem;
+  right: 0;
+  bottom: -1.25rem;
+  width: 12.5rem;
   aspect-ratio: 183 / 185;
-  padding-top: 13%;
   background: radial-gradient(circle at 49% 49%, color-mix(in srgb, var(--sheet) 90%, transparent) 0 24.5%, transparent 25%);
-  color: #bf0000; /* the red of the stamp as it was drawn */
   rotate: -8deg;
   animation: stamp 0.5s cubic-bezier(0.34, 1.4, 0.5, 1) 0.3s both;
-}
-
-.stamp::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: currentColor;
-  opacity: 0.88;
-  -webkit-mask: url('../library/postmark.svg') center / 100% 100% no-repeat;
-  mask: url('../library/postmark.svg') center / 100% 100% no-repeat;
-}
-
-.stamp b {
-  position: relative;
-  font-size: 0.5625rem;
-  font-weight: 900;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.stamp time {
-  position: relative;
-  font-size: 0.4375rem;
-  font-weight: 700;
-  letter-spacing: 0;
-  font-variant-numeric: tabular-nums;
 }
 
 @keyframes stamp {
