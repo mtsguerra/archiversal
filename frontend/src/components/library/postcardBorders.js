@@ -41,21 +41,26 @@ const laurel = {
     const band = Z * 0.5
     ctx.fillStyle = ink
     ctx.fillRect(from, 0, to - from, band)
-    along(from, to, Z * 0.52, (x) => {
+    along(from, to, Z * 0.74, (x) => {
       ctx.fillStyle = paper
-      leaf(ctx, x - Z * 0.17, band * 0.16, Z * 0.6, Z * 0.1, 0.78)
+      leaf(ctx, x - Z * 0.2, band * 0.14, Z * 0.62, Z * 0.15, 0.78)
       ctx.fillStyle = ink
-      leaf(ctx, x + Z * 0.08, band, Z * 0.62, Z * 0.1, 0.78)
+      leaf(ctx, x + Z * 0.1, band, Z * 0.62, Z * 0.14, 0.78)
     })
   },
+  // The band turns the corner with a leaf cut across the bend, and three sprigs fan out from the inner corner.
   corner(ctx, { Z, ink, paper }) {
     ctx.fillStyle = ink
     ctx.fillRect(0, 0, Z, Z * 0.5)
     ctx.fillRect(0, 0, Z * 0.5, Z)
     ctx.fillStyle = paper
-    dot(ctx, Z * 0.23, Z * 0.23, Z * 0.07)
+    leaf(ctx, Z * 0.06, Z * 0.06, Z * 0.64, Z * 0.15, Math.PI / 4)
     ctx.fillStyle = ink
-    leaf(ctx, Z * 0.5, Z * 0.5, Z * 0.5, Z * 0.09, Math.PI / 4)
+    leaf(ctx, Z * 0.5, Z * 0.5, Z * 0.72, Z * 0.17, Math.PI / 4)
+    leaf(ctx, Z * 0.5, Z * 0.5, Z * 0.6, Z * 0.12, Math.PI / 4 - 0.62)
+    leaf(ctx, Z * 0.5, Z * 0.5, Z * 0.6, Z * 0.12, Math.PI / 4 + 0.62)
+    ctx.fillStyle = paper
+    dot(ctx, Z * 0.68, Z * 0.68, Z * 0.045)
   },
 }
 
