@@ -15,7 +15,7 @@ import { JellyRadio } from '../ui/JellyRadio.jsx'
 import { Compare, Detail } from './Detail.jsx'
 import { EraDrawing } from './EraDrawing.jsx'
 import { LibraryGlobe } from './LibraryGlobe.jsx'
-import { Marks, Mass } from './Marks.jsx'
+import { Plate } from './Plate.jsx'
 import styles from './Library.module.css'
 
 const SHOWS = ['all', 'open', 'mastered', 'locked']
@@ -230,95 +230,43 @@ export function Library() {
               </section>
             </div>
             <div className={styles.tableWrap}>
-              <table className={styles.table}>
-                <thead>
-                  <tr>
-                    <th>{t.cols.sheet}</th>
-                    <th />
-                    <th>{t.cols.building}</th>
-                    <th>{t.cols.architect}</th>
-                    <th>{t.cols.country}</th>
-                    <th>{t.cols.year}</th>
-                    <th>{t.cols.marks}</th>
-                    <th>
-                      <span className={styles.srOnly}>{t.compare.title}</span>
-                    </th>
-                  </tr>
-                </thead>
-                {groups.map((g) => {
-                  const complete = group === 'era' && progress[g.key]?.complete
-                  return (
-                    <tbody key={g.key}>
-                      <tr className={styles.group}>
-                        <th colSpan={8} scope="colgroup" onClick={() => toggleGroup(g.key)}>
-                          <button type="button" className={styles.groupButton} aria-expanded={!folded.has(g.key)}>
-                            <ChevronDown className={styles.groupIcon} aria-hidden="true" strokeWidth={2} />
-                            {title(g)}
-                            <span className={styles.groupCount}>{group === 'era' ? t.of(progress[g.key].open, progress[g.key].total) : g.items.length}</span>
-                            {complete && (
-                              <span className={styles.done}>
-                                <EraDrawing era={g.key} small />
-                                {t.eraComplete}
-                              </span>
-                            )}
-                          </button>
-                        </th>
-                      </tr>
-                      {(folded.has(g.key) ? [] : g.items).map((r) => (
-                        <tr key={r.id} data-locked={!r.open || undefined} data-selected={selected === r.id || undefined} onClick={() => setSelected(r.id)}>
-                          <td className={styles.no}>{r.no}</td>
-                          <td className={styles.thumb}>
-                            <Mass era={r.era} />
-                          </td>
-                          <th scope="row" className={styles.name}>
-                            <button type="button" className={styles.rowButton} onClick={(e) => (e.stopPropagation(), setSelected(r.id))} aria-label={r.open ? r.name : `${r.no}, ${t.locked}`}>
-                              {r.open ? r.name : <span className={styles.redact} style={{ '--w': `${5 + (r.no.slice(2) % 4)}rem` }} />}
-                            </button>
-                          </th>
-                          {r.open ? (
-                            <>
-                              <td>{r.architects.join(', ')}</td>
-                              <td>{countryLabel(r.countryCode)}</td>
-                              <td className={styles.year}>{r.yearCompleted == null ? '–' : formatYear(r.yearCompleted, strings.years)}</td>
-                              <td>
-                                <Marks row={r} t={t} />
-                              </td>
-                              <td>
-                                <button
-                                  type="button"
-                                  className={styles.cmp}
-                                  aria-pressed={pair.includes(r.id)}
-                                  aria-label={`${pair.includes(r.id) ? t.compare.remove : t.compare.add}: ${r.name}`}
-                                  title={pair.includes(r.id) ? t.compare.remove : t.compare.add}
-                                  onClick={(e) => (e.stopPropagation(), toggleCompare(r.id))}
-                                >
-                                  +
-                                </button>
-                              </td>
-                            </>
-                          ) : (
-                            <>
-                              <td aria-hidden="true">
-                                <span className={styles.redact} style={{ '--w': `${4 + (r.no.slice(2) % 3)}rem` }} />
-                              </td>
-                              <td aria-hidden="true">
-                                <span className={styles.redact} style={{ '--w': '3rem' }} />
-                              </td>
-                              <td aria-hidden="true">
-                                <span className={styles.redact} style={{ '--w': '2.4rem' }} />
-                              </td>
-                              <td>
-                                <span className={styles.chip}>{eraLabel(r.era)}</span>
-                              </td>
-                              <td />
-                            </>
-                          )}
-                        </tr>
-                      ))}
-                    </tbody>
-                  )
-                })}
-              </table>
+              {groups.map((g) => {
+                const complete = group === 'era' && progress[g.key]?.complete
+                return (
+                  <section key={g.key} className={styles.groupBlock}>
+                    <div className={styles.groupHead} onClick={() => toggleGroup(g.key)}>
+                      <button type="button" className={styles.groupButton} aria-expanded={!folded.has(g.key)}>
+                        <ChevronDown className={styles.groupIcon} aria-hidden="true" strokeWidth={2} />
+                        {title(g)}
+                        <span className={styles.groupCount}>{group === 'era' ? t.of(progress[g.key].open, progress[g.key].total) : g.items.length}</span>
+                        {complete && (
+                          <span className={styles.done}>
+                            <EraDrawing era={g.key} small />
+                            {t.eraComplete}
+                          </span>
+                        )}
+                      </button>
+                    </div>
+                    {!folded.has(g.key) && (
+                      <div className={styles.plates}>
+                        {g.items.map((r) => (
+                          <Plate
+                            key={r.id}
+                            row={r}
+                            t={t}
+                            meta={`${countryLabel(r.countryCode)} · ${r.yearCompleted == null ? '–' : formatYear(r.yearCompleted, strings.years)}`}
+                            eraLabel={eraLabel(r.era)}
+                            selected={selected === r.id}
+                            inCompare={pair.includes(r.id)}
+                            onOpen={() => setSelected(r.id)}
+                            onCompare={() => toggleCompare(r.id)}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </section>
+                )
+              })}
               {rows && groups.length === 0 && <p className={styles.empty}>{t.none}</p>}
             </div>
           </div>

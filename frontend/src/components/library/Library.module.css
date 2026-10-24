@@ -227,31 +227,6 @@
   width: 2.4rem;
 }
 
-.table tbody tr:not(.group) {
-  cursor: pointer;
-}
-
-.table tbody tr[data-selected] td,
-.table tbody tr[data-selected] th[scope='row'] {
-  background: color-mix(in oklab, var(--accent) 10%, transparent);
-}
-
-.rowButton {
-  padding: 0;
-  border: 0;
-  background: none;
-  color: inherit;
-  font: inherit;
-  font-weight: 700;
-  text-align: left;
-  cursor: pointer;
-}
-
-.rowButton:focus-visible {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
-}
-
 .cmp {
   width: 1.6rem;
   height: 1.6rem;
@@ -290,50 +265,161 @@
   background: var(--accent);
 }
 
-.tableWrap {
-  min-width: 0;
-  overflow-x: hidden; /* the columns wrap instead of scrolling sideways */
-  border: var(--hairline) solid var(--paper-rule);
+.groupBlock + .groupBlock {
+  border-top: var(--hairline) solid var(--paper-rule);
 }
 
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: var(--text-xs);
-}
-
-.table thead th {
-  padding: var(--space-2) var(--space-3);
-  border-bottom: var(--hairline) solid var(--paper-rule);
-  background: var(--paper-shade);
-  font-size: var(--text-2xs);
-  font-weight: 650;
-  font-stretch: var(--stretch-semi);
-  letter-spacing: var(--tracking-caps);
-  text-align: left;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.table td,
-.table tbody th[scope='row'] {
-  padding: var(--space-1) var(--space-3);
-  border-bottom: var(--hairline) solid var(--paper-hairline);
-  vertical-align: middle;
-  text-align: left;
-  font-weight: 400;
-  overflow-wrap: anywhere;
-}
-
-.group th {
-  cursor: pointer;
+.groupHead {
   padding: var(--space-2) var(--space-3);
   border-bottom: var(--hairline) solid var(--paper-rule);
   background: var(--paper-shade);
   font-size: var(--text-xs);
   font-weight: 800;
   font-stretch: var(--stretch-semi);
+  cursor: pointer;
+}
+
+/* One building is one framed plate on the drafting grid: sheet number, drawing, name, country and year. */
+.plates {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  gap: var(--space-3);
+  padding: var(--space-3);
+}
+
+.plate {
+  position: relative;
+  display: grid;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  transition: translate var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+
+.plate:hover,
+.plate[data-selected] {
+  translate: 0 -3px;
+  box-shadow: 0 0.4rem 0 color-mix(in oklab, var(--accent) 20%, transparent);
+}
+
+.plate[data-mastered] {
+  border-color: var(--accent);
+}
+
+.plateOpen {
+  display: grid;
+  gap: 0.3rem;
+  align-content: start;
+  padding: 0.4rem;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
   text-align: left;
+  cursor: pointer;
+}
+
+.plateOpen:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.plateNo {
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  z-index: 1;
+  padding: 0.0625rem 0.4rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: var(--text-2xs);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.plateArt {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: var(--hairline) solid var(--paper-hairline);
+  background:
+    linear-gradient(color-mix(in oklab, var(--camel) 18%, transparent) 1px, transparent 1px) 0 0 / 0.9rem 0.9rem,
+    linear-gradient(90deg, color-mix(in oklab, var(--camel) 18%, transparent) 1px, transparent 1px) 0 0 / 0.9rem 0.9rem;
+}
+
+.plateDrawing {
+  position: absolute;
+  inset: 8% 6%;
+  width: 88%;
+  height: 84%;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.plateDrawing path {
+  vector-effect: non-scaling-stroke;
+}
+
+.plateDrawing path[data-tone='ground'] {
+  stroke: var(--ink-soft);
+}
+
+.plateDrawing .plateMass {
+  fill: color-mix(in oklab, var(--camel) 26%, transparent);
+  stroke: none;
+}
+
+/* Locked: the drawing sits under frosted tracing paper. */
+.plate[data-locked] .plateArt::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(5px);
+  background: repeating-linear-gradient(135deg, color-mix(in oklab, var(--paper) 70%, transparent) 0 6px, color-mix(in oklab, var(--camel) 22%, transparent) 6px 7px);
+}
+
+.plate[data-locked] .plateDrawing {
+  stroke: var(--ink-soft);
+  opacity: 0.55;
+}
+
+.plateName {
+  font-size: var(--text-sm);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.plateMeta {
+  color: var(--ink-soft);
+  font-size: var(--text-2xs);
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.plateMarks {
+  position: absolute;
+  right: 0.4rem;
+  top: 0.4rem;
+  z-index: 1;
+  padding: 0.125rem;
+  border-radius: 999px;
+  background: var(--paper);
+}
+
+.plateCmp {
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0.4rem;
+}
+
+.tableWrap {
+  min-width: 0;
+  overflow-x: hidden; /* the columns wrap instead of scrolling sideways */
+  border: var(--hairline) solid var(--paper-rule);
 }
 
 .groupButton {
@@ -376,50 +462,12 @@
   font-variant-numeric: tabular-nums;
 }
 
-.name {
-  font-weight: 700 !important;
-}
-
-.no,
-.year {
-  color: var(--ink-soft);
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
-
-.thumb {
-  width: 3.4rem;
-  padding-block: 0.125rem !important;
-}
-
-.mass {
-  display: block;
-  width: 2.6rem;
-  height: 1.6rem;
-  fill: currentColor;
-  color: var(--ink);
-}
-
-tr[data-locked] .mass {
-  color: var(--paper-hairline);
-}
-
 .redact {
   display: inline-block;
   width: var(--w, 6rem);
   height: 0.7rem;
   background: repeating-linear-gradient(135deg, var(--paper-hairline) 0 3px, transparent 3px 6px);
   vertical-align: middle;
-}
-
-.chip {
-  display: inline-block;
-  padding: 0.0625rem 0.4rem;
-  border: var(--hairline) dashed var(--paper-hairline);
-  color: var(--ink-soft);
-  font-size: var(--text-2xs);
-  font-weight: 600;
-  white-space: nowrap;
 }
 
 .marks {
@@ -515,7 +563,7 @@ tr[data-locked] .mass {
   }
 
   .tools .field:nth-child(2),
-  .tools .field:nth-child(4) {
+.tools .field:nth-child(4) {
     grid-column: auto;
   }
 
@@ -529,36 +577,13 @@ tr[data-locked] .mass {
   }
 
   .field input,
-  .field select {
+.field select {
     width: 100%;
     min-width: 0;
   }
 
   .actions > * {
     flex: 1 1 0;
-  }
-
-  .table thead th,
-  .table td,
-  .table tbody th[scope='row'] {
-    padding-inline: var(--space-2);
-  }
-
-  .chip {
-    max-width: 5.5rem;
-    white-space: normal;
-  }
-
-  /* The sheet number, silhouette, architect and country columns make way for the name, year and marks on a phone. */
-  .table thead th:nth-child(1),
-  .table td:nth-child(1),
-  .table th:nth-child(2),
-  .table td:nth-child(2),
-  .table th:nth-child(4),
-  .table td:nth-child(4),
-  .table th:nth-child(5),
-  .table td:nth-child(5) {
-    display: none;
   }
 }
 
