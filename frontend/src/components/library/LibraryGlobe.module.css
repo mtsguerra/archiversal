@@ -75,3 +75,10 @@
     max-width: 10rem;
   }
 }
+
+/* On wide screens the side rail's fold button carries the title. */
+@media (min-width: 1025px) {
+  .title {
+    display: none;
+  }
+}

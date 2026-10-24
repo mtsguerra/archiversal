@@ -1,3 +1,4 @@
+import { ChevronDown, ChevronRight } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { fetchLibrary } from '../../api/buildings.js'
 import { countryName } from '../../game/countries.js'
@@ -47,6 +48,10 @@ export function Library() {
   const [pair, setPair] = useState([]) // ids picked for Compare, at most two
   const [comparing, setComparing] = useState(false)
   const [note, setNote] = useState('')
+  // On wide screens each card of the side rail folds; with both folded the rail narrows to a tab and the table takes its room.
+  const [erasOpen, setErasOpen] = useState(true)
+  const [globeOpen, setGlobeOpen] = useState(true)
+  const railClosed = !erasOpen && !globeOpen
 
   useEffect(() => {
     let current = true
@@ -180,31 +185,62 @@ export function Library() {
             </p>
           )}
 
-          <div className={styles.body}>
+          <div className={styles.body} data-rail={railClosed ? 'closed' : 'open'}>
             <div className={styles.side}>
-              <nav className={styles.eras} aria-label={t.progress}>
-                <span className={styles.sideTitle}>{t.progress}</span>
-                {presentEras.map((id) => {
-                  const p = progress[id]
-                  return (
-                    <button key={id} type="button" className={styles.era} aria-pressed={era === id} onClick={() => chooseEra(era === id ? '' : id)}>
-                      <span>{eraLabel(id)}</span>
-                      <span className={styles.count}>
-                        {p.complete && (
-                          <span className={styles.eraMark} title={t.eraSet(eraLabel(id))}>
-                            <EraDrawing era={id} small />
+              <section className={styles.card} data-closed={!erasOpen || undefined}>
+                <button type="button" className={styles.fold} aria-expanded={erasOpen} onClick={() => setErasOpen((o) => !o)}>
+                  <span>{t.progress}</span>
+                  <ChevronDown className={styles.foldIcon} aria-hidden="true" strokeWidth={2} />
+                </button>
+                <div className={styles.collapse}>
+                  <nav className={`${styles.collapseInner} ${styles.eras}`} aria-label={t.progress}>
+                    <span className={styles.sideTitle}>{t.progress}</span>
+                    {presentEras.map((id) => {
+                      const p = progress[id]
+                      return (
+                        <button key={id} type="button" className={styles.era} aria-pressed={era === id} onClick={() => chooseEra(era === id ? '' : id)}>
+                          <span>{eraLabel(id)}</span>
+                          <span className={styles.count}>
+                            {p.complete && (
+                              <span className={styles.eraMark} title={t.eraSet(eraLabel(id))}>
+                                <EraDrawing era={id} small />
+                              </span>
+                            )}
+                            {t.of(p.open, p.total)}
                           </span>
-                        )}
-                        {t.of(p.open, p.total)}
-                      </span>
-                      <i style={{ '--p': `${(p.open / p.total) * 100}%` }} />
-                    </button>
-                  )
-                })}
-              </nav>
-              <div className={styles.globeSlot}>
-                <LibraryGlobe counts={unlockedByCountry} selected={country} nameOf={countryLabel} onPick={(code) => setCountry(country === code ? '' : code)} />
-              </div>
+                          <i style={{ '--p': `${(p.open / p.total) * 100}%` }} />
+                        </button>
+                      )
+                    })}
+                  </nav>
+                </div>
+              </section>
+              <section className={`${styles.card} ${styles.globeSlot}`} data-closed={!globeOpen || undefined}>
+                <button type="button" className={styles.fold} aria-expanded={globeOpen} onClick={() => setGlobeOpen((o) => !o)}>
+                  <span>{t.globe.title}</span>
+                  <ChevronDown className={styles.foldIcon} aria-hidden="true" strokeWidth={2} />
+                </button>
+                <div className={styles.collapse}>
+                  <div className={styles.collapseInner}>
+                    <LibraryGlobe counts={unlockedByCountry} selected={country} nameOf={countryLabel} onPick={(code) => setCountry(country === code ? '' : code)} />
+                  </div>
+                </div>
+              </section>
+            </div>
+            {/* Folded: a slim tab keeps the way back. */}
+            <div className={styles.railDock}>
+              <button
+                type="button"
+                className={styles.railTab}
+                aria-label={t.rail.show}
+                onClick={() => {
+                  setErasOpen(true)
+                  setGlobeOpen(true)
+                }}
+              >
+                <ChevronRight className={styles.foldIcon} aria-hidden="true" strokeWidth={2} />
+                <span>{t.rail.label}</span>
+              </button>
             </div>
 
             <div className={styles.tableWrap}>
