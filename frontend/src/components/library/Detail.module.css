@@ -34,6 +34,144 @@
   cursor: pointer;
 }
 
+/* The two actions come alive on hover: Share lifts and a shine sweeps across it; Copy fills from the left and its icon tilts. */
+.sendAction,
+.copyAction,
+.downloadAction,
+.chatAction {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 0.25s cubic-bezier(0.34, 1.4, 0.5, 1),
+    box-shadow 0.25s ease-out,
+    background-position 0.35s ease-out,
+    color 0.25s ease-out;
+}
+
+.sendAction::after,
+.chatAction::after {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 -40%;
+  width: 30%;
+  background: linear-gradient(100deg, transparent, rgb(255 250 234 / 0.35), transparent);
+  transform: skewX(-20deg);
+  opacity: 0;
+  z-index: -1;
+}
+
+.sendAction:hover,
+.chatAction:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1rem rgb(67 40 24 / 0.3);
+}
+
+.sendAction:hover::after,
+.chatAction:hover::after {
+  animation: sweep 0.7s ease-out;
+}
+
+.sendAction:hover svg {
+  transform: translate(2px, -2px) scale(1.15);
+}
+
+.sendAction svg,
+.copyAction svg,
+.downloadAction svg,
+.chatAction svg {
+  transition: transform 0.25s cubic-bezier(0.34, 1.6, 0.5, 1);
+}
+
+.copyAction,
+.downloadAction {
+  background: linear-gradient(90deg, color-mix(in oklab, var(--accent) 16%, transparent) 50%, transparent 50%) right / 200% 100% no-repeat;
+}
+
+.copyAction:hover,
+.downloadAction:hover {
+  background-position: left;
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.copyAction:hover svg {
+  transform: rotate(-10deg) scale(1.15);
+}
+
+.downloadAction:hover svg {
+  transform: translateY(3px);
+}
+
+.chatAction:hover svg {
+  transform: rotate(12deg) scale(1.2);
+}
+
+.sendAction:active,
+.copyAction:active,
+.downloadAction:active,
+.chatAction:active {
+  transform: translateY(0) scale(0.985);
+}
+
+@keyframes sweep {
+  from {
+    left: -40%;
+    opacity: 1;
+  }
+  to {
+    left: 120%;
+    opacity: 1;
+  }
+}
+
+.postcardWrap {
+  position: relative;
+}
+
+/* Skip sits on the postcard's lower corner while it is being written, so the dialog does not change height when it goes. */
+.skip {
+  position: absolute;
+  right: var(--space-3);
+  bottom: var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 2.25rem;
+  padding: 0 var(--space-3) 0 var(--space-4);
+  border: var(--hairline) solid var(--paper-rule);
+  border-radius: 999px;
+  background: rgb(255 250 234 / 0.94);
+  color: #432818;
+  box-shadow: 0.125rem 0.125rem 0 rgb(67 40 24 / 0.25);
+  font-size: var(--text-xs);
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  animation: skipIn 0.3s ease-out 0.6s both;
+}
+
+.skip svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.skip:active {
+  transform: translate(1px, 1px);
+  box-shadow: none;
+}
+
+@keyframes skipIn {
+  from {
+    opacity: 0;
+  }
+}
+
+.skip:hover {
+  background: #fff;
+}
+
+.skip:focus-visible,
 .close:focus-visible {
   outline: 2px solid var(--focus);
 }
@@ -119,6 +257,7 @@
 
 .actions {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-2);
 }
 
@@ -141,6 +280,50 @@
 
 .dialog::backdrop {
   background: rgb(30 18 10 / 0.55);
+}
+
+.shareDialog[open] {
+  animation: cardIn 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.15) both;
+}
+
+.shareDialog[open]::backdrop {
+  animation: dim 0.4s ease-out both;
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(2.5rem) rotate(-3deg) scale(0.9);
+  }
+}
+
+@keyframes dim {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sendAction::after,
+  .chatAction::after {
+    animation: none !important;
+  }
+
+  .sendAction,
+  .copyAction,
+  .downloadAction,
+  .chatAction,
+  .sendAction svg,
+  .copyAction svg,
+  .downloadAction svg,
+  .chatAction svg {
+    transition: none;
+  }
+
+  .shareDialog[open],
+  .shareDialog[open]::backdrop {
+    animation: none;
+  }
 }
 
 .cols {

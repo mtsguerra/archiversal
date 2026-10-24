@@ -118,44 +118,47 @@
   max-width: 100%;
 }
 
+/* The postmark drawing is a mask, so it takes the accent colour in both themes; the word sits in its ring below the little logo. */
 .stamp {
   position: absolute;
-  right: var(--space-3);
-  bottom: var(--space-3);
+  right: var(--space-2);
+  bottom: var(--space-1);
   display: grid;
+  align-content: center;
   justify-items: center;
-  gap: 0.0625rem;
-  padding: 0.25rem 0.75rem 0.125rem;
-  border: 0.1562rem double var(--accent);
-  border-radius: var(--radius-sm);
-  background: rgb(255 248 228 / 0.82);
+  width: 10.5rem;
+  aspect-ratio: 183 / 185;
+  padding-top: 13%;
+  background: radial-gradient(circle at 49% 49%, color-mix(in srgb, var(--sheet) 90%, transparent) 0 24.5%, transparent 25%);
   color: var(--accent);
-  rotate: -7deg;
+  rotate: -8deg;
   animation: stamp 0.5s cubic-bezier(0.34, 1.4, 0.5, 1) 0.3s both;
 }
 
+.stamp::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: 0.88;
+  -webkit-mask: url('../library/postmark.svg') center / 100% 100% no-repeat;
+  mask: url('../library/postmark.svg') center / 100% 100% no-repeat;
+}
+
 .stamp b {
-  font-size: var(--text-sm);
+  position: relative;
+  font-size: 0.5625rem;
   font-weight: 900;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .stamp time {
-  font-size: var(--text-2xs);
+  position: relative;
+  font-size: 0.5rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.02em;
   font-variant-numeric: tabular-nums;
-}
-
-.stamp svg {
-  width: 3rem;
-  height: 0.75rem;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 @keyframes stamp {

@@ -276,7 +276,9 @@ export default {
     share: {
       button: 'Share my shelf',
       shareImage: 'Share the postcard',
-      saveImage: 'Save the postcard',
+      skip: 'Skip',
+      download: 'Download the image',
+      whatsapp: 'WhatsApp',
       copyText: 'Copy as text',
       saved: 'Postcard saved.',
       copied: 'Copied to the clipboard.',
@@ -289,7 +291,6 @@ export default {
         title: 'Eras of architecture',
         of: (n, total) => `${n} of ${total} stamps`,
         brand: 'Archiversal · Library',
-        word: 'Library',
         dear: 'Dear fellow builder,',
         body: (d, total, m, n) => `${d} of ${total} buildings are on my drafting table, ${m} of them named. ${n} ${n === 1 ? 'era is' : 'eras are'} complete.`,
         wish: 'Wish you were here, drawing the elevations.',

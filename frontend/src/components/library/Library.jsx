@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronDown } from 'lucide-react'
+import { ArrowRight, ChevronDown, Stamp } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { fetchBuilding, fetchCatalogue, fetchLibrary } from '../../api/buildings.js'
 import { countryName } from '../../game/countries.js'
@@ -14,6 +14,7 @@ import { useLanguage, useStrings } from '../../i18n.js'
 import { AppShell } from '../layout/AppShell.jsx'
 import { menuSlots } from '../layout/menuSlots.jsx'
 import { Button } from '../ui/Button.jsx'
+import { Magnet } from '../ui/Magnet.jsx'
 import { InfoTip } from '../ui/InfoTip.jsx'
 import { JellyRadio } from '../ui/JellyRadio.jsx'
 import { Compare, Detail } from './Detail.jsx'
@@ -170,6 +171,11 @@ export function Library() {
             <Stat label={t.stats.eras} value={stats.erasComplete} total={stats.erasTotal} />
             <Stat label={t.stats.countries} value={stats.countries} total={stats.countriesTotal} />
             <Stat label={t.stats.oldest} value={stats.oldest == null ? '–' : formatYear(stats.oldest, strings.years)} />
+            <Magnet padding={90} magnetStrength={3} maxOffset={14} wrapperClassName={styles.shareWrap} innerClassName={styles.shareInner}>
+              <Button className={styles.shareShelf} icon={Stamp} onClick={() => setSharing(true)}>
+                {t.share.button}
+              </Button>
+            </Magnet>
           </div>
 
           <aside className={styles.lore} aria-label={t.lore.title}>
@@ -264,9 +270,6 @@ export function Library() {
               <Button onClick={() => playLocked()}>{era ? t.randomHere : t.random}</Button>
               <Button variant="ghost" disabled={pair.length < 2} onClick={() => setComparing(true)}>
                 {t.compare.button(pair.length)}
-              </Button>
-              <Button variant="ghost" onClick={() => setSharing(true)}>
-                {t.share.button}
               </Button>
             </div>
             <div className={styles.side}>

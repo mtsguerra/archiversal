@@ -41,8 +41,22 @@
   border-right: var(--hairline) solid var(--paper-hairline);
 }
 
-.stat:last-child {
+.stat:nth-last-child(2) {
   border-right: 0;
+}
+
+.shareWrap {
+  grid-column: 1 / -1;
+  margin: var(--space-2);
+}
+
+.shareInner,
+.shareShelf {
+  width: 100%;
+}
+
+.shareShelf {
+  justify-content: center;
 }
 
 .statLabel,
@@ -734,6 +748,41 @@
 
   .stat:last-child {
     border-right: var(--hairline) solid var(--paper-hairline);
+  }
+
+  /* The share button fills the end of the row: a wide stamp-red pill that leans toward the cursor (Magnet) and presses in. */
+  .shareWrap {
+    grid-column: auto;
+    margin: 0 0 0 auto;
+  }
+
+  .shareInner,
+  .shareShelf {
+    width: auto;
+  }
+
+  .shareShelf {
+    min-width: 13rem;
+    min-height: 2.5rem;
+    padding: 0 var(--space-6);
+    border-radius: 999px;
+    font-weight: 750;
+    letter-spacing: 0.02em;
+    box-shadow: 0.1875rem 0.1875rem 0 color-mix(in oklab, var(--accent-strong) 55%, transparent);
+    transition:
+      transform var(--dur-fast) var(--ease-out),
+      box-shadow var(--dur-fast) var(--ease-out),
+      background-color var(--dur-fast) var(--ease-out);
+  }
+
+  .shareShelf:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0 0 0 transparent;
+  }
+
+  .shareShelf svg {
+    width: 1.2em;
+    height: 1.2em;
   }
 
   .statValue {

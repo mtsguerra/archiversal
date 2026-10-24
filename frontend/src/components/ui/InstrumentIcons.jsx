@@ -96,6 +96,20 @@ export function ShareIcon(props) {
   )
 }
 
+/** Two sheets: on hover the lines are written again on the front one, and pressed it slides over the one behind. */
+export function CopyIcon(props) {
+  return (
+    <Svg {...props}>
+      <path d="M15.5 8V5.5a1.5 1.5 0 0 0-1.5-1.5H6A1.5 1.5 0 0 0 4.5 5.5V15A1.5 1.5 0 0 0 6 16.5h2.500" />
+      <g className={styles.copyFront}>
+        <rect x="8.5" y="8" width="11.5" height="12.5" rx="1.5" />
+        <path className={styles.copyLine1} pathLength="1" d="M11.5 12h5.5" />
+        <path className={styles.copyLine2} pathLength="1" d="M11.5 15.5h3.500" />
+      </g>
+    </Svg>
+  )
+}
+
 /** A drawing sheet under a veil: on hover the veil rolls up to show the lines beneath, and falls away when pressed. */
 export function RevealIcon(props) {
   return (

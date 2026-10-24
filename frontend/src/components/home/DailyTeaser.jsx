@@ -72,13 +72,10 @@ export function DailyTeaser() {
         <>
           <div className={styles.full} role="img" aria-label={t.aria}>
             {image}
-            {/* Signed off like a drawing: the word, the date and a signature. */}
+            {/* Postmarked like the Library's postcard: the word and the date inside the ring. */}
             <span className={styles.stamp}>
               <b>{t.done}</b>
-              <time>{new Date().toLocaleDateString(lang, { day: '2-digit', month: '2-digit', year: 'numeric' })}</time>
-              <svg viewBox="0 0 48 12" aria-hidden="true">
-                <path d="M2 8c3-7 5-7 4-1s3 4 6-1c2-3 3 0 5 1s4-3 6-2 3 3 6 1 5-1 7 0" />
-              </svg>
+              <time>{new Date().toLocaleDateString(lang, { day: '2-digit', month: 'short' })}</time>
             </span>
           </div>
           <p className={styles.next}>{t.next(left)}</p>

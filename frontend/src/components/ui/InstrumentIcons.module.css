@@ -344,6 +344,25 @@
   }
 }
 
+/* Copy: the lines are written again on hover; pressed, the front sheet slides onto the one behind. */
+.copyFront {
+  transition: transform 0.2s ease-out;
+}
+
+:global(:is(button, [data-motion]):hover) .copyLine1,
+:global(:is(button, [data-motion]):is(:focus-visible)) .copyLine1 {
+  animation: redraw 0.4s ease-out both;
+}
+
+:global(:is(button, [data-motion]):hover) .copyLine2,
+:global(:is(button, [data-motion]):is(:focus-visible)) .copyLine2 {
+  animation: redraw 0.4s ease-out 0.15s both;
+}
+
+:global(button:active) .copyFront {
+  transform: translate(-2.5px, -2.5px);
+}
+
 /* The veil over the sheet. */
 .veil {
   fill: currentColor;
@@ -409,6 +428,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .copyFront,
+  .copyLine1,
+  .copyLine2,
   .veil,
   .win,
   .door,
