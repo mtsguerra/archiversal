@@ -1,0 +1,115 @@
+/* The earlier Dailies: small ruled cells; a late one is stamped with a dashed ring, an on-time one filled. */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 2.25rem;
+  padding: 0 var(--space-3);
+  border: 0;
+  border-radius: var(--radius-md);
+  background: none;
+  box-shadow: inset 0 0 0 var(--hairline) var(--paper-rule);
+  color: var(--ink);
+  font: inherit;
+  font-size: var(--text-xs);
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.toggle:hover,
+.toggle[aria-expanded='true'] {
+  box-shadow: inset 0 0 0 1.5px var(--accent);
+}
+
+.toggle:focus-visible,
+.day:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.toggle svg {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.panel {
+  flex-basis: 100%;
+  display: grid;
+  gap: var(--space-2);
+  padding-top: var(--space-2);
+  border-top: var(--hairline) dashed var(--paper-hairline);
+  animation: open 0.25s var(--ease-out) both;
+}
+
+.note {
+  font-size: var(--text-2xs);
+  color: var(--ink-soft);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(3.4rem, 1fr));
+  gap: var(--space-1);
+  max-height: 9rem;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.day {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 2rem;
+  border: var(--hairline) solid var(--paper-rule);
+  color: var(--ink);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+a.day:hover {
+  border-color: var(--accent);
+  background: color-mix(in oklab, var(--accent) 10%, transparent);
+}
+
+.day[data-state='done'] {
+  background: color-mix(in oklab, var(--accent) 16%, transparent);
+  border-color: var(--accent);
+}
+
+/* Played late: a dashed ring and a clock tick in the corner, never the solid mark of an on-time day. */
+.day[data-state='late'] {
+  border-style: dashed;
+  border-color: var(--accent);
+}
+
+.day[data-state='late']::after {
+  content: '';
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  width: 0.35rem;
+  height: 0.35rem;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+}
+
+.day[data-current] {
+  outline: 2px solid var(--ink);
+  outline-offset: -3px;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    translate: 0 -0.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel {
+    animation: none;
+  }
+}

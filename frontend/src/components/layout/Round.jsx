@@ -83,7 +83,7 @@ export function Round({ round, eras, view, onViewChange, daily = false, replay =
                 play={settled}
                 onOpenBoard={() => onViewChange('board')}
                 outcome={round.outcome}
-                daily={daily ? { fields: round.fields, hintsUsed: round.hintsUsed } : null}
+                daily={daily ? { fields: round.fields, hintsUsed: round.hintsUsed, number: daily.number } : null}
               />
             </motion.div>
           ) : (

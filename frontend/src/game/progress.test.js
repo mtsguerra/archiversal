@@ -38,3 +38,12 @@ describe('progress', () => {
     expect(lastWeek([], 290).at(-1)).toEqual({ number: 290, state: 'today' })
   })
 })
+
+describe('lastWeek with late days', () => {
+  it('marks a day played afterwards as late, not done', () => {
+    const week = lastWeek([289], 290, [288])
+    expect(week.find((d) => d.number === 289).state).toBe('done')
+    expect(week.find((d) => d.number === 288).state).toBe('late')
+    expect(week.find((d) => d.number === 287).state).toBe('missed')
+  })
+})

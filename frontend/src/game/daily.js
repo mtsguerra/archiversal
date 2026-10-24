@@ -45,19 +45,47 @@ const validResult = ({ id, outcome, fields, attempts, hintsUsed }) =>
   count(attempts) &&
   count(hintsUsed)
 
+const DAYS_KEY = 'arch-guesser:daily-days' // every finished Daily by number, today's and the ones played late
+
 // localStorage can throw (private modes, blocked storage); the daily then just isn't remembered.
-export function readDaily(number) {
+const readDays = () => {
   try {
-    const saved = JSON.parse(localStorage.getItem(KEY))
-    return saved?.number === number && validResult(saved) ? saved : null
+    const saved = JSON.parse(localStorage.getItem(DAYS_KEY))
+    return saved && typeof saved === 'object' && !Array.isArray(saved) ? saved : {}
   } catch {
-    return null
+    return {}
   }
 }
 
-export function saveDaily(result) {
+export function readDaily(number) {
   try {
-    localStorage.setItem(KEY, JSON.stringify(result))
+    const saved = JSON.parse(localStorage.getItem(KEY))
+    if (saved?.number === number && validResult(saved)) return saved
+  } catch {
+    // fall through to the per-day record
+  }
+  const past = readDays()[number]
+  return past?.number === number && validResult(past) ? past : null
+}
+
+/** Numbers of the past Dailies that were played after their day (they do not count for the streak). */
+export const readLate = () =>
+  Object.values(readDays())
+    .filter((r) => r?.late === true && Number.isInteger(r.number) && validResult(r))
+    .map((r) => r.number)
+
+/** Every day number with a saved result, played on time or late. */
+export const readPlayed = () =>
+  Object.values(readDays())
+    .filter((r) => Number.isInteger(r?.number) && validResult(r))
+    .map((r) => r.number)
+
+/** `late` is set for a day other than today's. */
+export function saveDaily(result) {
+  const late = result.number !== dailyNumber()
+  try {
+    if (!late) localStorage.setItem(KEY, JSON.stringify(result))
+    localStorage.setItem(DAYS_KEY, JSON.stringify({ ...readDays(), [result.number]: { ...result, late } }))
   } catch {
     // Ignore: the daily can be replayed.
   }

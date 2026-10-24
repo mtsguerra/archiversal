@@ -51,11 +51,12 @@ export function streakLength(days, today) {
   return count
 }
 
-/** The last seven Dailies, oldest first: 'done' | 'missed' | 'today' (still open). */
-export function lastWeek(days, today) {
+/** The last seven Dailies, oldest first: 'done' | 'late' (played after its day) | 'missed' | 'today' (still open). */
+export function lastWeek(days, today, late = []) {
   const played = new Set(days)
+  const afterwards = new Set(late)
   return Array.from({ length: 7 }, (_, i) => {
     const number = today - 6 + i
-    return { number, state: played.has(number) ? 'done' : number === today ? 'today' : 'missed' }
+    return { number, state: played.has(number) ? 'done' : afterwards.has(number) ? 'late' : number === today ? 'today' : 'missed' }
   }).filter((d) => d.number > 0)
 }

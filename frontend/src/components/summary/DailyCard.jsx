@@ -6,6 +6,7 @@ import { useCountdown } from '../../game/useCountdown.js'
 import { useStrings } from '../../i18n.js'
 import { RollingNumber } from '../ui/RollingNumber.jsx'
 import { ShareMenu } from '../layout/DailyShare.jsx'
+import { PastDays } from './PastDays.jsx'
 import styles from './DailyCard.module.css'
 import { useReducedMotion } from '../../motionPref.js'
 
@@ -18,10 +19,10 @@ import { useReducedMotion } from '../../motionPref.js'
  * @param play   false while the reveal build-up covers the screen: the badges and digits wait, then play
  */
 export function DailyCard({ daily, play = true }) {
+  const number = daily.number ?? dailyNumber()
   const strings = useStrings()
   const reduce = useReducedMotion()
   const left = useCountdown()
-  const number = dailyNumber()
   const text = shareText({ number, fields: daily.fields, hintsUsed: daily.hintsUsed, title: strings.daily.shareTitle, url: window.location.origin })
   const got = GUESS_FIELDS.filter((f) => daily.fields[f] === 'correct').length
 
@@ -72,6 +73,7 @@ export function DailyCard({ daily, play = true }) {
         </ul>
       </div>
       <footer className={styles.foot}>
+        <div className={styles.countRow}>
         <div className={styles.countdown}>
           <span className={styles.countLabel}>{strings.daily.nextLabel}</span>
           <span className={styles.digits} aria-hidden="true">
@@ -88,6 +90,8 @@ export function DailyCard({ daily, play = true }) {
             <span>{strings.daily.minutesUnit}</span>
           </span>
           <span className="visually-hidden">{strings.daily.nextIn(left)}</span>
+        </div>
+        <PastDays current={number} />
         </div>
         <ShareMenu text={text} />
       </footer>

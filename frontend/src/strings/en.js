@@ -31,7 +31,7 @@ export default {
       streak: 'Daily streak',
       days: (n) => (n === 1 ? '1 day' : `${n} days`),
       start: 'Start today',
-      day: (n, state) => `Daily #${n}, ${state === 'done' ? 'played' : state === 'today' ? 'today' : 'not played'}`,
+      day: (n, state) => `Daily #${n}, ${state === 'done' ? 'played' : state === 'late' ? 'played late' : state === 'today' ? 'today' : 'not played'}`,
       archive: 'Archive',
       count: (styles, allStyles, countries, allCountries) => `${styles} of ${allStyles} styles · ${countries} of ${allCountries} countries`,
       empty: 'Every building you reveal stamps its style here.',
@@ -67,6 +67,11 @@ export default {
 
   daily: {
     title: (n) => `Daily #${n}`,
+    past: {
+      button: 'Other days',
+      note: 'Earlier Dailies. Playing one later does not count for the streak.',
+      day: (n, state) => `Daily #${n}, ${state === 'done' ? 'played' : state === 'late' ? 'played late' : 'not played yet'}`,
+    },
     play: 'Play today’s building',
     done: (time) => `Done · next in ${time}`,
     nextIn: (time) => `Next daily in ${time}`,

@@ -145,6 +145,14 @@
   }
 }
 
+.countRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+}
+
 /* The wait for the next sheet, drawn like a title-block cell: label, big digits, units. */
 .countdown {
   display: grid;

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { dailyNumber, readDaily } from '../../game/daily.js'
+import { dailyNumber, readDaily, readLate } from '../../game/daily.js'
 import { lastWeek, readProgress, streakLength } from '../../game/progress.js'
 import { eraName } from '../../game/useEras.js'
 import { useStrings } from '../../i18n.js'
@@ -23,7 +23,7 @@ export function StreakCard() {
   // A Daily finished before the record existed still counts for today.
   const days = readDaily(today) ? [...progress.days, today] : progress.days
   const run = streakLength(days, today)
-  const week = lastWeek(days, today)
+  const week = lastWeek(days, today, readLate())
 
   return (
     <section className={styles.card} aria-label={t.streak}>
@@ -35,7 +35,8 @@ export function StreakCard() {
         {week.map(({ number, state }) => (
           <li key={number} className={styles.day} data-state={state} title={t.day(number, state)} aria-label={t.day(number, state)}>
             <span className={styles.num}>#{number}</span>
-            <span className={styles.mark}>{state === 'done' && <Check />}</span>
+            <span className={styles.mark}>{state === 'done' && <Check />}
+            {state === 'late' && <Check />}</span>
           </li>
         ))}
       </ol>

@@ -27,7 +27,7 @@ export function RevealBar({ view, onToggleView, onMenu, wikipedia, onNext, nextL
   }, [])
 
   const text = daily
-    ? shareText({ number: dailyNumber(), fields: daily.fields, hintsUsed: daily.hintsUsed, title: strings.daily.shareTitle, url: window.location.origin })
+    ? shareText({ number: daily.number ?? dailyNumber(), fields: daily.fields, hintsUsed: daily.hintsUsed, title: strings.daily.shareTitle, url: window.location.origin })
     : ''
 
   const toSummary = view === 'board'

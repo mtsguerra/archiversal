@@ -18,7 +18,8 @@ import { readSeen, recordSeen } from './seenBuildings.js'
  * @param {'normal' | 'daily' | 'custom' | 'themed'} mode  daily plays today's fixed building once, then shows its saved result;
  *   custom and themed walk the saved session's buildings in order; themed also asks only the fields of its level.
  */
-export function useGameRound(mode = 'normal') {
+export function useGameRound(mode = 'normal', day) {
+  const number = day ?? dailyNumber() // the Daily being played: today's, or an earlier day's
   const [state, dispatch] = useReducer(gameReducer, initialState)
   const pending = useRef(null)
   const { lang } = useLanguage()
@@ -85,7 +86,6 @@ export function useGameRound(mode = 'normal') {
         return
       }
       if (mode === 'daily') {
-        const number = dailyNumber()
         const id = dailyId(await fetchBuildingIds(), number)
         const building = await fetchBuilding(id, controller.signal, langRef.current)
         const saved = readDaily(number)
@@ -100,7 +100,7 @@ export function useGameRound(mode = 'normal') {
     } catch (error) {
       if (error.name !== 'AbortError') dispatch({ type: 'load/failure', error })
     }
-  }, [mode])
+  }, [mode, number])
 
   // Next building (in a custom session: the next one); `reload` retries the current one.
   const loadNext = useCallback(() => {
@@ -120,16 +120,16 @@ export function useGameRound(mode = 'normal') {
   const { phase, outcome, fields, attempts, hintsUsed } = state
   useEffect(() => {
     if (mode === 'daily' && phase === 'revealed') {
-      saveDaily({ number: dailyNumber(), id: currentId, outcome, fields, attempts, hintsUsed })
+      saveDaily({ number, id: currentId, outcome, fields, attempts, hintsUsed })
     }
-  }, [mode, phase, outcome, fields, attempts, hintsUsed, currentId])
+  }, [mode, number, phase, outcome, fields, attempts, hintsUsed, currentId])
 
   // Every revealed building stamps its era and country in the archive; a Daily also counts for the streak.
   useEffect(() => {
     if (phase === 'revealed' && buildingRef.current?.id === currentId && currentId) {
-      recordReveal(buildingRef.current, mode === 'daily' ? dailyNumber() : undefined)
+      recordReveal(buildingRef.current, mode === 'daily' && number === dailyNumber() ? number : undefined) // an earlier day does not count for the streak
     }
-  }, [mode, phase, currentId])
+  }, [mode, number, phase, currentId])
 
   // The Library unlocks it too; naming the building (not only the era or architect) makes it mastered.
   useEffect(() => {

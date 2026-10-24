@@ -54,3 +54,16 @@ describe('readDaily', () => {
     expect(readDaily(5)).toBeNull()
   })
 })
+
+describe('earlier days', () => {
+  it('keeps a late result apart from today and lists it as late', async () => {
+    const store = new Map()
+    globalThis.localStorage = { getItem: (k) => store.get(k) ?? null, setItem: (k, v) => store.set(k, String(v)) }
+    const { saveDaily, readLate, dailyNumber: today } = await import('./daily.js')
+    const fields = { name: 'correct', architect: 'wrong', country: 'correct', era: 'correct' }
+    saveDaily({ number: today() - 2, id: 'x', outcome: 'solved', fields, attempts: 1, hintsUsed: 0 })
+    expect(readLate()).toEqual([today() - 2])
+    expect(readDaily(today())).toBeNull()
+    expect(readDaily(today() - 2).id).toBe('x')
+  })
+})

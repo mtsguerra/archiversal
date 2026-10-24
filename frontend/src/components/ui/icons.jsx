@@ -184,6 +184,16 @@ export function CheckIcon(props) {
 }
 
 /** An open book whose spine is drawn again and whose pages lift. */
+/** A calendar whose binding rings lift on hover. */
+export function CalendarIcon(props) {
+  return (
+    <Svg {...props}>
+      <rect width="18" height="18" x="3" y="4" rx="2" />
+      <path className={part('book')} d="M16 2v4M8 2v4M3 10h18" />
+    </Svg>
+  )
+}
+
 export function BookIcon(props) {
   return (
     <Svg {...props}>

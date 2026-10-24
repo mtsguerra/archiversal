@@ -31,7 +31,7 @@ export default {
       streak: 'Sequência do diário',
       days: (n) => (n === 1 ? '1 dia' : `${n} dias`),
       start: 'Comece hoje',
-      day: (n, state) => `Diário #${n}, ${state === 'done' ? 'jogado' : state === 'today' ? 'hoje' : 'não jogado'}`,
+      day: (n, state) => `Diário #${n}, ${state === 'done' ? 'jogado' : state === 'late' ? 'jogado depois' : state === 'today' ? 'hoje' : 'não jogado'}`,
       archive: 'Acervo',
       count: (styles, allStyles, countries, allCountries) => `${styles} de ${allStyles} estilos · ${countries} de ${allCountries} países`,
       empty: 'Cada obra revelada carimba o seu estilo aqui.',
@@ -67,6 +67,11 @@ export default {
 
   daily: {
     title: (n) => `Diário #${n}`,
+    past: {
+      button: 'Outros dias',
+      note: 'Diários anteriores. Jogar um depois não conta para a sequência.',
+      day: (n, state) => `Diário #${n}, ${state === 'done' ? 'jogado' : state === 'late' ? 'jogado depois' : 'ainda não jogado'}`,
+    },
     play: 'Jogue o edifício de hoje',
     done: (time) => `Concluído · próximo em ${time}`,
     nextIn: (time) => `Próximo diário em ${time}`,

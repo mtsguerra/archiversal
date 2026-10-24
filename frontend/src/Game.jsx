@@ -76,11 +76,11 @@ const SESSIONS = {
 }
 
 /** @param {'normal' | 'daily' | 'custom' | 'themed'} mode */
-export default function Game({ mode = 'normal' }) {
+export default function Game({ mode = 'normal', day }) {
   const strings = useStrings()
   const reduceMotion = useReducedMotion()
   const daily = mode === 'daily'
-  const round = useGameRound(mode)
+  const round = useGameRound(mode, day)
   const allEras = useEras()
   // A themed game offers only the styles that occur in its theme.
   const eras = round.themed && allEras ? allEras.filter((e) => round.themed.eras.includes(e.id)) : allEras
@@ -136,7 +136,7 @@ export default function Game({ mode = 'normal' }) {
           eras={eras}
           view={view}
           onViewChange={(next) => setViewFor({ id: building.id, view: next })}
-          daily={daily}
+          daily={daily && { number: day ?? dailyNumber() }}
         />
       </div>
     )
@@ -144,7 +144,7 @@ export default function Game({ mode = 'normal' }) {
 
   return (
     <AppShell
-      place={daily ? strings.daily.title(dailyNumber()) : (strings.places[mode] ?? strings.places.normal)}
+      place={daily ? strings.daily.title(day ?? dailyNumber()) : (strings.places[mode] ?? strings.places.normal)}
       slim
       bottomBar={revealed ? 'reveal' : 'phone'}
       menu={
@@ -181,7 +181,7 @@ export default function Game({ mode = 'normal' }) {
             onMenu={() => leave()}
             onNext={daily ? () => (window.location.hash = '#/play') : round.loadNext}
             nextLabel={daily ? strings.daily.playGuesser : undefined}
-            daily={daily ? { fields: round.fields, hintsUsed: round.hintsUsed } : null}
+            daily={daily ? { fields: round.fields, hintsUsed: round.hintsUsed, number: day ?? dailyNumber() } : null}
           />
         </>
       )}

@@ -94,6 +94,11 @@
   rotate: -8deg;
 }
 
+.day[data-state='late'] .mark {
+  border: 1.5px dashed var(--accent);
+  color: var(--accent);
+}
+
 .day[data-state='today'] {
   border-style: dashed;
   border-color: var(--accent);
