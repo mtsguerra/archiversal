@@ -1,3 +1,4 @@
+import { Flag } from 'lucide-react'
 import { silhouetteFor } from '../reveal/silhouettes.js'
 import { Marks } from './Marks.jsx'
 import styles from './Library.module.css'
@@ -24,7 +25,7 @@ function PlateArt({ era }) {
  * @param meta        "Country · year" for an unlocked plate
  * @param eraLabel    the era's name (shown on a locked plate)
  */
-export function Plate({ row, t, meta, eraLabel, selected, inCompare, onOpen, onCompare }) {
+export function Plate({ row, t, meta, eraLabel, selected, inCompare, inReading, onOpen, onCompare, onReading }) {
   const label = row.open ? row.name : `${row.no}, ${t.locked}`
   return (
     <article className={styles.plate} data-locked={!row.open || undefined} data-selected={selected || undefined} data-mastered={row.mastered || undefined}>
@@ -45,6 +46,18 @@ export function Plate({ row, t, meta, eraLabel, selected, inCompare, onOpen, onC
           </>
         )}
       </button>
+      {!row.open && (
+        <button
+          type="button"
+          className={`${styles.cmp} ${styles.plateCmp}`}
+          aria-pressed={inReading}
+          aria-label={`${inReading ? t.reading.remove : t.reading.add}: ${row.no}`}
+          title={inReading ? t.reading.remove : t.reading.add}
+          onClick={onReading}
+        >
+          <Flag aria-hidden="true" strokeWidth={2.2} size={13} fill={inReading ? 'currentColor' : 'none'} />
+        </button>
+      )}
       {row.open && (
         <>
           <span className={styles.plateMarks}>

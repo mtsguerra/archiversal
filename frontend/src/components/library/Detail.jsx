@@ -143,7 +143,27 @@ export function Compare({ a, b, eraLabel, countryLabel, onClose }) {
         </div>
         {side(b)}
       </div>
+      <Timeline a={a} b={b} label={t.timeline.label} years={strings.years} />
       <p className={styles.text}>{t.compare.note}</p>
     </dialog>
+  )
+}
+
+/** The two completion years on one axis, in proportion; nothing when either year is unknown. */
+function Timeline({ a, b, label, years }) {
+  if (a.yearCompleted == null || b.yearCompleted == null) return null
+  const lo = Math.min(a.yearCompleted, b.yearCompleted)
+  const span = Math.abs(a.yearCompleted - b.yearCompleted) || 1
+  const at = (y) => `${((y - lo) / span) * 100}%`
+  return (
+    <div className={styles.timeline} role="img" aria-label={`${label}: ${a.name} ${formatYear(a.yearCompleted, years)}, ${b.name} ${formatYear(b.yearCompleted, years)}`}>
+      <span className={styles.axis} />
+      <span className={styles.pin} data-side="a" style={{ left: at(a.yearCompleted) }}>
+        {formatYear(a.yearCompleted, years)}
+      </span>
+      <span className={styles.pin} data-side="b" style={{ left: at(b.yearCompleted) }}>
+        {formatYear(b.yearCompleted, years)}
+      </span>
+    </div>
   )
 }

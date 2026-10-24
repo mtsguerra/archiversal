@@ -224,7 +224,8 @@
 }
 
 .done svg {
-  width: 2.4rem;
+  width: 2.6rem;
+  flex: none;
 }
 
 .cmp {
@@ -270,6 +271,9 @@
 }
 
 .groupHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
   padding: var(--space-2) var(--space-3);
   border-bottom: var(--hairline) solid var(--paper-rule);
   background: var(--paper-shade);
@@ -425,7 +429,8 @@
 .groupButton {
   display: flex;
   align-items: center;
-  width: 100%;
+  flex: 1;
+  min-width: 0;
   padding: 0;
   border: 0;
   background: none;
@@ -726,9 +731,6 @@
     font-size: var(--text-md);
   }
 
-  .tools {
-    flex-wrap: nowrap;
-  }
 
   .tools .field:first-child {
     flex: 1 1 14rem;
@@ -742,4 +744,73 @@
     min-width: 0;
     width: 9.5rem;
   }
+}
+
+.sheetButton {
+  flex: none;
+  padding: 0.2rem 0.6rem;
+  border: var(--hairline) solid var(--paper-rule);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sheetButton:hover {
+  border-color: var(--accent);
+}
+
+.sheetButton:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.lore {
+  display: grid;
+  gap: 0.2rem;
+  padding: var(--space-2) var(--space-3);
+  border: var(--hairline) dashed var(--paper-rule);
+  background: var(--paper-shade);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+}
+
+.lore p {
+  margin: 0;
+  max-width: 80ch;
+}
+
+.loreTitle {
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.loreOpen {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.stampGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.era[data-done] {
+  color: var(--accent);
 }
