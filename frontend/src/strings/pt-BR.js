@@ -1,6 +1,6 @@
 // Português (Brasil). Mirrors the shape of en.js.
 export default {
-  appName: 'Arch Guesser',
+  appName: 'Archiversal',
   nextBuilding: 'Outra obra',
   nextConfirm: 'Toque de novo para confirmar',
   nextCancel: 'Cancelar',
@@ -84,7 +84,7 @@ export default {
     email: 'E-mail',
     copy: 'Copiar resultado',
     copied: 'Copiado',
-    shareTitle: 'Arch Guesser Diário',
+    shareTitle: 'Archiversal Diário',
     preview: 'Seu resultado para compartilhar',
     playGuesser: 'Jogar Adivinhar',
   },
@@ -278,13 +278,13 @@ export default {
       copied: 'Copiado para a área de transferência.',
       failed: 'Não foi possível compartilhar. Tente salvar a imagem ou copiar o texto.',
       alt: (n) => `Cartão-postal com ${n} selos, um para cada época que você completou`,
-      title: 'Minha Biblioteca do Arch Guesser',
+      title: 'Minha Biblioteca do Archiversal',
       line: (a, b, c, d, e) => `${a} de ${b} edifícios, ${c} dominados, ${d} de ${e} épocas completas.`,
       stamps: (s) => `Carimbos: ${s}`,
       card: {
         title: 'Épocas da arquitetura',
         of: (n, total) => `${n} de ${total} selos`,
-        brand: 'Arch Guesser · Biblioteca',
+        brand: 'Archiversal · Biblioteca',
         word: 'Biblioteca',
         dear: 'Querido colega construtor,',
         body: (d, total, m, n) => `${d} de ${total} edifícios estão na minha prancheta, ${m} deles nomeados. ${n} ${n === 1 ? 'época está completa' : 'épocas estão completas'}.`,

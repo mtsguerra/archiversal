@@ -54,7 +54,7 @@ export function ShareDialog({ eras, stats, onClose }) {
   const shareImage = async () => {
     setBusy(true)
     try {
-      const file = new File([await toBlob()], 'arch-guesser-library.png', { type: 'image/png' })
+      const file = new File([await toBlob()], 'archiversal-library.png', { type: 'image/png' })
       if (navigator.canShare?.({ files: [file] })) await navigator.share({ files: [file], text: text() })
       else save(file)
     } catch (error) {

@@ -1,6 +1,6 @@
 {
-  "name": "Arch Guesser",
-  "short_name": "Arch Guesser",
+  "name": "Archiversal",
+  "short_name": "Archiversal",
   "description": "Study famous buildings from their plans and sections, then guess the building, architect, country and era.",
   "start_url": "/#/",
   "scope": "/",

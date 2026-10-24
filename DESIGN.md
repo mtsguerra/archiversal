@@ -1,5 +1,5 @@
 ---
-name: Arch Guesser
+name: Archiversal
 description: A modern digital drafting board. Each round is a drawing set on the table, documented sheet by sheet with a title block.
 colors:
   oxblood: "#6f1d1b"
@@ -158,7 +158,7 @@ components:
     padding: "0.25rem 0.75rem 0.25rem 0.5rem"
 ---
 
-# Design System: Arch Guesser
+# Design System: Archiversal
 
 ## Overview
 

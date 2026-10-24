@@ -1,4 +1,4 @@
-# Arch Guesser
+# Archiversal
 
 Educational guessing game on architectural history. The player sees a building's drawings and photos as numbered sheets on a "drafting board", opens text tips, and guesses building, architect, country and era. No scores, no timers. A reveal shows an educational summary.
 

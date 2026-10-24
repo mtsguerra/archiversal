@@ -1,6 +1,6 @@
 // English copy. Every other language mirrors this shape (see pt-BR.js).
 export default {
-  appName: 'Arch Guesser',
+  appName: 'Archiversal',
   nextBuilding: 'Another building',
   nextConfirm: 'Tap again to confirm',
   nextCancel: 'Cancel',
@@ -84,7 +84,7 @@ export default {
     email: 'Email',
     copy: 'Copy result',
     copied: 'Copied',
-    shareTitle: 'Arch Guesser Daily',
+    shareTitle: 'Archiversal Daily',
     preview: 'Your shareable result',
     playGuesser: 'Play Guesser',
   },
@@ -282,13 +282,13 @@ export default {
       copied: 'Copied to the clipboard.',
       failed: 'Could not share. Try saving the image or copying the text.',
       alt: (n) => `Postcard with ${n} stamps, one for each era you have completed`,
-      title: 'My Arch Guesser Library',
+      title: 'My Archiversal Library',
       line: (a, b, c, d, e) => `${a} of ${b} buildings, ${c} mastered, ${d} of ${e} eras complete.`,
       stamps: (s) => `Stamps: ${s}`,
       card: {
         title: 'Eras of architecture',
         of: (n, total) => `${n} of ${total} stamps`,
-        brand: 'Arch Guesser · Library',
+        brand: 'Archiversal · Library',
         word: 'Library',
         dear: 'Dear fellow builder,',
         body: (d, total, m, n) => `${d} of ${total} buildings are on my drafting table, ${m} of them named. ${n} ${n === 1 ? 'era is' : 'eras are'} complete.`,

@@ -1,4 +1,4 @@
-# Arch Guesser
+# Archiversal
 
 A casual architecture guessing game. Study a building's drawings and photographs on a drafting board, open
 the hints if you want them, then guess the building, its architect, its country and its era. No scores, no timers.
