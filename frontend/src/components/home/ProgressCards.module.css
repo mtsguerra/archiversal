@@ -157,10 +157,11 @@
   text-decoration: none;
 }
 
-/* A style whose buildings are all in the Library turns orange. */
+/* A style whose buildings are all in the Library fills in russet. */
 .stamps li[data-complete] {
-  border-color: var(--orange, #d2691e);
-  background: color-mix(in oklab, var(--orange, #d2691e) 18%, transparent);
+  border-color: var(--russet);
+  background: var(--russet);
+  color: var(--cream);
 }
 
 @keyframes stamp {
