@@ -96,15 +96,29 @@ export function ShareIcon(props) {
   )
 }
 
+/** An open book: its lines are written on the left page and three pages turn over the spine one after another, while it is hovered. */
+export function BookIcon(props) {
+  return (
+    <Svg {...props}>
+      <path d="M12 6.5C10 5 7 4.5 3.5 5v13c3.5-.5 6.5 0 8.5 1.5 2-1.5 5-2 8.5-1.5V5c-3.5-.5-6.5 0-8.5 1.5Z" />
+      <path d="M12 6.5v13" />
+      <path className={styles.bookLines} pathLength="1" d="M6 9h3.5M6 11.5h3.5M6 14h2.5" />
+      {[0, 1, 2].map((i) => (
+        <path key={i} className={styles.bookPage} style={{ '--i': i }} d={`M12 6.5C13.8 ${5.4 + i * 0.2} 16 ${5.1 + i * 0.2} ${18.3 - i * 0.6} ${5.5 + i * 0.2}v${11.4 - i * 0.4}c-2-.3-4.3 0-${6.3 - i * 0.6} 1.3Z`} />
+      ))}
+    </Svg>
+  )
+}
+
 /** Two sheets: on hover the lines are written again on the front one, and pressed it slides over the one behind. */
 export function CopyIcon(props) {
   return (
     <Svg {...props}>
-      <path d="M15.5 8V5.5a1.5 1.5 0 0 0-1.5-1.5H6A1.5 1.5 0 0 0 4.5 5.5V15A1.5 1.5 0 0 0 6 16.5h2.500" />
+      <path d="M15.5 8V5.5a1.5 1.5 0 0 0-1.5-1.5H6A1.5 1.5 0 0 0 4.5 5.5V15A1.5 1.5 0 0 0 6 16.5h2.5" />
       <g className={styles.copyFront}>
         <rect x="8.5" y="8" width="11.5" height="12.5" rx="1.5" />
         <path className={styles.copyLine1} pathLength="1" d="M11.5 12h5.5" />
-        <path className={styles.copyLine2} pathLength="1" d="M11.5 15.5h3.500" />
+        <path className={styles.copyLine2} pathLength="1" d="M11.5 15.5h3.5" />
       </g>
     </Svg>
   )

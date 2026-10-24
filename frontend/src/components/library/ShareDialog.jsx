@@ -121,7 +121,7 @@ export function ShareDialog({ eras, stats, onClose }) {
   const download = async () => save(new File([await toBlob()], 'archiversal-library.png', { type: 'image/png' }))
   // WhatsApp gets the picture with the shelf text and link under it: through the share sheet on touch devices, else
   // WhatsApp opens with the text typed in and the picture goes on the clipboard (inside this click, which Safari
-  // requires) to be pasted above it; the panel under the postcard says so. Nothing is downloaded.
+  // requires) to be pasted above it. The panel under the postcard says so first, and its button opens WhatsApp. Nothing is downloaded.
   const openChat = () => window.open(`https://wa.me/?text=${encodeURIComponent(text())}`, '_blank', 'noopener')
   const whatsapp = () => {
     finish.current()
@@ -134,7 +134,6 @@ export function ShareDialog({ eras, stats, onClose }) {
     if (navigator.clipboard && typeof ClipboardItem !== 'undefined') {
       navigator.clipboard.write([new ClipboardItem({ 'image/png': png })]).then(() => done('copied'), () => done('failed'))
     } else done('failed')
-    openChat()
   }
   const copy = async () => {
     try {
@@ -160,13 +159,13 @@ export function ShareDialog({ eras, stats, onClose }) {
           </button>
         )}
       </div>
-      {chat && (
+      {chat && chat !== 'copying' && (
         <div className={styles.chatNote} role="status" data-state={chat}>
           <p>
             <b>{chat === 'failed' ? t.chatFailed : t.chatCopied}</b>
             {chat === 'copied' && ` ${t.chatHow(/Mac|iPhone|iPad/.test(navigator.platform) ? '⌘V' : 'Ctrl+V')}`}
           </p>
-          <Button variant="ghost" onClick={openChat}>
+          <Button onClick={openChat}>
             {t.chatOpen}
           </Button>
         </div>

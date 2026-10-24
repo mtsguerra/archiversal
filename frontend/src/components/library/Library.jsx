@@ -62,6 +62,7 @@ export function Library() {
   const [sharing, setSharing] = useState(false)
   const [sheetEra, setSheetEra] = useState('') // the era whose study sheet is open
   const [selected, setSelected] = useState(null) // the row whose panel is open
+  const [panelSide, setPanelSide] = useState('right') // the panel opens on the side away from the plate that was chosen
   const [pair, setPair] = useState([]) // ids picked for Compare, at most two
   const [comparing, setComparing] = useState(false)
   const [note, setNote] = useState('')
@@ -402,7 +403,11 @@ export function Library() {
                             inCompare={pair.includes(r.id)}
                             inReading={reading.includes(r.id)}
                             onReading={() => setReading((l) => toggleReading(l, r.id))}
-                            onOpen={() => setSelected(r.id)}
+                            onOpen={(el) => {
+                              const box = el.getBoundingClientRect()
+                              setPanelSide(box.left + box.width / 2 > window.innerWidth / 2 ? 'left' : 'right')
+                              setSelected(r.id)
+                            }}
                             onCompare={() => toggleCompare(r.id)}
                           />
                         ))}
@@ -420,6 +425,7 @@ export function Library() {
       {open && (
         <Detail
           key={open.id}
+          side={panelSide}
           row={open}
           eraLabel={eraLabel}
           countryLabel={countryLabel}

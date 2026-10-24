@@ -1,3 +1,4 @@
+import { ArrowLeft } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { fetchBuilding } from '../../api/buildings.js'
 import { readLibrary } from '../../game/library.js'
@@ -63,6 +64,10 @@ export function LibraryBuilding() {
         </span>
       }
     >
+      <a className={styles.backLink} href="#/library">
+        <ArrowLeft aria-hidden="true" strokeWidth={2} />
+        {strings.library.backLink}
+      </a>
       <div className={appStyles.sheet}>
         {failed ? (
           <BoardStatus status="error" onRetry={() => setFailed(false)} />

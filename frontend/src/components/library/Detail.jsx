@@ -1,10 +1,37 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { formatYear } from '../../game/useEras.js'
 import { compareFacts } from '../../game/libraryView.js'
+import { thumb } from '../../game/thumb.js'
 import { useLanguage, useStrings } from '../../i18n.js'
 import { Button } from '../ui/Button.jsx'
 import { Mass, Marks } from './Marks.jsx'
 import styles from './Detail.module.css'
+
+/** Text held to two lines; when it is longer a "…" button opens the rest (and a "–" folds it back). */
+function Clamp({ children, more, less }) {
+  const box = useRef(null)
+  const [open, setOpen] = useState(false)
+  const [over, setOver] = useState(false)
+  useEffect(() => {
+    const el = box.current
+    const measure = () => !el.hasAttribute('data-open') && setOver(el.scrollHeight > el.clientHeight + 1)
+    const watch = new ResizeObserver(measure)
+    watch.observe(el)
+    return () => watch.disconnect()
+  }, [])
+  return (
+    <>
+      <div ref={box} className={styles.clamp} data-open={open || undefined}>
+        {children}
+      </div>
+      {(over || open) && (
+        <button type="button" className={styles.more} aria-expanded={open} aria-label={open ? less : more} onClick={() => setOpen((o) => !o)}>
+          {open ? '–' : '…'}
+        </button>
+      )}
+    </>
+  )
+}
 
 /**
  * The panel for one row. An unlocked building shows its facts and opens its summary; a locked one shows
@@ -12,14 +39,21 @@ import styles from './Detail.module.css'
  *
  * @param neighbours  era ids the game calls close to this one
  */
-export function Detail({ row, eraLabel, countryLabel, neighbours, inCompare, onCompare, onEra, onPlay, onClose }) {
+export function Detail({ side = 'right', row, eraLabel, countryLabel, neighbours, inCompare, onCompare, onEra, onPlay, onClose }) {
   const strings = useStrings()
   const t = strings.library
   const root = useRef(null)
   useEffect(() => root.current?.focus(), [row.id])
+  const [failedId, setFailedId] = useState(null) // the row whose photo did not load: the drawing stays
+  const photoFailed = failedId === row.id
+  const near = neighbours.map((id) => (
+    <button key={id} type="button" onClick={() => onEra(id)}>
+      {eraLabel(id)}
+    </button>
+  ))
 
   return (
-    <aside ref={root} tabIndex={-1} className={styles.panel} aria-label={row.open ? row.name : t.notMet} onKeyDown={(e) => e.key === 'Escape' && onClose()}>
+    <aside ref={root} tabIndex={-1} className={styles.panel} data-side={side} aria-label={row.open ? row.name : t.notMet} onKeyDown={(e) => e.key === 'Escape' && onClose()}>
       <button type="button" className={styles.close} onClick={onClose} aria-label={t.close}>
         ×
       </button>
@@ -27,25 +61,62 @@ export function Detail({ row, eraLabel, countryLabel, neighbours, inCompare, onC
         {row.no} · {eraLabel(row.era)}
       </span>
       <div className={styles.pic} data-locked={!row.open || undefined}>
-        <Mass era={row.era} className={styles.picMass} />
+        {row.open && row.photo && !photoFailed ? (
+          <img className={styles.picPhoto} src={thumb(row.photo)} alt="" decoding="async" onError={() => setFailedId(row.id)} />
+        ) : (
+          <Mass era={row.era} className={styles.picMass} />
+        )}
       </div>
       {row.open ? (
         <>
           <h2 className={styles.name}>{row.name}</h2>
           <dl className={styles.facts}>
-            <dt>{t.detail.architect}</dt>
-            <dd>{row.architects.join(', ')}</dd>
-            <dt>{t.detail.country}</dt>
-            <dd>{countryLabel(row.countryCode)}</dd>
-            <dt>{t.detail.completed}</dt>
-            <dd>{row.yearCompleted == null ? '–' : formatYear(row.yearCompleted, strings.years)}</dd>
-            <dt>{t.detail.marks}</dt>
-            <dd>
-              <Marks row={row} t={t} /> {row.mastered ? t.mastered : t.revealed}
-            </dd>
-            <dt>{t.detail.met}</dt>
-            <dd>{t.met(row.at, t.modes[row.mode])}</dd>
+            <div className={styles.fact}>
+              <dt>{t.detail.architect}</dt>
+              <dd>
+                <Clamp more={t.showAll} less={t.showLess}>
+                  {row.architects.join(', ')}
+                </Clamp>
+              </dd>
+            </div>
+            <div className={styles.fact}>
+              <dt>{t.detail.country}</dt>
+              <dd>
+                <Clamp more={t.showAll} less={t.showLess}>
+                  {countryLabel(row.countryCode)}
+                </Clamp>
+              </dd>
+            </div>
+            <div className={styles.fact}>
+              <dt>{t.detail.completed}</dt>
+              <dd>{row.yearCompleted == null ? '–' : formatYear(row.yearCompleted, strings.years)}</dd>
+            </div>
+            <div className={styles.fact}>
+              <dt>{t.detail.marks}</dt>
+              <dd>
+                <Marks row={row} t={t} /> {row.mastered ? t.mastered : t.revealed}
+              </dd>
+            </div>
+            <div className={styles.fact}>
+              <dt>{t.detail.met}</dt>
+              <dd>
+                {row.at}
+                <br />
+                {t.modes[row.mode]}
+              </dd>
+            </div>
+            {neighbours.length > 0 && (
+              <div className={styles.fact}>
+                <dt>{t.neighbours}</dt>
+                <dd>
+                  <Clamp more={t.showAll} less={t.showLess}>
+                    <span className={styles.chips}>{near}</span>
+                  </Clamp>
+                </dd>
+              </div>
+            )}
           </dl>
+          {neighbours.length > 0 && <p className={styles.text}>{t.neighboursNote}</p>}
         </>
       ) : (
         <>
@@ -53,16 +124,10 @@ export function Detail({ row, eraLabel, countryLabel, neighbours, inCompare, onC
           <p className={styles.text}>{t.notMetText}</p>
         </>
       )}
-      {neighbours.length > 0 && (
+      {!row.open && neighbours.length > 0 && (
         <div className={styles.near}>
           <span className={styles.eyebrow}>{t.neighbours}</span>
-          <div className={styles.chips}>
-            {neighbours.map((id) => (
-              <button key={id} type="button" onClick={() => onEra(id)}>
-                {eraLabel(id)}
-              </button>
-            ))}
-          </div>
+          <div className={styles.chips}>{near}</div>
           <p className={styles.text}>{t.neighboursNote}</p>
         </div>
       )}

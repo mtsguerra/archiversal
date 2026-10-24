@@ -118,7 +118,7 @@
   max-width: 100%;
 }
 
-/* The postmark drawing is a mask, so it takes the accent colour in both themes; the word sits in its ring below the little logo. */
+/* The postmark drawing is a mask, so it takes the stamp's own red in both themes; the word sits in its ring below the little logo. */
 .stamp {
   position: absolute;
   right: var(--space-2);
@@ -130,7 +130,7 @@
   aspect-ratio: 183 / 185;
   padding-top: 13%;
   background: radial-gradient(circle at 49% 49%, color-mix(in srgb, var(--sheet) 90%, transparent) 0 24.5%, transparent 25%);
-  color: var(--accent);
+  color: #bf0000; /* the red of the stamp as it was drawn */
   rotate: -8deg;
   animation: stamp 0.5s cubic-bezier(0.34, 1.4, 0.5, 1) 0.3s both;
 }
@@ -155,9 +155,9 @@
 
 .stamp time {
   position: relative;
-  font-size: 0.5rem;
+  font-size: 0.4375rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   font-variant-numeric: tabular-nums;
 }
 

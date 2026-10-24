@@ -38,7 +38,7 @@ export function Plate({ row, t, meta, eraLabel, selected, inCompare, inReading, 
   const label = row.open ? row.name : `${row.no}, ${t.locked}`
   return (
     <article className={styles.plate} data-locked={!row.open || undefined} data-selected={selected || undefined} data-mastered={row.mastered || undefined}>
-      <button type="button" className={styles.plateOpen} onClick={onOpen} aria-label={label}>
+      <button type="button" className={styles.plateOpen} onClick={(e) => onOpen(e.currentTarget)} aria-label={label}>
         <span className={styles.plateNo}>{row.no}</span>
         <span className={styles.plateArt}>
           <PlateArt era={row.era} />

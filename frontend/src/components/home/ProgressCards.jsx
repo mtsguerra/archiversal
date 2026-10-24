@@ -5,7 +5,7 @@ import { dailyNumber, readDaily, readLate } from '../../game/daily.js'
 import { lastWeek, readProgress, streakLength } from '../../game/progress.js'
 import { eraName } from '../../game/useEras.js'
 import { useLanguage, useStrings } from '../../i18n.js'
-import buttonStyles from '../ui/Button.module.css'
+import { BookIcon } from '../ui/InstrumentIcons.jsx'
 import { readLibrary } from '../../game/library.js'
 import styles from './ProgressCards.module.css'
 
@@ -102,7 +102,8 @@ export function LibraryCard({ total }) {
         <span>{t.title}</span>
       </div>
       <p className={styles.libraryText}>{total ? t.text(unlocked, total) : ''}</p>
-      <a className={`${buttonStyles.button} ${buttonStyles.ghost}`} href="#/library">
+      <a className={styles.openLibrary} href="#/library" data-sound="start">
+        <BookIcon className={styles.book} />
         <span>{t.open}</span>
       </a>
     </section>

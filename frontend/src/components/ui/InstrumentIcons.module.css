@@ -363,6 +363,63 @@
   transform: translate(-2.5px, -2.5px);
 }
 
+/* Book: only while the button is hovered or focused do three pages turn over the spine in turn, round after round, and the lines on the left are written again. */
+.bookPage {
+  fill: currentColor;
+  fill-opacity: 0.28;
+  stroke-width: 1.2;
+  transform-box: view-box;
+  transform-origin: 12px 12px;
+  opacity: 0;
+}
+
+.bookLines {
+  stroke-dasharray: 1;
+}
+
+:global(:is(button, a, [data-motion]):hover) .bookPage,
+:global(:is(button, a, [data-motion]):is(:focus-visible)) .bookPage {
+  animation: pageTurn 1.5s ease-in-out calc(var(--i) * 0.12s) infinite;
+}
+
+:global(:is(button, a, [data-motion]):hover) .bookLines,
+:global(:is(button, a, [data-motion]):is(:focus-visible)) .bookLines {
+  animation: bookWrite 1.5s ease-out infinite;
+}
+
+@keyframes bookWrite {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  30%,
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pageTurn {
+  0% {
+    opacity: 0;
+    transform: scaleX(1);
+  }
+  4% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  24% {
+    transform: scaleX(0);
+  }
+  44%,
+  88% {
+    opacity: 1;
+    transform: scaleX(-1);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleX(-1);
+  }
+}
+
 /* The veil over the sheet. */
 .veil {
   fill: currentColor;
@@ -428,6 +485,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .bookPage,
+  .bookLines,
   .copyFront,
   .copyLine1,
   .copyLine2,

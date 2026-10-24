@@ -1,16 +1,16 @@
 import { useSyncExternalStore } from 'react'
 
 // Small sounds made with the Web Audio API (no files), one per moment of the game and its menus,
-// chosen on the sound board. Off until the player turns it on, and
-// the choice is remembered. The audio context is created on the first sound, after a tap, as
+// chosen on the sound board. On from the first visit (the browser still waits for a first tap before it
+// plays anything), and a choice to turn it off is remembered. The audio context is created on the first sound, after a tap, as
 // browsers require.
 const KEY = 'archiversal:sound'
 
-let on = false
+let on = true
 try {
-  on = localStorage.getItem(KEY) === 'on'
+  on = localStorage.getItem(KEY) !== 'off'
 } catch {
-  // Storage blocked: starts off, not remembered.
+  // Storage blocked: stays on, the choice is not remembered.
 }
 
 let context = null
