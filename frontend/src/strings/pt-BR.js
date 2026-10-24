@@ -256,7 +256,7 @@ export default {
     noneLocked: 'Nada está trancado aqui. Todos os edifícios desta vista são seus.',
     compare: { add: 'Adicionar à comparação', remove: 'Tirar da comparação', button: (n) => `Comparar (${n}/2)`, title: 'Comparar', same: 'Mesma escala, lado a lado', yearsApart: 'anos de diferença', kmApart: 'km de distância', era: 'Mesma era', country: 'Mesmo país', architect: 'Mesmo arquiteto', yes: 'sim', no: 'não', pick: 'Comparar edifícios', note: 'Os centros dos países, em linha reta.' },
     rail: { label: 'Mapa e progresso', show: 'Mostrar o mapa e o progresso' },
-    globe: { title: 'Onde no mundo', hint: 'Arraste para girar. Selecione um país para filtrar por ele.', aria: (n) => `Globo com ${n} países em que você tem edifícios`, country: (name, n) => `${name}: ${n}` },
+    globe: { zoom: 'Zoom', zoomIn: 'Aproximar', zoomOut: 'Afastar', title: 'Onde no mundo', hint: 'Arraste para girar, aproxime com + e −. Selecione um país para filtrar por ele.', aria: (n) => `Globo com ${n} países em que você tem edifícios`, country: (name, n) => `${name}: ${n}` },
   },
 
   language: {

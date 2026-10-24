@@ -1,9 +1,9 @@
-import { useEffect } from 'react'
+import { useEffect, useId } from 'react'
 import { animate, motion, useMotionValue, useTransform } from 'motion/react'
 import { countryName } from '../../game/countries.js'
 import { CENTROIDS } from '../../game/countryCentroids.js'
 import { SHAPES } from '../../game/countryShapes.js'
-import { C, R, graticule, silhouette } from '../../game/globe.js'
+import { C, R, graticule, silhouette, zoomFor } from '../../game/globe.js'
 import { useLanguage } from '../../i18n.js'
 import { easeOut } from '../../motion.js'
 import styles from './VeiledGlobe.module.css'
@@ -27,14 +27,18 @@ export function VeiledGlobe({ code, found }) {
   const lon = known ? centre[1] : IDLE.lon
   const latValue = useMotionValue(lat)
   const lonValue = useMotionValue(lon)
-  const path = useTransform([latValue, lonValue], ([a, b]) => graticule(a, b))
   const rings = known ? SHAPES[code] : undefined // not before the guess: the outline would give the country away
-  const shape = useTransform([latValue, lonValue], ([a, b]) => (rings?.length ? silhouette(rings, a, b) : ''))
+  const zoomTo = rings?.length ? zoomFor(rings) : 1 // a small country comes closer once found
+  const zoomValue = useMotionValue(1)
+  const clipId = `veil-${useId().replace(/:/g, '')}`
+  const path = useTransform([latValue, lonValue, zoomValue], ([a, b, z]) => graticule(a, b, z))
+  const shape = useTransform([latValue, lonValue, zoomValue], ([a, b, z]) => (rings?.length ? silhouette(rings, a, b, z) : ''))
 
   useEffect(() => {
     if (reduceMotion) {
       latValue.set(lat)
       lonValue.set(lon)
+      zoomValue.set(zoomTo)
       return undefined
     }
     // Going to the country, the globe first spins once all the way round (eastward) and ends on it.
@@ -46,8 +50,9 @@ export function VeiledGlobe({ code, found }) {
           animate(lonValue, spun, { ...SPIN, onComplete: () => lonValue.set(lon) }), // same place, so the next turn starts from a plain angle
         ]
       : [animate(latValue, lat, TURN), animate(lonValue, lon, TURN)]
+    turns.push(animate(zoomValue, zoomTo, { duration: 1.1, ease: easeOut, delay: known ? 1.7 : 0 }))
     return () => turns.forEach((t) => t.stop())
-  }, [lat, lon, known, latValue, lonValue, reduceMotion])
+  }, [lat, lon, known, zoomTo, latValue, lonValue, zoomValue, reduceMotion])
 
   const name = known ? (countryName(code, lang) ?? code) : text.hidden
 
@@ -55,9 +60,13 @@ export function VeiledGlobe({ code, found }) {
     <figure className={styles.globe}>
       <svg viewBox="0 0 200 200" className={styles.svg} role="img" aria-label={name}>
         <circle className={styles.disc} cx={C} cy={C} r={R} />
-        <motion.path className={styles.lines} d={path} />
+        <clipPath id={clipId}>
+          <circle cx={C} cy={C} r={R} />
+        </clipPath>
+        <motion.path className={styles.lines} d={path} clipPath={`url(#${clipId})`} />
         <motion.path
           className={styles.shape}
+          clipPath={`url(#${clipId})`}
           d={shape}
           initial={false}
           animate={{ opacity: rings?.length ? 1 : 0 }}

@@ -260,7 +260,7 @@ export default {
     noneLocked: 'Nothing is locked here. Every building in this view is yours.',
     compare: { add: 'Add to compare', remove: 'Remove from compare', button: (n) => `Compare (${n}/2)`, title: 'Compare', same: 'Same scale, side by side', yearsApart: 'years apart', kmApart: 'km apart', era: 'Same era', country: 'Same country', architect: 'Same architect', yes: 'yes', no: 'no', pick: 'Compare buildings', note: 'The centres of the countries, in a straight line.' },
     rail: { label: 'Map and progress', show: 'Show the map and progress' },
-    globe: { title: 'Where in the world', hint: 'Drag to turn. Select a country to filter by it.', aria: (n) => `Globe with ${n} countries you have buildings in`, country: (name, n) => `${name}: ${n}` },
+    globe: { zoom: 'Zoom', zoomIn: 'Zoom in', zoomOut: 'Zoom out', title: 'Where in the world', hint: 'Drag to turn, zoom with + and −. Select a country to filter by it.', aria: (n) => `Globe with ${n} countries you have buildings in`, country: (name, n) => `${name}: ${n}` },
   },
 
   language: {

@@ -65,6 +65,48 @@
   stroke-width: 2;
 }
 
+.zoom {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+}
+
+.zoom button {
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: var(--hairline) solid var(--paper-rule);
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.zoom button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.zoom button:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.zoom svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.country,
+.pin,
+.lines {
+  vector-effect: non-scaling-stroke;
+}
+
 .hint {
   font-size: var(--text-xs);
   color: var(--ink-soft);
