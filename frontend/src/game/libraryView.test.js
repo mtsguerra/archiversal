@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { compareFacts, completedEra, distanceKm, eraProgress, groupRows, joinRows, libraryStats, neighbourEras, passes, pickLocked } from './libraryView.js'
+import { collectionProgress, compareFacts, completedEra, distanceKm, eraFacts, eraProgress, groupRows, joinRows, libraryStats, neighbourEras, passes, pickLocked } from './libraryView.js'
 
 const rows = [
   { id: 'b-villa', name: 'Villa Savoye', architects: ['Le Corbusier'], era: 'MODERNISM', yearCompleted: 1931, countryCode: 'FR', country: 'France' },
@@ -94,5 +94,31 @@ describe('libraryView', () => {
       CLASSICAL: { total: 2, open: 1, complete: false },
       BRUTALISM: { total: 1, open: 0, complete: false },
     })
+  })
+})
+
+describe('reading list, features and collections', () => {
+  const rows = [
+    { id: 'a', era: 'X', open: true, mastered: false, name: 'Alpha Dome', architects: [], country: 'Italy', countryCode: 'IT', features: ['dome'] },
+    { id: 'b', era: 'X', open: false, mastered: false, name: 'Beta', architects: [], country: 'Italy', countryCode: 'IT', features: ['dome'] },
+    { id: 'c', era: 'Y', open: false, mastered: false, name: 'Gamma', architects: [], country: 'France', countryCode: 'FR', features: [] },
+  ]
+  it('feature search never matches a locked building', () => {
+    expect(rows.filter((r) => passes(r, { feature: 'dome' })).map((r) => r.id)).toEqual(['a'])
+  })
+  it('the reading list shows only locked buildings that were bookmarked', () => {
+    expect(rows.filter((r) => passes(r, { show: 'reading', reading: ['a', 'c'] })).map((r) => r.id)).toEqual(['c'])
+  })
+  it('Play a locked one prefers the reading list', () => {
+    expect(pickLocked(rows, '', () => 0, ['c'])).toBe('c')
+    expect(pickLocked(rows, '', () => 0, [])).toBe('b')
+  })
+  it('collections count only, and skip single-building ones', () => {
+    const p = collectionProgress(rows, { a: ['t1'], b: ['t1'], c: ['t2'] })
+    expect(p).toEqual({ t1: { total: 2, open: 1, complete: false } })
+  })
+  it('era facts come from unlocked buildings only', () => {
+    const open = [{ ...rows[0], yearCompleted: 1500 }, { ...rows[1], yearCompleted: 100 }]
+    expect(eraFacts(open, 'X')).toMatchObject({ total: 2, open: 1, from: 1500, to: 1500, features: [['dome', 1]] })
   })
 })

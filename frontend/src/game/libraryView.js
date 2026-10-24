@@ -2,6 +2,7 @@ import { CENTROIDS } from './countryCentroids.js'
 import { centuryOf } from './dates.js'
 import { CLOSE_ERAS } from './matchGuess.js'
 import { normalize } from './text.js'
+import { FEATURES_OF } from './features.js'
 
 // What the Library page shows, as plain functions over the API rows (fetchLibrary) and the unlocks (library.js).
 
@@ -14,7 +15,7 @@ export function joinRows(rows, unlocks) {
   const no = new Map(order.map((r, i) => [r.id, `A-${101 + i}`]))
   return rows.map((r) => {
     const u = unlocks[r.id]
-    return { ...r, no: no.get(r.id), open: Boolean(u), mastered: u?.mastered === true, at: u?.at ?? null, mode: u?.mode ?? null, attempts: u?.attempts ?? 0 }
+    return { ...r, features: FEATURES_OF[r.id] ?? [], no: no.get(r.id), open: Boolean(u), mastered: u?.mastered === true, at: u?.at ?? null, mode: u?.mode ?? null, attempts: u?.attempts ?? 0 }
   })
 }
 
@@ -22,12 +23,14 @@ export function joinRows(rows, unlocks) {
  * Whether a row passes the filters. A locked building shows only its era, so it never matches a name or
  * country search: a search can never be used to find out what is still locked.
  */
-export function passes(row, { era = '', country = '', show = 'all', query = '' }) {
+export function passes(row, { era = '', country = '', show = 'all', query = '', feature = '', reading = [] }) {
   if (era && row.era !== era) return false
   if (show === 'open' && !row.open) return false
   if (show === 'mastered' && !row.mastered) return false
   if (show === 'locked' && row.open) return false
-  if ((query || country) && !row.open) return false
+  if (show === 'reading' && (row.open || !reading.includes(row.id))) return false
+  if ((query || country || feature) && !row.open) return false
+  if (feature && !row.features.includes(feature)) return false
   if (country && row.countryCode !== country) return false
   if (query) {
     const hay = normalize([row.name, ...row.architects, row.country].join(' '))
@@ -99,8 +102,10 @@ export function distanceKm(codeA, codeB) {
 }
 
 /** A random locked building's id, from one era if given; null when none is left. Only the id leaves: nothing else about it is shown. */
-export function pickLocked(rows, era = '', random = Math.random) {
-  const pool = rows.filter((r) => !r.open && (!era || r.era === era))
+export function pickLocked(rows, era = '', random = Math.random, reading = []) {
+  const locked = rows.filter((r) => !r.open && (!era || r.era === era))
+  const wanted = locked.filter((r) => reading.includes(r.id))
+  const pool = wanted.length ? wanted : locked
   return pool.length ? pool[Math.floor(random() * pool.length)].id : null
 }
 
@@ -123,4 +128,41 @@ export function completedEra(catalogue, before, after, id) {
   const era = catalogue.find((b) => b.id === id)?.era
   if (!era || id in before) return null
   return catalogue.filter((b) => b.era === era).every((b) => b.id in after) ? era : null
+}
+
+/**
+ * How far each collection (a Themed theme) is complete. `themesOf` maps a building id to its theme ids; a
+ * collection with fewer than two buildings is left out. Counts only: nothing about a locked building leaks.
+ */
+export function collectionProgress(rows, themesOf) {
+  const out = {}
+  for (const r of rows) {
+    for (const id of themesOf[r.id] ?? []) {
+      out[id] ??= { total: 0, open: 0, complete: false }
+      out[id].total++
+      if (r.open) out[id].open++
+    }
+  }
+  for (const [id, p] of Object.entries(out)) {
+    if (p.total < 2) delete out[id]
+    else p.complete = p.open === p.total
+  }
+  return out
+}
+
+/** What a study sheet says about an era, from the buildings unlocked in it (the rest stay out of it). */
+export function eraFacts(rows, era) {
+  const mine = rows.filter((r) => r.era === era)
+  const open = mine.filter((r) => r.open)
+  const years = open.map((r) => r.yearCompleted).filter((y) => y != null)
+  const count = (list) => Object.entries(list.reduce((m, x) => ({ ...m, [x]: (m[x] ?? 0) + 1 }), {})).sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
+  return {
+    total: mine.length,
+    open: open.length,
+    from: years.length ? Math.min(...years) : null,
+    to: years.length ? Math.max(...years) : null,
+    countries: [...new Set(open.map((r) => r.countryCode))],
+    architects: [...new Set(open.flatMap((r) => r.architects))],
+    features: count(open.flatMap((r) => r.features)),
+  }
 }
