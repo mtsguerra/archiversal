@@ -11,7 +11,7 @@ import { AppShell } from '../layout/AppShell.jsx'
 import { menuSlots } from '../layout/menuSlots.jsx'
 import { Button } from '../ui/Button.jsx'
 import { InfoTip } from '../ui/InfoTip.jsx'
-import { MeltSelect } from '../ui/MeltSelect.jsx'
+import { JellyRadio } from '../ui/JellyRadio.jsx'
 import { Compare, Detail } from './Detail.jsx'
 import { EraDrawing } from './EraDrawing.jsx'
 import { LibraryGlobe } from './LibraryGlobe.jsx'
@@ -169,7 +169,7 @@ export function Library() {
             </label>
             <div className={styles.field}>
               <span>{t.show}</span>
-              <MeltSelect label={t.show} options={SHOWS.map((value) => ({ value, label: t.shows[value] }))} value={show} onChange={setShow} />
+              <JellyRadio size="sm" ariaLabel={t.show} items={SHOWS.map((value) => ({ value, label: t.shows[value] }))} value={show} onChange={setShow} />
             </div>
           </div>
           {group !== 'era' && <p className={styles.hint}>{t.undiscoveredNote}</p>}

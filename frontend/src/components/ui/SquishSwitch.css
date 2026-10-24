@@ -1,0 +1,91 @@
+.squish-switch {
+  --ss-w: 76px;
+  --ss-h: 32px;
+  --ss-inset: 4px;
+  --ss-thumb: 24px;
+  --ss-thumb-w: 34px;
+  --ss-r: 10px;
+  --ss-thumb-r: 6px;
+  --ss-track: var(--chocolate);
+  --ss-thumb-color: var(--cream);
+
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.squish-switch::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+}
+
+.squish-switch[data-held] {
+  cursor: grabbing;
+}
+
+.squish-switch:focus-visible .squish-switch__track {
+  outline: 2px solid var(--cream);
+  outline-offset: 2px;
+}
+
+.squish-switch__track {
+  position: relative;
+  display: block;
+  width: var(--ss-w);
+  height: var(--ss-h);
+  border-radius: var(--ss-r);
+  border: var(--hairline) solid color-mix(in oklab, var(--rail-ink) 28%, transparent);
+  box-sizing: border-box;
+  background: color-mix(in oklab, var(--ss-track) 70%, black);
+}
+
+/* The label the thumb is not covering. */
+.squish-switch__side {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  width: calc(var(--ss-w) / 2);
+  color: var(--rail-ink-soft);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  font-stretch: var(--stretch-wide);
+  letter-spacing: 0.08em;
+}
+
+.squish-switch__side--off {
+  left: 0;
+}
+
+.squish-switch__side--on {
+  right: 0;
+}
+
+.squish-switch__thumb {
+  position: absolute;
+  top: calc(var(--ss-inset) - var(--hairline));
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: var(--ss-thumb-w);
+  height: var(--ss-thumb);
+  border-radius: var(--ss-thumb-r);
+  background: var(--ss-thumb-color);
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.35);
+  color: var(--chocolate);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  font-stretch: var(--stretch-wide);
+  letter-spacing: 0.08em;
+}

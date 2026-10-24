@@ -15,6 +15,7 @@ import { menuSlots } from '../layout/menuSlots.jsx'
 import { Button } from '../ui/Button.jsx'
 import { InfoTip } from '../ui/InfoTip.jsx'
 import { THEME_COVERS } from './themeCovers.js'
+import { JellyRadio } from '../ui/JellyRadio.jsx'
 import { DifficultyAccordion } from './DifficultyAccordion.jsx'
 import { RuinsIcon, TowerIcon } from './ThemeIcons.jsx'
 import styles from './ThemedSetup.module.css'
@@ -175,12 +176,17 @@ export function ThemedSetup() {
             placeholder={themed.menu.search}
             aria-label={themed.menu.search}
           />
-          <div className={styles.groups} role="group" aria-label={themed.menu.groupsLabel}>
-            {['all', ...Object.keys(THEME_GROUPS)].map((g) => (
-              <button key={g} type="button" className={styles.group} aria-pressed={group === g} data-sound="choose" onClick={() => setGroup(g)}>
-                {g === 'all' ? themed.menu.all : themed.menu.groups[g]}
-              </button>
-            ))}
+          <div className={styles.groups}>
+            <JellyRadio
+              radius={999}
+              gap={8}
+              activeColor="var(--accent)"
+              activeTextColor="var(--accent-ink)"
+              ariaLabel={themed.menu.groupsLabel}
+              items={['all', ...Object.keys(THEME_GROUPS)].map((g) => ({ value: g, label: g === 'all' ? themed.menu.all : themed.menu.groups[g] }))}
+              value={group}
+              onChange={setGroup}
+            />
           </div>
           <div className={styles.order} onKeyDown={(e) => e.key === 'Escape' && setSortOpen(false)}>
             <button type="button" className={styles.orderBtn} data-set={sort || undefined} aria-haspopup="listbox" aria-expanded={sortOpen} aria-label={themed.menu.sortLabel} data-sound="toggle" onClick={() => setSortOpen((o) => !o)}>

@@ -284,19 +284,19 @@ const mannerist = {
 const half = (y) => 56 * (1 - ((188 - y) / 142) ** 1.7)
 const RIDGES = [168, 146, 124, 102, 80]
 const shikhara = {
-  mass: 'M50 214V188H70V150H190V188H184C184 120 214 70 240 46C266 70 296 120 296 188H340V198H350V214Z',
+  mass: 'M50 214V188H62V150H170V188H184C184 120 214 70 240 46C266 70 296 120 296 188H340V198H350V214Z',
   strokes: [
     GROUND,
     { d: 'M50 214V198H350V214', delay: 0.4, duration: 0.5 },
     { d: 'M60 198V188H340V198', delay: 0.6, duration: 0.5 },
-    { d: 'M70 188V150H190V188', delay: 0.8, duration: 0.5 },
-    ...spread([88, 108, 152, 172], (x) => `M${x} 188V150`, 1.0, 0.06, 0.3, 'column'),
-    { d: 'M118 188V168Q130 154 142 168V188', delay: 1.2, duration: 0.4, tone: 'column' },
-    { d: 'M64 150H196', delay: 1.3, duration: 0.3 },
-    { d: 'M76 150L94 136H166L184 150', delay: 1.4, duration: 0.4 },
-    { d: 'M94 136L112 124H148L166 136', delay: 1.5, duration: 0.4 },
-    { d: 'M112 124L124 114H136L148 124', delay: 1.6, duration: 0.35 },
-    { d: 'M130 114V100M126 106H134', delay: 1.9, duration: 0.25, tone: 'accent' },
+    { d: 'M62 188V150H170V188', delay: 0.8, duration: 0.5 },
+    ...spread([80, 98, 134, 152], (x) => `M${x} 188V150`, 1.0, 0.06, 0.3, 'column'),
+    { d: 'M104 188V168Q116 154 128 168V188', delay: 1.2, duration: 0.4, tone: 'column' },
+    { d: 'M56 150H176', delay: 1.3, duration: 0.3 },
+    { d: 'M68 150L86 136H146L164 150', delay: 1.4, duration: 0.4 },
+    { d: 'M86 136L100 124H132L146 136', delay: 1.5, duration: 0.4 },
+    { d: 'M100 124L109 114H123L132 124', delay: 1.6, duration: 0.35 },
+    { d: 'M116 114V100M112 106H120', delay: 1.9, duration: 0.25, tone: 'accent' },
     { d: 'M184 188C184 120 214 70 240 46C266 70 296 120 296 188', delay: 1.0, duration: 1.0 },
     ...RIDGES.map((y, i) => ({
       d: `M${(240 - half(y)).toFixed(1)} ${y}H${(240 + half(y)).toFixed(1)}`,

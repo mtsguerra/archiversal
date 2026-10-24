@@ -20,7 +20,7 @@ import { menuSlots } from '../layout/menuSlots.jsx'
 import { InfoTip } from '../ui/InfoTip.jsx'
 import { Button } from '../ui/Button.jsx'
 import { CompassIcon, GlobeClockIcon, GlobeIcon, HourglassIcon } from '../ui/InstrumentIcons.jsx'
-import { MeltSelect } from '../ui/MeltSelect.jsx'
+import { JellyRadio } from '../ui/JellyRadio.jsx'
 import { RoundsSlider } from './RoundsSlider.jsx'
 import { Dimension } from './Dimension.jsx'
 import { Arch } from './Arch.jsx'
@@ -91,9 +91,9 @@ export function CustomSetup() {
               <span className={styles.num}>1</span>
               {custom.modeLabel}
             </h2>
-            <MeltSelect
-              label={custom.modeLabel}
-              options={MODES.map((mode) => ({ value: mode, label: custom.modes[mode], icon: MODE_ICONS[mode] }))}
+            <JellyRadio
+              ariaLabel={custom.modeLabel}
+              items={MODES.map((mode) => ({ value: mode, label: custom.modes[mode], icon: MODE_ICONS[mode] }))}
               value={config.mode}
               onChange={(mode) => set({ mode })}
             />
