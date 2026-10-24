@@ -1,0 +1,314 @@
+{
+  "edificio-a-noite-rio": {
+    "name": "Edifício A Noite",
+    "aliases": [
+      "Edifício Joseph Gire",
+      "Prédio A Noite",
+      "Edifício Rádio Nacional"
+    ],
+    "architects": [
+      {
+        "aliases": [],
+        "nationality": "francês",
+        "lifespan": "1872–1933",
+        "bio": "Arquiteto francês nascido em Le Puy-en-Velay, de produção prolífica no Brasil e na Argentina. No Rio de Janeiro também projetou o Hotel Glória e o Copacabana Palace."
+      },
+      {
+        "aliases": [
+          "Elisiário Bahiana"
+        ],
+        "nationality": "brasileiro",
+        "lifespan": "1891–1980",
+        "bio": "Arquiteto e professor carioca, conhecido por obras art déco e por trabalhos de paisagismo. Depois atuou em São Paulo, inclusive na reconstrução do Viaduto do Chá."
+      }
+    ],
+    "city": "Rio de Janeiro",
+    "style": "Art déco",
+    "photos": [
+      {
+        "alt": "Torre clara de vinte e dois andares com coroamento escalonado e aletado, erguida ao lado de uma praça e de uma estátua de bronze sobre coluna",
+        "caption": null
+      },
+      {
+        "alt": "Arranha-céu em forma de bloco, cor creme, com coroamento de pequenos volumes, visto do outro lado de uma praça ampla ao entardecer",
+        "caption": null
+      }
+    ],
+    "drawings": [],
+    "hints": [
+      "Construído no fim dos anos 1920 em concreto armado, então uma novidade, seus 22 andares o tornaram o prédio mais alto do Brasil.",
+      "Foi erguido para um jornal vespertino e depois abrigou a emissora de rádio cujos programas de auditório marcaram a era do rádio no Brasil.",
+      "Seu coarquiteto francês também projetou um famoso hotel de Copacabana; o prédio fica numa praça ao lado do porto do Rio de Janeiro."
+    ],
+    "summary": {
+      "description": "Construída entre 1927 e 1929 na Praça Mauá, junto ao porto do Rio, esta torre de 22 andares e 102 metros foi o prédio mais alto do Brasil até ser superada pelo Martinelli, em São Paulo. A fachada e as áreas comuns mostram influência art déco, e a estrutura de concreto armado deu grande impulso à engenharia brasileira.",
+      "keyFeatures": [
+        "22 andares, cerca de 102 metros de altura",
+        "Estrutura de concreto armado",
+        "Ornamentos art déco na fachada e coroamento escalonado",
+        "Mais próximo dos modelos de arranha-céus norte-americanos que dos europeus"
+      ],
+      "funFacts": [
+        "Foi a sede do jornal vespertino carioca que deu ao prédio seu nome popular.",
+        "A Rádio Nacional transmitiu dali no auge da era do rádio, com grandes cantores se apresentando em seu auditório.",
+        "Os cálculos estruturais foram do engenheiro Emílio Baumgart, que depois trabalharia no Ministério da Educação e Saúde."
+      ]
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Edif%C3%ADcio_Joseph_Gire"
+  },
+  "igreja-convento-sao-francisco-salvador": {
+    "name": "Igreja e Convento de São Francisco",
+    "aliases": [
+      "Convento de São Francisco",
+      "Igreja de São Francisco de Salvador",
+      "Igreja de São Francisco"
+    ],
+    "architects": [
+      {
+        "aliases": [
+          "Francisco Pinheiro"
+        ],
+        "nationality": "colonial português",
+        "lifespan": "séculos XVII–XVIII",
+        "bio": "Não se sabe ao certo quem foi o arquiteto da igreja; o claustro é atribuído a Francisco Pinheiro. Frades e mestres de obras da ordem franciscana a ergueram, sob a supervisão de Manoel Quaresma e depois de frei Hilário da Visitação, na tradição colonial portuguesa."
+      }
+    ],
+    "city": "Salvador",
+    "style": "Barroco colonial português",
+    "photos": [
+      {
+        "alt": "Frontaria de arenito com duas torres revestidas de azulejos, frontão central com volutas e um cruzeiro de pedra numa praça de pedras",
+        "caption": null
+      },
+      {
+        "alt": "Frontaria iluminada à noite, duas torres de cobertura piramidal ladeando um frontão com volutas e um alto cruzeiro de pedra em primeiro plano",
+        "caption": null
+      }
+    ],
+    "drawings": [],
+    "hints": [
+      "Sua fachada de arenito local, com ecos maneiristas, dá para um largo marcado por um grande cruzeiro de pedra, num centro histórico Patrimônio da Humanidade.",
+      "Um convento franciscano erguido aqui em 1587 foi destruído pelos holandeses; o atual foi iniciado em 1686 e concluído no século XVIII.",
+      "Com cerca de 55 mil azulejos, tem mais do que qualquer outra igreja da América Latina, e seu interior é famoso pela talha dourada."
+    ],
+    "summary": {
+      "description": "Os franciscanos chegaram a Salvador em 1587; depois que as invasões holandesas destruíram o primeiro convento, as obras do atual começaram em 1686 e a igreja foi concluída em 1723. Construída em arenito baiano, é um marco do barroco colonial no Brasil, com uma nave de três naves incomum entre as igrejas franciscanas do Nordeste.",
+      "keyFeatures": [
+        "Paredes, pilastras e fachada de arenito baiano",
+        "Nave de três naves com três capelas laterais de cada lado",
+        "Cerca de 55 mil azulejos, o maior número entre as igrejas da América Latina",
+        "Largo do Cruzeiro, com grande cruzeiro de pedra à frente"
+      ],
+      "funFacts": [
+        "Foi tombada pelo instituto do patrimônio nacional em 1938.",
+        "Com a vizinha igreja da Ordem Terceira, é uma das Sete Maravilhas de Origem Portuguesa no Mundo.",
+        "A igreja da Ordem Terceira ao lado foi construída em paralelo, entre 1702 e 1870."
+      ]
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Igreja_e_Convento_de_S%C3%A3o_Francisco_(Salvador)"
+  },
+  "igreja-da-candelaria-rio": {
+    "name": "Igreja de Nossa Senhora da Candelária",
+    "aliases": [
+      "Igreja da Candelária",
+      "Candelária",
+      "Igreja Nossa Senhora da Candelária"
+    ],
+    "architects": [
+      {
+        "aliases": [
+          "Roscio"
+        ],
+        "nationality": "português",
+        "lifespan": "c. 1733–1805",
+        "bio": "Engenheiro militar nascido na Madeira que atuou no sul do Brasil e foi presidente interino da capitania do Rio Grande de São Pedro. Fez os planos da nova igreja na década de 1770."
+      }
+    ],
+    "city": "Rio de Janeiro",
+    "style": "Barroco colonial português com elementos neoclássicos e neorrenascentistas",
+    "photos": [
+      {
+        "alt": "Frontaria de duas torres em granito escuro e reboco claro, com frontão triangular e uma cúpula clara ao fundo",
+        "caption": null
+      },
+      {
+        "alt": "Arcos ricamente pintados e dourados sob uma cúpula com janelas em arco e murais nos cantos",
+        "caption": null
+      }
+    ],
+    "drawings": [],
+    "hints": [
+      "A tradição conta que uma pequena capela foi prometida aqui, no início dos anos 1600, por um casal cujo navio quase naufragou numa tempestade.",
+      "Sua fachada principal é barroco colonial português com toques neoclássicos, enquanto o interior foi refeito em mármore e pintura neorrenascentistas.",
+      "Sua cúpula de pedra lioz branca, concluída em 1877 e vinda de Lisboa, foi a estrutura mais alta do Rio de Janeiro; ela fecha uma grande avenida do Centro."
+    ],
+    "summary": {
+      "description": "Projetada pelo engenheiro militar Francisco João Roscio, a igreja começou a ser erguida em 1775 e foi inaugurada, ainda inacabada, em 1811. A cúpula só ficou pronta em 1877 e o interior foi redecorado a partir de 1878 em estilo neorrenascentista, de modo que o edifício reúne várias épocas.",
+      "keyFeatures": [
+        "Fachada barroca com elementos neoclássicos e duas torres",
+        "Planta em cruz latina com cúpula sobre o transepto e três naves",
+        "Cúpula e oito estátuas em pedra lioz branca feitas em Lisboa",
+        "Interior neorrenascentista com mármore italiano e pinturas de João Zeferino da Costa"
+      ],
+      "funFacts": [
+        "A planta pode ter se inspirado na igreja do Convento de Mafra e na Basílica da Estrela, em Portugal.",
+        "As portas de bronze (c. 1901) são do escultor português António Teixeira Lopes.",
+        "Foi palco do comício das Diretas Já, em 1984, com mais de um milhão de pessoas."
+      ]
+    }
+  },
+  "palacio-do-catete-rio": {
+    "name": "Palácio do Catete",
+    "aliases": [
+      "Museu da República",
+      "Palácio Nova Friburgo",
+      "Palácio do Largo Valdetaro"
+    ],
+    "architects": [
+      {
+        "aliases": [
+          "Gustav Waehneldt"
+        ],
+        "nationality": "prussiano-alemão",
+        "lifespan": "1830–1873",
+        "bio": "Arquiteto nascido na Prússia que atuou no Rio de Janeiro. Além do palácio, projetou o Palacete do Gavião, fez alterações na Igreja da Candelária e venceu o concurso de 1852 para o Teatro Provisório."
+      }
+    ],
+    "city": "Rio de Janeiro",
+    "style": "Neoclássico brasileiro",
+    "photos": [
+      {
+        "alt": "Palacete rosado de três andares com balcões de balaústres e águias escuras de bronze no alto da platibanda, visto de uma esquina",
+        "caption": null
+      },
+      {
+        "alt": "Grande salão com painéis dourados nas paredes, arcos pintados, lustres e um grande espelho sobre um sofá verde",
+        "caption": null
+      }
+    ],
+    "drawings": [],
+    "hints": [
+      "Foi erguido a partir de 1858 como residência urbana de um barão cafeicultor nascido em Portugal, num bairro à beira-mar do Rio.",
+      "De 1897 até 1960, quando a capital se mudou para Brasília, foi a sede do governo federal e palácio presidencial.",
+      "Em 1954 o presidente Getúlio Vargas se matou num quarto do terceiro andar; hoje abriga o Museu da República."
+    ],
+    "summary": {
+      "description": "Projetado em 1858 pelo arquiteto alemão Carl Friedrich Gustav Waehneldt para o barão de Nova Friburgo, o palacete foi construído entre 1858 e 1867 e tornou-se palácio presidencial do Brasil em 1897. É apontado como exemplar da arquitetura neoclássica brasileira do fim do século XIX.",
+      "keyFeatures": [
+        "Palacete urbano neoclássico entre a Rua do Catete e a Praia do Flamengo",
+        "Esculturas alegóricas de bronze na platibanda, no lugar das águias de ferro originais",
+        "Jardins atribuídos ao paisagista Auguste Glaziou",
+        "Salões ricamente decorados, hoje parte do Museu da República"
+      ],
+      "funFacts": [
+        "O Brasil declarou guerra à Alemanha aqui em 1917 e ao Eixo em 1942.",
+        "O cardeal Eugenio Pacelli, futuro papa Pio XII, foi recebido aqui em 1934.",
+        "Foi por muito tempo conhecido como Palácio de Nova Friburgo, por causa do primeiro dono."
+      ]
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Pal%C3%A1cio_do_Catete"
+  },
+  "elevador-lacerda-salvador": {
+    "name": "Elevador Lacerda",
+    "aliases": [
+      "Parafuso",
+      "Elevador Lacerda de Salvador"
+    ],
+    "architects": [
+      {
+        "aliases": [
+          "Antônio de Lacerda",
+          "irmãos Lacerda"
+        ],
+        "nationality": "brasileiro",
+        "lifespan": "atuante nas décadas de 1860–1870",
+        "bio": "Engenheiro de uma família empresária baiana. O elevador original foi concebido e construído pelos Lacerda a partir de 1869; as torres art déco de 1930 vieram de uma reforma posterior, cujo projetista não é citado nas fontes consultadas."
+      }
+    ],
+    "city": "Salvador",
+    "style": "Art déco",
+    "photos": [
+      {
+        "alt": "Torre esguia cor de creme com janelas verticais estreitas e topo envidraçado, ligada por uma passarela a uma segunda torre na encosta, acima de uma rua",
+        "caption": null
+      },
+      {
+        "alt": "Vista da plataforma da torre superior sobre uma baía turquesa com barcos, um forte e uma escultura numa fonte lá embaixo",
+        "caption": null
+      }
+    ],
+    "drawings": [],
+    "hints": [
+      "É um elevador urbano público e foi pioneiro da ideia: liga um bairro portuário baixo à cidade histórica no alto de uma escarpa.",
+      "Sobe 72 metros em duas torres, com quatro cabines de 27 passageiros fazendo a viagem em 30 segundos; era hidráulico antes de ser eletrificado em 1906.",
+      "Uma reforma de 1930 deu às torres um ar art déco; do alto se avista a Baía de Todos os Santos e um famoso mercado de artesanato."
+    ],
+    "summary": {
+      "description": "Inaugurado em 1873 como elevador hidráulico ligando a Cidade Baixa à Cidade Alta de Salvador, foi eletrificado em 1906 e ganhou as atuais torres art déco em 1930. O elevador de 72 metros tem quatro cabines e uma das torres perfura a encosta de pedra.",
+      "keyFeatures": [
+        "72 metros de altura, duas torres",
+        "Quatro cabines de 27 passageiros, viagem de 30 segundos",
+        "Estilo art déco da reforma de 1930",
+        "Liga a Cidade Baixa à Cidade Alta"
+      ],
+      "funFacts": [
+        "Recebeu o nome de Antônio de Lacerda, diretor da Associação Comercial da Bahia.",
+        "Transportou mais de 33 mil passageiros por dia em 2019.",
+        "Foi tombado como patrimônio nacional pelo Iphan em 7 de dezembro de 2006."
+      ]
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Elevador_Lacerda"
+  },
+  "biblioteca-nacional-do-brasil-rio": {
+    "name": "Biblioteca Nacional do Brasil",
+    "aliases": [
+      "Biblioteca Nacional",
+      "Biblioteca Nacional do Rio de Janeiro",
+      "Fundação Biblioteca Nacional"
+    ],
+    "architects": [
+      {
+        "aliases": [
+          "Sousa Aguiar",
+          "Marechal Sousa Aguiar"
+        ],
+        "nationality": "brasileiro",
+        "lifespan": "1855–1935",
+        "bio": "Engenheiro militar nascido em Salvador, formado em engenharia em 1876. Foi prefeito do Distrito Federal de 1906 a 1909 e projetou o Hospital Central do Exército em poucos dias, a pedido de Floriano Peixoto."
+      }
+    ],
+    "city": "Rio de Janeiro",
+    "style": "Eclético, com elementos neoclássicos e art nouveau",
+    "photos": [
+      {
+        "alt": "Edifício ocre em forma de palácio, com pórtico de colunas, frontão esculpido e cúpula de cobre verde, atrás de uma rua arborizada",
+        "caption": null
+      },
+      {
+        "alt": "Grande escadaria dupla com tapete vermelho, guarda-corpos de ferro forjado e luminárias de bronze levando a uma porta com um busto",
+        "caption": null
+      }
+    ],
+    "drawings": [],
+    "hints": [
+      "Sua pedra fundamental foi lançada em 1905 e ele foi inaugurado em 1910, no centenário da instituição que abriga.",
+      "Seu acervo começou com uma biblioteca real trazida de Lisboa após o terremoto de 1755; hoje tem cerca de nove milhões de itens.",
+      "Considerada pela UNESCO a maior biblioteca da América Latina, fica na Cinelândia, no Rio, ao lado de um famoso teatro e do museu de belas-artes."
+    ],
+    "summary": {
+      "description": "Projetado pelo engenheiro militar Sousa Aguiar, o prédio foi erguido na Cinelândia depois da pedra fundamental de 1905 e inaugurado em 29 de outubro de 1910. Seu estilo é eclético, com elementos neoclássicos e art nouveau e ornamentos de artistas como Eliseu Visconti e os irmãos Bernardelli.",
+      "keyFeatures": [
+        "Fachada eclética com elementos neoclássicos e art nouveau",
+        "Ornamentos de Eliseu Visconti, Henrique e Rodolfo Bernardelli, Modesto Brocos e Rodolfo Amoedo",
+        "Grande escadaria interna e tetos de vitral",
+        "Forma um conjunto com o Theatro Municipal e o Museu Nacional de Belas Artes"
+      ],
+      "funFacts": [
+        "A UNESCO a considera a maior biblioteca da América Latina e a sétima maior do mundo.",
+        "O acervo começou com cerca de 60 mil volumes da biblioteca real portuguesa, trazidos em 1810 e 1811.",
+        "Eliseu Visconti desenhou o emblema da biblioteca em 1903, antes de o prédio ficar pronto."
+      ]
+    },
+    "wikipedia": "https://pt.wikipedia.org/wiki/Biblioteca_Nacional_(Brasil)"
+  }
+}
