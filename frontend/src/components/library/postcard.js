@@ -1,6 +1,6 @@
 import { silhouetteFor } from '../reveal/silhouettes.js'
 
-// The Library's postcard, drawn on a canvas (so it can be shared or saved as an image): an airmail border,
+// The Library's postcard, drawn on a canvas (so it can be shared or saved as an image): a block-printed leaf border,
 // two thirds of stamp album (one perforated stamp per completed era, with that era's drawing) and a
 // handwritten note with address lines in the last third. Colours are the site's palette.
 export const CARD_W = 1800
@@ -20,7 +20,7 @@ export const stampInk = (index) => `hsl(${HUES[index % HUES.length]} 58% ${LIGHT
 const HAND = '"Bradley Hand", "Segoe Print", "Comic Sans MS", cursive'
 const SANS = 'Archivo, "Helvetica Neue", Arial, sans-serif'
 
-const BORDER = 46
+const BORDER = 64
 const SPLIT = 1200 // the album takes x < SPLIT: two thirds of the card
 const COLS = 6
 const ROWS = 4
@@ -40,30 +40,52 @@ export function wrapLines(text, maxWidth, measure) {
   return lines
 }
 
-function airmailBorder(ctx) {
-  const tile = document.createElement('canvas')
-  tile.width = tile.height = 84
-  const p = tile.getContext('2d')
-  p.fillStyle = CARD
-  p.fillRect(0, 0, 84, 84)
-  // diagonal bands, repeated one tile to each side so the pattern tiles seamlessly
-  ;[OXBLOOD, CARD, CAMEL, CARD].forEach((color, i) => {
-    p.fillStyle = color
-    for (const shift of [-84, 0, 84]) {
-      const x = i * 21 + shift
-      p.beginPath()
-      p.moveTo(x, 0)
-      p.lineTo(x + 21, 0)
-      p.lineTo(x + 21 - 84, 84)
-      p.lineTo(x - 84, 84)
-      p.fill()
-    }
-  })
-  ctx.fillStyle = ctx.createPattern(tile, 'repeat')
+/** A leaf cut out of the band: pointed at both ends, `len` long and `wid` wide, tilted `angle` radians. */
+function leaf(ctx, cx, cy, len, wid, angle) {
+  ctx.save()
+  ctx.translate(cx, cy)
+  ctx.rotate(angle)
+  ctx.beginPath()
+  ctx.moveTo(-len / 2, 0)
+  ctx.quadraticCurveTo(0, -wid, len / 2, 0)
+  ctx.quadraticCurveTo(0, wid, -len / 2, 0)
+  ctx.fill()
+  ctx.restore()
+}
+
+/**
+ * A block-printed leaf border: a solid band round the card with a row of paper-coloured leaves cut out of it,
+ * all leaning the same way round the card, and a dot in each corner.
+ */
+function leafBorder(ctx, color) {
+  ctx.fillStyle = color
   ctx.beginPath()
   ctx.rect(0, 0, CARD_W, CARD_H)
   ctx.rect(BORDER, BORDER, CARD_W - 2 * BORDER, CARD_H - 2 * BORDER)
   ctx.fill('evenodd')
+  ctx.fillStyle = CARD
+  const len = BORDER * 1.2
+  const wid = BORDER * 0.25
+  const tilt = -0.7
+  const sides = [
+    { from: [BORDER, BORDER / 2], to: [CARD_W - BORDER, BORDER / 2], turn: 0 },
+    { from: [CARD_W - BORDER / 2, BORDER], to: [CARD_W - BORDER / 2, CARD_H - BORDER], turn: Math.PI / 2 },
+    { from: [CARD_W - BORDER, CARD_H - BORDER / 2], to: [BORDER, CARD_H - BORDER / 2], turn: Math.PI },
+    { from: [BORDER / 2, CARD_H - BORDER], to: [BORDER / 2, BORDER], turn: -Math.PI / 2 },
+  ]
+  for (const { from, to, turn } of sides) {
+    const span = Math.hypot(to[0] - from[0], to[1] - from[1])
+    const n = Math.round(span / (BORDER * 0.78))
+    for (let i = 0; i < n; i++) {
+      const t = (i + 0.5) / n
+      leaf(ctx, from[0] + (to[0] - from[0]) * t, from[1] + (to[1] - from[1]) * t, len, wid, turn + tilt)
+    }
+  }
+  for (const [x, y] of [[BORDER / 2, BORDER / 2], [CARD_W - BORDER / 2, BORDER / 2], [CARD_W - BORDER / 2, CARD_H - BORDER / 2], [BORDER / 2, CARD_H - BORDER / 2]]) {
+    ctx.beginPath()
+    ctx.arc(x, y, BORDER * 0.13, 0, Math.PI * 2)
+    ctx.fill()
+  }
 }
 
 /** One perforated stamp with the era's drawing, its number and name. */
@@ -193,7 +215,7 @@ export function drawPostcard(canvas, eras, card) {
   const ctx = canvas.getContext('2d')
   ctx.fillStyle = CARD
   ctx.fillRect(0, 0, CARD_W, CARD_H)
-  airmailBorder(ctx)
+  leafBorder(ctx, card.borderColor ?? OXBLOOD)
 
   // the album: header, six by four slots, footer
   const ax = BORDER + 44
