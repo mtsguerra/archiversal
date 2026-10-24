@@ -1,3 +1,4 @@
+import './migrateStorage.js'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import '@fontsource-variable/archivo/wdth.css'

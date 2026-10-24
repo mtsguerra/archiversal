@@ -4,7 +4,7 @@ import { useSyncExternalStore } from 'react'
 // chosen on the sound board. Off until the player turns it on, and
 // the choice is remembered. The audio context is created on the first sound, after a tap, as
 // browsers require.
-const KEY = 'arch-guesser:sound'
+const KEY = 'archiversal:sound'
 
 let on = false
 try {

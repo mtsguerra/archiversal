@@ -98,7 +98,7 @@ describe('themed sessions', () => {
     expect(t.readThemedSession().played).toEqual([]) // unsafe link filtered
     t.advanceThemedSession(next, { id: 'b2', name: 'C', wikipedia: 'https://en.wikipedia.org/wiki/C', yearCompleted: null }, false)
     expect(t.readThemedSession().played).toEqual([{ id: 'b2', name: 'C', wikipedia: 'https://en.wikipedia.org/wiki/C', year: null, solved: false }])
-    store['arch-guesser:themed-session'] = '{"theme":"X y","level":9}'
+    store['archiversal:themed-session'] = '{"theme":"X y","level":9}'
     expect(t.readThemedSession()).toBeNull()
   })
 })

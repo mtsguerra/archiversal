@@ -1,6 +1,6 @@
 // What this device has played: finished Dailies (by number) and the eras and countries of every
 // revealed building. Kept only here; read back defensively since anything can sit in localStorage.
-const KEY = 'arch-guesser:progress'
+const KEY = 'archiversal:progress'
 const LIMITS = { days: 400, eras: 60, countries: 300 }
 const empty = () => ({ days: [], eras: [], countries: [] })
 

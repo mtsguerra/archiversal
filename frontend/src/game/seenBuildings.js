@@ -1,6 +1,6 @@
 // Ids of buildings already shown in this tab, so rounds don't repeat.
 // sessionStorage can throw (privacy modes, blocked storage); the game then just forgets.
-const KEY = 'arch-guesser:seen'
+const KEY = 'archiversal:seen'
 
 export function readSeen() {
   try {

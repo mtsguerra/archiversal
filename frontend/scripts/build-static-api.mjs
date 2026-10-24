@@ -12,7 +12,7 @@ import { fileURLToPath } from 'node:url'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..')
 const buildingsFile = join(root, 'src/main/resources/data/buildings.json')
-const eraFile = join(root, 'src/main/java/com/mtsguerra/archguesser/building/Era.java')
+const eraFile = join(root, 'src/main/java/com/mtsguerra/archiversal/building/Era.java')
 const translationsDir = join(root, 'src/main/resources/data/pt-BR')
 const out = join(root, 'frontend/public/api')
 
@@ -20,7 +20,7 @@ const write = (path, value) => writeFileSync(path, JSON.stringify(value))
 
 // The Spring API serializes every record component, writing null for optional ones the source
 // JSON leaves out. Read the component names from the Java records so the static files match.
-const javaDir = join(root, 'src/main/java/com/mtsguerra/archguesser/building')
+const javaDir = join(root, 'src/main/java/com/mtsguerra/archiversal/building')
 function components(record) {
   const source = readFileSync(join(javaDir, `${record}.java`), 'utf8')
   const start = source.indexOf(`record ${record}(`) + `record ${record}(`.length

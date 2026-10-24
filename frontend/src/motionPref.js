@@ -2,8 +2,8 @@ import { useSyncExternalStore } from 'react'
 
 // The first value is set before paint by public/prepaint.js (the saved choice, else the system setting);
 // this is the live part. CSS reads html[data-motion='reduced'] (postcss-motion-attr.js).
-const KEY = 'arch-guesser:motion'
-const NOTE_KEY = 'arch-guesser:motion-note'
+const KEY = 'archiversal:motion'
+const NOTE_KEY = 'archiversal:motion-note'
 
 export const isReduced = () => document.documentElement.dataset.motion === 'reduced'
 

@@ -10,8 +10,8 @@ export const MODES = ['architect', 'era', 'country', 'countryEra']
 
 export const emptyConfig = { mode: 'architect', architects: [], eras: [], countries: [], rounds: 10 }
 
-const CONFIG_KEY = 'arch-guesser:custom'
-const SESSION_KEY = 'arch-guesser:custom-session'
+const CONFIG_KEY = 'archiversal:custom'
+const SESSION_KEY = 'archiversal:custom-session'
 
 /** Buildings matching the config. Inside a filter, any pick matches; countries + eras need both. */
 export function filterPool(catalogue, { mode, architects, eras, countries }) {

@@ -1,6 +1,6 @@
 // The reading list: locked buildings the player wants to find, by id. Kept only on this device and read
 // back defensively, like the Library's unlocks.
-const KEY = 'arch-guesser:reading'
+const KEY = 'archiversal:reading'
 const LIMIT = 200
 const ID = /^[a-z0-9-]{1,80}$/
 

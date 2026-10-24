@@ -4,7 +4,7 @@ import { GUESS_FIELDS } from './matchGuess.js'
 // Daily #1 is the launch day. A day is the player's local calendar day.
 const EPOCH = Date.UTC(2026, 9, 16)
 const DAY = 86_400_000
-const KEY = 'arch-guesser:daily'
+const KEY = 'archiversal:daily'
 
 const dayStart = (date) => Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())
 export const dailyNumber = (date = new Date()) => Math.max(1, Math.round((dayStart(date) - EPOCH) / DAY) + 1)
@@ -45,7 +45,7 @@ const validResult = ({ id, outcome, fields, attempts, hintsUsed }) =>
   count(attempts) &&
   count(hintsUsed)
 
-const DAYS_KEY = 'arch-guesser:daily-days' // every finished Daily by number, today's and the ones played late
+const DAYS_KEY = 'archiversal:daily-days' // every finished Daily by number, today's and the ones played late
 
 // localStorage can throw (private modes, blocked storage); the daily then just isn't remembered.
 const readDays = () => {

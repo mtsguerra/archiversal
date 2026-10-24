@@ -49,7 +49,7 @@ describe('library', () => {
   })
 
   it('reads an empty library when storage holds garbage', () => {
-    localStorage.setItem('arch-guesser:library', '{not json')
+    localStorage.setItem('archiversal:library', '{not json')
     expect(readLibrary()).toEqual({})
   })
 })

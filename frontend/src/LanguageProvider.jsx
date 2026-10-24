@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import { LanguageContext, detectLanguage } from './i18n.js'
 import { bundles } from './strings/index.js'
 
-const STORAGE_KEY = 'arch-guesser:lang'
+const STORAGE_KEY = 'archiversal:lang'
 
 function initialLanguage() {
   let saved = null

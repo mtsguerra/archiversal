@@ -3,7 +3,7 @@
 // Names and facts are not stored: they come from the API in the current language (api fetchLibrary).
 import { emptyConfig, startSession } from './custom.js'
 
-const KEY = 'arch-guesser:library'
+const KEY = 'archiversal:library'
 const LIMIT = 1000
 const MODES = ['normal', 'daily', 'custom', 'themed']
 const ID = /^[a-z0-9-]{1,80}$/

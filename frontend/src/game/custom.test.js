@@ -67,7 +67,7 @@ describe('a stored session is not trusted', () => {
     setItem: (k, v) => (store[k] = v),
     removeItem: (k) => delete store[k],
   }
-  const key = 'arch-guesser:custom-session'
+  const key = 'archiversal:custom-session'
   const session = (extra) => JSON.stringify({ config: emptyConfig, ids: ['a', 'b'], index: 0, played: [], ...extra })
 
   it('keeps only recap entries with a kebab-case id and an https link', () => {

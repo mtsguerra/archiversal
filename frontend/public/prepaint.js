@@ -6,11 +6,11 @@
 // It is a file, not an inline script, because the Content-Security-Policy allows only 'self' scripts.
 (() => {
   const root = document.documentElement
-  const THEME_KEY = 'arch-guesser:theme'
+  const THEME_KEY = 'archiversal:theme'
 
   let saved = null
   try {
-    saved = localStorage.getItem(THEME_KEY)
+    saved = localStorage.getItem(THEME_KEY) ?? localStorage.getItem('arch-guesser:theme') // the old name, until the app copies it over
   } catch {
     // Storage blocked: follow the system.
   }
@@ -31,7 +31,7 @@
   // "reduced" from the saved choice, else the system setting; the toggle changes it later (src/motionPref.js).
   let motion = null
   try {
-    motion = localStorage.getItem('arch-guesser:motion')
+    motion = (localStorage.getItem('archiversal:motion') ?? localStorage.getItem('arch-guesser:motion'))
   } catch {
     // Storage blocked: follow the system.
   }

@@ -40,17 +40,17 @@ describe('readDaily', () => {
   const good = { number: 5, id: 'a', outcome: 'solved', attempts: 1, hintsUsed: 0, fields: { name: 'correct', architect: 'correct', country: 'correct', era: 'correct' } }
 
   it('returns today\'s saved result and ignores another day', () => {
-    store['arch-guesser:daily'] = JSON.stringify(good)
+    store['archiversal:daily'] = JSON.stringify(good)
     expect(readDaily(5)).toEqual(good)
     expect(readDaily(6)).toBeNull()
   })
 
   it('ignores a damaged result', () => {
-    store['arch-guesser:daily'] = JSON.stringify({ ...good, fields: { name: 'correct' } })
+    store['archiversal:daily'] = JSON.stringify({ ...good, fields: { name: 'correct' } })
     expect(readDaily(5)).toBeNull()
-    store['arch-guesser:daily'] = JSON.stringify({ ...good, outcome: '<script>' })
+    store['archiversal:daily'] = JSON.stringify({ ...good, outcome: '<script>' })
     expect(readDaily(5)).toBeNull()
-    store['arch-guesser:daily'] = 'not json'
+    store['archiversal:daily'] = 'not json'
     expect(readDaily(5)).toBeNull()
   })
 })

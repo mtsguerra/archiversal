@@ -101,7 +101,7 @@ export function fieldsFor(level, pool, building, extras = DEFAULT_EXTRAS) {
 }
 
 // A themed session is one shuffled run through ten buildings of a theme; it lives in this tab only.
-const SESSION_KEY = 'arch-guesser:themed-session'
+const SESSION_KEY = 'archiversal:themed-session'
 
 export function startThemedSession(pool, theme, level, random, extras = DEFAULT_EXTRAS) {
   const ids = shuffle(pool.map((b) => b.id), random).slice(0, THEMED_ROUNDS)
@@ -141,7 +141,7 @@ export function advanceThemedSession(session, building, solved) {
 }
 
 // The last theme and level picked, remembered between visits.
-const PICK_KEY = 'arch-guesser:themed'
+const PICK_KEY = 'archiversal:themed'
 
 export function readThemedPick() {
   const v = read(localStorage, PICK_KEY) ?? {}

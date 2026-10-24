@@ -2,7 +2,7 @@ import { flushSync } from 'react-dom'
 import { useSyncExternalStore } from 'react'
 
 // The first choice is made before paint by public/prepaint.js; this is the live part.
-const KEY = 'arch-guesser:theme'
+const KEY = 'archiversal:theme'
 const COLORS = { light: '#432818', dark: '#1f1209' } // the phone's status bar
 
 const getTheme = () => (document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light')
