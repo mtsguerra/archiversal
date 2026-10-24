@@ -456,7 +456,7 @@
   }
 
   .body {
-    grid-template-columns: 18rem minmax(0, 1fr); /* the rail (menu, then the difficulty) beside the tiles */
+    grid-template-columns: 22rem minmax(0, 1fr); /* the rail (menu, then the difficulty) beside the tiles */
     grid-template-rows: auto minmax(0, 1fr) auto;
     grid-template-areas:
       'menu frame'
