@@ -178,8 +178,12 @@ export function ThemedSetup() {
           />
           <div className={styles.groups}>
             <JellyRadio
+              size="sm"
               radius={999}
-              gap={8}
+              gap={6}
+              swell={0.06}
+              barge={0}
+              shrink={0.02}
               activeColor="var(--accent)"
               activeTextColor="var(--accent-ink)"
               ariaLabel={themed.menu.groupsLabel}
