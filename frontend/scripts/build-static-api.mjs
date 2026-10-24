@@ -169,6 +169,7 @@ const libraryRow = (b) => ({
   yearCompleted: b.yearCompleted,
   countryCode: b.location.countryCode,
   country: b.location.country,
+  photo: b.photos.find((p) => p.view === 'EXTERIOR')?.src ?? null,
 })
 write(join(out, 'library.json'), buildings.map(libraryRow))
 write(join(out, 'pt-BR', 'library.json'), buildings.map((b) => libraryRow(translations[b.id] ? translate(b, translations[b.id]) : b)))

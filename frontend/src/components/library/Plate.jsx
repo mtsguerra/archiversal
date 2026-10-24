@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Flag } from 'lucide-react'
 import { silhouetteFor } from '../reveal/silhouettes.js'
 import { Marks } from './Marks.jsx'
@@ -18,6 +19,16 @@ function PlateArt({ era }) {
   )
 }
 
+// Wikimedia serves stepped thumbnail widths; a plate needs 500px, not the 1920px the board loads.
+const small = (src) => src.replace(/(\/thumb\/.*\/)\d+px-/, '$1500px-')
+
+/** The building's photograph over the drawing; if it fails to load the drawing stays. */
+function PlatePhoto({ src }) {
+  const [failed, setFailed] = useState(false)
+  if (failed) return null
+  return <img className={styles.platePhoto} src={small(src)} alt="" loading="lazy" decoding="async" onError={() => setFailed(true)} />
+}
+
 /**
  * One building as a framed plate. Unlocked: its name, country and year, marks, and a Compare toggle.
  * Locked: the era's drawing under frosted tracing paper, and only the sheet number.
@@ -33,6 +44,7 @@ export function Plate({ row, t, meta, eraLabel, selected, inCompare, inReading, 
         <span className={styles.plateNo}>{row.no}</span>
         <span className={styles.plateArt}>
           <PlateArt era={row.era} />
+          {row.open && row.photo && <PlatePhoto src={row.photo} />}
         </span>
         {row.open ? (
           <>
