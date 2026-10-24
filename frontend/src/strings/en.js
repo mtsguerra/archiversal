@@ -277,6 +277,7 @@ export default {
       button: 'Share my shelf',
       shareImage: 'Share the postcard',
       skip: 'Skip',
+      imageCopied: 'Image copied: paste it into the chat, the link is already in the message.',
       download: 'Download the image',
       whatsapp: 'WhatsApp',
       copyText: 'Copy as text',

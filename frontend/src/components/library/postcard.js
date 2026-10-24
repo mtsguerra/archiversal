@@ -190,7 +190,10 @@ function postmark(ctx, image, cx, cy, [line1, line2], t = 1) {
   ctx.drawImage(image, -90 * MARK_RATIO, -91 * MARK_RATIO, 183 * MARK_RATIO, 185 * MARK_RATIO)
   ctx.fillStyle = OXBLOOD
   ctx.textAlign = 'center'
-  ctx.font = `900 19px ${SANS}`
+  // the date has to fit inside the ring, which a long month ("24 DE OUT.") would not at full size
+  let size = 19
+  ctx.font = `900 ${size}px ${SANS}`
+  while (ctx.measureText(line1).width > 74 && size > 11) ctx.font = `900 ${--size}px ${SANS}`
   ctx.fillText(line1, -4, 14)
   ctx.font = `800 17px ${SANS}`
   ctx.fillText(line2, -4, 34)

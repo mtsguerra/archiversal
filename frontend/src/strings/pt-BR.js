@@ -273,6 +273,7 @@ export default {
       button: 'Compartilhar minha estante',
       shareImage: 'Compartilhar o cartão-postal',
       skip: 'Pular',
+      imageCopied: 'Imagem copiada: cole na conversa, o link já está na mensagem.',
       download: 'Baixar a imagem',
       whatsapp: 'WhatsApp',
       copyText: 'Copiar como texto',

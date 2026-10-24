@@ -116,8 +116,20 @@ export function ShareDialog({ eras, stats, onClose }) {
     showToast({ text: t.saved })
   }
   const download = async () => save(new File([await toBlob()], 'archiversal-library.png', { type: 'image/png' }))
-  // a link cannot carry the picture, so WhatsApp gets the text; "Share the postcard" sends the image itself
-  const whatsapp = () => window.open(`https://wa.me/?text=${encodeURIComponent(text())}`, '_blank', 'noopener')
+  // WhatsApp gets the picture with the shelf text and link under it: through the share sheet on touch devices, else WhatsApp opens with the text typed in and the picture goes on the clipboard (inside this click, which
+  // Safari requires) to be pasted above it. Nothing is downloaded.
+  const whatsapp = () => {
+    finish.current()
+    const probe = new File([], 'archiversal-library.png', { type: 'image/png' })
+    // a computer's share sheet has no WhatsApp in it, so only touch devices (phones, tablets) go through it
+    if (matchMedia('(pointer: coarse)').matches && navigator.canShare?.({ files: [probe] })) return shareImage()
+    const png = new Promise((resolve) => canvas.current.toBlob(resolve, 'image/png'))
+    navigator.clipboard
+      ?.write([new ClipboardItem({ 'image/png': png })])
+      .then(() => showToast({ text: t.imageCopied }))
+      .catch(() => {}) // the text and link still go through
+    window.open(`https://wa.me/?text=${encodeURIComponent(text())}`, '_blank', 'noopener')
+  }
   const copy = async () => {
     try {
       await navigator.clipboard.writeText(text())
