@@ -1,9 +1,10 @@
-import { ChevronDown, ChevronRight } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { fetchLibrary } from '../../api/buildings.js'
 import { countryName } from '../../game/countries.js'
 import { playBuilding, readLibrary } from '../../game/library.js'
 import { eraProgress, groupRows, joinRows, libraryStats, neighbourEras, passes, pickLocked } from '../../game/libraryView.js'
+import { libraryEraFrom } from '../../route.js'
 import { formatYear, useEras } from '../../game/useEras.js'
 import { useLanguage, useStrings } from '../../i18n.js'
 import { AppShell } from '../layout/AppShell.jsx'
@@ -41,17 +42,16 @@ export function Library() {
   const [unlocks] = useState(readLibrary)
   const [query, setQuery] = useState('')
   const [group, setGroup] = useState('era')
-  const [era, setEra] = useState('')
+  const [era, setEra] = useState(() => libraryEraFrom(window.location.hash))
   const [country, setCountry] = useState('')
   const [show, setShow] = useState('all')
   const [selected, setSelected] = useState(null) // the row whose panel is open
   const [pair, setPair] = useState([]) // ids picked for Compare, at most two
   const [comparing, setComparing] = useState(false)
   const [note, setNote] = useState('')
-  // On wide screens each card of the side rail folds; with both folded the rail narrows to a tab and the table takes its room.
+  // On wide screens each card of the side rail folds in place.
   const [erasOpen, setErasOpen] = useState(true)
   const [globeOpen, setGlobeOpen] = useState(true)
-  const railClosed = !erasOpen && !globeOpen
 
   useEffect(() => {
     let current = true
@@ -179,7 +179,7 @@ export function Library() {
             </p>
           )}
 
-          <div className={styles.body} data-rail={railClosed ? 'closed' : 'open'}>
+          <div className={styles.body}>
             <div className={styles.actions}>
               <Button onClick={() => playLocked()}>{era ? t.randomHere : t.random}</Button>
               <Button variant="ghost" disabled={pair.length < 2} onClick={() => setComparing(true)}>
@@ -227,22 +227,6 @@ export function Library() {
                 </div>
               </section>
             </div>
-            {/* Folded: a slim tab keeps the way back. */}
-            <div className={styles.railDock}>
-              <button
-                type="button"
-                className={styles.railTab}
-                aria-label={t.rail.show}
-                onClick={() => {
-                  setErasOpen(true)
-                  setGlobeOpen(true)
-                }}
-              >
-                <ChevronRight className={styles.foldIcon} aria-hidden="true" strokeWidth={2} />
-                <span>{t.rail.label}</span>
-              </button>
-            </div>
-
             <div className={styles.tableWrap}>
               <table className={styles.table}>
                 <thead>

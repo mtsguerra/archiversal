@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { fetchLibrary } from '../../api/buildings.js'
+import { eraProgress, joinRows } from '../../game/libraryView.js'
 import { dailyNumber, readDaily, readLate } from '../../game/daily.js'
 import { lastWeek, readProgress, streakLength } from '../../game/progress.js'
 import { eraName } from '../../game/useEras.js'
-import { useStrings } from '../../i18n.js'
+import { useLanguage, useStrings } from '../../i18n.js'
 import buttonStyles from '../ui/Button.module.css'
 import { readLibrary } from '../../game/library.js'
 import styles from './ProgressCards.module.css'
@@ -53,8 +55,14 @@ export function StreakCard() {
 export function ArchiveCard({ eras, countriesTotal }) {
   const strings = useStrings()
   const t = strings.home.progress
+  const { lang } = useLanguage()
   const [progress] = useState(readProgress)
+  const [rows, setRows] = useState([])
+  useEffect(() => {
+    fetchLibrary(lang).then(setRows, () => {})
+  }, [lang])
   if (!eras?.length) return null
+  const done = eraProgress(joinRows(rows, readLibrary()))
   const found = new Set(progress.eras)
   const discovered = eras.filter((e) => found.has(e.id))
 
@@ -72,8 +80,8 @@ export function ArchiveCard({ eras, countriesTotal }) {
       {discovered.length ? (
         <ul className={styles.stamps}>
           {discovered.map((e, i) => (
-            <li key={e.id} style={{ '--i': i }}>
-              {eraName(e, strings)}
+            <li key={e.id} style={{ '--i': i }} data-complete={done[e.id]?.complete || undefined}>
+              <a href={`#/library?era=${e.id}`}>{eraName(e, strings)}</a>
             </li>
           ))}
         </ul>
