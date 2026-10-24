@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { useStrings } from '../../i18n.js'
 import { LanguageSwitch } from './LanguageSwitch.jsx'
 import { MotionToggle } from './MotionToggle.jsx'
@@ -12,6 +12,7 @@ export function Options() {
   const { options, language } = useStrings()
   const sheet = useRef(null)
   const button = useRef(null)
+  const [moved, setMoved] = useState(false) // the knobs slide once per tap
   const rows = [
     [options.sound, <SoundToggle key="s" />],
     [language.label, <LanguageSwitch key="l" />],
@@ -20,8 +21,8 @@ export function Options() {
   ]
   return (
     <>
-      <button ref={button} type="button" className={styles.button} aria-label={options.label} aria-haspopup="dialog" onClick={() => sheet.current.showModal()}>
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <button ref={button} type="button" className={styles.button} aria-label={options.label} aria-haspopup="dialog" data-moved={moved || undefined} onPointerDown={() => setMoved(true)} onClick={() => sheet.current.showModal()}>
+        <svg onAnimationEnd={() => setMoved(false)} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <path d="M4 7h9M17 7h3M4 17h3M11 17h9" />
           <circle cx="15" cy="7" r="2" />
           <circle cx="9" cy="17" r="2" />

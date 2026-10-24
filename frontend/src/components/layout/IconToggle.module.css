@@ -17,6 +17,21 @@
   background: rgb(255 230 167 / 0.12);
 }
 
+.toggle:hover .icon,
+.toggle:hover > svg {
+  animation: nudge 0.55s var(--ease-out);
+}
+
+@keyframes nudge {
+  30% {
+    rotate: -14deg;
+    scale: 1.15;
+  }
+  60% {
+    rotate: 8deg;
+  }
+}
+
 .toggle:active {
   scale: 0.94;
 }
@@ -26,6 +41,15 @@
 }
 
 .icon {
+  transform-origin: center;
+  transform-box: fill-box;
   width: 1.125rem;
   height: 1.125rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toggle:hover .icon,
+  .toggle:hover > svg {
+    animation: none;
+  }
 }

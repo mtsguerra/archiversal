@@ -29,6 +29,38 @@
   }
 }
 
+/* A tap slides the two knobs past each other, once. */
+.button circle {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.button[data-moved] circle:first-of-type {
+  animation: knobLeft 0.6s var(--ease-out);
+}
+
+.button[data-moved] circle:last-of-type {
+  animation: knobRight 0.6s var(--ease-out);
+}
+
+@keyframes knobLeft {
+  45% {
+    transform: translateX(-8px);
+  }
+}
+
+@keyframes knobRight {
+  45% {
+    transform: translateX(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button[data-moved] circle {
+    animation: none !important;
+  }
+}
+
 .sheet {
   --rail-ink: var(--ink);
   --toggle-size: 2.75rem;

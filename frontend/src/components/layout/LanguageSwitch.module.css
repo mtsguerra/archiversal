@@ -27,6 +27,16 @@
   color: var(--rail-ink);
 }
 
+.option:hover:not(.on) {
+  animation: hop 0.4s var(--ease-out);
+}
+
+@keyframes hop {
+  40% {
+    translate: 0 -2px;
+  }
+}
+
 .option:focus-visible {
   outline-color: var(--cream);
   outline-offset: 1px;
