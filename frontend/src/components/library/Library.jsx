@@ -1,4 +1,4 @@
-import { ChevronDown } from 'lucide-react'
+import { ArrowRight, ChevronDown } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { fetchBuilding, fetchCatalogue, fetchLibrary } from '../../api/buildings.js'
 import { countryName } from '../../game/countries.js'
@@ -21,6 +21,8 @@ import { JellyRadio } from '../ui/JellyRadio.jsx'
 import { Compare, Detail } from './Detail.jsx'
 import { EraDrawing } from './EraDrawing.jsx'
 import { LibraryGlobe } from './LibraryGlobe.jsx'
+import { thumb } from '../../game/thumb.js'
+import { Mass } from './Marks.jsx'
 import { EraSheet } from './EraSheet.jsx'
 import { EraStamp } from './EraStamp.jsx'
 import { Plate } from './Plate.jsx'
@@ -108,6 +110,7 @@ export function Library() {
     )
     return () => controller.abort()
   }, [loreRowId, lang, day])
+  const loreRow = joined.find((r) => r.id === loreRowId)
   const loreNow = lore?.id === loreRowId ? lore : null
   const progress = useMemo(() => eraProgress(joined), [joined])
   const eraLabel = (id) => strings.eras[id] ?? id
@@ -182,22 +185,27 @@ export function Library() {
           </div>
 
           <aside className={styles.lore} aria-label={t.lore.title}>
-            <span className={styles.loreTitle}>{t.lore.title}</span>
-            {loreRowId ? (
-              <p>
-                {loreNow ? (
-                  <>
-                    <b>{joined.find((r) => r.id === loreRowId)?.name}.</b> {loreNow.fact}{' '}
-                    <button type="button" className={styles.loreOpen} onClick={() => (window.location.hash = `#/library/${loreRowId}`)}>
-                      {t.lore.open}
-                    </button>
-                  </>
-                ) : (
-                  t.lore.loading
-                )}
-              </p>
+            {loreRow ? (
+              <>
+                <div className={styles.loreArt}>
+                  {loreRow.photo ? <img src={thumb(loreRow.photo)} alt="" loading="lazy" /> : <Mass era={loreRow.era} className={styles.loreMass} />}
+                  <span className={styles.loreNo}>№ {day}</span>
+                </div>
+                <div className={styles.loreBody}>
+                  <span className={styles.loreTitle}>{t.lore.title}</span>
+                  <h2 className={styles.loreName}>{loreRow.name}</h2>
+                  <p className={styles.loreFact}>{loreNow ? loreNow.fact : t.lore.loading}</p>
+                </div>
+                <button type="button" className={styles.loreOpen} onClick={() => (window.location.hash = `#/library/${loreRow.id}`)}>
+                  {t.lore.open}
+                  <ArrowRight aria-hidden="true" strokeWidth={2} />
+                </button>
+              </>
             ) : (
-              <p>{t.lore.none}</p>
+              <div className={styles.loreBody}>
+                <span className={styles.loreTitle}>{t.lore.title}</span>
+                <p className={styles.loreFact}>{t.lore.none}</p>
+              </div>
             )}
           </aside>
 
