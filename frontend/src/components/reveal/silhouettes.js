@@ -177,103 +177,136 @@ const palazzo = {
   ],
 }
 
-// Art Deco: a streamlined front with a curved corner, horizontal bands and a vertical sign tower.
+// Art Deco: a stepped-back tower with vertical piers, a chevron frieze, a stepped entrance and a crown of nested sunburst arches under a spire.
+const zig = (x0, x1, y, step) => `M${x0} ${y}` + Array.from({ length: (x1 - x0) / step }, () => `l${step / 2} -6l${step / 2} 6`).join('')
 const deco = {
-  mass: 'M70 214V130Q70 110 90 110H260V30H300V214Z',
+  mass: 'M110 214V120H130V84H152V54Q192 50 200 18Q208 50 248 54V84H270V120H290V214Z',
   strokes: [
     GROUND,
-    { d: 'M70 214V130Q70 110 90 110H260V214', delay: 0.4, duration: 0.8 },
-    ...spread([150, 175, 195], (y) => `M70 ${y}H260`, 0.8, 0.15, 0.5),
-    { d: 'M110 214V190H200V214', delay: 1.3, duration: 0.5, tone: 'column' },
-    { d: 'M260 214V30H300V214', delay: 1.0, duration: 0.9 },
-    ...spread([270, 280, 290], (x) => `M${x} 214V40`, 1.5, 0.1, 0.6, 'column'),
-    { d: 'M260 70H300M260 100H300', delay: 1.9, duration: 0.4 },
-    { d: 'M105 186H205', delay: 2.0, duration: 0.3, tone: 'accent' },
-    { d: 'M280 30V8', delay: 2.3, duration: 0.2, tone: 'accent' },
-    dimension(70, 300),
+    { d: 'M110 214V120H290V214', delay: 0.4, duration: 0.7 },
+    { d: 'M130 120V84H270V120', delay: 0.7, duration: 0.5 },
+    { d: 'M152 84V54H248V84', delay: 0.9, duration: 0.5 },
+    ...spread([126, 150, 174, 226, 250, 274], (x) => `M${x} 214V132`, 1.0, 0.07, 0.5, 'column'),
+    ...spread([146, 172, 228, 254], (x) => `M${x} 120V90`, 1.3, 0.07, 0.4, 'column'),
+    ...spread([174, 200, 226], (x) => `M${x} 84V60`, 1.5, 0.07, 0.4, 'column'),
+    { d: zig(110, 290, 132, 20), delay: 1.6, duration: 0.5, tone: 'accent' },
+    { d: 'M184 214V176H216V214', delay: 1.7, duration: 0.4 },
+    { d: 'M192 214V184H208V214', delay: 1.8, duration: 0.3, tone: 'column' },
+    { d: 'M158 54Q192 50 200 18Q208 50 242 54', delay: 1.9, duration: 0.4 },
+    { d: 'M172 54Q194 50 200 30Q206 50 228 54', delay: 2.0, duration: 0.35 },
+    { d: 'M186 54Q198 50 200 42Q202 50 214 54', delay: 2.1, duration: 0.3 },
+    { d: 'M200 18V2', delay: 2.3, duration: 0.3, tone: 'accent' },
+    dimension(110, 290),
   ],
 }
 
 // Manueline: a deep portal under a pointed arch, rope-twisted columns, an armillary sphere
-// and the cross of the Order of Christ, between pinnacles.
+// and the cross of the Order of Christ, between pinnacles and a scalloped cornice.
 const rope = (x, from, to) => {
   const steps = Array.from({ length: Math.round((from - to) / 18) }, (_, i) => `T${x} ${from - 18 * (i + 1)}`)
   return `M${x} ${from}Q${x + 10} ${from - 9} ${x} ${from - 18}${steps.slice(1).join('')}`
 }
+const scallops = (x0, n, y) => `M${x0} ${y}` + 'q4 -8 8 0'.repeat(n)
 const belem = {
-  mass: 'M80 214V60H96V30L104 14L112 30V60H288V30L296 14L304 30V60H320V214Z',
+  mass: 'M70 214V60H88V30L96 12L104 30V60H296V30L304 12L312 30V60H330V214Z',
   strokes: [
     GROUND,
-    { d: 'M80 214V60H320V214', delay: 0.4, duration: 0.7 },
-    { d: 'M96 60V30L104 14L112 30V60', delay: 0.8, duration: 0.5 },
-    { d: 'M288 60V30L296 14L304 30V60', delay: 0.9, duration: 0.5 },
+    { d: 'M70 214V60H330V214', delay: 0.4, duration: 0.7 },
+    { d: 'M88 60V30L96 12L104 30V60', delay: 0.8, duration: 0.5 },
+    { d: 'M296 60V30L304 12L312 30V60', delay: 0.9, duration: 0.5 },
+    { d: scallops(104, 24, 60), delay: 1.0, duration: 0.7, tone: 'accent' },
     { d: 'M150 214V130Q150 70 200 40Q250 70 250 130V214', delay: 1.0, duration: 0.8 },
     { d: 'M164 214V134Q164 88 200 62Q236 88 236 134V214', delay: 1.2, duration: 0.7 },
+    { d: 'M178 214V140Q178 106 200 86Q222 106 222 140V214', delay: 1.4, duration: 0.6, tone: 'column' },
     { d: rope(140, 214, 106), delay: 1.0, duration: 0.8, tone: 'accent' },
     { d: rope(260, 214, 106), delay: 1.1, duration: 0.8, tone: 'accent' },
-    { d: arch(110, 16, 170, 150, 8), delay: 1.6, duration: 0.4 },
-    { d: arch(290, 16, 170, 150, 8), delay: 1.7, duration: 0.4 },
-    { d: 'M190 46a10 10 0 1 0 20 0a10 10 0 1 0 -20 0M190 46Q200 30 210 46Q200 62 190 46', delay: 1.9, duration: 0.5, tone: 'column' },
+    { d: rope(84, 214, 70), delay: 1.2, duration: 0.8, tone: 'accent' },
+    { d: rope(316, 214, 70), delay: 1.3, duration: 0.8, tone: 'accent' },
+    { d: arch(114, 16, 170, 150, 8), delay: 1.6, duration: 0.4 },
+    { d: arch(286, 16, 170, 150, 8), delay: 1.7, duration: 0.4 },
+    { d: arch(114, 16, 130, 112, 8), delay: 1.8, duration: 0.4 },
+    { d: arch(286, 16, 130, 112, 8), delay: 1.9, duration: 0.4 },
+    { d: 'M190 46a10 10 0 1 0 20 0a10 10 0 1 0 -20 0M190 46Q200 30 210 46Q200 62 190 46', delay: 2.0, duration: 0.5, tone: 'column' },
     { d: 'M200 28V12M194 18H206', delay: 2.4, duration: 0.3, tone: 'accent' },
-    dimension(80, 320),
+    dimension(70, 330),
   ],
 }
 
-// Islamic and Byzantine: a domed hall with a horseshoe portal beside a tall minaret.
+// Byzantine: after Hagia Sophia, a great dome on a ring of windows between two half-domes, an arcade below and a minaret at each end.
+const byzWindows = [152, 168, 184, 200, 216, 232, 248]
 const domedMinaret = {
-  mass: 'M90 214V140H120C120 60 220 60 220 140H250V214ZM272 214V50L280 20L288 50V214Z',
+  mass: 'M70 214V160Q70 114 140 112C140 56 260 56 260 112Q330 114 330 160V214Z',
   strokes: [
     GROUND,
-    { d: 'M90 214V140H250V214', delay: 0.4, duration: 0.7 },
-    { d: 'M152 214V184C132 172 142 150 170 150C198 150 208 172 188 184V214', delay: 0.9, duration: 0.7, tone: 'column' },
-    { d: arch(112, 14, 190, 172, 8), delay: 1.2, duration: 0.4 },
-    { d: arch(228, 14, 190, 172, 8), delay: 1.3, duration: 0.4 },
-    { d: 'M120 140C120 60 220 60 220 140', delay: 1.5, duration: 0.8 },
-    { d: 'M170 80V64', delay: 2.3, duration: 0.2, tone: 'accent' },
-    { d: 'M272 214V50H288V214', delay: 0.8, duration: 0.9 },
-    { d: 'M264 100H296M266 70H294', delay: 1.6, duration: 0.4, tone: 'column' },
-    { d: 'M272 50L280 20L288 50', delay: 1.9, duration: 0.4 },
-    dimension(90, 288),
+    { d: 'M70 214V160H330V214', delay: 0.4, duration: 0.6 },
+    { d: 'M60 214L70 160M340 214L330 160', delay: 0.6, duration: 0.4, tone: 'column' },
+    ...spread([96, 124, 152, 248, 276, 304], (x) => arch(x, 14, 200, 188, 7), 0.8, 0.08, 0.35, 'column'),
+    { d: 'M184 214V178Q200 160 216 178V214', delay: 1.2, duration: 0.5 },
+    { d: 'M70 160Q70 114 140 112', delay: 1.3, duration: 0.5 },
+    { d: 'M330 160Q330 114 260 112', delay: 1.4, duration: 0.5 },
+    { d: 'M140 112C140 56 260 56 260 112', delay: 1.5, duration: 0.8 },
+    { d: byzWindows.map((x) => `M${x - 3} 112V102Q${x} 96 ${x + 3} 102V112`).join(''), delay: 1.9, duration: 0.5, tone: 'column' },
+    { d: 'M200 70V48M193 55H207', delay: 2.4, duration: 0.3, tone: 'accent' },
+    { d: 'M46 214V70H58V214', delay: 0.8, duration: 0.8 },
+    { d: 'M342 214V70H354V214', delay: 0.9, duration: 0.8 },
+    { d: 'M43 104H61M339 104H357', delay: 1.7, duration: 0.3, tone: 'column' },
+    { d: 'M46 70L52 44L58 70', delay: 2.0, duration: 0.3 },
+    { d: 'M342 70L348 44L354 70', delay: 2.1, duration: 0.3 },
+    dimension(46, 354),
   ],
 }
 
-// Mannerism: the classical rules bent: giant pilasters, a pediment inside a pediment and a
-// keystone that has slipped out of its arch.
+// Mannerism: the classical rules bent: a rusticated base, giant pilasters, mismatched window pediments,
+// a pediment inside a pediment, a keystone slipped into its arch and a triglyph dropped out of the frieze.
 const mannerist = {
-  mass: 'M80 214V110L200 66L320 110V214Z',
+  mass: 'M80 214V98L200 58L320 98V214Z',
   strokes: [
     GROUND,
     { d: 'M80 214V110H320V214', delay: 0.4, duration: 0.7 },
-    ...spread([100, 160, 240, 300], (x) => `M${x - 6} 214V110H${x + 6}V214`, 0.7, 0.12, 0.5, 'column'),
-    { d: 'M80 190H320M80 170H320', delay: 1.2, duration: 0.5 },
-    { d: 'M170 214V160Q170 130 200 130Q230 130 230 160V214', delay: 1.3, duration: 0.6, tone: 'column' },
-    { d: 'M80 110L200 66L320 110', delay: 1.7, duration: 0.6 },
-    { d: 'M170 100L200 82L230 100', delay: 2.0, duration: 0.4 },
-    { d: 'M193 140H207L204 158H196Z', delay: 2.3, duration: 0.3, tone: 'accent' },
+    { d: 'M80 202H320M80 190H320', delay: 0.7, duration: 0.5 },
+    { d: 'M110 214V202M160 214V202M240 214V202M290 202V190M130 202V190M270 202V190', delay: 0.9, duration: 0.4, tone: 'column' },
+    ...spread([100, 160, 240, 300], (x) => `M${x - 6} 190V110H${x + 6}V190`, 1.0, 0.1, 0.5, 'column'),
+    { d: 'M120 184V146H140V184M114 146H146L130 132Z', delay: 1.3, duration: 0.5 },
+    { d: 'M260 184V146H280V184M254 146Q270 130 286 146Z', delay: 1.4, duration: 0.5 },
+    { d: 'M178 214V172Q178 146 200 146Q222 146 222 172V214', delay: 1.5, duration: 0.6, tone: 'column' },
+    { d: 'M195 150H205L203 170H197Z', delay: 1.9, duration: 0.3, tone: 'accent' },
+    { d: 'M80 110V98H320V110', delay: 1.7, duration: 0.4 },
+    { d: Array.from({ length: 12 }, (_, i) => `M${95 + i * 20} 110V100`).filter((d) => !d.startsWith('M235')).join(''), delay: 1.9, duration: 0.3, tone: 'column' },
+    { d: 'M80 98L200 58L320 98', delay: 2.0, duration: 0.5 },
+    { d: 'M160 92L192 74M208 74L240 92', delay: 2.3, duration: 0.3 },
+    { d: 'M194 86a6 6 0 1 0 12 0a6 6 0 1 0 -12 0', delay: 2.5, duration: 0.25, tone: 'accent' },
+    { d: 'M235 114V124', delay: 2.5, duration: 0.2, tone: 'accent' },
     dimension(80, 320),
   ],
 }
 
-// Indic: a curving shikhara tower in tiers over a plinth, with a stepped porch.
-const half = (y) => 60 * (1 - ((198 - y) / 150) ** 1.7)
-const RIDGES = [170, 146, 122, 98, 74]
+// Indic: after Khajuraho, a curving shikhara ringed with tiers and small spires, a stepped-roof porch hall and a carved plinth.
+const half = (y) => 56 * (1 - ((188 - y) / 142) ** 1.7)
+const RIDGES = [168, 146, 124, 102, 80]
 const shikhara = {
-  mass: 'M70 214V168L105 138L140 168V198C140 120 170 70 200 48C230 70 260 120 260 198V214Z',
+  mass: 'M50 214V188H70V150H190V188H184C184 120 214 70 240 46C266 70 296 120 296 188H340V198H350V214Z',
   strokes: [
     GROUND,
-    { d: 'M70 214V198H330V214', delay: 0.4, duration: 0.5 },
-    { d: 'M70 198V168H140V198', delay: 0.7, duration: 0.5 },
-    { d: 'M76 168L105 138L134 168', delay: 0.9, duration: 0.5 },
-    { d: 'M140 198C140 120 170 70 200 48C230 70 260 120 260 198', delay: 1.0, duration: 1.0 },
+    { d: 'M50 214V198H350V214', delay: 0.4, duration: 0.5 },
+    { d: 'M60 198V188H340V198', delay: 0.6, duration: 0.5 },
+    { d: 'M70 188V150H190V188', delay: 0.8, duration: 0.5 },
+    ...spread([88, 108, 152, 172], (x) => `M${x} 188V150`, 1.0, 0.06, 0.3, 'column'),
+    { d: 'M118 188V168Q130 154 142 168V188', delay: 1.2, duration: 0.4, tone: 'column' },
+    { d: 'M64 150H196', delay: 1.3, duration: 0.3 },
+    { d: 'M76 150L94 136H166L184 150', delay: 1.4, duration: 0.4 },
+    { d: 'M94 136L112 124H148L166 136', delay: 1.5, duration: 0.4 },
+    { d: 'M112 124L124 114H136L148 124', delay: 1.6, duration: 0.35 },
+    { d: 'M130 114V100M126 106H134', delay: 1.9, duration: 0.25, tone: 'accent' },
+    { d: 'M184 188C184 120 214 70 240 46C266 70 296 120 296 188', delay: 1.0, duration: 1.0 },
     ...RIDGES.map((y, i) => ({
-      d: `M${(200 - half(y)).toFixed(1)} ${y}H${(200 + half(y)).toFixed(1)}`,
-      delay: 1.2 + i * 0.12,
-      duration: 0.35,
+      d: `M${(240 - half(y)).toFixed(1)} ${y}H${(240 + half(y)).toFixed(1)}`,
+      delay: 1.2 + i * 0.1,
+      duration: 0.3,
     })),
-    { d: 'M186 198V170H214V198', delay: 1.6, duration: 0.4, tone: 'column' },
-    { d: 'M184 56H216', delay: 2.0, duration: 0.3 },
-    { d: 'M200 48V26M196 32H204', delay: 2.3, duration: 0.3, tone: 'accent' },
-    dimension(70, 330),
+    { d: 'M228 188V166H252V188', delay: 2.0, duration: 0.3, tone: 'column' },
+    { d: 'M224 46a16 6 0 1 0 32 0a16 6 0 1 0 -32 0', delay: 2.2, duration: 0.3 },
+    { d: 'M240 40V16M235 26H245', delay: 2.4, duration: 0.3, tone: 'accent' },
+    dimension(50, 350),
   ],
 }
 
