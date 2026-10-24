@@ -210,6 +210,7 @@ export default {
   },
 
   library: {
+    nav: 'Acervo',
     heading: 'Biblioteca',
     info: {
       label: 'Sobre a Biblioteca',

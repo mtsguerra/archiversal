@@ -214,6 +214,7 @@ export default {
   },
 
   library: {
+    nav: 'Library',
     heading: 'Library',
     info: {
       label: 'About the Library',

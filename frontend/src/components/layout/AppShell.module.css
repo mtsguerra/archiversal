@@ -240,6 +240,7 @@
 }
 
 .slimLeft {
+  gap: var(--space-4);
   grid-column: 1;
   justify-self: start;
   display: flex;

@@ -32,13 +32,14 @@ function PlanMark() {
  *               while the page scrolls down and returns when it scrolls up; no box, no big name
  * @param info  slim only: a note (an InfoTip) shown beside the logo and place
  * @param menu   the slim header's left control
+ * @param library  a Library link beside it
  * @param bottomBar  'phone' or 'reveal' when a fixed bar covers the bottom of the screen (on phones only, or at every size),
  *               so the credits footer gets room above it
  * @param floating  drop the rail's strip and let the logo and controls float over the page (the home and Custom pages)
  * @param brand  'always' shows the small name in the header; 'afterHero' (the home page, which has the big
  *               drawn name in the page) shows it only once that has scrolled away
  */
-export function AppShell({ actions, place, brand = 'always', floating = false, slim = false, info, menu, bottomBar, children }) {
+export function AppShell({ actions, place, brand = 'always', floating = false, slim = false, info, menu, library, bottomBar, children }) {
   const strings = useStrings()
   const title = useHeaderTitle()
   // The rail's edge only appears once content scrolls under it.
@@ -72,7 +73,10 @@ export function AppShell({ actions, place, brand = 'always', floating = false, s
         onBlur={() => setFocused(false)}
         inert={hidden || undefined}
       >
-        <div className={styles.slimLeft}>{menu}</div>
+        <div className={styles.slimLeft}>
+          {menu}
+          {library}
+        </div>
         <span className={styles.slimGroup} data-info={info ? true : undefined}>
           <a className={styles.slimBrand} href="#/" aria-label={strings.appName} data-away={title ? true : undefined}>
             <PlanMark />

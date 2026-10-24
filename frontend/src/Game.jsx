@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import { ChevronDown } from 'lucide-react'
-import { CheckIcon, LayoutGridIcon, ShuffleIcon } from './components/ui/icons.jsx'
+import { BookIcon, CheckIcon, LayoutGridIcon, ShuffleIcon } from './components/ui/icons.jsx'
 import { dailyNumber } from './game/daily.js'
 import { clearSession, readSession, restoreSession } from './game/custom.js'
 import { clearThemedSession, readThemedSession, restoreThemedSession } from './game/themed.js'
@@ -104,7 +104,7 @@ export default function Game({ mode = 'normal' }) {
 
   // Leaving a custom session ends it at once; for a few seconds Undo puts it back where it was
   // (the building you were on, though not the guesses you had typed for it).
-  const leave = () => {
+  const leave = (to = '#/') => {
     const store = SESSIONS[mode]
     const session = store && phase !== 'done' ? store.read() : null
     if (session) {
@@ -118,7 +118,7 @@ export default function Game({ mode = 'normal' }) {
         },
       })
     }
-    window.location.hash = '#/'
+    window.location.hash = to
   }
 
   let content
@@ -149,8 +149,15 @@ export default function Game({ mode = 'normal' }) {
       bottomBar={revealed ? 'reveal' : 'phone'}
       menu={
         <span className={styles.desktopOnly}>
-          <SlimButton icon={LayoutGridIcon} onClick={leave}>
+          <SlimButton icon={LayoutGridIcon} onClick={() => leave()}>
             {strings.menu}
+          </SlimButton>
+        </span>
+      }
+      library={
+        <span className={styles.desktopOnly}>
+          <SlimButton icon={BookIcon} onClick={() => leave('#/library')}>
+            {strings.library.nav}
           </SlimButton>
         </span>
       }
@@ -171,7 +178,7 @@ export default function Game({ mode = 'normal' }) {
             view={view}
             onToggleView={toggleView}
             wikipedia={building.wikipedia}
-            onMenu={leave}
+            onMenu={() => leave()}
             onNext={daily ? () => (window.location.hash = '#/play') : round.loadNext}
             nextLabel={daily ? strings.daily.playGuesser : undefined}
             daily={daily ? { fields: round.fields, hintsUsed: round.hintsUsed } : null}
@@ -182,7 +189,7 @@ export default function Game({ mode = 'normal' }) {
       {!revealed && (
         <>
           <div className={styles.bar}>
-            <Button variant="ghost" icon={LayoutGridIcon} onClick={leave} compact className={styles.barMenu} aria-label={strings.menu}>
+            <Button variant="ghost" icon={LayoutGridIcon} onClick={() => leave()} compact className={styles.barMenu} aria-label={strings.menu}>
               {strings.menu}
             </Button>
             {phase === 'playing' && (

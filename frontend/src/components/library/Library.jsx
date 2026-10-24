@@ -109,7 +109,7 @@ export function Library() {
     <AppShell
       place={strings.places.library}
       slim
-      {...menuSlots(strings.menu)}
+      {...menuSlots(strings.menu, undefined, false)}
       info={
         <InfoTip label={t.info.label}>
           <strong>{t.info.title}</strong>
