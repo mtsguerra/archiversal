@@ -1,5 +1,8 @@
 /* The earlier Dailies: small ruled cells; a late one is stamped with a dashed ring, an on-time one filled. */
 .toggle {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
@@ -33,7 +36,8 @@
 }
 
 .panel {
-  flex-basis: 100%;
+  grid-column: 1 / -1;
+  width: 100%;
   display: grid;
   gap: var(--space-2);
   padding-top: var(--space-2);
