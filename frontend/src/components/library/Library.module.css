@@ -326,6 +326,7 @@
 }
 
 .group th {
+  cursor: pointer;
   padding: var(--space-2) var(--space-3);
   border-bottom: var(--hairline) solid var(--paper-rule);
   background: var(--paper-shade);
@@ -346,6 +347,8 @@
   font: inherit;
   text-align: left;
   cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .groupButton:focus-visible {
@@ -355,6 +358,7 @@
 
 .groupIcon {
   flex: none;
+  pointer-events: none; /* the click lands on the button, not the svg */
   width: 1rem;
   height: 1rem;
   margin-right: var(--space-2);

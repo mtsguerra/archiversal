@@ -250,8 +250,8 @@ export function Library() {
                   return (
                     <tbody key={g.key}>
                       <tr className={styles.group}>
-                        <th colSpan={8} scope="colgroup">
-                          <button type="button" className={styles.groupButton} aria-expanded={!folded.has(g.key)} onClick={() => toggleGroup(g.key)}>
+                        <th colSpan={8} scope="colgroup" onClick={() => toggleGroup(g.key)}>
+                          <button type="button" className={styles.groupButton} aria-expanded={!folded.has(g.key)}>
                             <ChevronDown className={styles.groupIcon} aria-hidden="true" strokeWidth={2} />
                             {title(g)}
                             <span className={styles.groupCount}>{group === 'era' ? t.of(progress[g.key].open, progress[g.key].total) : g.items.length}</span>
