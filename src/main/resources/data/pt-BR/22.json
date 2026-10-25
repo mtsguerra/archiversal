@@ -15,12 +15,20 @@
     "drawings": [],
     "photos": [
       {
-        "alt": "Muros baixos de pedra bruta e concreto sob um telhado listrado de rosa e branco numa encosta do deserto, com um caminho de cascalho e um cacto",
+        "alt": "Baixo conjunto no deserto de vigas de madeira vermelha e paredes de pedra bruta, com uma larga escada vermelha ao lado de uma piscina, sob uma montanha.",
+        "caption": null
+      },
+      {
+        "alt": "Longa edificação baixa de pedra e estruturas de madeira com cobertura de lona, estendida sobre um gramado verde com plantas do deserto e montanhas ao fundo.",
         "caption": null
       },
       {
         "alt": "Grande sala sob um teto inclinado de vigas de madeira, com sofás laranja embutidos, cadeiras baixas e mesas angulosas",
         "caption": "Triângulos e motivos naturais percorrem as salas."
+      },
+      {
+        "alt": "Sala de desenho com treliças de madeira marrom-avermelhada, painéis de cobertura translúcidos e mesas de trabalho com tampo laranja e luminárias.",
+        "caption": null
       }
     ],
     "hints": [
@@ -57,11 +65,23 @@
     "drawings": [],
     "photos": [
       {
+        "alt": "Dois blocos geométricos de concreto com fileiras de altas colunas quadradas sob telhados planos em balanço, vistos de uma rua com carros estacionados.",
+        "caption": null
+      },
+      {
+        "alt": "Vista de baixo para cima de uma parede de concreto coroada por colunas quadradas com padrões geométricos esculpidos sob uma ampla laje de cobertura plana.",
+        "caption": null
+      },
+      {
         "alt": "Edifício de concreto em blocos iluminado ao entardecer, com altos pilares coroados por capitéis ornamentais ao longo das paredes superiores e carros estacionados à frente",
         "caption": null
       },
       {
         "alt": "Auditório quadrado com pisos de balcões e bancos em torno de um púlpito central, tubos de órgão, paredes creme com acabamento de madeira escura e claraboias",
+        "caption": null
+      },
+      {
+        "alt": "Teto de uma sala com painéis de claraboia quadrados numa grade de faixas de madeira escura e uma saliência de reboco amarelo-claro.",
         "caption": null
       }
     ],
@@ -100,6 +120,14 @@
     "photos": [
       {
         "alt": "Frente clara de paredes inclinadas para dentro com um friso de flores estilizadas no topo, portas escuras e um tanque raso à frente",
+        "caption": null
+      },
+      {
+        "alt": "Casa baixa cor de areia com telhado piramidal escalonado e friso esculpido, atrás de um gramado verde e uma árvore de ramos pendentes.",
+        "caption": null
+      },
+      {
+        "alt": "Piscina curva em um pátio rebaixado sob uma longa viga de concreto decorada com uma fileira de ornamentos geométricos esculpidos.",
         "caption": null
       },
       {
@@ -142,6 +170,10 @@
     "photos": [
       {
         "alt": "Torre alta e esbelta com persianas horizontais cor de cobre e aletas verticais, a erguer-se num céu azul limpo",
+        "caption": null
+      },
+      {
+        "alt": "Vista aproximada dos andares superiores de uma torre, com venezianas metálicas horizontais, parede de concreto claro e um painel de cobre esverdeado com relevo geométrico.",
         "caption": null
       },
       {
@@ -189,6 +221,14 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Sede_da_Johnson_Wax",
     "drawings": [],
     "photos": [
+      {
+        "alt": "Alta torre redonda de tijolo com faixas de tubos de vidro, erguendo-se atrás de um longo edifício baixo de tijolo sob um céu azul-claro e limpo.",
+        "caption": null
+      },
+      {
+        "alt": "Paredes curvas de tijolo vermelho com faixas de vidro e uma passagem coberta apoiada em esbeltas colunas de concreto em forma de cogumelo.",
+        "caption": null
+      },
       {
         "alt": "Vista em preto e branco de uma torre esbelta de tijolo com faixas horizontais de vidro ao lado de um edifício baixo e curvo de tijolo, um grande globo e um parque de estacionamento",
         "caption": null

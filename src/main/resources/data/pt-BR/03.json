@@ -19,8 +19,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/F%C3%A1brica_Fagus",
     "drawings": [],
     "photos": [
-      { "alt": "Edifício de três andares cujas paredes de vidro dobram a esquina sem nenhum pilar de apoio", "caption": null },
-      { "alt": "Hall de escada com paredes de faixas pretas e uma escada que sobe ao lado de uma esquina envidraçada", "caption": "A escada principal, ao lado da esquina de vidro." }
+      {
+        "alt": "Bloco de três andares em tijolo amarelo cujas paredes de vidro envolvem o canto sem apoio, ao lado de uma torre com relógio e degraus baixos de entrada.",
+        "caption": null
+      },
+      {
+        "alt": "Edifícios fabris de tijolo amarelo e vidro em torno de um pátio de pedra, com uma alta chaminé, uma torre de relógio e uma árvore florida sob céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Hall de escada com paredes de faixas pretas e uma escada que sobe ao lado de uma esquina envidraçada",
+        "caption": "A escada principal, ao lado da esquina de vidro."
+      }
     ],
     "hints": [
       "Suas paredes de vidro dobram a esquina sem nenhum pilar de apoio.",
@@ -57,8 +67,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Torre_Einstein",
     "drawings": [],
     "photos": [
-      { "alt": "Torre branca, lisa e curva, coroada por uma pequena cúpula, entre árvores", "caption": null },
-      { "alt": "Grande espelho de telescópio montado em uma câmara branca de instrumentos", "caption": "Por dentro, espelhos enviam a luz do Sol por um poço até o laboratório." }
+      {
+        "alt": "Torre branca de superfície lisa e moldada, com pequenas janelas redondas e topo baixo em cúpula, com a base curva se espalhando abaixo, sob um céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Torre branca, lisa e curva, coroada por uma pequena cúpula, entre árvores",
+        "caption": null
+      },
+      {
+        "alt": "Vista para baixo de uma estreita escada em espiral de degraus de concreto arredondados, iluminada por uma luz quente vinda de cima.",
+        "caption": null
+      },
+      {
+        "alt": "Grande espelho de telescópio montado em uma câmara branca de instrumentos",
+        "caption": "Por dentro, espelhos enviam a luz do Sol por um poço até o laboratório."
+      }
     ],
     "hints": [
       "Foi construída para testar, observando o Sol, a teoria da relatividade de um famoso cientista.",
@@ -95,8 +119,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Casa_Rietveld_Schr%C3%B6der",
     "drawings": [],
     "photos": [
-      { "alt": "Pequena casa de planos brancos e cinzas sobrepostos, no fim de uma fileira de casas de tijolo", "caption": null },
-      { "alt": "Mesa simples e cadeira vermelha em uma sala com janelas em dois lados", "caption": "O andar superior, com suas janelas de esquina." }
+      {
+        "alt": "Pequena casa de planos brancos e cinzentos com finas linhas vermelhas, azuis e amarelas, no fim de uma fileira de casas comuns de tijolo.",
+        "caption": null
+      },
+      {
+        "alt": "Pequena casa de planos brancos e cinzas sobrepostos, no fim de uma fileira de casas de tijolo",
+        "caption": null
+      },
+      {
+        "alt": "Canto do andar superior sem pilar, com as duas janelas abertas sob um fino plano de teto branco com uma barra vermelha na borda.",
+        "caption": null
+      },
+      {
+        "alt": "Mesa simples e cadeira vermelha em uma sala com janelas em dois lados",
+        "caption": "O andar superior, com suas janelas de esquina."
+      }
     ],
     "hints": [
       "Seu andar superior pode ser um único espaço aberto ou ser dividido em cômodos com painéis deslizantes e giratórios.",
@@ -131,8 +169,22 @@
     "style": "Modernismo",
     "drawings": [],
     "photos": [
-      { "alt": "Ala de oficinas com uma contínua parede-cortina de vidro, ao lado de uma ala branca mais baixa", "caption": null },
-      { "alt": "Salão de reuniões com fileiras de luminárias tubulares penduradas em um teto nervurado", "caption": "O salão de reuniões." }
+      {
+        "alt": "Vista ampla de um bloco branco, uma ala de oficinas com paredes de vidro e uma ligação em ponte entre eles sobre uma rua, sob um céu azul profundo.",
+        "caption": null
+      },
+      {
+        "alt": "Ala de oficinas com uma contínua parede-cortina de vidro, ao lado de uma ala branca mais baixa",
+        "caption": null
+      },
+      {
+        "alt": "Vista de baixo de um bloco branco com sacadas salientes empilhadas, guarda-corpos finos e pequenas janelas contra um céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Salão de reuniões com fileiras de luminárias tubulares penduradas em um teto nervurado",
+        "caption": "O salão de reuniões."
+      }
     ],
     "hints": [
       "Suas alas de oficinas, salas de aula e ateliês de estudantes são ligadas por uma ponte de dois andares sobre uma rua.",
@@ -174,8 +226,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pavilh%C3%A3o_de_Barcelona",
     "drawings": [],
     "photos": [
-      { "alt": "Pavilhão baixo de paredes de pedra e vidro sob uma laje plana, ao lado de um espelho d'água", "caption": null },
-      { "alt": "Interior aberto com uma parede de ônix polido e divisórias de vidro voltadas para um espelho d'água", "caption": "Paredes independentes de ônix e vidro." }
+      {
+        "alt": "Pavilhão baixo com teto plano branco sobre colunas esbeltas, paredes de pedra e vidro, visto do outro lado de um espelho d'água raso com seixos sob céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Pavilhão baixo de paredes de pedra e vidro sob uma laje plana, ao lado de um espelho d'água",
+        "caption": null
+      },
+      {
+        "alt": "Paredes de travertino e um banco ao lado de uma esbelta coluna de aço sob um fino teto plano, abrindo-se para um jardim verde plantado.",
+        "caption": null
+      },
+      {
+        "alt": "Figura de bronze de uma mulher com os braços erguidos, em um espelho d'água preto emoldurado por paredes de mármore verde veiado, com seu reflexo abaixo.",
+        "caption": null
+      },
+      {
+        "alt": "Interior aberto com uma parede de ônix polido e divisórias de vidro voltadas para um espelho d'água",
+        "caption": "Paredes independentes de ônix e vidro."
+      }
     ],
     "hints": [
       "Foi construído para uma exposição internacional e não continha objetos expostos, apenas o próprio edifício.",
@@ -219,8 +289,22 @@
       { "label": "Corte longitudinal", "alt": "Corte de uma vasta igreja com uma cúpula central rasa sobre um anel de janelas" }
     ],
     "photos": [
-      { "alt": "Edifício com cúpula e minaretes em uma colina acima de uma cidade à beira-mar", "caption": null },
-      { "alt": "Vasto interior sob uma cúpula dourada cercada de janelas, com grandes medalhões caligráficos", "caption": "Uma cúpula cercada de janelas parece flutuar sobre a nave." }
+      {
+        "alt": "Grande igreja de cúpula clara com quatro minaretes esbeltos acima de árvores e construções baixas, sob um céu azul limpo.",
+        "caption": null
+      },
+      {
+        "alt": "Vasto interior sob uma cúpula dourada cercada de janelas, com grandes medalhões caligráficos",
+        "caption": "Uma cúpula cercada de janelas parece flutuar sobre a nave."
+      },
+      {
+        "alt": "Edifício de cúpula iluminado, com quatro minaretes brilhando na hora azul, visto por cima de telhados e de um jardim meio iluminado.",
+        "caption": null
+      },
+      {
+        "alt": "Capitel de mármore esculpido com ornamento rendilhado sobre uma coluna escura, emoldurado por mosaicos e arcos decorados.",
+        "caption": null
+      }
     ],
     "hints": [
       "Por quase mil anos, guardou o maior espaço interior do mundo.",
@@ -258,8 +342,22 @@
       { "label": "Corte da cúpula (Cigoli, c. 1613)", "alt": "Corte desenhado à mão de uma alta cúpula pontiaguda com casca interna e externa, cercado de anotações" }
     ],
     "photos": [
-      { "alt": "Enorme cúpula nervurada de telhas vermelhas, com lanterna, acima de uma cidade de telhados de terracota", "caption": null },
-      { "alt": "Nave gótica de altos arcos ogivais que leva a um octógono com cúpula", "caption": "A nave leva a um vasto cruzeiro octogonal." }
+      {
+        "alt": "Enorme cúpula nervurada de telhas vermelhas, com lanterna, acima de uma cidade de telhados de terracota",
+        "caption": null
+      },
+      {
+        "alt": "Nave gótica de altos arcos ogivais que leva a um octógono com cúpula",
+        "caption": "A nave leva a um vasto cruzeiro octogonal."
+      },
+      {
+        "alt": "Igreja revestida de mármore com uma enorme cúpula vermelha e um campanário alto e esguio, vista de uma colina ao entardecer com as luzes da cidade.",
+        "caption": null
+      },
+      {
+        "alt": "Vista de baixo de uma grande cúpula de tijolos vermelhos com uma janela redonda no tambor, paredes de mármore e uma lanterna dourada.",
+        "caption": null
+      }
     ],
     "hints": [
       "Seu construtor venceu um concurso contra o ourives Lorenzo Ghiberti.",
@@ -299,8 +397,22 @@
       { "label": "Pátio projetado (Serlio)", "alt": "Planta de um pequeno templo redondo no centro de um pátio circular cercado por colunata" }
     ],
     "photos": [
-      { "alt": "Templo redondo com um anel de colunas e uma cúpula, ao lado de um campanário", "caption": null },
-      { "alt": "Vista para cima de uma pequena cúpula de pedra cercada por estátuas em nichos em forma de concha", "caption": "Dentro da minúscula cúpula." }
+      {
+        "alt": "Templo redondo com um anel de colunas e uma cúpula, ao lado de um campanário",
+        "caption": null
+      },
+      {
+        "alt": "Vista para cima de uma pequena cúpula de pedra cercada por estátuas em nichos em forma de concha",
+        "caption": "Dentro da minúscula cúpula."
+      },
+      {
+        "alt": "Pequeno santuário redondo com cúpula, cercado por colunas de pedra e uma balaustrada, sobre degraus em um pátio estreito entre muros altos.",
+        "caption": null
+      },
+      {
+        "alt": "Santuário redondo com cúpula emoldurado por um arco de pedra e degraus, visto através de um pátio molhado cercado por prédios ocre.",
+        "caption": null
+      }
     ],
     "hints": [
       "Marca o local onde, segundo a tradição, São Pedro teria sido martirizado.",
@@ -338,8 +450,26 @@
       { "label": "Planta do segundo pavimento", "alt": "Planta de casa com terraços projetados sobre um riacho" }
     ],
     "photos": [
-      { "alt": "Casa de terraços sobrepostos em balanço sobre uma cachoeira, em um bosque", "caption": null },
-      { "alt": "Sala de estar com piso de pedra, sofás embutidos e uma parede de lareira de pedra", "caption": "A sala de estar, construída em torno do rochedo da lareira." }
+      {
+        "alt": "Casa de terraços sobrepostos em balanço sobre uma cachoeira, em um bosque",
+        "caption": null
+      },
+      {
+        "alt": "Sala de estar com piso de pedra, sofás embutidos e uma parede de lareira de pedra",
+        "caption": "A sala de estar, construída em torno do rochedo da lareira."
+      },
+      {
+        "alt": "Terraços de concreto em balanço e uma torre de pedra surgindo da floresta verde e densa, acima de uma pequena cachoeira em um riacho.",
+        "caption": null
+      },
+      {
+        "alt": "Terraço cor de creme sobre um riacho, com uma escada de aço vermelha descendo até a água ao lado de muros de pedra rústica empilhada.",
+        "caption": null
+      },
+      {
+        "alt": "Longos parapeitos horizontais de concreto empilhados sobre muros de pedra em camadas, com uma laje de cobertura em balanço e árvores nuas ao fundo.",
+        "caption": null
+      }
     ],
     "hints": [
       "Era uma casa de fim de semana para o dono de uma loja de departamentos de Pittsburgh e sua esposa.",
@@ -380,8 +510,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/%C3%93pera_de_Sydney",
     "drawings": [],
     "photos": [
-      { "alt": "Cascas brancas em forma de velas sobre um pódio junto a um porto, com arranha-céus ao fundo", "caption": null },
-      { "alt": "Grande sala de concertos com painéis de madeira no teto, fileiras de assentos e um palco", "caption": "A sala de concertos." }
+      {
+        "alt": "Cascas brancas em forma de velas sobre um amplo pódio à beira da água, sob um céu azul, com uma balsa passando.",
+        "caption": null
+      },
+      {
+        "alt": "Cascas brancas em forma de velas sobre um pódio junto a um porto, com arranha-céus ao fundo",
+        "caption": null
+      },
+      {
+        "alt": "Três abóbadas brancas em forma de casca abrindo-se para paredes de vidro, acima de uma escadaria larga de granito com pessoas sentadas.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aproximada de uma cobertura curva branca revestida de ladrilhos cerâmicos brilhantes e foscos dispostos em padrão de chevron.",
+        "caption": null
+      },
+      {
+        "alt": "Grande sala de concertos com painéis de madeira no teto, fileiras de assentos e um palco",
+        "caption": "A sala de concertos."
+      }
     ],
     "hints": [
       "Seu arquiteto venceu em 1957 um concurso internacional com 233 projetos, mas saiu antes de a obra terminar.",
@@ -418,8 +566,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Real_Gabinete_Portugu%C3%AAs_de_Leitura",
     "drawings": [],
     "photos": [
-      { "alt": "Fachada ornamentada de pedra clara, com arcos ogivais e pináculos, no fim de uma rua de paralelepípedos", "caption": null },
-      { "alt": "Alto salão de leitura forrado de estantes de madeira em vários níveis, sob uma claraboia decorada", "caption": "O salão principal de leitura." }
+      {
+        "alt": "Fachada de pedra clara neomanuelina com janelas de arco ogival esculpidas, estátuas e um portal central, ao lado de prédios antigos em uma praça de paralelepípedos.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada ornamentada de pedra clara, com arcos ogivais e pináculos, no fim de uma rua de paralelepípedos",
+        "caption": null
+      },
+      {
+        "alt": "Alto salão de leitura forrado de estantes de madeira em vários níveis, sob uma claraboia decorada",
+        "caption": "O salão principal de leitura."
+      },
+      {
+        "alt": "Vista direta para cima de uma claraboia hexagonal de vitral e um lustre, cercados por fileiras de estantes de madeira escura.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi fundado em 1837 por imigrantes portugueses, muitos deles refugiados políticos.",
@@ -456,8 +618,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Teatro_Amazonas",
     "drawings": [],
     "photos": [
-      { "alt": "Teatro rosa e branco com pórtico de colunas sob uma colorida cúpula de azulejos, ao entardecer", "caption": null },
-      { "alt": "Plateia em ferradura com fileiras de camarotes dourados voltados para um palco", "caption": "A plateia." }
+      {
+        "alt": "Teatro de ópera rosa e branco com pórtico de colunas e cúpula revestida de azulejos amarelos, verdes e azuis, atrás de um muro de pedra vermelha.",
+        "caption": null
+      },
+      {
+        "alt": "Teatro rosa e branco com pórtico de colunas sob uma colorida cúpula de azulejos, ao entardecer",
+        "caption": null
+      },
+      {
+        "alt": "Plateia em ferradura com fileiras de camarotes dourados voltados para um palco",
+        "caption": "A plateia."
+      },
+      {
+        "alt": "Vista da balaustrada dourada de um camarote, passando por uma coluna, em direção a um palco onde músicos se preparam, com teto pintado acima.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construído em plena floresta tropical, no auge de um ciclo da borracha.",

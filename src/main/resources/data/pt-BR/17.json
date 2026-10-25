@@ -31,8 +31,20 @@
         "caption": null
       },
       {
+        "alt": "Uma torre de menagem quadrada de pedra, com quatro torres de canto, ergue-se atrás de dois anéis de muralhas ameadas, com árvores verdes nos dois lados sob um céu azul-claro.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de uma fortaleza murada de pedra, com torre de menagem central, pátios internos e torres de canto à beira de um largo rio, cercada por edifícios da cidade.",
+        "caption": null
+      },
+      {
         "alt": "Capela de pedra simples, com pesadas colunas redondas, uma galeria de arcos e um altar singelo",
         "caption": "Uma capela normanda ocupa o canto sudeste da torre de menagem."
+      },
+      {
+        "alt": "Um aposento de madeira nua com parede pintada, uma grande lareira de pedra, uma cama com dossel drapejado e uma mesa coberta por uma toalha.",
+        "caption": null
       }
     ],
     "hints": [
@@ -96,6 +108,10 @@
         "caption": null
       },
       {
+        "alt": "Uma fachada gótica de pedra clara com duas altas torres de pináculos, uma grande janela ogival e um relógio, vista do outro lado de uma rua movimentada.",
+        "caption": null
+      },
+      {
         "alt": "Nave e abóbada góticas altíssimas, com lustres, olhando em direção a uma tela esculpida",
         "caption": null
       },
@@ -154,9 +170,24 @@
       }
     ],
     "photos": [
-      { "alt": "Igreja gótica escura com duas flechas vazadas altíssimas contra um céu azul intenso", "caption": null },
+      {
+        "alt": "Igreja gótica escura com duas flechas vazadas altíssimas contra um céu azul intenso",
+        "caption": null
+      },
+      {
+        "alt": "Uma catedral gótica escura vista de uma ampla praça, com uma alta torre à esquerda, uma longa lateral e a fachada triangular do transepto.",
+        "caption": null
+      },
+      {
+        "alt": "Uma igreja gótica de duas torres brilha ao lado de uma ponte de arco de aço iluminada sobre um rio ao entardecer, sob um céu azul profundo.",
+        "caption": null
+      },
       {
         "alt": "Alta abside gótica com janelas esbeltas de vidro colorido e fileiras de colunas agrupadas",
+        "caption": null
+      },
+      {
+        "alt": "Uma nave gótica muito alta, com pilares de pedra agrupados, fileiras de bancos de madeira e altos vitrais coloridos brilhando ao fundo.",
         "caption": null
       }
     ],
@@ -206,8 +237,22 @@
       }
     ],
     "photos": [
-      { "alt": "Fachada gótica de mármore claro, repleta de pináculos, estátuas e flechas altas", "caption": null },
-      { "alt": "Floresta densa de flechas de mármore coroadas por estátuas contra um céu pálido", "caption": null },
+      {
+        "alt": "Uma enorme fachada gótica de mármore claro, repleta de pináculos e estátuas, vista de uma praça ensolarada sob um céu azul limpo.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada gótica de mármore claro, repleta de pináculos, estátuas e flechas altas",
+        "caption": null
+      },
+      {
+        "alt": "Floresta densa de flechas de mármore coroadas por estátuas contra um céu pálido",
+        "caption": null
+      },
+      {
+        "alt": "A borda de um telhado inclinado, guarnecida de rendilhado de pedra vazado, diante de grupos de esbeltas agulhas de mármore contra um céu cinzento.",
+        "caption": null
+      },
       {
         "alt": "Colunas gigantes agrupadas ladeando uma nave abobadada na penumbra, com luz vinda do fundo",
         "caption": null
@@ -255,12 +300,24 @@
     "drawings": [],
     "photos": [
       {
+        "alt": "Uma torre sineira redonda de mármore branco, com andares de arcadas sobrepostos, inclina-se visivelmente para um lado acima de um gramado, com nuvens ao fundo.",
+        "caption": null
+      },
+      {
         "alt": "Campanário redondo de mármore branco, com andares de arcadas, claramente inclinado para um lado sobre um gramado verde",
+        "caption": null
+      },
+      {
+        "alt": "Uma longa igreja de mármore com cúpula cinzenta e paredes de arcadas listradas ao lado de uma torre redonda inclinada, diante de um amplo gramado verde.",
         "caption": null
       },
       {
         "alt": "Vista para baixo de uma câmara de sinos redonda, de pedra, com um grande sino de bronze e uma abertura coberta de vidro no piso",
         "caption": "A câmara dos sinos fica no alto da torre."
+      },
+      {
+        "alt": "Olhando direto para cima pelo oco interior de uma torre redonda de pedra, com uma escada, cabos e uma abertura luminosa no topo.",
+        "caption": null
       }
     ],
     "hints": [
@@ -309,8 +366,20 @@
         "caption": null
       },
       {
+        "alt": "Vista de canto de um palácio rosa e branco de padrão geométrico, com arcada no térreo e loggia superior de rendilhado circular, cheio de visitantes.",
+        "caption": null
+      },
+      {
+        "alt": "Um pátio pavimentado emoldurado por paredes de arcadas sobrepostas e uma escadaria esculpida, com uma igreja de cúpulas ao fundo.",
+        "caption": null
+      },
+      {
         "alt": "Vasto salão com teto dourado em caixotões, enormes pinturas nas paredes e piso polido",
         "caption": "O Grande Conselho se reunia num salão coberto de enormes pinturas."
+      },
+      {
+        "alt": "Um salão com teto dourado entalhado, grandes painéis pintados, bancos de madeira escura sobre um estrado elevado e um visitante observando.",
+        "caption": null
       }
     ],
     "hints": [
@@ -352,6 +421,14 @@
     "photos": [
       {
         "alt": "Ilha rochosa de maré, coroada por uma flecha de abadia iluminada em dourado, vista do outro lado das planícies de areia",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de uma ilha rochosa coroada por uma abadia de pedra com flecha, cercada por uma vila amuralhada e águas calmas ao amanhecer.",
+        "caption": null
+      },
+      {
+        "alt": "Uma ilha rochosa distante com uma abadia no topo, sobre águas azuis calmas, com uma longa passarela curva ao lado, à direita.",
         "caption": null
       },
       {
@@ -409,7 +486,18 @@
         "alt": "Grupo de cúpulas bulbosas de padrões vivos e uma torre alta acima de uma praça pavimentada",
         "caption": null
       },
-      { "alt": "Estreita passagem abobadada, com paredes e teto pintados com densos padrões florais", "caption": null }
+      {
+        "alt": "Um conjunto de cúpulas bulbosas de padrões vivos ao redor de uma alta torre revestida, visto através de uma praça pavimentada sob grandes nuvens brancas.",
+        "caption": null
+      },
+      {
+        "alt": "Vista oblíqua próxima de cúpulas bulbosas listradas e escamadas e torres de tijolo vermelho com detalhes brancos, acima de um longo muro baixo.",
+        "caption": null
+      },
+      {
+        "alt": "Estreita passagem abobadada, com paredes e teto pintados com densos padrões florais",
+        "caption": null
+      }
     ],
     "hints": [
       "Comemora a tomada de duas cidades por um temido tsar.",

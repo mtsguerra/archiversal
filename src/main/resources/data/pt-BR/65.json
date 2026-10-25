@@ -20,7 +20,19 @@
     "style": "High-tech",
     "photos": [
       {
+        "alt": "Torre de vidro inteira em forma de projétil com treliça de losangos erguendo-se atrás de uma pequena torre de igreja medieval de pedra e prédios antigos",
+        "caption": null
+      },
+      {
+        "alt": "Parte superior de uma torre de vidro com padrão espiral de painéis em losango escuros e claros, vista contra um céu azul sobre prédios de pedra",
+        "caption": null
+      },
+      {
         "alt": "Vista aérea de uma torre de vidro em forma de projétil, com treliça de losangos e faixas espirais escuras acima dos telhados da cidade",
+        "caption": null
+      },
+      {
+        "alt": "Base curva de vidro de uma torre em forma de ovo sobre apoios diagonais de aço, com vista grande angular de edifícios de escritórios próximos e céu nublado",
         "caption": null
       },
       {
@@ -77,7 +89,15 @@
         "caption": null
       },
       {
+        "alt": "Alto arranha-céu escalonado com faixas escuras e duas antenas brancas, erguendo-se entre prédios de escritórios de vidro e concreto sob céu azul profundo",
+        "caption": null
+      },
+      {
         "alt": "Arranha-céu preto altíssimo visto de baixo, com linhas verticais e partes superiores pontiagudas",
+        "caption": null
+      },
+      {
+        "alt": "Olhando para cima ao longo da face de vidro escuro e metal de uma torre muito alta com recuos escalonados, passando por uma árvore sem folhas e prédios vizinhos, sob nuvens esparsas",
         "caption": null
       }
     ],
@@ -122,11 +142,19 @@
     "style": "Contemporâneo",
     "photos": [
       {
+        "alt": "Torre alta e arredondada com um padrão pixelado de painéis de fachada azuis e vermelhos contra o céu limpo",
+        "caption": null
+      },
+      {
         "alt": "Torre em forma de projétil revestida de venezianas laranja, azuis e douradas contra um céu azul profundo",
         "caption": null
       },
       {
-        "alt": "Torre alta e arredondada com um padrão pixelado de painéis de fachada azuis e vermelhos contra o céu limpo",
+        "alt": "Torre de vidro em forma de projétil com painéis azuis e vermelhos, além de um espelho d'água, um longo edifício baixo e árvores sob um céu azul",
+        "caption": null
+      },
+      {
+        "alt": "Vista distante de uma torre em forma de projétil erguendo-se sobre uma cidade plana com uma avenida larga e trilhos de trem, vista de um ponto alto em dia de névoa",
         "caption": null
       }
     ],

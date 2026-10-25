@@ -19,11 +19,15 @@
     "style": "Modernismo minimalista em concreto",
     "photos": [
       {
+        "alt": "Parede lisa de concreto cinza com uma fenda envidraçada em forma de cruz, parcialmente escondida por sebes e uma conífera",
+        "caption": null
+      },
+      {
         "alt": "Capela de concreto aparente com bancos de madeira escura e uma cruz de luz do dia recortada na parede atrás do altar",
         "caption": null
       },
       {
-        "alt": "Parede lisa de concreto cinza com uma fenda envidraçada em forma de cruz, parcialmente escondida por sebes e uma conífera",
+        "alt": "Vista em preto e branco de um canto de uma sala de concreto nu, onde frestas estreitas de luz do dia formam uma cruz em duas paredes.",
         "caption": null
       }
     ],
@@ -66,7 +70,15 @@
     "style": "Contemporâneo",
     "photos": [
       {
+        "alt": "Edifício branco e anguloso com telhado de pedra inclinado, fachada de vidro inclinada e pessoas caminhando na praça pavimentada junto à água.",
+        "caption": null
+      },
+      {
         "alt": "Edifício branco anguloso com paredes de vidro iluminadas ao entardecer, cujo telhado inclinado desce até a água",
+        "caption": null
+      },
+      {
+        "alt": "Ampla rampa de pedra branca que sobe de uma praça pavimentada ao lado de uma parede de vidro, com o porto e prédios antigos ao fundo.",
         "caption": null
       },
       {
@@ -118,6 +130,10 @@
     "city": "Reykjavik",
     "style": "Contemporâneo",
     "photos": [
+      {
+        "alt": "Grande edifício anguloso revestido de painéis de vidro verdes e azuis em forma de favo, com duas pessoas caminhando no cais pavimentado à frente.",
+        "caption": null
+      },
       {
         "alt": "Edifício escuro de vidro facetado ao lado de um porto, visto por cima de uma encosta coberta de neve ao entardecer",
         "caption": null
@@ -171,6 +187,14 @@
         "caption": null
       },
       {
+        "alt": "Pirâmide de vidro em um pátio ensolarado vista de um canto elevado, com pirâmides menores, uma longa ala de palácio em pedra e céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Pirâmide de vidro com fontes e espelhos d'água diante de um grande palácio de pedra com pavilhão em cúpula, vista de cima.",
+        "caption": null
+      },
+      {
         "alt": "Vista para cima através da treliça de aço e vidro de uma pirâmide, com o sol e um edifício de pedra refletidos",
         "caption": null
       }
@@ -214,6 +238,10 @@
     "photos": [
       {
         "alt": "Alta igreja de concreto claro com fachada escalonada e nervurada que sobe até uma torre esbelta, com a estátua de um explorador ao lado",
+        "caption": null
+      },
+      {
+        "alt": "Abside de concreto arredondada coberta por uma cúpula em forma de ovo, com janelas altas e estreitas em arco e paredes escalonadas sob céu azul.",
         "caption": null
       },
       {
@@ -270,7 +298,19 @@
         "caption": null
       },
       {
+        "alt": "Duas torres de pedra esculpida e uma cúpula mais baixa erguendo-se sobre um conjunto de telhados de cerâmica sob a luz quente do fim de tarde.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada lateral de granito claro com pilastras clássicas, nichos esculpidos e portas em arco numa praça pavimentada sob um céu carregado.",
+        "caption": null
+      },
+      {
         "alt": "Nave românica escura com arcos de volta perfeita, uma galeria acima e uma cúpula-lanterna no cruzeiro",
+        "caption": null
+      },
+      {
+        "alt": "Altar-mor dourado e ornamentado com figuras esculpidas e uma lâmpada pendente, emoldurado por arcos de pedra e uma plataforma de madeira elevada.",
         "caption": null
       }
     ],

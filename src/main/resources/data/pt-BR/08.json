@@ -18,8 +18,22 @@
     "style": "Modernismo",
     "drawings": [],
     "photos": [
-      { "alt": "Bloco de apartamentos rosa e cinza de dez andares, com fileiras de sacadas acima de uma arcada no térreo", "caption": null },
-      { "alt": "Hall de entrada com uma coluna em tom pastel, uma escada e uma parede de caixas de correio iluminada pelo sol baixo", "caption": "O hall de entrada." }
+      {
+        "alt": "Bloco de apartamentos rosa e cinza de dez andares, com fileiras de sacadas acima de uma arcada no térreo",
+        "caption": null
+      },
+      {
+        "alt": "Hall de entrada com uma coluna em tom pastel, uma escada e uma parede de caixas de correio iluminada pelo sol baixo",
+        "caption": "O hall de entrada."
+      },
+      {
+        "alt": "Pátio de entrada aberto com vasos de plantas, passadiço elevado com parede revestida a madeira, teto avermelhado e um mural desbotado na parede.",
+        "caption": null
+      },
+      {
+        "alt": "Caixa de escadas com corrimão de madeira curvo, grande janela de caixilharia metálica para as árvores e parede com mural de figuras desenhadas a traço.",
+        "caption": null
+      }
     ],
     "hints": [
       "É um bloco de apartamentos, planejado como edifício de renda numa década cheia de edifícios assim.",
@@ -54,8 +68,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Casa_de_Ch%C3%A1_da_Boa_Nova",
     "drawings": [],
     "photos": [
-      { "alt": "Edifício baixo de telhado de madeira com um beiral profundo sobre uma parede de concreto, sobre as rochas e o mar", "caption": null },
-      { "alt": "Escada de madeira escura que leva a um salão com um abajur de mesa", "caption": "A escada de entrada." }
+      {
+        "alt": "Edifício baixo e branco com ampla cobertura de telha e chaminé alta, entre grandes blocos de granito junto ao mar num dia luminoso.",
+        "caption": null
+      },
+      {
+        "alt": "Longo edifício de beirais de madeira com paredes envidraçadas iluminadas, encaixado entre blocos arredondados, visto das rochas sob céu azul limpo.",
+        "caption": null
+      },
+      {
+        "alt": "Edifício baixo de telhado de madeira com um beiral profundo sobre uma parede de concreto, sobre as rochas e o mar",
+        "caption": null
+      },
+      {
+        "alt": "Escada de madeira escura que leva a um salão com um abajur de mesa",
+        "caption": "A escada de entrada."
+      }
     ],
     "hints": [
       "Foi uma das primeiras obras de seu arquiteto, passada a ele por seu professor depois de escolhido o local.",
@@ -90,8 +118,22 @@
     "style": "Adaptação contemporânea de um mosteiro histórico",
     "drawings": [],
     "photos": [
-      { "alt": "Frente de igreja barroca de duas torres acima de uma escadaria, vista entre árvores", "caption": null },
-      { "alt": "Claustro com arcadas em volta de uma fonte e de sebes de buxo aparadas", "caption": "O claustro." }
+      {
+        "alt": "Fachada de igreja barroca de duas torres com molduras de pedra esculpida e painéis brancos sobre uma escadaria dupla, vista sob um céu azul intenso.",
+        "caption": null
+      },
+      {
+        "alt": "Vista distante de uma igreja de duas torres e de uma longa ala branca numa encosta, com acesso por uma praça de cascalho com árvores despidas.",
+        "caption": null
+      },
+      {
+        "alt": "Claustro com arcadas em volta de uma fonte e de sebes de buxo aparadas",
+        "caption": "O claustro."
+      },
+      {
+        "alt": "Capela-mor de igreja com cadeirais de madeira escura esculpida ao longo da parede, conduzindo a um retábulo dourado com um crucifixo.",
+        "caption": null
+      }
     ],
     "hints": [
       "É um antigo mosteiro cujo terreno se acredita ter sido o paço dos primeiros condes portugueses.",
@@ -127,8 +169,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Funda%C3%A7%C3%A3o_de_Serralves",
     "drawings": [],
     "photos": [
-      { "alt": "Volumes brancos e rebocados em forma de caixa, com uma porta recuada e uma única janela quadrada, em um gramado entre árvores", "caption": null },
-      { "alt": "Grande galeria de paredes brancas e marrons, com claraboia e piso de madeira polida", "caption": "Uma galeria." }
+      {
+        "alt": "Volumes brancos e rebocados em forma de caixa, com uma porta recuada e uma única janela quadrada, em um gramado entre árvores",
+        "caption": null
+      },
+      {
+        "alt": "Longo volume branco rebocado de um museu, com um terraço, num amplo relvado entre árvores altas sob um céu claro.",
+        "caption": null
+      },
+      {
+        "alt": "Grande galeria de paredes brancas e marrons, com claraboia e piso de madeira polida",
+        "caption": "Uma galeria."
+      },
+      {
+        "alt": "Sala branca e luminosa atravessada por uma escada e um patamar de aço escuro, com visitantes junto a uma janela alta.",
+        "caption": null
+      }
     ],
     "hints": [
       "Seu arquiteto assinou o contrato em março de 1991, um ano antes de ganhar o Prêmio Pritzker.",
@@ -162,8 +218,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Faculdade_de_Arquitetura_da_Universidade_do_Porto",
     "drawings": [],
     "photos": [
-      { "alt": "Fileira de torres de concreto claro e austero, com janelas estreitas em fenda, vista de uma rua", "caption": null },
-      { "alt": "Longo salão de biblioteca com mesas de madeira e estantes sob uma claraboia inclinada", "caption": "A biblioteca." }
+      {
+        "alt": "Fileira de torres de concreto claro e austero, com janelas estreitas em fenda, vista de uma rua",
+        "caption": null
+      },
+      {
+        "alt": "Torre branca alta com janelas em fenda junto a um longo muro de granito e alas brancas baixas, sob um céu azul limpo.",
+        "caption": null
+      },
+      {
+        "alt": "Longo salão de biblioteca com mesas de madeira e estantes sob uma claraboia inclinada",
+        "caption": "A biblioteca."
+      },
+      {
+        "alt": "Longa sala de biblioteca com piso de madeira, mesas de leitura e estantes de livros, iluminada por uma clarabóia translúcida inclinada.",
+        "caption": null
+      }
     ],
     "hints": [
       "Abriga uma escola criada em 1979, sucessora de um curso de arquitetura ministrado na escola de belas-artes da cidade.",
@@ -199,8 +269,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Batalha_Centro_de_Cinema",
     "drawings": [],
     "photos": [
-      { "alt": "Esquina branca curva com altas janelas de vidro e um painel em relevo entalhado, em uma praça da cidade", "caption": null },
-      { "alt": "Caixa de escada escura que sobe ao lado de uma parede pintada com formas em espiral", "caption": "A caixa de escada." }
+      {
+        "alt": "Esquina branca curva com altas janelas de vidro e um painel em relevo entalhado, em uma praça da cidade",
+        "caption": null
+      },
+      {
+        "alt": "Vista elevada sobre uma praça pavimentada para um edifício modernista claro, com uma longa frente envidraçada e um painel de relevo em pedra.",
+        "caption": null
+      },
+      {
+        "alt": "Caixa de escada escura que sobe ao lado de uma parede pintada com formas em espiral",
+        "caption": "A caixa de escada."
+      }
     ],
     "hints": [
       "Substituiu um cinema mais antigo no mesmo local; o velho edifício foi demolido em 1944.",
@@ -236,8 +316,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pavilh%C3%A3o_de_Portugal",
     "drawings": [],
     "photos": [
-      { "alt": "Fina cobertura de concreto cedendo entre dois blocos maciços com pórticos, sobre uma praça aberta", "caption": null },
-      { "alt": "Caixa de escada branca de planos afiados, subindo sob uma claraboia escondida", "caption": "Uma caixa de escada." }
+      {
+        "alt": "Enorme laje fina de betão que se curva sobre uma parede escura revestida a azulejo e um bloco de pedra clara, numa ampla praça junto à água.",
+        "caption": null
+      },
+      {
+        "alt": "Vista de baixo de uma ampla cobertura de betão sobre uma praça pavimentada, em direção a um rio distante e a uma longa ponte.",
+        "caption": null
+      },
+      {
+        "alt": "Vista de baixo de uma fila de altos pilares de pedra e reentrâncias profundas revestidas de verde, contra um céu azul limpo.",
+        "caption": null
+      },
+      {
+        "alt": "Caixa de escada branca de planos afiados, subindo sob uma claraboia escondida",
+        "caption": "Uma caixa de escada."
+      },
+      {
+        "alt": "Fina cobertura de concreto cedendo entre dois blocos maciços com pórticos, sobre uma praça aberta",
+        "caption": null
+      }
     ],
     "hints": [
       "Abrigou a representação nacional de seu país em uma feira mundial no fim dos anos 1990.",
@@ -272,8 +370,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Est%C3%A1dio_Municipal_de_Braga",
     "drawings": [],
     "photos": [
-      { "alt": "Estádio de futebol com duas longas arquibancadas entre uma parede de rocha e uma encosta, visto de cima", "caption": null },
-      { "alt": "Estrutura sombria de concreto, de escadas e vigas, sob uma arquibancada, com luz vinda de uma parede de rocha", "caption": "Sob as arquibancadas." }
+      {
+        "alt": "Estádio de futebol com duas longas arquibancadas entre uma parede de rocha e uma encosta, visto de cima",
+        "caption": null
+      },
+      {
+        "alt": "Relvado de futebol visto de uma bancada alta, com duas bancadas encostadas a uma parede de rocha e uma cobertura leve suspensa por cabos.",
+        "caption": null
+      },
+      {
+        "alt": "Estrutura sombria de concreto, de escadas e vigas, sob uma arquibancada, com luz vinda de uma parede de rocha",
+        "caption": "Sob as arquibancadas."
+      }
     ],
     "hints": [
       "Foi construído como sede de um campeonato europeu de futebol em 2004.",
@@ -308,8 +416,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Casa_das_Hist%C3%B3rias_Paula_Rego",
     "drawings": [],
     "photos": [
-      { "alt": "Museu de concreto vermelho com duas altas torres em forma de pirâmide, entre árvores em um gramado", "caption": null },
-      { "alt": "Sala de galeria clara com teto inclinado e pequenas obras emolduradas nas paredes", "caption": "Uma galeria." }
+      {
+        "alt": "Museu de concreto vermelho com duas altas torres em forma de pirâmide, entre árvores em um gramado",
+        "caption": null
+      },
+      {
+        "alt": "Muros baixos de betão rosa-avermelhado encimados por duas altas chaminés em forma de pirâmide, vistos de um relvado entre pinheiros.",
+        "caption": null
+      },
+      {
+        "alt": "Um alto volume vermelho em forma de pirâmide atrás de um terraço ajardinado com guarda-sóis brancos, mesas e pequenas árvores.",
+        "caption": null
+      },
+      {
+        "alt": "Sala de galeria clara com teto inclinado e pequenas obras emolduradas nas paredes",
+        "caption": "Uma galeria."
+      }
     ],
     "hints": [
       "É um museu dedicado à obra de uma única artista, que esteve presente na inauguração.",
@@ -343,8 +465,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Casa_da_M%C3%BAsica",
     "drawings": [],
     "photos": [
-      { "alt": "Bloco facetado de concreto branco como uma gema lapidada, com uma grande janela e uma escada até a entrada, em uma praça pavimentada", "caption": null },
-      { "alt": "Sala em caixa de sapatos, com paredes de madeira de padrão dourado e uma parede de vidro ao fundo", "caption": "A sala principal." }
+      {
+        "alt": "Bloco facetado de concreto branco como uma gema lapidada, com uma grande janela e uma escada até a entrada, em uma praça pavimentada",
+        "caption": null
+      },
+      {
+        "alt": "Bloco facetado de betão branco com um grande canto envidraçado, visto de uma ampla praça de pedra sob um céu azul com nuvens.",
+        "caption": null
+      },
+      {
+        "alt": "Sala em caixa de sapatos, com paredes de madeira de padrão dourado e uma parede de vidro ao fundo",
+        "caption": "A sala principal."
+      },
+      {
+        "alt": "Uma escada esguia de betão que sobe em ângulo acentuado de uma praça pavimentada até à entrada de um edifício angular de betão.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi planejada para marcar o ano em que sua cidade foi Capital Europeia da Cultura, 2001, mas abriu com quatro anos de atraso.",
@@ -380,8 +516,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Gare_do_Oriente",
     "drawings": [],
     "photos": [
-      { "alt": "Entrada da estação sob um leque de nervuras de aço branco e vidro, brilhando ao entardecer sobre uma via", "caption": null },
-      { "alt": "Plataformas sob uma floresta de «árvores» de aço branco que se ramificam em uma cobertura de vidro, com um trem vermelho", "caption": "As plataformas." }
+      {
+        "alt": "Frente diurna de uma estação com uma cobertura curva de vidro e aço e um leque de coberturas brancas nervuradas ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Fila de coberturas brancas de aço em forma de árvore sobre um átrio envidraçado baixo, vistas de viés sobre uma ampla praça pavimentada.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de longas coberturas de vidro nervuradas sobre cais e linhas de comboio, com cidade e rio ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Plataformas sob uma floresta de «árvores» de aço branco que se ramificam em uma cobertura de vidro, com um trem vermelho",
+        "caption": "As plataformas."
+      }
     ],
     "hints": [
       "Foi inaugurada em maio de 1998 como parte das celebrações de uma feira mundial.",
@@ -414,8 +564,18 @@
     "style": "Modernismo contemporâneo",
     "drawings": [],
     "photos": [
-      { "alt": "Edifício de pedra branca erguido sobre uma profunda abertura horizontal para um pátio pavimentado com fontes", "caption": null },
-      { "alt": "Corredor preto com piso xadrez distorcido e uma forma branca em seta na parede", "caption": "Um corredor." }
+      {
+        "alt": "Edifício de pedra branca erguido sobre uma profunda abertura horizontal para um pátio pavimentado com fontes",
+        "caption": null
+      },
+      {
+        "alt": "Amplo pátio de pedra clara com fontes, uma escultura de molécula e um globo, emoldurado por volumes brancos em balanço.",
+        "caption": null
+      },
+      {
+        "alt": "Corredor preto com piso xadrez distorcido e uma forma branca em seta na parede",
+        "caption": "Um corredor."
+      }
     ],
     "hints": [
       "Foi construído para uma feira mundial em 1998, quando mostrava a relação entre as pessoas e o oceano.",

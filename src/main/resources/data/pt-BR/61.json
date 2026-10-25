@@ -18,11 +18,19 @@
     "style": "Muromachi, estilos shinden e zen",
     "photos": [
       {
+        "alt": "Pavilhão de três andares com os andares superiores cobertos de ouro e telhados escuros ao lado de um lago calmo que o espelha, cercado por pinheiros e colinas arborizadas.",
+        "caption": null
+      },
+      {
         "alt": "Pavilhão de três andares com os pisos superiores cobertos de ouro e telhados escuros, refletido num lago parado emoldurado por folhas vermelhas de bordo",
         "caption": null
       },
       {
         "alt": "Vista próxima de um pavilhão folheado a ouro com dois andares superiores, uma varanda e uma fênix de bronze no telhado, entre pinheiros",
+        "caption": null
+      },
+      {
+        "alt": "Pavilhão dourado com telhados cobertos de neve à beira de um lago, emoldurado por pinheiros nevados e colinas enevoadas sob a neve que cai.",
         "caption": null
       }
     ],
@@ -70,6 +78,18 @@
       },
       {
         "alt": "Santuário dourado refletido num grande lago, alcançado por uma passarela coberta cheia de visitantes, com prédios brancos ao fundo",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de um tanque quadrado cercado por edifícios brancos, com um pequeno santuário dourado ligado à margem por uma passarela reta.",
+        "caption": null
+      },
+      {
+        "alt": "Santuário dourado brilhando ao entardecer com suas cúpulas e quiosques dourados, refletido na água escura do tanque que o cerca.",
+        "caption": null
+      },
+      {
+        "alt": "Painel de teto octogonal com um medalhão dourado em raios de sol no centro, cercado por padrões florais azuis e vermelhos e uma borda dourada.",
         "caption": null
       }
     ],
@@ -119,6 +139,14 @@
       },
       {
         "alt": "Torre piramidal de muitos níveis de pequenos santuários e esculturas, coroada por uma cúpula, acima de salões de entrada baixos",
+        "caption": null
+      },
+      {
+        "alt": "Alta torre de entrada de pedra avermelhada com camadas de figuras esculpidas, vista de um pátio pavimentado onde visitantes caminham e se sentam.",
+        "caption": null
+      },
+      {
+        "alt": "Vista próxima da parede de uma torre de granito com camadas de pilastras, janelas treliçadas e divindades esculpidas em nichos recuados.",
         "caption": null
       }
     ],
@@ -264,6 +292,10 @@
       },
       {
         "alt": "Pavilhão dourado de vários telhados com telhas verdes ao lado de flechas douradas numa plataforma de mármore sob céu azul",
+        "caption": null
+      },
+      {
+        "alt": "Estupa dourada em forma de sino e um anel de pequenos santuários dourados brilhando ao sol baixo, contra um céu azul e âmbar",
         "caption": null
       }
     ],

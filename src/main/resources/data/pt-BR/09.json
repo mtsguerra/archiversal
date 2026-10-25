@@ -19,8 +19,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Centro_Cultural_de_Bel%C3%A9m",
     "drawings": [],
     "photos": [
-      { "alt": "Paredes longas e quase sem janelas de pedra rústica rosada em volta de uma praça pavimentada", "caption": null },
-      { "alt": "Sala de concertos com ripas de madeira no teto e paredes de pedra, uma orquestra no palco diante de uma plateia cheia", "caption": "O grande auditório." }
+      {
+        "alt": "Paredes longas e quase sem janelas de pedra rústica rosada em volta de uma praça pavimentada",
+        "caption": null
+      },
+      {
+        "alt": "Blocos de pedra clara de talhe rugoso emolduram uma passagem pavimentada com degraus que leva a uma ponte envidraçada entre duas torres.",
+        "caption": null
+      },
+      {
+        "alt": "Pátio estreito de calçada entre dois altos muros de pedra sem janelas, aberto para um céu azul, sem pessoas à vista.",
+        "caption": null
+      },
+      {
+        "alt": "Sala de concertos com ripas de madeira no teto e paredes de pedra, uma orquestra no palco diante de uma plateia cheia",
+        "caption": "O grande auditório."
+      }
     ],
     "hints": [
       "Foi construído para sediar a primeira presidência do Conselho Europeu de seu país, em 1992.",
@@ -55,8 +69,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Museu_Nacional_dos_Coches",
     "drawings": [],
     "photos": [
-      { "alt": "Longa caixa branca com uma fina faixa azul de janelas, elevada sobre colunas redondas de concreto sobre um térreo aberto", "caption": null },
-      { "alt": "Longo salão branco com fileiras de carruagens históricas, visto de cima", "caption": "O salão principal." }
+      {
+        "alt": "Longa caixa branca com uma fina faixa azul de janelas, elevada sobre colunas redondas de concreto sobre um térreo aberto",
+        "caption": null
+      },
+      {
+        "alt": "Longo salão branco com fileiras de carruagens históricas, visto de cima",
+        "caption": "O salão principal."
+      },
+      {
+        "alt": "Longa sala de exposição branca com piso polido e uma fila de carruagens ornamentadas de tração animal expostas em plintos baixos.",
+        "caption": null
+      }
     ],
     "hints": [
       "O museu que abriga foi fundado em 1905 por uma rainha e foi o primeiro de seu tipo no mundo.",
@@ -90,8 +114,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Museu_de_Arte,_Arquitetura_e_Tecnologia",
     "drawings": [],
     "photos": [
-      { "alt": "Edifício branco, baixo e curvo, ao longo de um calçadão à beira-rio, visto da água", "caption": null },
-      { "alt": "Galeria aberta e curva com piso branco sob uma grade escura no teto", "caption": "A galeria oval." }
+      {
+        "alt": "Cobertura curva de azulejos brancos sobre uma entrada envidraçada e um amplo terraço em degraus, junto à água sob um céu azul intenso.",
+        "caption": null
+      },
+      {
+        "alt": "Longo passeio pavimentado à beira da água junto a um edifício branco baixo e curvo, com uma ponte pênsil vermelha ao longe.",
+        "caption": null
+      },
+      {
+        "alt": "Edifício branco, baixo e curvo, ao longo de um calçadão à beira-rio, visto da água",
+        "caption": null
+      },
+      {
+        "alt": "Galeria aberta e curva com piso branco sob uma grade escura no teto",
+        "caption": "A galeria oval."
+      }
     ],
     "hints": [
       "Fica às margens de um rio, a oeste do centro da cidade, ao lado de uma antiga central elétrica.",
@@ -125,8 +163,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Terminal_de_Cruzeiros_do_Porto_de_Leix%C3%B5es",
     "drawings": [],
     "photos": [
-      { "alt": "Edifício branco arredondado, envolvido por faixas curvas, com um térreo envidraçado escuro", "caption": null },
-      { "alt": "Rampa em espiral sob uma claraboia redonda, com paredes revestidas de azulejos brancos", "caption": "A rampa em espiral." }
+      {
+        "alt": "Edifício redondo inteiro de faixas brancas texturadas sobrepostas, com uma longa janela azul em fita, sobre água calma junto a um cais.",
+        "caption": null
+      },
+      {
+        "alt": "Edifício branco arredondado, envolvido por faixas curvas, com um térreo envidraçado escuro",
+        "caption": null
+      },
+      {
+        "alt": "Uma rampa branca em espiral enrola-se em torno de um edifício redondo em camadas, junto a água escura sob nuvens cinzentas pesadas.",
+        "caption": null
+      },
+      {
+        "alt": "Rampa em espiral sob uma claraboia redonda, com paredes revestidas de azulejos brancos",
+        "caption": "A rampa em espiral."
+      }
     ],
     "hints": [
       "Foi inaugurado em julho de 2015 para receber navios maiores em um porto perto do Porto.",
@@ -161,8 +213,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pante%C3%A3o_(Roma)",
     "drawings": [],
     "photos": [
-      { "alt": "Edifício redondo de tijolo com um profundo pórtico de colunas de granito sob um frontão, em uma praça movimentada", "caption": null },
-      { "alt": "Cúpula de concreto com caixotões vista de baixo, com uma abertura redonda para o céu no centro", "caption": "A cúpula e o óculo." }
+      {
+        "alt": "Vista frontal de um pórtico de templo com dezesseis colunas de granito sob um frontão triangular, com uma carruagem de cavalos parada na praça.",
+        "caption": null
+      },
+      {
+        "alt": "Vista de canto de um pórtico de colunas ligado a um enorme tambor redondo de tijolo, com multidões atravessando a praça de pedra à frente.",
+        "caption": null
+      },
+      {
+        "alt": "Cúpula rasa de concreto sobre um tambor de tijolo em degraus e telhados de cerâmica, vista de um terraço próximo ao entardecer.",
+        "caption": null
+      },
+      {
+        "alt": "Cúpula de concreto com caixotões vista de baixo, com uma abertura redonda para o céu no centro",
+        "caption": "A cúpula e o óculo."
+      }
     ],
     "hints": [
       "Substituiu um templo anterior construído sob Augusto; o imperador que o reconstruiu manteve a inscrição do fundador original.",
@@ -198,8 +264,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Maison_Carr%C3%A9e",
     "drawings": [],
     "photos": [
-      { "alt": "Pequeno templo romano com colunas coríntias sobre um alto pódio com degraus, iluminado à noite", "caption": null },
-      { "alt": "Teto de pedra com caixotões do pórtico do templo, visto de baixo entre colunas", "caption": "O teto do pórtico." }
+      {
+        "alt": "Templo romano retangular sobre um alto pódio, com um profundo pórtico de colunas e um frontão triangular, sob luz do dia clara.",
+        "caption": null
+      },
+      {
+        "alt": "Lado longo de um templo de colunas sobre um pódio de pedra, com colunas coríntias embutidas na parede, sob um céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Pequeno templo romano com colunas coríntias sobre um alto pódio com degraus, iluminado à noite",
+        "caption": null
+      },
+      {
+        "alt": "Teto de pedra com caixotões do pórtico do templo, visto de baixo entre colunas",
+        "caption": "O teto do pórtico."
+      }
     ],
     "hints": [
       "Foi dedicado ou rededicado por volta de 4–7 d.C. a dois netos e herdeiros de Augusto que morreram jovens.",
@@ -235,8 +315,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Templo_de_Hefesto",
     "drawings": [],
     "photos": [
-      { "alt": "Templo dórico de mármore completo, com um anel de colunas, visto entre arbustos", "caption": null },
-      { "alt": "Vista para cima entre colunas dóricas e um friso esculpido dentro da colunata", "caption": "Dentro da colunata." }
+      {
+        "alt": "Templo dórico de mármore completo, com um anel de colunas, visto entre arbustos",
+        "caption": null
+      },
+      {
+        "alt": "Templo dórico visto de cima, sobre uma colina baixa entre árvores verdes, com casas visíveis na encosta ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Vista ao longo do flanco de uma colunata dórica de pedra desgastada, com um caminho de cascalho ao lado, sob um céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Vista para cima entre colunas dóricas e um friso esculpido dentro da colunata",
+        "caption": "Dentro da colunata."
+      }
     ],
     "hints": [
       "Fica em uma colina a noroeste da ágora de uma cidade antiga.",
@@ -272,8 +366,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Termas_de_Caracala",
     "drawings": [],
     "photos": [
-      { "alt": "Imponentes paredes e pilares de tijolo em ruínas de um vasto edifício antigo, em um gramado aberto", "caption": null },
-      { "alt": "Salão abobadado de tijolo em ruínas, com piso de mosaico em preto e branco", "caption": "Um salão com piso de mosaico." }
+      {
+        "alt": "Maciças torres e abóbadas de tijolo em ruínas erguendo-se sobre um gramado verde sob um céu azul brilhante, com muros baixos à frente.",
+        "caption": null
+      },
+      {
+        "alt": "Imponentes paredes e pilares de tijolo em ruínas de um vasto edifício antigo, em um gramado aberto",
+        "caption": null
+      },
+      {
+        "alt": "Salão abobadado de tijolo em ruínas, com piso de mosaico em preto e branco",
+        "caption": "Um salão com piso de mosaico."
+      }
     ],
     "hints": [
       "Era o segundo maior complexo de banhos públicos de sua cidade, construído por volta de 212–216 d.C.",
@@ -309,8 +413,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Bas%C3%ADlica_de_S%C3%A3o_Vital",
     "drawings": [],
     "photos": [
-      { "alt": "Igreja octogonal de tijolos, com telhados escalonados e janelas em arco, em um jardim", "caption": null },
-      { "alt": "Interior octogonal elevado, com arcadas e mosaicos dourados na abside", "caption": "O octógono." }
+      {
+        "alt": "Igreja octogonal de tijolos, com telhados escalonados e janelas em arco, em um jardim",
+        "caption": null
+      },
+      {
+        "alt": "Vista ampla do interior de uma igreja octogonal com cúpula, galerias em arco, mosaicos luminosos e um piso de mármore em padrões abaixo.",
+        "caption": null
+      },
+      {
+        "alt": "Interior octogonal elevado, com arcadas e mosaicos dourados na abside",
+        "caption": "O octógono."
+      },
+      {
+        "alt": "Vista para cima de um teto de abóbada em cruzaria coberto de mosaico denso em verde e dourado, com padrões florais e medalhões.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi iniciada em 526 por um bispo local e concluída em 547, depois que o imperador Justiniano conquistou a Itália.",
@@ -345,8 +463,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Igreja_de_S%C3%A3o_Salvador_em_Cora",
     "drawings": [],
     "photos": [
-      { "alt": "Pequena igreja de tijolo e pedra com uma cúpula e telhados em camadas, ao lado de um gramado", "caption": null },
-      { "alt": "Nave revestida de mármore sob uma cúpula, com janelas no tambor", "caption": "A nave." }
+      {
+        "alt": "Vista aérea de uma pequena igreja de tijolo com várias cúpulas cinzentas e um alto minarete, cercada por gramado e ruas densas da cidade.",
+        "caption": null
+      },
+      {
+        "alt": "Pequena igreja de tijolo e pedra com uma cúpula e telhados em camadas, ao lado de um gramado",
+        "caption": null
+      },
+      {
+        "alt": "Vista para cima de uma cúpula nervurada com um padrão dourado radiante de figuras em pé em volta de um retrato central.",
+        "caption": null
+      },
+      {
+        "alt": "Nave revestida de mármore sob uma cúpula, com janelas no tambor",
+        "caption": "A nave."
+      }
     ],
     "hints": [
       "Foi construída primeiro fora das muralhas de sua cidade e depois se viu dentro de novas muralhas, erguidas em 413–414.",
@@ -382,8 +514,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Bas%C3%ADlica_de_S%C3%A3o_Marcos",
     "drawings": [],
     "photos": [
-      { "alt": "Frente de igreja ornamentada, com cinco portais em arco, mosaicos dourados e cúpulas, do outro lado de uma praça pavimentada", "caption": null },
-      { "alt": "Interior sob cúpulas e abóbadas de mosaicos em fundo dourado, com galerias e piso de mármore", "caption": "As cúpulas e os mosaicos." }
+      {
+        "alt": "Fachada ornamentada de cinco arcos coroada por cúpulas e pináculos dourados, vista de uma praça movimentada com altos mastros vermelhos sob céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Canto de uma igreja bizantina com pináculos esculpidos, estátuas e arcos ao lado de uma cúpula arredondada sob a luz quente do fim da tarde.",
+        "caption": null
+      },
+      {
+        "alt": "Cinco cúpulas cinzentas revestidas de chumbo sobre tambores, vistas de cima, com um denso mar de telhados vermelhos ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Interior sob cúpulas e abóbadas de mosaicos em fundo dourado, com galerias e piso de mármore",
+        "caption": "As cúpulas e os mosaicos."
+      }
     ],
     "hints": [
       "Foi reconstruída a partir de 1063, segundo o modelo de uma igreja do século VI em Constantinopla.",
@@ -419,8 +565,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Mosteiro_de_S%C3%A3o_Lucas",
     "drawings": [],
     "photos": [
-      { "alt": "Igrejas de pedra de um mosteiro, com cúpulas e um campanário, em um vale sob montanhas", "caption": null },
-      { "alt": "Interior de igreja de pedra com arcos e uma coluna de mármore sob uma abóbada", "caption": "A igreja." }
+      {
+        "alt": "Igreja bizantina com cúpulas, de faixas de tijolo e pedra, várias cúpulas pequenas e janelas em arco, vista acima de árvores verdes.",
+        "caption": null
+      },
+      {
+        "alt": "Igreja de pedra e tijolo com cúpula baixa e janelas em arco atrás de um portal e de um abeto, em cenário de montanha.",
+        "caption": null
+      },
+      {
+        "alt": "Igrejas de pedra de um mosteiro, com cúpulas e um campanário, em um vale sob montanhas",
+        "caption": null
+      },
+      {
+        "alt": "Interior de igreja de pedra com arcos e uma coluna de mármore sob uma abóbada",
+        "caption": "A igreja."
+      }
     ],
     "hints": [
       "Cresceu em torno das relíquias de um eremita que morreu em 953.",

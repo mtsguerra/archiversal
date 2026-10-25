@@ -16,11 +16,23 @@
     "style": "Art Nouveau",
     "photos": [
       {
+        "alt": "Fachada estreita de casa de pedra com janelas de sacada curvas, varandas de ferro forjado e uma porta de madeira em arco ao nível da rua.",
+        "caption": null
+      },
+      {
         "alt": "Fachada de casa estreita com janelas salientes curvas, varandas de ferro forjado e esquadrias de madeira esguias",
         "caption": null
       },
       {
+        "alt": "Vista próxima de uma varanda do primeiro andar com grade de ferro forjado em curvas, sob grandes janelas de madeira em pedra clara.",
+        "caption": null
+      },
+      {
         "alt": "Hall da escada com guarda-corpo de ferro em linhas sinuosas, claraboia de vitral e um grande mural pontilhista",
+        "caption": null
+      },
+      {
+        "alt": "Salão revestido de madeira com vitrines curvas de vidro, mesa redonda com cadeiras, lustre e janelas altas com cortinas leves.",
         "caption": null
       }
     ],
@@ -62,6 +74,14 @@
     "photos": [
       {
         "alt": "Casa de pedra com telhado íngreme de empena, uma grande janela em arco e uma sacada com metal esverdeado",
+        "caption": null
+      },
+      {
+        "alt": "Casa de pedra clara com empenas íngremes de ardósia, uma marquise sobre a entrada e uma grade de ferro branca ao longo do muro da rua.",
+        "caption": null
+      },
+      {
+        "alt": "Alta parede de pedra com janelas em arco e um ornamento de ferro forjado em curva sobre o andar superior, ao lado de um tubo de queda verde.",
         "caption": null
       },
       {
@@ -109,6 +129,14 @@
       },
       {
         "alt": "Caixa de escada com degraus de mármore e tapete vermelho, parede estampada e uma janela com grade de ferro forjado e vidros coloridos",
+        "caption": null
+      },
+      {
+        "alt": "Hall de entrada com colunas de pedra torcidas, arcos ogivais, rodapé de azulejos e algumas mesinhas de café sobre piso estampado.",
+        "caption": null
+      },
+      {
+        "alt": "Vista para cima de um poço de escada, com uma claraboia retangular de vitral em padrões geométricos amarelos e vermelhos e paredes de pedra entalhada.",
         "caption": null
       }
     ],
@@ -204,11 +232,15 @@
     "style": "Brutalismo",
     "photos": [
       {
+        "alt": "Andares de vidro escalonados de um edifício de concreto apoiado em pilares inclinados, vistos de uma esquina junto a um muro baixo de concreto.",
+        "caption": null
+      },
+      {
         "alt": "Andares escalonados de vidro de um edifício de concreto de oito pavimentos sustentado por pernas de concreto abertas",
         "caption": null
       },
       {
-        "alt": "Vista frontal de uma torre escalonada de concreto e vidro atrás de uma árvore escultural sem folhas e pavilhões de entrada em vidro",
+        "alt": "Vista sob céu nublado de uma torre escalonada de vidro e concreto sobre apoios inclinados, atrás de arbustos secos e eucaliptos.",
         "caption": null
       },
       {
@@ -255,11 +287,23 @@
     "style": "Brutalismo",
     "photos": [
       {
+        "alt": "Alta laje residencial de concreto com fileiras de varandas ao lado de uma esbelta torre de serviço separada, atrás de uma fileira de árvores escuras.",
+        "caption": null
+      },
+      {
         "alt": "Alta lâmina residencial de concreto com varandas ao lado de uma torre de serviço estreita e separada, coroada por uma casa de caldeiras envidraçada",
         "caption": null
       },
       {
-        "alt": "Vista de baixo para cima de uma torre de serviço de concreto com janelas em fenda, ligada a uma lâmina escura por uma passarela",
+        "alt": "Vista para cima entre duas torres de concreto, com passarelas de concreto aparente e pequenas janelas que ligam uma à outra.",
+        "caption": null
+      },
+      {
+        "alt": "Uma densa grade de varandas e janelas de concreto numa parede de edifício alto, com antenas parabólicas e roupas estendidas.",
+        "caption": null
+      },
+      {
+        "alt": "Vista distante de uma alta laje de concreto e sua torre acima de casas baixas e árvores ao longo de uma rua sob céu azul.",
         "caption": null
       }
     ],

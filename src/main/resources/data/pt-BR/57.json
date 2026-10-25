@@ -21,6 +21,14 @@
         "caption": null
       },
       {
+        "alt": "Ampla fachada de arenito vermelho e creme com galerias em arco, uma janela redonda e duas torres iluminadas pelo sol dourado e baixo.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de uma longa igreja de pedra com telhados de cobre esverdeados, quatro torres e uma cúpula central ao lado de uma praça pavimentada e árvores.",
+        "caption": null
+      },
+      {
         "alt": "Alta nave de pedra listrada em rosa e creme, com abóbadas de aresta, arcos de volta perfeita e um lustre em forma de anel",
         "caption": null
       }
@@ -71,7 +79,15 @@
     "style": "Gótico",
     "photos": [
       {
+        "alt": "Fotografia antiga em preto e branco de uma enorme igreja gótica com uma única torre muito alta e rendilhada erguendo-se sobre uma praça e casas da cidade.",
+        "caption": null
+      },
+      {
         "alt": "Esbelta flecha gótica rendilhada sob andaimes, atrás de uma torre medieval, casas enxaimel e uma pirâmide de vidro",
+        "caption": null
+      },
+      {
+        "alt": "Retábulo esculpido e dourado com um tríptico aberto de painéis pintados sob três vitrais em um coro de pedra.",
         "caption": null
       },
       {
@@ -118,7 +134,15 @@
     "style": "Rococó fredericiano",
     "photos": [
       {
+        "alt": "Palácio baixo e amarelo com altas janelas em arco entre figuras esculpidas e uma cúpula verde, visto em ângulo por um terraço de cascalho aberto.",
+        "caption": null
+      },
+      {
         "alt": "Vista aérea de um palácio amarelo baixo com cúpula verde acima de seis amplos terraços de jardim, um lago redondo e gramados formais",
+        "caption": null
+      },
+      {
+        "alt": "Longa sequência de terraços de videiras subindo de um espelho d'água calmo até um pequeno palácio no alto da colina, sob luz de outono.",
         "caption": null
       },
       {
@@ -175,11 +199,19 @@
     "style": "Barroco petrino e elisabetano",
     "photos": [
       {
+        "alt": "Longo palácio amarelo e branco com uma cúpula dourada sobre uma cascata em degraus com estátuas douradas e fontes sob um céu azul.",
+        "caption": null
+      },
+      {
         "alt": "Longo palácio amarelo e branco com uma cúpula dourada acima de uma cascata de fontes e um canal reto ladeado de árvores",
         "caption": null
       },
       {
-        "alt": "Estátuas douradas e jatos de água numa cascata escalonada diante de um palácio amarelo com uma capela de cúpula dourada",
+        "alt": "Vista aérea de um longo palácio na cabeceira de um canal, com jardins formais simétricos e densos bosques ao redor.",
+        "caption": null
+      },
+      {
+        "alt": "Conjunto de cúpulas douradas em forma de cebola e cruzes numa ala amarela e branca de palácio contra um céu azul brilhante com nuvens.",
         "caption": null
       }
     ],

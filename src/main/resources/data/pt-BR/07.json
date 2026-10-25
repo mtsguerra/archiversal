@@ -14,8 +14,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_Ferrovi%C3%A1ria_de_Porto-S%C3%A3o_Bento",
     "drawings": [],
     "photos": [
-      { "alt": "Edifício Beaux-Arts de granito com um relógio em um frontão curvo e telhado mansarda, em uma esquina", "caption": null },
-      { "alt": "Saguão de entrada revestido de grandes painéis de azulejos azuis e brancos sob altas janelas em arco e um relógio", "caption": "O vestíbulo." }
+      {
+        "alt": "Grande edifício de estação em granito, de estilo Beaux-Arts, com frontão de relógio, mansardas e uma fiada de janelas em arco, visto de uma esquina movimentada.",
+        "caption": null
+      },
+      {
+        "alt": "Edifício Beaux-Arts de granito com um relógio em um frontão curvo e telhado mansarda, em uma esquina",
+        "caption": null
+      },
+      {
+        "alt": "Linhas e plataformas de caminho de ferro vistas através de um arco de túnel de pedra escura ao entardecer, com um comboio parado sob um céu luminoso.",
+        "caption": null
+      },
+      {
+        "alt": "Saguão de entrada revestido de grandes painéis de azulejos azuis e brancos sob altas janelas em arco e um relógio",
+        "caption": "O vestíbulo."
+      }
     ],
     "hints": [
       "Fica no local de um convento beneditino fundado pelo rei D. Manuel I em 1518.",
@@ -51,8 +65,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_Ferrovi%C3%A1ria_do_Rossio",
     "drawings": [],
     "photos": [
-      { "alt": "Fachada ornamentada de pedra branca, com uma torreta de relógio, pináculos e fileiras de janelas em arco entalhadas", "caption": null },
-      { "alt": "Saguão com estrutura de ferro no teto, claraboias e aberturas em arco ogival", "caption": "O saguão." }
+      {
+        "alt": "Fachada simétrica de estação em pedra creme com delicada ornamentação neomanuelina, pináculos, torre do relógio central e entradas em arco de ferradura.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada ornamentada de pedra branca, com uma torreta de relógio, pináculos e fileiras de janelas em arco entalhadas",
+        "caption": null
+      },
+      {
+        "alt": "Saguão com estrutura de ferro no teto, claraboias e aberturas em arco ogival",
+        "caption": "O saguão."
+      }
     ],
     "hints": [
       "Originalmente chamava-se «Estação Central», nome que ainda está gravado em sua fachada.",
@@ -87,8 +111,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Livraria_Lello",
     "drawings": [],
     "photos": [
-      { "alt": "Fachada de loja estreita com um empena de estilo gótico, figuras pintadas e altas janelas", "caption": null },
-      { "alt": "Escadaria de madeira bifurcada subindo até uma galeria sob um teto de vitral, entre paredes de livros", "caption": "A escadaria." }
+      {
+        "alt": "Fachada de loja estreita com um empena de estilo gótico, figuras pintadas e altas janelas",
+        "caption": null
+      },
+      {
+        "alt": "Escadaria de madeira bifurcada subindo até uma galeria sob um teto de vitral, entre paredes de livros",
+        "caption": "A escadaria."
+      },
+      {
+        "alt": "Olhar ao longo de uma escadaria de madeira esculpida sob uma abóbada ricamente ornamentada, com estantes de livros nos dois lados.",
+        "caption": null
+      },
+      {
+        "alt": "Olhar para o alto de uma varanda de madeira esculpida e de um teto de estuque de estilo gótico com rendilhados delicados e lanternas suspensas.",
+        "caption": null
+      }
     ],
     "hints": [
       "É uma loja, fundada por um francês em 1869 e depois dirigida por dois irmãos.",
@@ -123,8 +161,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Teatro_Nacional_S%C3%A3o_Jo%C3%A3o",
     "drawings": [],
     "photos": [
-      { "alt": "Grande teatro de pedra com colunas jônicas, janelas em arco e relevos esculpidos, em uma praça", "caption": null },
-      { "alt": "Foyer com colunas vermelhas marmorizadas, capitéis dourados e um teto de caixotões pendurado de lâmpadas", "caption": "O foyer." }
+      {
+        "alt": "Grande teatro de pedra com colunas jônicas, janelas em arco e relevos esculpidos, em uma praça",
+        "caption": null
+      },
+      {
+        "alt": "Vista lateral de um grande teatro de pedra com parede pintada de rosa, janelas altas e cornija esculpida, visto da rua sob céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Vista próxima de um canto de cornija de pedra com um rosto barbudo esculpido entre frutos e folhagem, sob mísulas salientes.",
+        "caption": null
+      },
+      {
+        "alt": "Foyer com colunas vermelhas marmorizadas, capitéis dourados e um teto de caixotões pendurado de lâmpadas",
+        "caption": "O foyer."
+      }
     ],
     "hints": [
       "Substituiu um teatro real do século XVIII destruído por um incêndio em 1908.",
@@ -158,8 +210,22 @@
     "style": "Casa Portuguesa",
     "drawings": [],
     "photos": [
-      { "alt": "Casa de campo branca com uma longa galeria superior em arcadas e telhados de telhas, ao lado de um pátio aberto", "caption": null },
-      { "alt": "Grande escadaria com balaustrada de madeira entalhada e estátuas, diante de um painel de azulejos azuis e brancos", "caption": "A grande escadaria." }
+      {
+        "alt": "Casa de campo branca com uma longa galeria superior em arcadas e telhados de telhas, ao lado de um pátio aberto",
+        "caption": null
+      },
+      {
+        "alt": "Vista ampla de edifícios caiados de branco com telhados vermelhos, galerias de arcos e um coruchéu pontiagudo em volta de um grande pátio de areia.",
+        "caption": null
+      },
+      {
+        "alt": "Casa caiada de branco com empenas escalonadas de telha vermelha, janelas em arco e portal esculpido, vista de um pátio empedrado sob céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Grande escadaria com balaustrada de madeira entalhada e estátuas, diante de um painel de azulejos azuis e brancos",
+        "caption": "A grande escadaria."
+      }
     ],
     "hints": [
       "Foi construída para um político republicano que proclamou a República da varanda de uma câmara municipal em 1910.",
@@ -199,8 +265,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Funda%C3%A7%C3%A3o_de_Serralves",
     "drawings": [],
     "photos": [
-      { "alt": "Vila Art Déco rosa, com uma baía arredondada, faixas verticais de janelas e um terraço de degraus", "caption": null },
-      { "alt": "Porta com uma grade dourada de ferro forjado entre colunas claras, abrindo-se para uma sequência de salas", "caption": "A porta do salão." }
+      {
+        "alt": "Vila Art Déco rosa, com uma baía arredondada, faixas verticais de janelas e um terraço de degraus",
+        "caption": null
+      },
+      {
+        "alt": "Moradia Art Déco cor de pêssego com torre de escada arredondada, longas janelas verticais e relvado com sebes em socalcos à frente.",
+        "caption": null
+      },
+      {
+        "alt": "Porta com uma grade dourada de ferro forjado entre colunas claras, abrindo-se para uma sequência de salas",
+        "caption": "A porta do salão."
+      },
+      {
+        "alt": "Casa de banho inteiramente revestida a mármore rosa veiado, com banheira de mármore em degraus, grande espelho e radiador de lâminas.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi encomendada por um aristocrata da indústria têxtil que herdou a propriedade em 1923.",
@@ -236,8 +316,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Coliseu_do_Porto",
     "drawings": [],
     "photos": [
-      { "alt": "Edifício cor de creme com faixas horizontais de janelas, aberturas redondas como vigias e uma base de pedra escura", "caption": null },
-      { "alt": "Plateia com fileiras de camarotes, um relevo dourado acima do palco e um anel no teto iluminado em azul", "caption": "A plateia." }
+      {
+        "alt": "Edifício cor de creme com faixas horizontais de janelas, aberturas redondas como vigias e uma base de pedra escura",
+        "caption": null
+      },
+      {
+        "alt": "Plateia com fileiras de camarotes, um relevo dourado acima do palco e um anel no teto iluminado em azul",
+        "caption": "A plateia."
+      },
+      {
+        "alt": "Balcões curvos de uma sala de espetáculos em amarelo quente, sob um grande teto oval com um lustre circular cravejado de luzes redondas.",
+        "caption": null
+      }
     ],
     "hints": [
       "Substituiu um salão-jardim que fora ponto de encontro da sociedade da cidade.",
@@ -273,8 +363,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Igreja_de_Nossa_Senhora_do_Ros%C3%A1rio_de_F%C3%A1tima",
     "drawings": [],
     "photos": [
-      { "alt": "Igreja de pedra branca com uma alta e esbelta torre sineira terminando em uma flecha pontiaguda, em uma esquina", "caption": null },
-      { "alt": "Nave com arcos pontiagudos de concreto que leva a uma abside preenchida de vitrais azuis", "caption": "A nave." }
+      {
+        "alt": "Igreja de pedra branca com uma alta e esbelta torre sineira terminando em uma flecha pontiaguda, em uma esquina",
+        "caption": null
+      },
+      {
+        "alt": "Igreja modernista branca com torre esbelta e pontiaguda e um alto volume com janelas atrás de uma base baixa de pedra, vista de uma rua arborizada sob céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Pórtico de entrada em pedra com um longo friso em relevo de figuras de pé com túnicas, acima de uma porta escura e de uma escadaria larga.",
+        "caption": null
+      },
+      {
+        "alt": "Nave com arcos pontiagudos de concreto que leva a uma abside preenchida de vitrais azuis",
+        "caption": "A nave."
+      }
     ],
     "hints": [
       "Foi encomendada em 1933 e consagrada em outubro de 1938.",
@@ -314,8 +418,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Instituto_Superior_T%C3%A9cnico",
     "drawings": [],
     "photos": [
-      { "alt": "Longo edifício rebocado em creme, com fileiras de altas janelas de caixilho verde divididas por nervuras verticais", "caption": null },
-      { "alt": "Escada de pedra com corrimão curvo de metal, que gira sob uma claraboia", "caption": "Uma caixa de escada." }
+      {
+        "alt": "Longo edifício rebocado em creme, com fileiras de altas janelas de caixilho verde divididas por nervuras verticais",
+        "caption": null
+      },
+      {
+        "alt": "Ala de fachada branca com janelas de caixilharia verde e uma porta verde, vista de um pátio sombreado com uma pequena árvore sob céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Vista distante ao longo de um longo parque verde e de uma escadaria até um edifício institucional claro, com quarteirões e torres altas dos dois lados.",
+        "caption": null
+      },
+      {
+        "alt": "Escada de pedra com corrimão curvo de metal, que gira sob uma claraboia",
+        "caption": "Uma caixa de escada."
+      }
     ],
     "hints": [
       "Pertence à escola de engenharia de Portugal, fundada em 1911, e foi a primeira instituição acadêmica do país a ter campus próprio.",
@@ -351,8 +469,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Biblioteca_Nacional_de_Portugal",
     "drawings": [],
     "photos": [
-      { "alt": "Edifício largo e baixo com entrada central recuada e painéis rosa-avermelhados entre fileiras de janelas, visto do outro lado de um gramado", "caption": null },
-      { "alt": "Grande sala de leitura sob um teto de caixotões de madeira, com altas janelas e uma tapeçaria na parede do fundo", "caption": "A sala de leitura." }
+      {
+        "alt": "Edifício largo e baixo com painéis rosa-avermelhados e entrada central recuada, visto de um pátio pavimentado ladeado por árvores altas e relvado.",
+        "caption": null
+      },
+      {
+        "alt": "Corpo monumental de entrada com altas portas envidraçadas entre dois painéis de relevo em pedra com figuras humanas, sob uma cobertura plana.",
+        "caption": null
+      },
+      {
+        "alt": "Esquina de um edifício modernista com vãos envidraçados altos e relevo esculpido em pedra, com uma longa ala de painéis rosa ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Edifício largo e baixo com entrada central recuada e painéis rosa-avermelhados entre fileiras de janelas, visto do outro lado de um gramado",
+        "caption": null
+      },
+      {
+        "alt": "Grande sala de leitura sob um teto de caixotões de madeira, com altas janelas e uma tapeçaria na parede do fundo",
+        "caption": "A sala de leitura."
+      }
     ],
     "hints": [
       "Foi construída porque a sede histórica da biblioteca, um convento, havia ficado pequena para seu acervo.",
@@ -398,8 +534,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Museu_Calouste_Gulbenkian",
     "drawings": [],
     "photos": [
-      { "alt": "Longo edifício de concreto elevado, com terraços plantados, com vista para um gramado pontilhado de guarda-sóis de café", "caption": null },
-      { "alt": "Sala de teto de madeira com uma janela do chão ao teto para um jardim, com duas cadeiras vermelhas", "caption": "Uma sala voltada para o jardim." }
+      {
+        "alt": "Longo edifício de concreto elevado, com terraços plantados, com vista para um gramado pontilhado de guarda-sóis de café",
+        "caption": null
+      },
+      {
+        "alt": "Sala de teto de madeira com uma janela do chão ao teto para um jardim, com duas cadeiras vermelhas",
+        "caption": "Uma sala voltada para o jardim."
+      },
+      {
+        "alt": "Galeria com painéis de madeira quente nas paredes e piso polido, exibindo tapeçarias, mobiliário ornamentado e um relógio alto sob um teto escuro.",
+        "caption": null
+      }
     ],
     "hints": [
       "O terreno fazia parte de um parque comprado em 1957, e os edifícios foram projetados por uma equipe que venceu um concurso.",
@@ -439,8 +585,22 @@
     "style": "Brutalismo",
     "drawings": [],
     "photos": [
-      { "alt": "Escadaria de concreto bruto subindo ao lado de um edifício moderno austero com uma alta faixa de vidro azul, emoldurada por árvores", "caption": null },
-      { "alt": "Nave de paredes texturizadas como tijolo sob uma grelha de concreto no teto, iluminada por vidros coloridos estreitos", "caption": "A nave." }
+      {
+        "alt": "Largos degraus de betão sobem até um complexo moderno austero de volumes escalonados em betão e painéis, vistos de baixo sob um céu azul intenso.",
+        "caption": null
+      },
+      {
+        "alt": "Edifício brutalista escalonado de betão e painéis ocres, com janelas em fita e terraços em volta de um pátio pavimentado, sob céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Escadaria de concreto bruto subindo ao lado de um edifício moderno austero com uma alta faixa de vidro azul, emoldurada por árvores",
+        "caption": null
+      },
+      {
+        "alt": "Nave de paredes texturizadas como tijolo sob uma grelha de concreto no teto, iluminada por vidros coloridos estreitos",
+        "caption": "A nave."
+      }
     ],
     "hints": [
       "Ganhou o primeiro prêmio no concurso realizado para seu projeto.",

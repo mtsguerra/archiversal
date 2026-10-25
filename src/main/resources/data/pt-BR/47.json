@@ -22,7 +22,15 @@
     "style": "Gótico vitoriano",
     "photos": [
       {
+        "alt": "Duas torres góticas de pedra unidas por uma passarela alta azul e branca, com correntes de suspensão, erguendo-se de pilares de pedra num rio largo.",
+        "caption": null
+      },
+      {
         "alt": "Duas torres de pedra de estilo gótico unidas por passarelas altas, vistas sobre uma antiga muralha de fortaleza",
+        "caption": null
+      },
+      {
+        "alt": "Uma estrada passando pela alta base em arco de uma torre gótica de pedra, emoldurada por vigas azul-claras sob um céu luminoso.",
         "caption": null
       },
       {
@@ -72,6 +80,18 @@
     "city": "Nova York",
     "style": "Ponte pênsil neogótica",
     "photos": [
+      {
+        "alt": "Ponte suspensa com uma torre de granito, leques de cabos de aço e um longo vão de acesso cruzando um rio em direção à margem distante, num dia claro.",
+        "caption": null
+      },
+      {
+        "alt": "Torre de granito com dois arcos ogivais e uma bandeira no topo, cruzada por uma teia de cabos de suspensão de aço contra o céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Vista elevada de uma ponte suspensa com duas torres de pedra e uma larga pista sobre um rio, com edifícios da cidade nas duas margens.",
+        "caption": null
+      },
       {
         "alt": "A pista vista do tabuleiro da ponte ao entardecer, com uma teia de cabos de aço e o horizonte de uma cidade à frente",
         "caption": null
@@ -140,6 +160,18 @@
         "caption": null
       },
       {
+        "alt": "Longa ponte suspensa laranja-avermelhada com duas torres altas cruzando um estreito, com um forte de tijolo e colinas verdes ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Olhando para cima uma alta torre de ponte laranja-avermelhada com contraventamento e cabos verticais, sobre um pilar de concreto e ondas quebrando.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea ao longo do tabuleiro de uma longa ponte, com a sombra da torre se estendendo sobre a água em direção a colinas e a uma baía distante.",
+        "caption": null
+      },
+      {
         "alt": "Uma alta torre vermelho-alaranjada emergindo da neblina sobre uma pista cheia de carros",
         "caption": null
       }
@@ -181,11 +213,23 @@
     "style": "Ponte em arco de ferro",
     "photos": [
       {
-        "alt": "Um rio ao entardecer com barcos atracados e antigos cais iluminados, e uma ponte ao fundo",
+        "alt": "Grande ponte em arco de ferro com um tabuleiro treliçado no alto, um encontro de pedra com escadas à esquerda e um tabuleiro inferior embaixo.",
         "caption": null
       },
       {
         "alt": "Vista aérea de uma ponte em arco de ferro com tabuleiro no alto cruzando um rio ao lado de uma cidade em encosta",
+        "caption": null
+      },
+      {
+        "alt": "Ponte em arco de ferro atravessando um desfiladeiro de rio com um tabuleiro superior alto, casas nas encostas das duas margens e céu nublado.",
+        "caption": null
+      },
+      {
+        "alt": "Vista próxima, de baixo para cima, de um arco treliçado de ferro curvo que sustenta um tabuleiro superior, travado por esbeltas treliças verticais contra um céu claro.",
+        "caption": null
+      },
+      {
+        "alt": "Um rio ao entardecer com barcos atracados e antigos cais iluminados, e uma ponte ao fundo",
         "caption": null
       }
     ],
@@ -225,6 +269,10 @@
     "city": "Veneza",
     "style": "Ponte de pedra renascentista",
     "photos": [
+      {
+        "alt": "Ponte de pedra branca em arco com arcadas cobertas e balaustrada atravessando um canal movimentado, com barcos e uma parada de barco-ônibus embaixo.",
+        "caption": null
+      },
       {
         "alt": "Uma ponte de pedra branca em arco, com arcadas cobertas, sobre um canal ao entardecer",
         "caption": null
@@ -271,11 +319,23 @@
     "style": "Ponte medieval de pedra",
     "photos": [
       {
-        "alt": "Uma ponte com casas ao longo da borda e um longo edifício de arcadas ao lado, refletidos em um rio ao entardecer",
+        "alt": "Ponte de pedra com três arcos, ladeada por casas coloridas e uma longa galeria coberta acima, atravessando um rio calmo sob céu limpo.",
         "caption": null
       },
       {
         "alt": "Uma ponte de pedra ladeada de casas e lojas cruzando um rio, vista da margem gramada",
+        "caption": null
+      },
+      {
+        "alt": "Vista oblíqua ao longo de uma ponte de casas amarelas e laranja sobrepostas, com venezianas e varandas projetadas sobre um rio verde.",
+        "caption": null
+      },
+      {
+        "alt": "Vista próxima dos arcos de pedra de uma ponte, com uma fileira de casas de janelas com venezianas e um longo corredor arcado no topo.",
+        "caption": null
+      },
+      {
+        "alt": "Uma ponte com casas ao longo da borda e um longo edifício de arcadas ao lado, refletidos em um rio ao entardecer",
         "caption": null
       }
     ],

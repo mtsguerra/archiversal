@@ -15,12 +15,20 @@
     "drawings": [],
     "photos": [
       {
+        "alt": "Sala de concertos revestida de mármore branco, com longa fachada nervurada de estreitas frestas verticais e um alto bloco anguloso atrás, contra um céu azul intenso.",
+        "caption": null
+      },
+      {
         "alt": "Longo edifício de mármore branco com janelas em fita e beiral saliente ao lado de uma praça pavimentada e árvores sem folhas",
         "caption": null
       },
       {
         "alt": "Foyer branco e luminoso com pilares redondos, uma parede de janelas altas para as árvores e uma galeria envidraçada acima",
         "caption": "Cada candeeiro, painel e piso foi desenhado para o edifício."
+      },
+      {
+        "alt": "Auditório de concertos com fileiras de assentos voltadas para um palco, piso de madeira e paredes laterais de painéis azul-escuros ondulantes.",
+        "caption": null
       }
     ],
     "hints": [
@@ -63,11 +71,23 @@
     "drawings": [],
     "photos": [
       {
+        "alt": "Edifício cívico de tijolo vermelho com um alto bloco escalonado em um canto e uma ala baixa e comprida com ripas de madeira, entre pinheiros.",
+        "caption": null
+      },
+      {
         "alt": "Bloco alto de tijolo vermelho com topo escalonado e inclinado erguendo-se atrás de um muro coberto de hera e de uma ala baixa de madeira",
         "caption": null
       },
       {
+        "alt": "Vista ampla de edifícios de tijolo em torno de um pátio elevado, alcançado por uma escada gramada, com uma escada de tijolo subindo a uma entrada superior.",
+        "caption": null
+      },
+      {
         "alt": "Longo corredor ensolarado com piso de tijolo, uma parede de janelas altas de moldura de madeira, floreiras e uma porta de madeira ao fundo",
+        "caption": null
+      },
+      {
+        "alt": "Sala de reuniões com paredes de tijolo vermelho, fileiras de mesas escuras e cadeiras de madeira voltadas para uma mesa elevada e um mapa pintado.",
         "caption": null
       }
     ],
@@ -116,6 +136,10 @@
         "caption": null
       },
       {
+        "alt": "Casa de tijolo pintado de branco com volume superior revestido de madeira escura, porta de madeira tipo garagem e muro branco liso ao longo da rua.",
+        "caption": null
+      },
+      {
         "alt": "Sala de estar ensolarada com persianas de madeira numa parede de janelas, poltronas de madeira curvada, uma mesa baixa e prateleiras com livros e uma garrafa verde",
         "caption": null
       }
@@ -161,11 +185,19 @@
     "drawings": [],
     "photos": [
       {
+        "alt": "Ala de ateliê de reboco branco com uma longa parede curva e uma faixa de janelas acima de terraços de pedra escalonados em um declive gramado.",
+        "caption": null
+      },
+      {
         "alt": "Paredes simples de tijolo pintado de branco com uma faixa horizontal de janelas, um muro baixo e árvores sem folhas sob um céu azul",
         "caption": null
       },
       {
         "alt": "Grande escritório de desenho aberto com janelas amplas, mesas compridas, gaveteiros de plantas e candeeiros de mesa sob um teto claro",
+        "caption": null
+      },
+      {
+        "alt": "Luminoso salão de ateliê branco com parede curva envidraçada, bancos de madeira, um tapete, uma plataforma escalonada e luminárias pendentes.",
         "caption": null
       }
     ],
@@ -208,7 +240,18 @@
     "style": "Modernismo orgânico",
     "drawings": [],
     "photos": [
-      { "alt": "Edifícios brancos de igreja com telhado escuro entre altos pinheiros na neve", "caption": null },
+      {
+        "alt": "Fachada de igreja de reboco branco com um muro baixo de entrada, janelas altas e estreitas e uma empena íngreme escalonada, vista de um pátio coberto de neve.",
+        "caption": null
+      },
+      {
+        "alt": "Paredes brancas de igreja com beiral de cobre e um esbelto campanário escalonado coroado por uma cruz, contra um céu azul brilhante.",
+        "caption": null
+      },
+      {
+        "alt": "Vista oblíqua de uma igreja branca com cobertura dobrada de cobre e metal escuro, uma marquise sobre a entrada e uma alta torre entre pinheiros.",
+        "caption": null
+      },
       {
         "alt": "Átrio de entrada com um longo banco de madeira, um quadro de avisos, uma porta de madeira e piso de ladrilho castanho",
         "caption": null

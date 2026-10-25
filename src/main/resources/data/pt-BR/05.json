@@ -16,8 +16,26 @@
       { "label": "Fachada e planta (c. 1700)", "alt": "Elevação da frente de uma igreja com frontão sobre duas pilastras e um pórtico semicircular, com a planta abaixo" }
     ],
     "photos": [
-      { "alt": "Frente de igreja com um alto frontão sobre pilastras e um pórtico curvo sobre duas colunas, acima de uma ampla escadaria", "caption": null },
-      { "alt": "Cúpula oval dourada de caixotões com uma lanterna e figuras na cornija", "caption": "A cúpula oval sobre a nave." }
+      {
+        "alt": "Frente de igreja com um alto frontão sobre pilastras e um pórtico curvo sobre duas colunas, acima de uma ampla escadaria",
+        "caption": null
+      },
+      {
+        "alt": "Cúpula oval dourada de caixotões com uma lanterna e figuras na cornija",
+        "caption": "A cúpula oval sobre a nave."
+      },
+      {
+        "alt": "Interior oval de igreja com cúpula dourada de caixotões, figuras esculpidas brancas na cornija e paredes de mármore rosado.",
+        "caption": null
+      },
+      {
+        "alt": "Capela do altar emoldurada por pares de colunas caneladas de mármore rosado, com uma grande pintura e raios esculpidos dourados atrás do altar.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aproximada de uma fachada de pedra clara com frontão, pórtico curvo sobre duas colunas e um brasão esculpido acima da porta.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construída para um seminário dos jesuítas.",
@@ -56,8 +74,26 @@
       { "label": "Corte pela escadaria e pelos salões", "alt": "Corte de uma grande escadaria sob uma ampla abóbada, ao lado de dois salões" }
     ],
     "photos": [
-      { "alt": "Longo palácio com um pavilhão central, visto do outro lado de um jardim formal", "caption": null },
-      { "alt": "Grande escadaria que sobe sob um vasto teto pintado", "caption": "A escadaria e o teto de Tiepolo." }
+      {
+        "alt": "Longo palácio com um pavilhão central, visto do outro lado de um jardim formal",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de um grande palácio em forma de U com pátios, um jardim formal com fontes e as ruas da cidade ao redor.",
+        "caption": null
+      },
+      {
+        "alt": "Grande escadaria que sobe sob um vasto teto pintado",
+        "caption": "A escadaria e o teto de Tiepolo."
+      },
+      {
+        "alt": "Parede de palácio em arenito com janelas altas, uma sacada de ferro forjado, figuras esculpidas e frontões ornamentais abaixo de estátuas no telhado.",
+        "caption": null
+      },
+      {
+        "alt": "Enorme teto pintado com nuvens, deuses e figuras em cores vivas, contornado por molduras de estuque.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construída para príncipes-bispos e, segundo se diz, Napoleão a chamou de «a maior casa paroquial da Europa».",
@@ -98,8 +134,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/S%C3%A9_Velha_de_Coimbra",
     "drawings": [],
     "photos": [
-      { "alt": "Frente de igreja de pedra, com ar de fortaleza, com muralhas ameadas e um profundo portal em arco", "caption": null },
-      { "alt": "Nave românica de arcos redondos que leva a um retábulo gótico dourado", "caption": "A nave." }
+      {
+        "alt": "Frente de igreja de pedra, com ar de fortaleza, com muralhas ameadas e um profundo portal em arco",
+        "caption": null
+      },
+      {
+        "alt": "Igreja de pedra com aspecto de fortaleza, com platibanda ameada e uma torre com cúpula, vista do alto entre telhados de telha vermelha.",
+        "caption": null
+      },
+      {
+        "alt": "Nave românica de arcos redondos que leva a um retábulo gótico dourado",
+        "caption": "A nave."
+      },
+      {
+        "alt": "Parede de pedra dourada com uma fileira de colunas esbeltas e arcos cegos acima de uma porta de madeira em arco de volta perfeita.",
+        "caption": null
+      },
+      {
+        "alt": "Galeria de claustro com arcos ogivais e pequenos rosetões em torno de um gramado verde e de uma fonte simples de pedra.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi iniciada depois que sua cidade se tornou capital de um reino recém-proclamado, no século XII.",
@@ -143,8 +197,26 @@
       { "label": "Corte longitudinal da igreja", "alt": "Corte de uma alta igreja gótica com janelas ogivais, pináculos e uma flecha" }
     ],
     "photos": [
-      { "alt": "Igreja gótica ornamentada, com pináculos, arcobotantes e altas janelas com tracejados", "caption": null },
-      { "alt": "Nave gótica muito alta e estreita, com luz colorida caindo sobre os pilares", "caption": "A nave." }
+      {
+        "alt": "Fachada gótica ornamentada de calcário, com um profundo portal em arco, uma grande janela com rendilhado, muitos pináculos e uma torre esguia.",
+        "caption": null
+      },
+      {
+        "alt": "Igreja gótica ornamentada, com pináculos, arcobotantes e altas janelas com tracejados",
+        "caption": null
+      },
+      {
+        "alt": "Cabeceira de uma igreja gótica com um anel de capelas rendilhadas de topo aberto e altas janelas com contrafortes, numa ampla praça pavimentada.",
+        "caption": null
+      },
+      {
+        "alt": "Jardim de claustro com sebes aparadas e ciprestes altos, emoldurado por arcadas de rendilhado de pedra sob uma torre com pináculos.",
+        "caption": null
+      },
+      {
+        "alt": "Nave gótica muito alta e estreita, com luz colorida caindo sobre os pilares",
+        "caption": "A nave."
+      }
     ],
     "hints": [
       "Foi construído para agradecer uma vitória sobre Castela em 1385.",
@@ -185,8 +257,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Mosteiro_dos_Jer%C3%B3nimos",
     "drawings": [],
     "photos": [
-      { "alt": "Fachada de igreja em calcário branco ricamente entalhado, com uma torre de cúpula, vista de um gramado", "caption": null },
-      { "alt": "Igreja-salão com esbeltas colunas entalhadas que se abrem em uma abóbada de nervuras em estrela", "caption": "A igreja." }
+      {
+        "alt": "Fachada de igreja em calcário branco ricamente entalhado, com uma torre de cúpula, vista de um gramado",
+        "caption": null
+      },
+      {
+        "alt": "Fachada muito longa de mosteiro em pedra clara, com uma ala baixa de arcadas, uma torre com cúpula à direita e canteiros de jardim formal à frente.",
+        "caption": null
+      },
+      {
+        "alt": "Portal de pedra densamente esculpido com uma coluna de estátuas e dosséis, entre duas altas janelas sob um parapeito de pináculos.",
+        "caption": null
+      },
+      {
+        "alt": "Claustro de dois andares com arcos rendilhados em torno de um gramado e de uma pequena fonte, sob um céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Igreja-salão com esbeltas colunas entalhadas que se abrem em uma abóbada de nervuras em estrela",
+        "caption": "A igreja."
+      }
     ],
     "hints": [
       "Foi pago com um imposto sobre os lucros do comércio com a África e o Oriente.",
@@ -222,8 +312,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Torre_de_Bel%C3%A9m",
     "drawings": [],
     "photos": [
-      { "alt": "Torre de fortaleza em calcário branco ornamentado, com um baluarte, erguida em um rio", "caption": null },
-      { "alt": "Casamata abobadada de pedra, com arcos e canhões antigos", "caption": "O salão de artilharia abobadado do baluarte." }
+      {
+        "alt": "Torre de fortaleza em calcário branco ornamentado, com um baluarte, erguida em um rio",
+        "caption": null
+      },
+      {
+        "alt": "Torre fortificada de calcário claro com guaritas nos cantos e um terraço baixo ameado, alcançada por uma passarela de madeira sobre a margem.",
+        "caption": null
+      },
+      {
+        "alt": "Pequena torre de pedra e baluarte ameado sobre a água, com uma ponte pênsil de pilares vermelhos e um veleiro ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Casamata abobadada de pedra, com arcos e canhões antigos",
+        "caption": "O salão de artilharia abobadado do baluarte."
+      },
+      {
+        "alt": "Vista aproximada de uma guarita de canto com cúpula nervurada e cruzes esculpidas na ameia ao lado.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construída como fortaleza sobre uma rocha em um rio, para guardar o porto de uma capital.",
@@ -264,8 +372,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Convento_de_Cristo",
     "drawings": [],
     "photos": [
-      { "alt": "Parede de pedra entalhada com uma grande janela emoldurada por cordas, corais e folhagens, sob uma janela redonda", "caption": "A janela da sala do capítulo." },
-      { "alt": "Igreja templária redonda com um octógono central dourado e pintado", "caption": "A Charola, a igreja redonda dos Templários." }
+      {
+        "alt": "Igreja de pedra clara com uma torre sineira quadrada e um corpo poligonal ameado, alcançada por escadarias de pedra, sob um céu azul profundo.",
+        "caption": null
+      },
+      {
+        "alt": "Parede de pedra entalhada com uma grande janela emoldurada por cordas, corais e folhagens, sob uma janela redonda",
+        "caption": "A janela da sala do capítulo."
+      },
+      {
+        "alt": "Longos muros brancos com guarnições de pedra, galerias de arcadas e fileiras de pequenas janelas, ao longo de uma encosta gramada.",
+        "caption": null
+      },
+      {
+        "alt": "Pátio de pedra ensolarado com uma pequena fonte octogonal, cercado por galerias de claustro rebocadas de branco com arcos de volta perfeita.",
+        "caption": null
+      },
+      {
+        "alt": "Igreja templária redonda com um octógono central dourado e pintado",
+        "caption": "A Charola, a igreja redonda dos Templários."
+      }
     ],
     "hints": [
       "Começou como uma fortaleza dos Cavaleiros Templários no século XII.",
@@ -303,8 +429,26 @@
       { "label": "Vista da igreja e do convento (século XVIII)", "alt": "Desenho antigo de uma longa igreja e convento com um beiral ameado, e uma cruz na praça à frente" }
     ],
     "photos": [
-      { "alt": "Longa igreja com contrafortes de pináculos e um portal decorado, ao lado de uma cruz de pedra em um gramado", "caption": null },
-      { "alt": "Estreita igreja-salão com colunas de pedra torcidas e uma abóbada nervurada", "caption": "A nave." }
+      {
+        "alt": "Parede de igreja caiada com um portal de pedra esculpido e contrafortes com pináculos, com uma alta cruz de pedra sobre uma base escalonada em primeiro plano.",
+        "caption": null
+      },
+      {
+        "alt": "Longa igreja com contrafortes de pináculos e um portal decorado, ao lado de uma cruz de pedra em um gramado",
+        "caption": null
+      },
+      {
+        "alt": "Portal de pedra profundamente esculpido com motivos de corda retorcida em uma parede caiada simples, ao lado de uma janela estreita e de um contraforte com pináculo.",
+        "caption": null
+      },
+      {
+        "alt": "Estreita igreja-salão com colunas de pedra torcidas e uma abóbada nervurada",
+        "caption": "A nave."
+      },
+      {
+        "alt": "Painel de azulejos azuis e brancos com uma cena pastoral dentro de uma moldura dourada de volutas, acima de uma faixa de azulejos ornamentais amarelos.",
+        "caption": null
+      }
     ],
     "hints": [
       "É um dos primeiros edifícios do estilo gótico tardio da era dos descobrimentos de seu país.",
@@ -345,8 +489,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Igreja_de_S%C3%A3o_Roque_(Lisboa)",
     "drawings": [],
     "photos": [
-      { "alt": "Frente de igreja clássica simples, com um frontão triangular e uma janela redonda", "caption": null },
-      { "alt": "Ampla nave única sob um teto pintado, que leva a um altar dourado", "caption": "A nave." }
+      {
+        "alt": "Frente de igreja clássica simples, com um frontão triangular e uma janela redonda",
+        "caption": null
+      },
+      {
+        "alt": "Fachada clássica branca e simples com frontão triangular e janela redonda, ao lado de um longo edifício baixo em uma praça de paralelepípedos.",
+        "caption": null
+      },
+      {
+        "alt": "Ampla nave única sob um teto pintado, que leva a um altar dourado",
+        "caption": "A nave."
+      },
+      {
+        "alt": "Capela lateral coberta de talha dourada e pinturas, com um crucifixo sobre o altar e um piso de mármore xadrez.",
+        "caption": null
+      },
+      {
+        "alt": "Retábulo dourado de madeira entalhada com a estátua de uma mulher vestida em túnica, cercada por querubins e painéis em arco.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi a primeira igreja dos jesuítas no mundo de seu país.",
@@ -387,8 +549,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Igreja_de_S%C3%A3o_Vicente_de_Fora",
     "drawings": [],
     "photos": [
-      { "alt": "Alta fachada de igreja branca, com duas torres e três entradas em arco", "caption": null },
-      { "alt": "Vista para cima de um cruzeiro com uma cúpula de caixotões e abóbadas de berço", "caption": "O cruzeiro." }
+      {
+        "alt": "Alta fachada de igreja branca, com duas torres e três entradas em arco",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de uma igreja branca de duas torres e longas alas de mosteiro em torno de pátios, com um rio e uma igreja de cúpula ao longe.",
+        "caption": null
+      },
+      {
+        "alt": "Igreja branca de duas torres sobre uma colina vista por cima de telhados de telha vermelha e uma palmeira, com uma cúpula ao longe à direita.",
+        "caption": null
+      },
+      {
+        "alt": "Vista para cima de um cruzeiro com uma cúpula de caixotões e abóbadas de berço",
+        "caption": "O cruzeiro."
+      },
+      {
+        "alt": "Painel de azulejos azuis e brancos mostrando uma paisagem fluvial com barcos e um pagode, emoldurado por volutas e querubins.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi reconstruída por ordem de um rei espanhol que, em 1580, passou a ser também rei deste país.",
@@ -424,8 +604,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/S%C3%A9_Nova_de_Coimbra",
     "drawings": [],
     "photos": [
-      { "alt": "Fachada de igreja de pedra clara, com estátuas em nichos, um topo barroco curvo e torres sineiras atrás", "caption": null },
-      { "alt": "Nave clara com abóbada de berço que leva a um retábulo dourado sob uma cúpula", "caption": "A nave." }
+      {
+        "alt": "Frontaria simétrica de igreja barroca em pedra clara, com estátuas em nichos, duas torres sineiras e um frontão central coroado sob céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada de igreja de pedra clara, com estátuas em nichos, um topo barroco curvo e torres sineiras atrás",
+        "caption": null
+      },
+      {
+        "alt": "Nave clara com abóbada de berço que leva a um retábulo dourado sob uma cúpula",
+        "caption": "A nave."
+      }
     ],
     "hints": [
       "Foi construída como igreja de um colégio universitário dos jesuítas.",
@@ -463,8 +653,22 @@
       { "label": "Planta ao nível da entrada", "alt": "Planta de uma igreja alongada com nave oval, ligada a uma torre nos fundos" }
     ],
     "photos": [
-      { "alt": "Torre sineira barroca de granito, muito alta e ricamente entalhada, contra o céu", "caption": null },
-      { "alt": "Nave oval de granito cinzento que leva a um altar de mármore policromo", "caption": "A nave oval." }
+      {
+        "alt": "Esbelta torre sineira barroca em granito ao lado de uma igreja branca de telhados laranja, vista de uma praça verde sob céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada barroca de granito ricamente esculpida, com escadaria curva, pináculos e grande janela em arco, vista de uma esquina ensolarada.",
+        "caption": null
+      },
+      {
+        "alt": "Torre sineira barroca de granito, muito alta e ricamente entalhada, contra o céu",
+        "caption": null
+      },
+      {
+        "alt": "Nave oval de granito cinzento que leva a um altar de mármore policromo",
+        "caption": "A nave oval."
+      }
     ],
     "hints": [
       "Foi construída para uma irmandade de clérigos.",

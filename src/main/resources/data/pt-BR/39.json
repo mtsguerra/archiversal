@@ -20,11 +20,15 @@
     "drawings": [],
     "photos": [
       {
+        "alt": "Maciço bloco angular de museu revestido a granito, com longos estandartes pendurados e um emblema circular vermelho, junto a um edifício antigo de pedra e uma rua com degraus.",
+        "caption": null
+      },
+      {
         "alt": "Grande bloco de granito elevado sobre um piso térreo envidraçado, com uma alta faixa verde, ao pé de escadas junto a um velho muro de pedra",
         "caption": null
       },
       {
-        "alt": "Longa parede cinzenta de granito de uma galeria que flutua sobre uma base envidraçada, junto a escadas e um candeeiro, sob um céu azul",
+        "alt": "Bloco de museu em granito com um alto estandarte vermelho ergue-se sobre um muro baixo de pedra e largos degraus, enquanto um autocarro amarelo passa.",
         "caption": null
       }
     ],
@@ -73,7 +77,11 @@
         "caption": null
       },
       {
-        "alt": "Rocha castanha recortada em primeiro plano, com um tanque branco curvo escavado na costa e a rebentação ao fundo",
+        "alt": "Duas piscinas de água do mar entre rochas numa praia de areia, com banhistas, um muro baixo de contenção e ondas a rebentar ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Um estreito passadiço ao sol entre muros de betão bruto marcado por tábuas conduz a volumes de madeira escura dos balneários sob um céu azul limpo.",
         "caption": null
       }
     ],
@@ -118,6 +126,14 @@
       {
         "alt": "Bloco de betão claro com uma faixa de janelas que paira sobre um piso térreo recuado, junto a um talude verde",
         "caption": null
+      },
+      {
+        "alt": "Caixa elevada de betão claro marcado por tábuas, com uma longa janela corrida e varanda, pairando sobre um relvado, com rio e colinas ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Vista por baixo de um grande avanço em betão sobre um relvado sombreado, em direção a um rio e a gruas à luz do fim da tarde.",
+        "caption": null
       }
     ],
     "hints": [
@@ -155,11 +171,11 @@
     "drawings": [],
     "photos": [
       {
-        "alt": "Bloco baixo e comprido e claro num cais ribeirinho, com uma fiada de tubos na cobertura e um candeeiro à frente, sob um céu limpo",
+        "alt": "Edifício baixo de cobertura plana com piso térreo envidraçado e grandes condutas prateadas no piso superior, numa praça pavimentada sob um céu azul intenso.",
         "caption": null
       },
       {
-        "alt": "Canto de um comprido edifício elevado com grossas condutas prateadas a serpentear na cobertura, sobre um piso térreo envidraçado numa praça pavimentada",
+        "alt": "Grandes condutas prateadas percorrem o piso superior de um longo edifício envidraçado junto a um passeio pavimentado à beira-rio e nuvens brancas.",
         "caption": null
       },
       {
@@ -211,6 +227,10 @@
       },
       {
         "alt": "Pátio com um tanque octogonal de azulejos e árvores, rodeado de baixos pavilhões sob finas coberturas brancas",
+        "caption": null
+      },
+      {
+        "alt": "Salão coberto e aberto com longas bancadas de ardósia sobre apoios azuis em redor de uma bacia redonda de pedra, sobre piso de ladrilho vermelho.",
         "caption": null
       }
     ],

@@ -41,10 +41,21 @@
         "caption": null
       },
       {
+        "alt": "Um alto pavilhão de pedra ornamentado, com telhado de ardósia íngreme e frontões esculpidos, ergue-se atrás de um gramado com estátuas de mármore e árvores de outono.",
+        "caption": null
+      },
+      {
+        "alt": "Um pátio quadrado de alas clássicas ricamente esculpidas brilha ao entardecer, com uma fonte iluminada refletindo um céu azul profundo.",
+        "caption": null
+      },
+      {
         "alt": "Grande escada de pedra que sobe entre arcos em direção a uma estátua alada de mármore sob uma claraboia",
         "caption": null
       },
-      { "alt": "Longa galeria abobadada, com esculturas e relevos antigos nos dois lados", "caption": null }
+      {
+        "alt": "Longa galeria abobadada, com esculturas e relevos antigos nos dois lados",
+        "caption": null
+      }
     ],
     "hints": [
       "Começou como fortaleza medieval, virou palácio real e hoje é um dos museus mais visitados do mundo.",
@@ -102,10 +113,17 @@
     ],
     "photos": [
       {
+        "alt": "Um enorme arco triunfal de pedra clara, com grupos de relevos esculpidos nos pilares e um friso entalhado, visto de frente através de uma rotatória vazia.",
+        "caption": null
+      },
+      {
         "alt": "Enorme arco do triunfo de pedra, com relevos esculpidos, emoldurado por árvores e uma rotatória movimentada",
         "caption": null
       },
-      { "alt": "Sala abobadada de pedra dentro do arco, com vitrines e uma longa inscrição gravada", "caption": null }
+      {
+        "alt": "Sala abobadada de pedra dentro do arco, com vitrines e uma longa inscrição gravada",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi encomendado por um imperador depois de sua maior vitória, mas ele não viveu para vê-lo pronto.",
@@ -163,7 +181,14 @@
         "alt": "Alta torre treliçada de ferro que se afunila de uma base larga de quatro pernas até um topo esbelto, contra um céu azul",
         "caption": null
       },
-      { "alt": "Vista direto para cima, entre quatro pernas de ferro, da treliça e do céu acima", "caption": null },
+      {
+        "alt": "Uma torre de treliça de ferro iluminada ergue-se sobre uma cidade ao entardecer, com uma faixa de nuvem rosada num céu azul profundo.",
+        "caption": null
+      },
+      {
+        "alt": "Vista direto para cima, entre quatro pernas de ferro, da treliça e do céu acima",
+        "caption": null
+      },
       {
         "alt": "Pequeno apartamento revestido de madeira, com uma escrivaninha e duas figuras sentadas conversando",
         "caption": "O projetista mantinha um apartamento particular perto do topo."
@@ -215,6 +240,14 @@
         "caption": null
       },
       {
+        "alt": "Uma basílica de pedra branca com uma grande cúpula central escamada e torres menores com cúpulas, vista por entre árvores verdes e um céu pálido.",
+        "caption": null
+      },
+      {
+        "alt": "Uma estátua de bronze esverdeado de um cavaleiro segurando uma cruz ergue-se sobre um pedestal de pedra, diante de arcos esculpidos claros e janelas estreitas.",
+        "caption": null
+      },
+      {
         "alt": "Longa nave e coro com arcos redondos, um mosaico dourado na abside e um altar ao fundo",
         "caption": null
       }
@@ -260,11 +293,23 @@
     ],
     "photos": [
       {
-        "alt": "Longo edifício neogótico com muitas flechas e uma cúpula central, à margem de um largo rio",
+        "alt": "Um longo edifício simétrico neogótico, com cúpula central vermelha, muitas agulhas e alas em arcadas, estende-se ao longo de um largo rio sob um céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "A fachada voltada para a terra de um enorme palácio neogótico com cúpula vermelha e agulhas, atrás de um gramado verde e bancos de parque ao pôr do sol.",
+        "caption": null
+      },
+      {
+        "alt": "Um edifício neogótico claro com cúpula vermelha e muitos pináculos reflete suas arcadas de pedra nas águas azul-escuras do rio em um dia claro.",
         "caption": null
       },
       {
         "alt": "Câmara semicircular com fileiras de bancos de madeira, decoração dourada e altas janelas em arco",
+        "caption": null
+      },
+      {
+        "alt": "Um salão suntuoso com arcos dourados, colunas de mármore vermelho, lustre de cristal, tapete estampado e um assento redondo estofado atrás de cordas.",
         "caption": null
       }
     ],
@@ -319,6 +364,18 @@
     ],
     "photos": [
       {
+        "alt": "Um edifício legislativo neoclássico branco, com alta cúpula de colunas e longas alas, ergue-se acima de um gramado verde e amplas escadarias sob um céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Um edifício branco com cúpula, pórtico central de colunas e alas laterais, visto através de uma ampla praça pavimentada vazia sob um céu azul intenso.",
+        "caption": null
+      },
+      {
+        "alt": "Vista de canto de um edifício branco com cúpula, uma grande escadaria de pedra e altas colunas coríntias à direita.",
+        "caption": null
+      },
+      {
         "alt": "Edifício legislativo branco com cúpula, visto do outro lado de um parque nevado ao entardecer de inverno",
         "caption": null
       },
@@ -372,7 +429,15 @@
     ],
     "photos": [
       {
+        "alt": "Uma mansão neoclássica branca com alto pórtico de colunas e frontão triangular ergue-se atrás de uma cerca de ferro e um canteiro de flores vermelhas e azuis.",
+        "caption": null
+      },
+      {
         "alt": "Casa branca com um pórtico semicircular de colunas, atrás de um gramado verde e de uma fonte",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de uma mansão branca com pórtico de colunas, cercada por gramados verdes e árvores frondosas, com alas baixas de cada lado.",
         "caption": null
       },
       {
@@ -426,7 +491,15 @@
         "caption": null
       },
       {
+        "alt": "Um pesado palácio de pedra com pórtico de colunas, torres de canto e uma cúpula de vidro atrás, visto através de um amplo gramado verde sob nuvens de tempestade.",
+        "caption": null
+      },
+      {
         "alt": "Interior de uma cúpula de vidro com uma rampa em espiral, visto de baixo, com visitantes na passarela",
+        "caption": null
+      },
+      {
+        "alt": "Uma grande câmara de debates semicircular com fileiras curvas de assentos roxos, um púlpito central e galerias em níveis acima.",
         "caption": null
       }
     ],

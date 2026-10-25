@@ -16,8 +16,26 @@
       { "label": "Planta geral", "alt": "Planta de um vasto complexo retangular com uma igreja no centro da fachada principal e pátios atrás" }
     ],
     "photos": [
-      { "alt": "Fachada de pedra muito longa, com uma igreja de duas torres no centro, vista do outro lado de uma praça pavimentada", "caption": null },
-      { "alt": "Longo salão de biblioteca abobadado, forrado de estantes de madeira dourada e piso de mármore xadrez", "caption": "A biblioteca." }
+      {
+        "alt": "Imensa fachada de palácio em tons claros e amarelos ao longo de uma praça pavimentada, com uma alta igreja de duas torres ao centro sob céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de um vasto complexo palaciano barroco com igreja de cúpula e duas torres, longas alas amarelas e grande praça pavimentada com linhas radiais.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada de pedra muito longa, com uma igreja de duas torres no centro, vista do outro lado de uma praça pavimentada",
+        "caption": null
+      },
+      {
+        "alt": "Longo salão de biblioteca abobadado, forrado de estantes de madeira dourada e piso de mármore xadrez",
+        "caption": "A biblioteca."
+      },
+      {
+        "alt": "Olhar para o alto de uma cúpula de pedra com anel de caixotões, emoldurada por arcos e abóbadas ricamente moldadas em mármore cinza e creme.",
+        "caption": null
+      }
     ],
     "hints": [
       "Cumpriu o voto de um rei, feito em 1711, de construir um convento se a rainha lhe desse um herdeiro.",
@@ -53,8 +71,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Igreja_de_Santa_Engr%C3%A1cia",
     "drawings": [],
     "photos": [
-      { "alt": "Igreja de pedra branca em planta de cruz grega, com torres nos cantos e uma grande cúpula", "caption": null },
-      { "alt": "Centro com cúpula de uma igreja, com pisos e paredes de mármore colorido", "caption": "Sob a cúpula." }
+      {
+        "alt": "Igreja de pedra branca em planta de cruz grega, com torres nos cantos e uma grande cúpula",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea ao entardecer sobre uma cidade densa de telhados vermelhos, com uma igreja branca de cúpula destacando-se entre os edifícios.",
+        "caption": null
+      },
+      {
+        "alt": "Centro com cúpula de uma igreja, com pisos e paredes de mármore colorido",
+        "caption": "Sob a cúpula."
+      }
     ],
     "hints": [
       "Seu nome virou um ditado nacional para uma obra que nunca termina.",
@@ -90,8 +118,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Santu%C3%A1rio_do_Bom_Jesus_do_Monte",
     "drawings": [],
     "photos": [
-      { "alt": "Escadaria de granito em zigue-zague, com estátuas e fontes, subindo uma colina arborizada até uma igreja de duas torres", "caption": null },
-      { "alt": "Nave de igreja com abóbada de berço de pedra que leva a um altar-mor dourado", "caption": "A igreja." }
+      {
+        "alt": "Escadaria de granito em zigue-zague, com estátuas e fontes, subindo uma colina arborizada até uma igreja de duas torres",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de uma igreja de duas torres no topo de uma colina arborizada, com jardins formais, terraços e uma escadaria dupla abaixo.",
+        "caption": null
+      },
+      {
+        "alt": "Igreja barroca de duas torres vista por trás de sebes aparadas e arbustos floridos, com árvores verdes e nuvens brancas ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Nave de igreja com abóbada de berço de pedra que leva a um altar-mor dourado",
+        "caption": "A igreja."
+      }
     ],
     "hints": [
       "É um local de peregrinação no alto de um monte, tradicionalmente alcançado a pé ou até de joelhos.",
@@ -132,8 +174,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pal%C3%A1cio_Nacional_de_Queluz",
     "drawings": [],
     "photos": [
-      { "alt": "Frente de palácio rococó rosa e branco, com frontão e altas janelas, vista ao longo de um jardim formal", "caption": null },
-      { "alt": "Sala do trono espelhada e dourada, com lustres de cristal e um teto pintado", "caption": "A Sala do Trono." }
+      {
+        "alt": "Frente de palácio rococó rosa e branco, com frontão e altas janelas, vista ao longo de um jardim formal",
+        "caption": null
+      },
+      {
+        "alt": "Vista oblíqua de uma ala de palácio azul-acinzentada e branca, com grande escadaria dupla, sebes aparadas e caminho de cascalho à frente.",
+        "caption": null
+      },
+      {
+        "alt": "Grupo escultórico de pedra erguendo-se de um tanque de jardim, com fachada de palácio rosa-clara e amarela e sebes verdes ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Sala do trono espelhada e dourada, com lustres de cristal e um teto pintado",
+        "caption": "A Sala do Trono."
+      }
     ],
     "hints": [
       "Foi construído como refúgio de verão para o irmão de um rei, que depois se casou com a própria sobrinha, a rainha.",
@@ -174,8 +230,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Bas%C3%ADlica_da_Estrela",
     "drawings": [],
     "photos": [
-      { "alt": "Frente de igreja branca com duas torres sineiras e estátuas, vista da rua", "caption": null },
-      { "alt": "Vista para cima de um cruzeiro de abóbadas de mármore colorido sob uma cúpula", "caption": "As abóbadas e a cúpula." }
+      {
+        "alt": "Frente de igreja branca com duas torres sineiras e estátuas, vista da rua",
+        "caption": null
+      },
+      {
+        "alt": "Vista oblíqua em contra-picado de uma fachada barroca branca com estátuas, janelas de portadas vermelhas e duas torres com relógio sob céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Vista para cima de um cruzeiro de abóbadas de mármore colorido sob uma cúpula",
+        "caption": "As abóbadas e a cúpula."
+      },
+      {
+        "alt": "Longa nave de mármore cinza e rosa com bancos de madeira, conduzindo a um altar iluminado sob abóbada de berço e cúpula ao fundo.",
+        "caption": null
+      }
     ],
     "hints": [
       "Uma princesa prometeu construí-la se tivesse um herdeiro; só pôde cumprir o voto depois de se tornar rainha.",
@@ -217,8 +287,18 @@
       { "label": "Planta do projeto original", "alt": "Planta de um enorme palácio em torno de um grande pátio, com a parte executada em preto sólido" }
     ],
     "photos": [
-      { "alt": "Longa frente de palácio neoclássico com pavilhões nos cantos, vista do outro lado de um gramado aberto", "caption": null },
-      { "alt": "Escadaria de pedra com tapete vermelho subindo entre paredes brancas entalhadas", "caption": "Uma escadaria." }
+      {
+        "alt": "Fachada neoclássica clara de palácio com frontão central, arcadas e pavilhões nos cantos, emoldurada por ciprestes altos e uma estátua.",
+        "caption": null
+      },
+      {
+        "alt": "Longa frente de palácio neoclássico com pavilhões nos cantos, vista do outro lado de um gramado aberto",
+        "caption": null
+      },
+      {
+        "alt": "Escadaria de pedra com tapete vermelho subindo entre paredes brancas entalhadas",
+        "caption": "Uma escadaria."
+      }
     ],
     "hints": [
       "Fica no local de uma residência real de madeira construída depois do terremoto de 1755.",
@@ -290,8 +370,22 @@
     "style": "Palladiano",
     "drawings": [],
     "photos": [
-      { "alt": "Longo edifício neoclássico de granito, com um pavilhão central de colunas coroado por estátuas", "caption": null },
-      { "alt": "Antiga farmácia com armários de madeira entalhada cheios de potes de vidro sob um teto abobadado", "caption": "A antiga farmácia, hoje museu." }
+      {
+        "alt": "Longo edifício neoclássico de granito, com um pavilhão central de colunas coroado por estátuas",
+        "caption": null
+      },
+      {
+        "alt": "Edifício neoclássico de granito escuro com pórtico central de colunas encimado por uma estátua, janelas em arco no piso térreo e balaustrada.",
+        "caption": null
+      },
+      {
+        "alt": "Longo edifício neoclássico de granito visto por cima de um jardim com um lago que reflete a fachada, emoldurado por árvores.",
+        "caption": null
+      },
+      {
+        "alt": "Antiga farmácia com armários de madeira entalhada cheios de potes de vidro sob um teto abobadado",
+        "caption": "A antiga farmácia, hoje museu."
+      }
     ],
     "hints": [
       "Seu arquiteto era inglês, mais conhecido por casas de campo em estilo palladiano.",
@@ -325,8 +419,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pal%C3%A1cio_Nacional_da_Pena",
     "drawings": [],
     "photos": [
-      { "alt": "Castelo-palácio amarelo, vermelho e cinza, com cúpulas e torres, no alto de uma colina arborizada", "caption": null },
-      { "alt": "Sala redonda com uma coluna central que se abre em abóbada como uma palmeira, decorada com chifres", "caption": "A Sala dos Veados." }
+      {
+        "alt": "Castelo-palácio amarelo, vermelho e cinza, com cúpulas e torres, no alto de uma colina arborizada",
+        "caption": null
+      },
+      {
+        "alt": "Colorido palácio amarelo e vermelho no alto de uma colina, com cúpula cinzenta e torre do relógio, acima de uma densa floresta sob céu azul limpo.",
+        "caption": null
+      },
+      {
+        "alt": "Vista próxima de um palácio com paredes cinzentas decoradas, cúpulas douradas e ameias amarelas, com torre vermelha ao fundo e portais em arco abaixo.",
+        "caption": null
+      },
+      {
+        "alt": "Terraço com escada de pedra que sobe até uma torre vermelha com relógio, ladeada por muros amarelos ameados e por uma ala cinzenta decorada.",
+        "caption": null
+      },
+      {
+        "alt": "Sala redonda com uma coluna central que se abre em abóbada como uma palmeira, decorada com chifres",
+        "caption": "A Sala dos Veados."
+      }
     ],
     "hints": [
       "Foi construído sobre as ruínas de um mosteiro destruído por um raio e depois pelo terremoto de 1755.",
@@ -362,8 +474,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pal%C3%A1cio_Hotel_do_Bu%C3%A7aco",
     "drawings": [],
     "photos": [
-      { "alt": "Palácio de pedra ornamentado, com uma alta torre de pináculos e arcadas entalhadas, visto do outro lado de um jardim formal", "caption": null },
-      { "alt": "Fotografia antiga de um grande salão com lareira entalhada, arcos e paredes pintadas", "caption": "Um salão, c. 1923." }
+      {
+        "alt": "Palácio de pedra ornamentado, com uma alta torre de pináculos e arcadas entalhadas, visto do outro lado de um jardim formal",
+        "caption": null
+      },
+      {
+        "alt": "Palácio neomanuelino cor de areia com alta torre de pináculos e frontaria de arcos ricamente esculpidos, visto de um jardim sob céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Vista lateral de um palácio de pedra ornamentado, com longa arcada aberta de colunas esbeltas, ameias e alta torre de canto.",
+        "caption": null
+      },
+      {
+        "alt": "Fotografia antiga de um grande salão com lareira entalhada, arcos e paredes pintadas",
+        "caption": "Um salão, c. 1923."
+      }
     ],
     "hints": [
       "Foi planejado como residência real para uma rainha, mas acabou virando hotel.",
@@ -404,8 +530,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pal%C3%A1cio_da_Bolsa",
     "drawings": [],
     "photos": [
-      { "alt": "Grande palácio neoclássico com frente de frontão, visto entre os telhados de uma cidade em encosta junto a um rio", "caption": null },
-      { "alt": "Salão octogonal coberto de arabescos dourados de estuque em estilo mourisco, com arcos em ferradura e teto estampado", "caption": "O Salão Árabe." }
+      {
+        "alt": "Grande palácio neoclássico com frente de frontão, visto entre os telhados de uma cidade em encosta junto a um rio",
+        "caption": null
+      },
+      {
+        "alt": "Olhar para o alto de um teto de caixotões com moldura de estuque dourado em volta de um medalhão oval pintado e painéis florais em tons pastel.",
+        "caption": null
+      },
+      {
+        "alt": "Salão octogonal coberto de arabescos dourados de estuque em estilo mourisco, com arcos em ferradura e teto estampado",
+        "caption": "O Salão Árabe."
+      }
     ],
     "hints": [
       "Foi construído pelos comerciantes da cidade como sede de sua associação comercial.",
@@ -441,8 +577,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Quinta_da_Regaleira",
     "drawings": [],
     "photos": [
-      { "alt": "Mansão de pedra cinzenta rendilhada, com pináculos e uma torre, erguida acima de um jardim", "caption": null },
-      { "alt": "Sala revestida de madeira escura entalhada, com um friso pintado acima de uma porta monumental", "caption": "Uma sala revestida de madeira." }
+      {
+        "alt": "Mansão de pedra cinzenta rendilhada, com pináculos e uma torre, erguida acima de um jardim",
+        "caption": null
+      },
+      {
+        "alt": "Esbelto pináculo de pedra esculpida em primeiro plano, com uma mansão neogótica clara ao fundo, entre árvores e relvados numa encosta.",
+        "caption": null
+      },
+      {
+        "alt": "Olhar para o fundo de um poço circular de pedra com escada em espiral, aberturas em arco e piso decorado na base.",
+        "caption": null
+      },
+      {
+        "alt": "Parede de pedra creme desgastada com porta de madeira esculpida e duas janelas estreitas emolduradas por ornamentação de pedra de estilo manuelino.",
+        "caption": null
+      },
+      {
+        "alt": "Sala revestida de madeira escura entalhada, com um friso pintado acima de uma porta monumental",
+        "caption": "Uma sala revestida de madeira."
+      }
     ],
     "hints": [
       "Seu dono, apelidado «o Milionário», comprou a propriedade em 1892.",

@@ -28,6 +28,14 @@
     "drawings": [],
     "photos": [
       {
+        "alt": "Um edifício virado do avesso, com exoesqueleto de aço, tubos de escada rolante em vidro na diagonal e estrutura aparente, acima de uma praça onde pessoas se sentam.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de um bloco de vidro e aço com tubulações e dutos coloridos no telhado, entre telhados cinzentos e uma torre de igreja.",
+        "caption": null
+      },
+      {
         "alt": "Tubos e dutos azuis, vermelhos e brancos empilhados do lado de fora de um edifício, acima de velhos telhados de Paris",
         "caption": null
       },
@@ -76,10 +84,25 @@
     "drawings": [],
     "photos": [
       {
+        "alt": "Ampla praça de travertino com um canal de água central entre duas fileiras de blocos de laboratório em concreto, rumo ao mar e a um céu azul limpo.",
+        "caption": null
+      },
+      {
         "alt": "Dois edifícios paralelos escalonados, de concreto e madeira, frente a frente, em torno de um pátio de pedra nua sobre um penhasco",
         "caption": null
       },
-      { "alt": "Escada e poço de concreto bruto, com painéis de luz descendo do alto", "caption": null }
+      {
+        "alt": "Longa ala de laboratórios em concreto, com módulos escalonados e angulados e janelas com caixilhos de teca, vista da praça aberta sob um céu azul intenso.",
+        "caption": null
+      },
+      {
+        "alt": "Vista oblíqua ao longo da borda de uma praça, com fileiras de blocos de laboratório em concreto e baías de estudo revestidas de madeira e varandas recuadas.",
+        "caption": null
+      },
+      {
+        "alt": "Escada e poço de concreto bruto, com painéis de luz descendo do alto",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construído para um cientista que queria um lugar onde um Picasso se sentisse em casa, num penhasco acima do oceano.",
@@ -122,6 +145,10 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Est%C3%A1dio_Nacional_de_Pequim",
     "drawings": [],
     "photos": [
+      {
+        "alt": "Estádio oval envolto por uma treliça de vigas de aço entrelaçadas, visto de uma ampla praça pavimentada sob um céu azul brilhante.",
+        "caption": null
+      },
       {
         "alt": "Enorme estádio oval envolvido por uma teia de elementos de aço cruzados, sobre terreno aberto",
         "caption": null
@@ -182,7 +209,15 @@
         "caption": null
       },
       {
+        "alt": "Fachada de pedra beaux-arts de uma estação iluminada à noite, com altas janelas em arco, um grupo escultórico na cornija e táxis amarelos enfileirados embaixo.",
+        "caption": null
+      },
+      {
         "alt": "Vasto salão abobadado com altas janelas em arco e uma multidão de passageiros sob luzes quentes",
+        "caption": null
+      },
+      {
+        "alt": "Vasto salão visto de uma sacada elevada, com altas janelas em arco, um quiosque de informações central e multidões atravessando o piso de mármore.",
         "caption": null
       }
     ],
@@ -229,6 +264,14 @@
     "photos": [
       {
         "alt": "Templo de mármore branco com um anel de colunas dóricas sobre uma base em degraus, sob um céu limpo",
+        "caption": null
+      },
+      {
+        "alt": "Vista de canto de um templo de mármore branco cercado por altas colunas caneladas, sobre uma base escalonada acima de um gramado verde sob um céu azul intenso.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de um templo retangular de mármore com colunata e telhado com claraboias, uma ampla escadaria e árvores e ruas ao redor.",
         "caption": null
       },
       {
@@ -282,11 +325,23 @@
     ],
     "photos": [
       {
-        "alt": "Frente de palácio barroco verde-claro e branco, com detalhes dourados, colunas e altas janelas",
+        "alt": "Longa fachada barroca verde e branca com colunas, estátuas no alto da cobertura e um portal em arco central, sob um céu azul intenso.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada muito longa de um palácio diante de uma vasta praça, com uma alta coluna de granito vermelho coroada por um anjo em primeiro plano.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada de palácio estendendo-se ao longo de uma ampla margem de rio, com colunas claras e telhado esverdeado vista do outro lado da água escura sob céu limpo.",
         "caption": null
       },
       {
         "alt": "Salão do trono forrado de seda vermelha, com colunas brancas e douradas, um trono elevado e um teto dourado",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de um enorme complexo palaciano quadrado com telhados verdes em torno de um pátio com árvores.",
         "caption": null
       }
     ],
@@ -337,10 +392,17 @@
     ],
     "photos": [
       {
-        "alt": "Ornamentado portão de ferro verde enquadrando, ao fundo, um longo palácio amarelo-claro",
+        "alt": "Longo palácio barroco amarelo visto de uma colina acima de seus jardins formais, com telhados da cidade e a torre de uma igreja ao fundo.",
         "caption": null
       },
-      { "alt": "Longo palácio claro visto de uma colina, do outro lado de jardins formais e fontes", "caption": null },
+      {
+        "alt": "Ampla fachada amarela de palácio com arcada central diante de um enorme pátio de pedras sob um céu de nuvens esparsas.",
+        "caption": null
+      },
+      {
+        "alt": "Pavilhão simétrico com arcadas, salão central envidraçado e cobertura escultórica sobre uma elevação gramada, espelhado em um lago calmo.",
+        "caption": null
+      },
       {
         "alt": "Teto pintado com uma cena lotada de figuras entre nuvens, emoldurada por estuque branco e dourado",
         "caption": null

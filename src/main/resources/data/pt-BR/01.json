@@ -22,8 +22,18 @@
       { "label": "Corte transversal", "alt": "Corte de uma vila elevada mostrando um salão central com cúpula que se ergue acima dos cômodos ao redor" }
     ],
     "photos": [
-      { "alt": "Vila cor de creme em um gramado, com pórticos de templo em dois lados visíveis e uma cúpula baixa de telhas", "caption": null },
-      { "alt": "Vista para cima de uma cúpula com afrescos e um óculo no centro", "caption": "A casa inteira gira em torno de um único salão circular com cúpula." }
+      {
+        "alt": "Vila cor de creme em um gramado, com pórticos de templo em dois lados visíveis e uma cúpula baixa de telhas",
+        "caption": null
+      },
+      {
+        "alt": "Vila simétrica com cúpula, pórtico de colunas e escadaria larga, vista de um caminho de cascalho entre muros de jardim, sob um pinheiro.",
+        "caption": null
+      },
+      {
+        "alt": "Vista para cima de uma cúpula com afrescos e um óculo no centro",
+        "caption": "A casa inteira gira em torno de um único salão circular com cúpula."
+      }
     ],
     "hints": [
       "Foi construída no alto de uma colina como refúgio para um clérigo aposentado.",
@@ -63,8 +73,22 @@
       { "label": "Corte pela cúpula", "alt": "Corte de uma igreja alta de planta centralizada: as paredes sobem até uma cúpula nervurada coroada por uma esbelta lanterna" }
     ],
     "photos": [
-      { "alt": "Fachada côncava de igreja no fim de um pátio com arcadas, coroada por uma lanterna em espiral", "caption": "Uma lanterna em espiral coroa a cúpula." },
-      { "alt": "Olhando para cima: paredes brancas que fluem sem interrupção até uma cúpula em forma de estrela", "caption": "As paredes sobem em direção à cúpula sem nenhuma interrupção." }
+      {
+        "alt": "Fachada côncava de igreja no fim de um pátio com arcadas, coroada por uma lanterna em espiral",
+        "caption": "Uma lanterna em espiral coroa a cúpula."
+      },
+      {
+        "alt": "Longo pátio de arcadas em dois andares, com uma igreja branca de cúpula e lanterna em espiral fechando o fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Olhando para cima: paredes brancas que fluem sem interrupção até uma cúpula em forma de estrela",
+        "caption": "As paredes sobem em direção à cúpula sem nenhuma interrupção."
+      },
+      {
+        "alt": "Tambor branco e lanterna em espiral escalonada de uma igreja, vistos através de um arco de pedra escura contra o céu azul.",
+        "caption": null
+      }
     ],
     "hints": [
       "Sua planta nasce de dois triângulos equiláteros entrelaçados.",
@@ -104,8 +128,22 @@
       { "label": "Elevação sul", "alt": "Elevação lateral de uma casa com três janelas altas em arco sob um telhado com balaustrada e uma cúpula baixa" }
     ],
     "photos": [
-      { "alt": "Casa de tijolos vermelhos com pórtico branco de colunas e uma cúpula octogonal baixa, vista do outro lado de um gramado", "caption": "Esta fachada aparece em uma moeda dos Estados Unidos." },
-      { "alt": "Parede de um salão decorada com chifres, mapas e uma escada de biblioteca acima de um busto de mármore", "caption": "O vestíbulo de entrada funcionava também como museu de fósseis, mapas e achados de expedições." }
+      {
+        "alt": "Casa de tijolos vermelhos com pórtico branco de colunas e uma cúpula octogonal baixa, vista do outro lado de um gramado",
+        "caption": "Esta fachada aparece em uma moeda dos Estados Unidos."
+      },
+      {
+        "alt": "Casa de tijolos vermelhos com pórtico de colunas brancas e telhado com balaustrada, vista de um caminho curvo de cascalho sob um grande carvalho.",
+        "caption": null
+      },
+      {
+        "alt": "Casa de tijolos com cúpula branca e varanda de colunas, cercada por árvores e refletida em um lago tranquilo em primeiro plano.",
+        "caption": null
+      },
+      {
+        "alt": "Parede de um salão decorada com chifres, mapas e uma escada de biblioteca acima de um busto de mármore",
+        "caption": "O vestíbulo de entrada funcionava também como museu de fósseis, mapas e achados de expedições."
+      }
     ],
     "hints": [
       "Seu dono aprendeu arquitetura sozinho, em grande parte nos livros de um mestre do Renascimento.",
@@ -142,8 +180,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Igreja_de_S%C3%A3o_Francisco_de_Assis_(Ouro_Preto)",
     "drawings": [],
     "photos": [
-      { "alt": "Igreja branca com torres sineiras redondas e entalhes de pedra ornamentados em volta de uma porta verde", "caption": null },
-      { "alt": "Teto pintado da nave de uma igreja: um céu cheio de figuras emoldurado por arquitetura pintada", "caption": "O teto da nave, pintado por Manuel da Costa Ataíde." }
+      {
+        "alt": "Fachada caiada de uma igreja com duas torres sineiras de topo arredondado, portal de pedra ornamentado e portas verdes, sob um céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Igreja branca com torres sineiras redondas e entalhes de pedra ornamentados em volta de uma porta verde",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de uma igreja branca de duas torres em uma pequena praça, cercada por casas de telhado vermelho em uma encosta arborizada.",
+        "caption": null
+      },
+      {
+        "alt": "Teto pintado da nave de uma igreja: um céu cheio de figuras emoldurado por arquitetura pintada",
+        "caption": "O teto da nave, pintado por Manuel da Costa Ataíde."
+      }
     ],
     "hints": [
       "Fica em uma cidade mineradora de ouro do século XVIII.",
@@ -184,8 +236,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Mosteiro_de_S%C3%A3o_Bento_(Rio_de_Janeiro)",
     "drawings": [],
     "photos": [
-      { "alt": "Fachada de igreja branca e simples, com duas torres pontiagudas e três entradas em arco", "caption": null },
-      { "alt": "Nave de igreja revestida quase por completo de talha dourada", "caption": "Por dentro, quase todas as superfícies são cobertas de entalhes dourados." }
+      {
+        "alt": "Fachada branca e simples de igreja com detalhes em pedra, duas torres sineiras de topo pontiagudo e três portais em arco com grades de ferro, sob céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada de igreja branca e simples, com duas torres pontiagudas e três entradas em arco",
+        "caption": null
+      },
+      {
+        "alt": "Vista de canto de uma fachada branca com torres sineiras pontiagudas, emoldurada por uma árvore frondosa e uma estátua de monge em primeiro plano.",
+        "caption": null
+      },
+      {
+        "alt": "Nave de igreja revestida quase por completo de talha dourada",
+        "caption": "Por dentro, quase todas as superfícies são cobertas de entalhes dourados."
+      },
+      {
+        "alt": "Anjos dourados esculpidos e uma balaustrada sob um teto abobadado de painéis pintados, acima de uma caixa de órgão escura.",
+        "caption": null
+      }
     ],
     "hints": [
       "Atrás de uma fachada simples e sóbria, quase todas as superfícies internas são cobertas de entalhes dourados.",
@@ -226,8 +296,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Theatro_Municipal_do_Rio_de_Janeiro",
     "drawings": [],
     "photos": [
-      { "alt": "Rua em preto e branco, de paralelepípedos molhados, que leva a um edifício ornamentado com cúpula", "caption": null },
-      { "alt": "Grande escadaria de mármore subindo entre balaustradas douradas sob lustres", "caption": "A grande escadaria." }
+      {
+        "alt": "Ornamentado teatro de ópera cor de creme com canto de colunas, cúpulas de cobre verde e uma águia dourada, cercado por torres da cidade.",
+        "caption": null
+      },
+      {
+        "alt": "Cúpula de cobre verde com nervuras douradas e janelas redondas ao lado de uma lanterna coroada por uma águia dourada, contra um céu claro.",
+        "caption": null
+      },
+      {
+        "alt": "Grande escadaria de mármore subindo entre balaustradas douradas sob lustres",
+        "caption": "A grande escadaria."
+      }
     ],
     "hints": [
       "Seu projeto toma como modelo uma famosa casa de ópera parisiense do século XIX.",
@@ -264,8 +344,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Igreja_de_S%C3%A3o_Francisco_de_Assis_(Belo_Horizonte)",
     "drawings": [],
     "photos": [
-      { "alt": "Fileira de abóbadas parabólicas brancas com um mural de azulejos azuis e brancos, ao lado de uma torre em treliça", "caption": null },
-      { "alt": "Nave de uma pequena igreja, com bancos de madeira voltados para um grande mural pintado atrás do altar", "caption": "A nave, voltada para o mural pintado atrás do altar." }
+      {
+        "alt": "Fileira de abóbadas parabólicas brancas com um mural de azulejos azuis e brancos, ao lado de uma torre em treliça",
+        "caption": null
+      },
+      {
+        "alt": "Capela branca de abóbadas parabólicas com uma torre esguia perfurada na margem de um lago, entre palmeiras e uma árvore avermelhada.",
+        "caption": null
+      },
+      {
+        "alt": "Nave de uma pequena igreja, com bancos de madeira voltados para um grande mural pintado atrás do altar",
+        "caption": "A nave, voltada para o mural pintado atrás do altar."
+      }
     ],
     "hints": [
       "Seu telhado é uma fileira de abóbadas parabólicas de concreto, forma então usada em hangares de aviões.",
@@ -302,8 +392,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pal%C3%A1cio_da_Alvorada",
     "drawings": [],
     "photos": [
-      { "alt": "Palácio de vidro, longo e baixo, atrás de uma colunata de colunas brancas curvas, refletido em um espelho d'água ao entardecer", "caption": null },
-      { "alt": "Salão envidraçado com vista, entre colunas brancas curvas, para um lago", "caption": "Por dentro, a colunata emoldura o lago." }
+      {
+        "alt": "Longo pavilhão baixo de vidro atrás de uma fileira de esbeltas colunas brancas curvas num gramado amplo, com uma ema caminhando à frente.",
+        "caption": null
+      },
+      {
+        "alt": "Colunas brancas curvas e altas paredes de vidro de um edifício de teto plano refletidos em um espelho d'água ao entardecer, com palmeiras ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Palácio de vidro, longo e baixo, atrás de uma colunata de colunas brancas curvas, refletido em um espelho d'água ao entardecer",
+        "caption": null
+      },
+      {
+        "alt": "Salão de pé-direito duplo com parede de madeira escura, uma colorida tapeçaria floral, poltronas vermelhas e vidro do chão ao teto com vista para fora.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construído em cerca de catorze meses, um dos primeiros edifícios de uma capital totalmente nova.",
@@ -339,8 +443,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pal%C3%A1cio_do_Congresso_Nacional",
     "drawings": [],
     "photos": [
-      { "alt": "Torres de escritórios gêmeas entre uma cúpula e uma tigela emborcada sobre uma longa plataforma, ao lado de um espelho d'água", "caption": null },
-      { "alt": "Vasto plenário circular com fileiras de mesas sob um teto de luz colorida", "caption": "O plenário sob a tigela emborcada." }
+      {
+        "alt": "Torres gêmeas em forma de lâmina entre uma cúpula branca e uma tigela branca invertida sobre uma longa base de vidro, com espelhos d'água à frente.",
+        "caption": null
+      },
+      {
+        "alt": "Grande cobertura clara em forma de tigela e uma pequena cúpula sobre base plana de vidro, iluminadas em dourado ao pôr do sol sob torres gêmeas.",
+        "caption": null
+      },
+      {
+        "alt": "Torres gêmeas, uma cúpula e uma tigela em silhueta ao anoitecer, refletidas em um espelho d'água perfeitamente parado, com janelas iluminadas na base.",
+        "caption": null
+      },
+      {
+        "alt": "Torres de escritórios gêmeas entre uma cúpula e uma tigela emborcada sobre uma longa plataforma, ao lado de um espelho d'água",
+        "caption": null
+      },
+      {
+        "alt": "Vasto plenário circular com fileiras de mesas sob um teto de luz colorida",
+        "caption": "O plenário sob a tigela emborcada."
+      }
     ],
     "hints": [
       "Foi inaugurado em 1960, o ano em que sua cidade se tornou capital nacional.",
@@ -377,8 +499,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Museu_de_Arte_de_S%C3%A3o_Paulo",
     "drawings": [],
     "photos": [
-      { "alt": "Caixa de galeria com paredes de vidro suspensa entre dois pórticos de concreto pintados de vermelho", "caption": null },
-      { "alt": "Longa galeria aberta onde os quadros ficam em cavaletes transparentes, enfileirados", "caption": "Quadros expostos em cavaletes transparentes." }
+      {
+        "alt": "Caixa de galeria envidraçada suspensa entre dois pórticos de concreto vermelho sobre uma rua larga, com um grande vão livre embaixo.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de uma longa caixa de vidro sustentada por dois pórticos de concreto vermelho ao lado de uma avenida movimentada, com uma multidão na praça aberta abaixo.",
+        "caption": null
+      },
+      {
+        "alt": "Longa galeria aberta onde os quadros ficam em cavaletes transparentes, enfileirados",
+        "caption": "Quadros expostos em cavaletes transparentes."
+      }
     ],
     "hints": [
       "Suas galerias foram erguidas em uma caixa de vidro pendurada entre dois grandes pórticos, deixando uma praça pública embaixo.",
@@ -415,8 +547,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Catedral_Metropolitana_de_Bras%C3%ADlia",
     "drawings": [],
     "photos": [
-      { "alt": "Edifício circular de dezesseis nervuras de concreto branco curvas reunidas no alto, com vidro entre elas", "caption": null },
-      { "alt": "Altar sob um dossel de vitrais azuis, verdes e brancos entre nervuras curvas", "caption": "A nave sob seu dossel de vitrais." }
+      {
+        "alt": "Edifício circular de nervuras curvas de concreto branco que sobem até uma coroa com uma cruz, envidraçado entre as nervuras, sob um céu azul brilhante.",
+        "caption": null
+      },
+      {
+        "alt": "Edifício circular branco de nervuras iluminado à noite, com a torre sineira separada à esquerda, visto do outro lado de uma rua escura.",
+        "caption": null
+      },
+      {
+        "alt": "Altar sob um dossel de vitrais azuis, verdes e brancos entre nervuras curvas",
+        "caption": "A nave sob seu dossel de vitrais."
+      },
+      {
+        "alt": "Nave sob altas nervuras envidraçadas cheias de vitrais azuis e verdes, com anjos suspensos no ar acima de um tapete vermelho e do altar.",
+        "caption": null
+      }
     ],
     "hints": [
       "Sua estrutura é um hiperboloide de dezesseis colunas curvas de concreto.",
@@ -472,8 +618,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pinacoteca_de_S%C3%A3o_Paulo",
     "drawings": [],
     "photos": [
-      { "alt": "Longo edifício de tijolos com loggias de colunas atrás de uma fonte no jardim", "caption": null },
-      { "alt": "Paredes de tijolo aparente de um pátio subindo até uma cobertura de vidro", "caption": "Um pátio coberto de vidro na reforma dos anos 1990." }
+      {
+        "alt": "Longo edifício de tijolos com loggias de colunas atrás de uma fonte no jardim",
+        "caption": null
+      },
+      {
+        "alt": "Paredes de tijolo aparente de um pátio subindo até uma cobertura de vidro",
+        "caption": "Um pátio coberto de vidro na reforma dos anos 1990."
+      },
+      {
+        "alt": "Panorama de um pátio de tijolos aparentes atravessado por uma passarela elevada de metal, com altas aberturas de janelas e esculturas no piso abaixo.",
+        "caption": null
+      }
     ],
     "hints": [
       "Suas paredes de tijolo nunca receberam o reboco que estava planejado.",

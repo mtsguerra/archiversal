@@ -17,11 +17,15 @@
     "style": "Romantismo Nacional / Art Nouveau tardio",
     "photos": [
       {
+        "alt": "Fachada pesada de granito de uma estação com um enorme arco arredondado, figuras de pedra segurando globos luminosos e uma torre de relógio com telhado verde, vista do outro lado da rua.",
+        "caption": null
+      },
+      {
         "alt": "Pesado edifício de granito com uma alta torre de relógio de telhado verde e uma grande entrada em arco, visto de cima",
         "caption": null
       },
       {
-        "alt": "Enorme entrada em arco de granito ladeada por figuras de pedra que seguram lampiões esféricos, com torre de relógio à direita",
+        "alt": "Passageiros caminhando por uma plataforma entre trens vermelhos e brancos de dois andares sob uma escura cobertura de ferro com lâmpadas penduradas.",
         "caption": null
       }
     ],
@@ -63,7 +67,15 @@
     "style": "Neofuturista high-tech",
     "photos": [
       {
+        "alt": "Gigantesca abóbada branca em arco de aço e vidro vista de frente, cobrindo a entrada de uma estação atrás de gramados e de uma ampla via pavimentada sob céu azul.",
+        "caption": null
+      },
+      {
         "alt": "Ampla cobertura branca de aço e vidro curvando-se sobre uma grande esplanada pavimentada, ao lado de uma fileira de pilares de concreto afunilados",
+        "caption": null
+      },
+      {
+        "alt": "Lateral de uma cobertura branca nervurada de estação com escadas rolantes, guarda-corpos de aço e uma asa curva avançando em direção a um parque gramado sob céu nublado.",
         "caption": null
       },
       {
@@ -115,7 +127,19 @@
     "style": "Eclético com cobertura de ferro e vidro",
     "photos": [
       {
+        "alt": "Fachada ornamentada de estação em pedra cinza e rosa, com centro de vidro, relógio redondo, cúpulas de ardósia azul e entradas em arco ao longo da rua.",
+        "caption": null
+      },
+      {
         "alt": "Grande extremidade em arco de uma cobertura de ferro e vidro pintada de bordô, sobre um viaduto de pedra",
+        "caption": null
+      },
+      {
+        "alt": "Vasto salão de pedra com piso de mármore polido estampado, abóbadas douradas em caixotões, uma grande janela em arco e uma imponente escadaria dupla.",
+        "caption": null
+      },
+      {
+        "alt": "Vista direto para cima em um salão de pedra, mostrando uma cúpula quadrada de caixotões cercada por quatro arcos, abóbadas douradas e altas janelas em arco.",
         "caption": null
       },
       {
@@ -161,7 +185,11 @@
     "style": "Eclético 'assírio-lombardo' com toques de Liberty e Art Déco",
     "photos": [
       {
-        "alt": "Frente de pedra muito larga com um alto pórtico central e figuras esculpidas, do outro lado de uma rua movimentada",
+        "alt": "Monumental fachada de estação em pedra clara com um alto bloco central, pórticos com colunas, grupos de cavalos esculpidos e bandeiras diante de uma ampla praça pavimentada.",
+        "caption": null
+      },
+      {
+        "alt": "Longo saguão de pedra com uma larga escadaria, lustres pendentes, viajantes e uma fileira de arcos com teto de vidro que se afastam ao fundo.",
         "caption": null
       },
       {

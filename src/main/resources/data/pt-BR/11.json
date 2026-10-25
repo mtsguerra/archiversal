@@ -13,8 +13,22 @@
     "style": "Renascimento",
     "drawings": [],
     "photos": [
-      { "alt": "Frente de igreja em forma de arco do triunfo, com pilastras e um frontão, ao lado de um campanário gótico", "caption": null },
-      { "alt": "Grande nave única sob uma abóbada de berço pintada, com capelas laterais e um cruzeiro com cúpula", "caption": "A nave." }
+      {
+        "alt": "Fachada de igreja em forma de arco do triunfo, com um pórtico em arco profundo e um frontão, junto a uma alta torre sineira de tijolo numa praça ao sol.",
+        "caption": null
+      },
+      {
+        "alt": "Abside de tijolo com uma grande janela circular e uma cúpula com lanternim que se ergue acima de casas com arcadas, vistas do outro lado de uma praça.",
+        "caption": null
+      },
+      {
+        "alt": "Grande nave única sob uma abóbada de berço pintada, com capelas laterais e um cruzeiro com cúpula",
+        "caption": "A nave."
+      },
+      {
+        "alt": "Vista para cima de uma cúpula pintada com janelas redondas, enquadrada por abóbadas de berço de caixotões cobertas de pintura decorativa.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi iniciada em 1472, o ano da morte de seu arquiteto, para um marquês governante.",
@@ -50,8 +64,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Castelo_de_Chambord",
     "drawings": [],
     "photos": [
-      { "alt": "Enorme castelo branco com torres redondas e uma silhueta de telhados apinhados, refletido em águas paradas", "caption": null },
-      { "alt": "Escada de pedra em espiral, com um núcleo central aberto visto por aberturas em arco", "caption": "A escada de dupla espiral." }
+      {
+        "alt": "Enorme castelo branco com torres redondas e uma silhueta de telhados apinhados, refletido em águas paradas",
+        "caption": null
+      },
+      {
+        "alt": "Frente larga de um castelo claro com um torreão simétrico, quatro torres redondas nos cantos e um perfil cheio de chaminés, do outro lado de um relvado e de um fosso.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de um torreão quadrado com torres redondas num pátio cercado, ao lado de jardins formais com canteiros e um canal.",
+        "caption": null
+      },
+      {
+        "alt": "Escada de pedra em espiral, com um núcleo central aberto visto por aberturas em arco",
+        "caption": "A escada de dupla espiral."
+      }
     ],
     "hints": [
       "Foi construído entre 1519 e 1547 como pavilhão de caça para um rei, que ficou ali apenas sete semanas.",
@@ -92,8 +120,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Mosteiro_do_Escorial",
     "drawings": [],
     "photos": [
-      { "alt": "Vasto edifício austero de granito, com uma torre de canto e flecha, sob um céu azul", "caption": null },
-      { "alt": "Longo salão de biblioteca com estantes entalhadas, piso de mármore e abóbada de berço com afrescos", "caption": "A biblioteca." }
+      {
+        "alt": "Vasto edifício austero de granito, com uma torre de canto e flecha, sob um céu azul",
+        "caption": null
+      },
+      {
+        "alt": "Vista distante de um vasto complexo de granito cinzento com uma cúpula central e torres nos cantos, rodeado de denso pinhal.",
+        "caption": null
+      },
+      {
+        "alt": "Pátio de pedra com uma fachada de igreja com frontão sobre uma base de arcadas, ladeada por uma torre sineira e alas lisas de granito.",
+        "caption": null
+      },
+      {
+        "alt": "Longo salão de biblioteca com estantes entalhadas, piso de mármore e abóbada de berço com afrescos",
+        "caption": "A biblioteca."
+      }
     ],
     "hints": [
       "Foi construído entre 1563 e 1584 por ordem de um rei e é o maior edifício renascentista do mundo.",
@@ -129,8 +171,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Biblioteca_Medicea_Laurenziana",
     "drawings": [],
     "photos": [
-      { "alt": "Edifício de pedra simples com uma pequena cúpula, erguendo-se atrás de um muro de claustro em uma rua estreita", "caption": null },
-      { "alt": "Longa sala de leitura com fileiras de carteiras de madeira entalhada sob um teto de madeira com caixotões", "caption": "A sala de leitura." }
+      {
+        "alt": "Piso superior simples com pequenas janelas de frontão por cima de uma galeria de claustro em arcadas e uma laranjeira no pátio ajardinado.",
+        "caption": null
+      },
+      {
+        "alt": "Longa sala de leitura com fileiras de carteiras de madeira entalhada sob um teto de madeira com caixotões",
+        "caption": "A sala de leitura."
+      },
+      {
+        "alt": "Vestíbulo alto com colunas de pedra cinzenta escura e janelas cegas, e uma escadaria de degraus ovais que sobe até uma porta.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construída no claustro de uma igreja, sob o patrocínio de um papa Médici.",
@@ -171,8 +223,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pal%C3%A1cio_de_Versalhes",
     "drawings": [],
     "photos": [
-      { "alt": "Fachada de palácio muito longa, vista da extremidade de um terraço de jardim formal", "caption": null },
-      { "alt": "Longa galeria forrada de espelhos e janelas sob lustres de cristal, cheia de visitantes", "caption": "O Salão dos Espelhos." }
+      {
+        "alt": "Vista aérea de um vasto palácio com longas alas de pedra em torno de um pátio, voltado para jardins formais, com uma cidade e uma avenida ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada de tijolo e pedra com altas janelas em arco, varandas douradas e ornamentos no telhado, e um relógio azul sobre a varanda central.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada de palácio muito longa, vista da extremidade de um terraço de jardim formal",
+        "caption": null
+      },
+      {
+        "alt": "Longa galeria forrada de espelhos e janelas sob lustres de cristal, cheia de visitantes",
+        "caption": "O Salão dos Espelhos."
+      }
     ],
     "hints": [
       "Começou como um modesto pavilhão de caça de tijolo e pedra de um rei, construído em 1623.",
@@ -208,8 +274,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Igreja_de_S%C3%A3o_Carlos_das_Quatro_Fontes",
     "drawings": [],
     "photos": [
-      { "alt": "Frente de igreja estreita, de vãos côncavos e convexos ondulantes, com colunas, nichos e estátuas", "caption": null },
-      { "alt": "Cúpula oval com caixotões profundos de cruzes, octógonos e hexágonos, iluminada por uma lanterna", "caption": "A cúpula." }
+      {
+        "alt": "Frente de igreja estreita, de vãos côncavos e convexos ondulantes, com colunas, nichos e estátuas",
+        "caption": null
+      },
+      {
+        "alt": "Cúpula oval com caixotões profundos de cruzes, octógonos e hexágonos, iluminada por uma lanterna",
+        "caption": "A cúpula."
+      },
+      {
+        "alt": "Interior branco de igreja com altas colunas, paredes curvas e uma cúpula de caixotões sobre um retábulo dourado e um pavimento em mosaico.",
+        "caption": null
+      },
+      {
+        "alt": "Vista a preto e branco através de um arco de volta perfeita para um pequeno claustro com colunas esguias, uma varanda e um poço central.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construída para uma ordem religiosa dedicada a libertar escravos cristãos.",
@@ -244,8 +324,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Igreja_de_S%C3%A3o_Carlos_Borromeu_(Viena)",
     "drawings": [],
     "photos": [
-      { "alt": "Igreja com cúpula e um pórtico de templo ladeado por duas grandes colunas entalhadas", "caption": null },
-      { "alt": "Cúpula oval afrescada vista do interior de seu tambor", "caption": "A cúpula." }
+      {
+        "alt": "Igreja de cúpula verde com um pórtico de templo e duas altas colunas esculpidas, vista do outro lado de um espelho de água sob um céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Igreja com cúpula e um pórtico de templo ladeado por duas grandes colunas entalhadas",
+        "caption": null
+      },
+      {
+        "alt": "Cúpula oval afrescada vista do interior de seu tambor",
+        "caption": "A cúpula."
+      },
+      {
+        "alt": "Nave oval com colunas de mármore rosa e branco, bancos de madeira escura e um sol dourado no alto, sobre o altar.",
+        "caption": null
+      }
     ],
     "hints": [
       "Um imperador prometeu construí-la em 1713, um ano depois da última grande peste de sua cidade.",
@@ -280,8 +374,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Abadia_de_Melk",
     "drawings": [],
     "photos": [
-      { "alt": "Longa abadia amarela com uma igreja de cúpula e duas torres, em uma elevação rochosa", "caption": null },
-      { "alt": "Biblioteca com estantes douradas, piso de marchetaria e teto pintado", "caption": "A biblioteca." }
+      {
+        "alt": "Igreja abacial barroca amarela e branca com duas torres e uma cúpula verde, no alto de uma colina rochosa sobre casas de telhado vermelho.",
+        "caption": null
+      },
+      {
+        "alt": "Longa abadia amarela com uma igreja de cúpula e duas torres, em uma elevação rochosa",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de uma abadia muito comprida de telhado vermelho, com uma igreja de cúpula ao centro, acima de uma curva do rio, de uma vila e de jardins em socalcos.",
+        "caption": null
+      },
+      {
+        "alt": "Biblioteca com estantes douradas, piso de marchetaria e teto pintado",
+        "caption": "A biblioteca."
+      }
     ],
     "hints": [
       "Fica em um afloramento rochoso acima de um grande rio, no início do vale de Wachau.",
@@ -316,8 +424,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pante%C3%A3o_(Paris)",
     "drawings": [],
     "photos": [
-      { "alt": "Edifício neoclássico com cúpula e pórtico coríntio, do outro lado de uma praça", "caption": null },
-      { "alt": "Abóbadas de caixotões e um mosaico pintado na abside, vistos entre colunas coríntias", "caption": "O interior." }
+      {
+        "alt": "Edifício neoclássico com cúpula e pórtico coríntio, do outro lado de uma praça",
+        "caption": null
+      },
+      {
+        "alt": "Vista de esquina de um edifício neoclássico com cúpula, um profundo pórtico coríntio e um frontão esculpido, iluminado por sol dourado e baixo.",
+        "caption": null
+      },
+      {
+        "alt": "Abóbadas de caixotões e um mosaico pintado na abside, vistos entre colunas coríntias",
+        "caption": "O interior."
+      }
     ],
     "hints": [
       "Foi construído para um rei que prometeu, em 1744, substituir uma igreja se se recuperasse de uma doença.",
@@ -353,8 +471,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Museu_Antigo",
     "drawings": [],
     "photos": [
-      { "alt": "Longa colunata de colunas jônicas ao longo de uma parede pintada com painéis vermelhos", "caption": "A colunata." },
-      { "alt": "Rotunda com cúpula, cercada de colunas e estátuas, com piso estampado", "caption": "A rotunda." }
+      {
+        "alt": "Edifício neoclássico comprido e baixo, com uma fila de dezoito colunas jónicas e estátuas na cobertura, voltado para um amplo relvado.",
+        "caption": null
+      },
+      {
+        "alt": "Vista de esquina de uma longa colunata jónica com painéis vermelhos atrás das colunas e estátuas de bronze, sob um céu azul brilhante.",
+        "caption": null
+      },
+      {
+        "alt": "Longa colunata de colunas jônicas ao longo de uma parede pintada com painéis vermelhos",
+        "caption": "A colunata."
+      },
+      {
+        "alt": "Rotunda com cúpula, cercada de colunas e estátuas, com piso estampado",
+        "caption": "A rotunda."
+      }
     ],
     "hints": [
       "Foi construído como museu público para uma coleção de arte real, refletindo o ideal humboldtiano de educação.",
@@ -389,8 +521,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Museu_Brit%C3%A2nico",
     "drawings": [],
     "photos": [
-      { "alt": "Fileira de altas colunas jônicas de um pórtico neoclássico grego acima de degraus molhados", "caption": null },
-      { "alt": "Longa galeria com altas estantes e vitrines sob um teto decorado", "caption": "A galeria da Biblioteca do Rei." }
+      {
+        "alt": "Vista de esquina de um longo edifício neoclássico grego com pórtico de frontão, altas colunas jónicas e uma bandeira, sob um céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Fileira de altas colunas jônicas de um pórtico neoclássico grego acima de degraus molhados",
+        "caption": null
+      },
+      {
+        "alt": "Vasto pátio sob uma cobertura de vidro em treliça, com um tambor redondo e branco ao centro e duas escadarias curvas a subir em torno dele.",
+        "caption": null
+      },
+      {
+        "alt": "Longa galeria com altas estantes e vitrines sob um teto decorado",
+        "caption": "A galeria da Biblioteca do Rei."
+      }
     ],
     "hints": [
       "Abriu ao público em 1759 em uma mansão do século XVII, convertida, no mesmo local.",
@@ -425,8 +571,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Igreja_de_la_Madeleine",
     "drawings": [],
     "photos": [
-      { "alt": "Canto de um edifício em forma de templo, com um frontão sobre fileiras de colunas coríntias", "caption": null },
-      { "alt": "Altar-mor de mármore com um grupo escultórico de anjos e castiçais dourados", "caption": "O altar-mor." }
+      {
+        "alt": "Edifício com aspeto de templo e um pórtico de frontão com colunas coríntias, no fim de uma avenida ladeada por edifícios de pedra creme.",
+        "caption": null
+      },
+      {
+        "alt": "Canto de um edifício em forma de templo, com um frontão sobre fileiras de colunas coríntias",
+        "caption": null
+      },
+      {
+        "alt": "Altar-mor de mármore com um grupo escultórico de anjos e castiçais dourados",
+        "caption": "O altar-mor."
+      },
+      {
+        "alt": "Nave sob uma fila de cúpulas rasas com óculos, com altas colunas, cornijas douradas, lustres suspensos e uma abside pintada.",
+        "caption": null
+      }
     ],
     "hints": [
       "Sua primeira pedra foi lançada em 1764 por um rei, mas a Revolução interrompeu a obra.",

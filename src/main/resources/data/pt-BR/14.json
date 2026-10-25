@@ -14,8 +14,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Museu_Judaico_de_Berlim",
     "drawings": [],
     "photos": [
-      { "alt": "Edifício em zigue-zague revestido de zinco, com janelas em talho, ao lado de um palácio barroco", "caption": null },
-      { "alt": "Caixa de escada estreita cruzada por vigas diagonais de concreto", "caption": "A caixa de escada." }
+      {
+        "alt": "Edifício anguloso revestido de zinco, com cortes diagonais abertos nas paredes, ao lado de um prédio antigo de pedra e de um poste de rua.",
+        "caption": null
+      },
+      {
+        "alt": "Vista de rua de um edifício escuro revestido de metal, com janelas em fendas irregulares e faces inclinadas sobre uma estreita viela de paralelepípedos.",
+        "caption": null
+      },
+      {
+        "alt": "Malha de pilares de concreto inclinados coroados por arbustos num jardim, com um edifício recortado revestido de zinco ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Caixa de escada estreita cruzada por vigas diagonais de concreto",
+        "caption": "A caixa de escada."
+      },
+      {
+        "alt": "Estreito espaço de concreto em forma de torre, com milhares de rostos de ferro bruto cobrindo o chão, iluminado por uma fresta no alto.",
+        "caption": null
+      }
     ],
     "hints": [
       "Seu projeto foi escolhido entre 189 propostas e apelidado de «Relâmpago» por sua planta em zigue-zague.",
@@ -50,8 +68,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Elbphilharmonie",
     "drawings": [],
     "photos": [
-      { "alt": "Edifício de vidro com telhado ondulado sobre um armazém de tijolos no porto", "caption": null },
-      { "alt": "Paredes curvas e claras de uma sala de concertos, com fileiras de degraus", "caption": "Dentro da sala de concertos." }
+      {
+        "alt": "Sala de concertos de vidro ondulado, com linha de telhado em picos, sobre um maciço armazém de tijolo vermelho à beira da água.",
+        "caption": null
+      },
+      {
+        "alt": "Torre de vidro com crista curva que se ergue de uma base de tijolo num cais, vista da água sob a luz cinzenta do fim da tarde.",
+        "caption": null
+      },
+      {
+        "alt": "Edifício de vidro com telhado ondulado sobre um armazém de tijolos no porto",
+        "caption": null
+      },
+      {
+        "alt": "Superfície curva de vidro coberta por discos brancos pontilhados redondos, com torres de igrejas ao longe e um céu nublado.",
+        "caption": null
+      },
+      {
+        "alt": "Paredes curvas e claras de uma sala de concertos, com fileiras de degraus",
+        "caption": "Dentro da sala de concertos."
+      }
     ],
     "hints": [
       "Sua estrutura de vidro repousa sobre um antigo armazém de tijolos construído em 1963.",
@@ -86,8 +122,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Walt_Disney_Concert_Hall",
     "drawings": [],
     "photos": [
-      { "alt": "Curvas ondulantes de aço inoxidável de uma sala de concertos", "caption": null },
-      { "alt": "Sala de concertos com terraços de assentos revestidos de madeira em volta do palco e de um órgão", "caption": "A sala principal." }
+      {
+        "alt": "Conjunto de paredes curvas e onduladas de aço inoxidável que captam a luz sob um céu azul profundo riscado por nuvens.",
+        "caption": null
+      },
+      {
+        "alt": "Vista próxima de curvas amplas de aço escovado com arestas vivas e reflexos quentes e suaves contra um céu claro.",
+        "caption": null
+      },
+      {
+        "alt": "Sala de concertos com terraços de assentos revestidos de madeira em volta do palco e de um órgão",
+        "caption": "A sala principal."
+      },
+      {
+        "alt": "Sala de concertos vista de cima, com formas de teto em camadas revestidas de madeira, plateia em terraços ao redor do palco da orquestra e tubos de órgão.",
+        "caption": null
+      }
     ],
     "hints": [
       "Começou com uma doação de 50 milhões de dólares em 1987, feita pela viúva de um famoso produtor de cinema.",
@@ -127,8 +177,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Partenon",
     "drawings": [],
     "photos": [
-      { "alt": "Templo dórico de mármore em ruínas, com colunata completa, no alto de uma colina rochosa", "caption": null },
-      { "alt": "Vista em preto e branco ao longo do interior de uma fileira de maciças colunas caneladas", "caption": "Dentro da colunata." }
+      {
+        "alt": "Antigo templo de mármore com uma colunata de colunas caneladas e um telhado com frontão, visto de um canto sob um céu azul brilhante.",
+        "caption": null
+      },
+      {
+        "alt": "Templo dórico de mármore em ruínas, com colunata completa, no alto de uma colina rochosa",
+        "caption": null
+      },
+      {
+        "alt": "Cidadela rochosa no topo de uma colina, com templos antigos no cume, acima de uma encosta verde e da cidade, vista de uma colina vizinha.",
+        "caption": null
+      },
+      {
+        "alt": "Canto do telhado de um templo, com frontão triangular e um friso de painéis em relevo esculpido sobre as colunas.",
+        "caption": null
+      },
+      {
+        "alt": "Vista em preto e branco ao longo do interior de uma fileira de maciças colunas caneladas",
+        "caption": "Dentro da colunata."
+      }
     ],
     "hints": [
       "A construção começou em 447 a.C., quando uma aliança de cidades-estado gregas estava no auge de seu poder.",
@@ -164,8 +232,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Coliseu",
     "drawings": [],
     "photos": [
-      { "alt": "Enorme anfiteatro elíptico em ruínas, com fileiras de arcos", "caption": null },
-      { "alt": "Piso da arena em ruínas com paredes subterrâneas expostas, cercado por fileiras de arcos", "caption": "A arena." }
+      {
+        "alt": "Enorme anfiteatro romano oval de arcos sobrepostos, com um alto trecho da parede externa preservado à esquerda, visto de uma praça vazia.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de um anfiteatro oval em ruínas entre ruas, árvores e uma ampla cidade sob um céu azul com nuvens.",
+        "caption": null
+      },
+      {
+        "alt": "Vista próxima de três pavimentos de aberturas em arco com colunas adossadas e uma parede superior maciça com pequenas janelas.",
+        "caption": null
+      },
+      {
+        "alt": "Anfiteatro em ruínas visto de uma colina através de um parque, com um arco triunfal em primeiro plano à direita.",
+        "caption": null
+      },
+      {
+        "alt": "Piso da arena em ruínas com paredes subterrâneas expostas, cercado por fileiras de arcos",
+        "caption": "A arena."
+      }
     ],
     "hints": [
       "Foi iniciado em 72 d.C. sob um imperador e concluído em 80 sob seu filho.",
@@ -205,8 +291,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Bas%C3%ADlica_de_Saint-Denis",
     "drawings": [],
     "photos": [
-      { "alt": "Transepto de igreja gótica com um rosetão, visto de um jardim", "caption": null },
-      { "alt": "Abóbada gótica de nervuras irradiando sobre um cruzeiro, iluminada por vitrais", "caption": "As abóbadas." }
+      {
+        "alt": "Fachada de igreja em pedra clara com uma única torre alta, uma rosácea e três portais, vista através de uma praça sob céu cinzento.",
+        "caption": null
+      },
+      {
+        "alt": "Parte superior de uma fachada de igreja em pedra com uma rosácea redonda e uma torre sineira quadrada com aberturas em arco contra um céu azul intenso.",
+        "caption": null
+      },
+      {
+        "alt": "Portal de pedra esculpida com tímpano semicircular mostrando uma figura central, cercado por arquivoltas de pequenas figuras esculpidas.",
+        "caption": null
+      },
+      {
+        "alt": "Transepto de igreja gótica com um rosetão, visto de um jardim",
+        "caption": null
+      },
+      {
+        "alt": "Abóbada gótica de nervuras irradiando sobre um cruzeiro, iluminada por vitrais",
+        "caption": "As abóbadas."
+      }
     ],
     "hints": [
       "Seu coro, concluído em 1144, é amplamente considerado a primeira estrutura a usar todos os elementos da arquitetura gótica.",
@@ -247,8 +351,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Catedral_de_Notre-Dame_de_Paris",
     "drawings": [],
     "photos": [
-      { "alt": "Frente de catedral gótica de duas torres, com três portais e um rosetão", "caption": null },
-      { "alt": "Alta nave gótica com lustres que leva ao coro", "caption": "A nave." }
+      {
+        "alt": "Frente de catedral gótica de duas torres, com três portais e um rosetão",
+        "caption": null
+      },
+      {
+        "alt": "Fachada de igreja gótica de duas torres vista de baixo, com uma grande rosácea, uma fileira de estátuas e três portais em arco ogival.",
+        "caption": null
+      },
+      {
+        "alt": "Portal gótico em arco ogival com arquivoltas de figuras esculpidas ao redor de um tímpano, abaixo de uma galeria de estátuas em pé.",
+        "caption": null
+      },
+      {
+        "alt": "Alta nave gótica com lustres que leva ao coro",
+        "caption": "A nave."
+      },
+      {
+        "alt": "Rosácea circular de vitral com raios e anéis de pequenos painéis em roxo, vermelho e azul vivos.",
+        "caption": null
+      }
     ],
     "hints": [
       "Iniciada em 1163, estava em grande parte concluída por 1260.",
@@ -283,8 +405,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Mesquita-Catedral_de_C%C3%B3rdova",
     "drawings": [],
     "photos": [
-      { "alt": "Porta em arco de ferradura, com painéis entalhados, em uma parede de pedra", "caption": null },
-      { "alt": "Floresta de colunas com arcos duplos listrados de vermelho e branco", "caption": "O salão de oração." }
+      {
+        "alt": "Complexo religioso murado com uma torre alta e uma nave central coberta que se ergue acima de uma ponte de pedra de estilo romano e de um rio.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de um vasto complexo retangular murado com um pátio de laranjeiras, uma torre sineira e muitos telhados paralelos de telha.",
+        "caption": null
+      },
+      {
+        "alt": "Porta em arco de ferradura, com painéis entalhados, em uma parede de pedra",
+        "caption": null
+      },
+      {
+        "alt": "Floresta de colunas com arcos duplos listrados de vermelho e branco",
+        "caption": "O salão de oração."
+      },
+      {
+        "alt": "Olhando para cima, uma cúpula nervurada ricamente decorada, com mosaico dourado e arcos entrelaçados sobre um vão quadrado.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi iniciada em 785 por ordem do fundador de um emirado islâmico.",
@@ -319,8 +459,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Alhambra",
     "drawings": [],
     "photos": [
-      { "alt": "Complexo palaciano fortificado em uma colina arborizada, sob montanhas nevadas", "caption": null },
-      { "alt": "Janela com arcos de estuque entalhado emoldurando uma vista de árvores", "caption": "Uma janela do palácio." }
+      {
+        "alt": "Complexo palaciano fortificado em uma colina arborizada, sob montanhas nevadas",
+        "caption": null
+      },
+      {
+        "alt": "Torre de palácio com telhado de telhas e um pórtico em arcadas refletido numa longa piscina tranquila, emoldurado por palmeiras e ciprestes.",
+        "caption": null
+      },
+      {
+        "alt": "Janela com arcos de estuque entalhado emoldurando uma vista de árvores",
+        "caption": "Uma janela do palácio."
+      },
+      {
+        "alt": "Olhando para cima, um vasto teto abobadado de nichos em favo de mel, iluminado por pequenas janelas em arco na base.",
+        "caption": null
+      }
     ],
     "hints": [
       "É o único palácio bem preservado do mundo islâmico medieval.",
@@ -355,8 +509,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Capela_Pazzi",
     "drawings": [],
     "photos": [
-      { "alt": "Capela com um pórtico de colunas e uma pequena cúpula no fim de um claustro", "caption": null },
-      { "alt": "Interior branco de capela, com pilastras de pedra cinza, arcos e um teto com cúpula", "caption": "A capela." }
+      {
+        "alt": "Capela com um pórtico de colunas e uma pequena cúpula no fim de um claustro",
+        "caption": null
+      },
+      {
+        "alt": "Pequena capela com cúpula e pórtico de colunas ao fundo de um longo claustro gramado, com uma alta torre sineira atrás.",
+        "caption": null
+      },
+      {
+        "alt": "Olhando para cima, o teto de um pórtico com um medalhão redondo vidrado ao centro, nichos em concha e abóbadas de berço em caixotões.",
+        "caption": null
+      },
+      {
+        "alt": "Interior branco de capela, com pilastras de pedra cinza, arcos e um teto com cúpula",
+        "caption": "A capela."
+      },
+      {
+        "alt": "Paredes de reboco claro com pilastras e arcos de pedra cinza, medalhões azuis redondos e uma cúpula nervurada com pequenas janelas.",
+        "caption": null
+      }
     ],
     "hints": [
       "Fica em um claustro ao lado de uma grande basílica franciscana.",
@@ -401,8 +573,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Bas%C3%ADlica_de_S%C3%A3o_Pedro",
     "drawings": [],
     "photos": [
-      { "alt": "Grande cúpula nervurada erguendo-se acima de árvores em um jardim", "caption": null },
-      { "alt": "Interior de uma vasta cúpula de caixotões com mosaicos, vista de baixo", "caption": "A cúpula." }
+      {
+        "alt": "Ampla fachada de igreja clássica com uma fileira de colunas gigantes, um parapeito encimado por estátuas e uma grande cúpula nervurada ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Grande igreja com cúpula vista de longe sobre telhados e pinheiros, com sua fachada de colunas e cúpulas menores ao lado da principal.",
+        "caption": null
+      },
+      {
+        "alt": "Grande cúpula nervurada erguendo-se acima de árvores em um jardim",
+        "caption": null
+      },
+      {
+        "alt": "Enorme interior de mármore com um dossel de bronze de colunas torcidas sobre o altar sob uma cúpula, com pendentes pintados acima.",
+        "caption": null
+      },
+      {
+        "alt": "Interior de uma vasta cúpula de caixotões com mosaicos, vista de baixo",
+        "caption": "A cúpula."
+      }
     ],
     "hints": [
       "A construção começou em 18 de abril de 1506 e terminou em 18 de novembro de 1626.",
@@ -437,8 +627,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/The_Crystal_Palace",
     "drawings": [],
     "photos": [
-      { "alt": "Fotografia antiga de um longo salão de exposição de vidro e ferro com um centro abobadado", "caption": null },
-      { "alt": "Gravura histórica de um vasto salão de teto de vidro cheio de visitantes e de peças expostas", "caption": "O interior, gravura de 1851." }
+      {
+        "alt": "Gravura colorida de um enorme pavilhão de exposições de ferro e vidro com um transepto em abóbada de berço, visto através de um parque com uma árvore alta e visitantes passeando.",
+        "caption": null
+      },
+      {
+        "alt": "Fotografia antiga de um longo salão de exposição de vidro e ferro com um centro abobadado",
+        "caption": null
+      },
+      {
+        "alt": "Fotografia em preto e branco de um vasto edifício de vidro e ferro com um enorme transepto em arco, num terreno aberto e vazio.",
+        "caption": null
+      },
+      {
+        "alt": "Pintura de um salão lotado com teto de vidro e galerias de ferro, com estátuas, fontes e objetos expostos sob um teto em treliça.",
+        "caption": null
+      },
+      {
+        "alt": "Gravura histórica de um vasto salão de teto de vidro cheio de visitantes e de peças expostas",
+        "caption": "O interior, gravura de 1851."
+      }
     ],
     "hints": [
       "Foi construído em um parque para abrigar uma grande exposição internacional realizada de maio a outubro de 1851.",
@@ -478,8 +686,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Chiswick_House",
     "drawings": [],
     "photos": [
-      { "alt": "Vila palladiana clara com pórtico de templo, escadas gêmeas e uma cúpula baixa, na neve", "caption": null },
-      { "alt": "Teto ricamente pintado e dourado, com uma pintura alegórica central", "caption": "Um teto." }
+      {
+        "alt": "Vila branca simétrica com pórtico de colunas, uma cúpula baixa atrás e rampas de escada gêmeas, atravessando um amplo pátio de cascalho.",
+        "caption": null
+      },
+      {
+        "alt": "Vila palladiana clara com pórtico de templo, escadas gêmeas e uma cúpula baixa, na neve",
+        "caption": null
+      },
+      {
+        "alt": "Vila baixa e branca com janelas em arco, cúpula rasa e escadas curvas, ladeada por uma ala de pedra, vista através de um gramado.",
+        "caption": null
+      },
+      {
+        "alt": "Pequeno templo de jardim branco com quatro colunas jônicas, um frontão e um corpo redondo com cúpula, entre árvores escuras.",
+        "caption": null
+      },
+      {
+        "alt": "Teto ricamente pintado e dourado, com uma pintura alegórica central",
+        "caption": "Um teto."
+      }
     ],
     "hints": [
       "Foi construída depois que um incêndio, em 1725, danificou uma casa jacobina mais antiga na propriedade.",

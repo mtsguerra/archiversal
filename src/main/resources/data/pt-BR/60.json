@@ -17,11 +17,15 @@
     "style": "Revival mouro-marroquino",
     "photos": [
       {
+        "alt": "Minarete quadrado muito alto com painéis esculpidos e azulejados ao lado de um longo salão com telhados verdes e fileiras de arcos em ferradura, sob nuvens enevoadas.",
+        "caption": null
+      },
+      {
         "alt": "Minarete quadrado muito alto, com azulejos verdes e painéis entalhados, visto por um arco de ferradura ao entardecer",
         "caption": null
       },
       {
-        "alt": "Silhueta de uma torre enorme e de um salão de telhado verde na orla, contra um sol baixo e ondas quebrando",
+        "alt": "Salão de oração com colunas robustas encimadas por capitéis intricadamente esculpidos e altos arcos esculpidos que levam a uma galeria na penumbra.",
         "caption": null
       }
     ],
@@ -64,12 +68,20 @@
     "style": "Tijolo de adobe sudano-saheliano",
     "photos": [
       {
+        "alt": "Enorme edifício de terra com três altas torres afuniladas coroadas por pináculos e fileiras de vigas de madeira salientes ao longo das paredes.",
+        "caption": null
+      },
+      {
         "alt": "Enorme edifício de terra cor de areia, com altas torres-contraforte eriçadas de estacas de madeira, visto do outro lado de uma praça aberta",
         "caption": null
       },
       {
         "alt": "Fileira de pináculos de terra, cada um coroado por um ovo de avestruz, com vigas de madeira salientes",
         "caption": "A linha do telhado de pináculos cônicos."
+      },
+      {
+        "alt": "Edifício de terra com torres pontiagudas erguendo-se atrás de um movimentado mercado ao ar livre com barracas, carrinhos e pessoas sobre a areia.",
+        "caption": null
       }
     ],
     "drawings": [],
@@ -112,7 +124,15 @@
     "style": "Persa safávida",
     "photos": [
       {
+        "alt": "Pórtico de entrada revestido de azulejos com dois esbeltos minaretes e uma cúpula turquesa erguendo-se atrás de um longo edifício arcado, vistos do outro lado de uma praça ajardinada.",
+        "caption": null
+      },
+      {
         "alt": "Vista de baixo para cima de um profundo nicho de portal coberto de mosaico azul, com abóbada de favo feita de células em estalactite",
+        "caption": null
+      },
+      {
+        "alt": "Grande pátio emoldurado por altos iwans azulejados e arcadas de dois andares sob um céu azul profundo, com alguns visitantes sentados à sombra.",
         "caption": null
       },
       {
@@ -159,11 +179,15 @@
     "style": "Persa safávida",
     "photos": [
       {
-        "alt": "Câmara de oração quadrada com paredes de azulejos azuis e dourados, arcos ogivais e um anel de janelas rendilhadas sob uma cúpula dourada",
+        "alt": "Grande cúpula revestida de azulejos creme e turquesa sobre um pórtico de entrada azulejado em azul, ao lado de uma longa arcada com toldos e arbustos podados.",
         "caption": null
       },
       {
-        "alt": "Vista muito ampla sobre um espelho d'água e uma vasta praça com arcadas, com uma única cúpula azulejada pequena no meio do lado oposto",
+        "alt": "Edifício com cúpula no centro de uma longa arcada de dois andares do outro lado de um enorme espelho d'água e de uma praça pavimentada, com pequenas figuras na borda.",
+        "caption": null
+      },
+      {
+        "alt": "Câmara de oração quadrada com paredes de azulejos azuis e dourados, arcos ogivais e um anel de janelas rendilhadas sob uma cúpula dourada",
         "caption": null
       }
     ],
@@ -205,6 +229,18 @@
     "city": "Lahore",
     "style": "Mogol",
     "photos": [
+      {
+        "alt": "Mesquita de arenito vermelho com um portal central em arco, três cúpulas de mármore branco e esbeltos minaretes nos cantos, diante de um pátio pavimentado vazio.",
+        "caption": null
+      },
+      {
+        "alt": "Mesquita vermelha com cúpulas brancas e altos minaretes brilhando ao entardecer, perfeitamente espelhada em um espelho d'água calmo em primeiro plano.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de um vasto pátio quadrado com quatro altos minaretes nos cantos, uma sala de oração com cúpulas ao fundo e um portal na frente.",
+        "caption": null
+      },
       {
         "alt": "Alto minarete de arenito vermelho com um pequeno pavilhão com cúpula no topo, ao lado de uma grande cúpula de mármore claro e de um longo muro vermelho",
         "caption": null
@@ -253,11 +289,19 @@
     "style": "Abássida (estilo Samarra)",
     "photos": [
       {
+        "alt": "Pátio de pedra cor de areia com uma casa de fonte encimada por cúpula à direita, arcadas pontiagudas e um minarete de topo espiralado erguendo-se ao fundo.",
+        "caption": null
+      },
+      {
         "alt": "Minarete de pedra com base retangular, fuste redondo e pequena lanterna com cúpula, atrás de uma crista de muro em rendilhado vazado",
         "caption": null
       },
       {
         "alt": "Vasto pátio vazio cercado por arcadas ogivais simples, com um pavilhão de abluções com cúpula no meio",
+        "caption": null
+      },
+      {
+        "alt": "Sala de oração com amplos arcos pontiagudos de tijolo, bordas de estuque esculpidas, uma pequena sacada de madeira e um tapete verde no chão.",
         "caption": null
       }
     ],

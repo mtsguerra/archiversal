@@ -30,7 +30,15 @@
         "caption": null
       },
       {
-        "alt": "Arranha-céu em forma de bloco, cor creme, com coroamento de pequenos volumes, visto do outro lado de uma praça ampla ao entardecer",
+        "alt": "Alta torre cor de creme com fileiras de pequenas janelas e um coroamento escalonado com aletas, vista de uma esquina ao lado de árvores e de um prédio de vidro.",
+        "caption": null
+      },
+      {
+        "alt": "Arranha-céu esguio cor de creme com topo escalonado, erguendo-se acima de uma praça ampla e ensolarada e de prédios baixos sob um céu azul intenso.",
+        "caption": null
+      },
+      {
+        "alt": "Olhando em ângulo acentuado para cima pela fachada de um arranha-céu claro com fileiras regulares de janelas e coroamento escalonado contra um céu azul escuro.",
         "caption": null
       }
     ],
@@ -77,11 +85,19 @@
     "style": "Barroco colonial português",
     "photos": [
       {
+        "alt": "Fachada de igreja em arenito com duas torres de remate piramidal e um frontão central de volutas, sob um céu azul limpo.",
+        "caption": null
+      },
+      {
         "alt": "Frontaria de arenito com duas torres revestidas de azulejos, frontão central com volutas e um cruzeiro de pedra numa praça de pedras",
         "caption": null
       },
       {
-        "alt": "Frontaria iluminada à noite, duas torres de cobertura piramidal ladeando um frontão com volutas e um alto cruzeiro de pedra em primeiro plano",
+        "alt": "Nave de igreja densamente coberta de talha dourada, com teto pintado de desenho geométrico e um retábulo dourado ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Detalhe de perto de pilastras de arenito desgastadas e cornijas esculpidas ao lado de uma alta porta de madeira almofadada verde.",
         "caption": null
       }
     ],
@@ -128,11 +144,19 @@
     "style": "Barroco colonial português com elementos neoclássicos e neorrenascentistas",
     "photos": [
       {
+        "alt": "Fachada de igreja de pedra com duas torres e uma cúpula cinzenta atrás do frontão, de frente para uma rotatória com fonte entre edifícios comerciais.",
+        "caption": null
+      },
+      {
         "alt": "Frontaria de duas torres em granito escuro e reboco claro, com frontão triangular e uma cúpula clara ao fundo",
         "caption": null
       },
       {
         "alt": "Arcos ricamente pintados e dourados sob uma cúpula com janelas em arco e murais nos cantos",
+        "caption": null
+      },
+      {
+        "alt": "Vista para cima de uma cúpula nervurada pintada com figuras vestidas e anjos, com janelas em arco e uma claraboia no topo.",
         "caption": null
       }
     ],
@@ -178,11 +202,19 @@
     "style": "Neoclássico brasileiro",
     "photos": [
       {
+        "alt": "Frente simétrica de palácio rosa de três andares, com base de pedra, sacadas com balaústres e águias de bronze ao longo do telhado.",
+        "caption": null
+      },
+      {
         "alt": "Palacete rosado de três andares com balcões de balaústres e águias escuras de bronze no alto da platibanda, visto de uma esquina",
         "caption": null
       },
       {
         "alt": "Grande salão com painéis dourados nas paredes, arcos pintados, lustres e um grande espelho sobre um sofá verde",
+        "caption": null
+      },
+      {
+        "alt": "Longa mesa de reuniões de madeira com cadeiras de couro em uma sala com painéis pintados nas paredes, um lustre e piso em espinha de peixe.",
         "caption": null
       }
     ],
@@ -230,6 +262,10 @@
     "photos": [
       {
         "alt": "Torre esguia cor de creme com janelas verticais estreitas e topo envidraçado, ligada por uma passarela a uma segunda torre na encosta, acima de uma rua",
+        "caption": null
+      },
+      {
+        "alt": "Esbelta torre cor de creme com plataforma superior envidraçada, vista de um cais de pedra com um pequeno barco desgastado em primeiro plano.",
         "caption": null
       },
       {
@@ -281,7 +317,15 @@
     "style": "Eclético, com elementos neoclássicos e art nouveau",
     "photos": [
       {
+        "alt": "Vista de cima de um grande edifício ocre em estilo de palácio, com pórtico de colunas, cúpula verde de cobre e telhados de telhas vermelhas entre árvores.",
+        "caption": null
+      },
+      {
         "alt": "Edifício ocre em forma de palácio, com pórtico de colunas, frontão esculpido e cúpula de cobre verde, atrás de uma rua arborizada",
+        "caption": null
+      },
+      {
+        "alt": "Esquina de um edifício neoclássico creme e ocre, com janelas superiores em arco, um pórtico com frontão e uma cúpula verde.",
         "caption": null
       },
       {

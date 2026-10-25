@@ -14,8 +14,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Catedral_de_Chartres",
     "drawings": [],
     "photos": [
-      { "alt": "Catedral gótica com arcobotantes e uma flecha, iluminada por refletores à noite", "caption": null },
-      { "alt": "Alta nave gótica voltada para um rosetão acima de janelas em lanceta", "caption": "A nave e o rosetão oeste." }
+      {
+        "alt": "Catedral gótica com duas torres de pedra desiguais e telhado de cobre esverdeado, erguendo-se sobre os telhados da cidade sob luz do dia clara.",
+        "caption": null
+      },
+      {
+        "alt": "Catedral gótica com arcobotantes e uma flecha, iluminada por refletores à noite",
+        "caption": null
+      },
+      {
+        "alt": "Alta nave gótica voltada para um rosetão acima de janelas em lanceta",
+        "caption": "A nave e o rosetão oeste."
+      },
+      {
+        "alt": "Biombo de pedra entalhada repleto de pequenas figuras esculpidas e arcos ogivais, com vitrais brilhando na janela superior.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construída em sua maior parte entre 1194 e 1220, no local de pelo menos cinco catedrais anteriores.",
@@ -51,8 +65,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Sainte-Chapelle",
     "drawings": [],
     "photos": [
-      { "alt": "Esbelta capela gótica com flecha e empenas, erguendo-se atrás de edifícios de um palácio em volta de um pátio", "caption": null },
-      { "alt": "Capela superior fechada quase toda por altas janelas de vitral sob uma abóbada azul estrelada", "caption": "A capela superior." }
+      {
+        "alt": "Esbelta capela gótica com uma alta flecha atrás de um portão de ferro dourado e longos edifícios de pedra, vista de uma rua da cidade.",
+        "caption": null
+      },
+      {
+        "alt": "Empena de pedra íngreme com rosácea, pináculos e uma balaustrada rendilhada, encimada por uma flecha esguia contra o céu nublado.",
+        "caption": null
+      },
+      {
+        "alt": "Portal de pedra em arco ogival com um tímpano esculpido sobre duas portas roxas e uma estátua no parteluz central.",
+        "caption": null
+      },
+      {
+        "alt": "Capela superior fechada quase toda por altas janelas de vitral sob uma abóbada azul estrelada",
+        "caption": "A capela superior."
+      },
+      {
+        "alt": "Grande rosácea circular de vitrais densos em vermelho e azul, emoldurada por um arco ogival com nervuras douradas.",
+        "caption": null
+      }
     ],
     "hints": [
       "Um rei a construiu para abrigar relíquias, entre elas o que se afirmava ser a Coroa de Espinhos de Cristo.",
@@ -88,8 +120,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Catedral_de_Durham",
     "drawings": [],
     "photos": [
-      { "alt": "Maciça catedral românica com torres quadradas acima de margens arborizadas de um rio", "caption": null },
-      { "alt": "Abóbada da nave, de nervuras de pedra ogivais, vista de baixo", "caption": "A abóbada da nave." }
+      {
+        "alt": "Longa igreja românica com uma alta torre central, torres gêmeas a oeste e torreões pontiagudos, vista de um gramado à luz do dia.",
+        "caption": null
+      },
+      {
+        "alt": "Maciça igreja de pedra com três torres erguendo-se sobre uma encosta arborizada e telhados da cidade sob um céu parcialmente nublado.",
+        "caption": null
+      },
+      {
+        "alt": "Jardim de claustro gramado cercado por muros de pedra com arcadas, com uma torre quadrada e um transepto de empena erguendo-se atrás.",
+        "caption": null
+      },
+      {
+        "alt": "Abóbada da nave, de nervuras de pedra ogivais, vista de baixo",
+        "caption": "A abóbada da nave."
+      }
     ],
     "hints": [
       "Abriga os santuários dos santos Cuthbert e Beda.",
@@ -130,8 +176,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Catedral_de_Pisa",
     "drawings": [],
     "photos": [
-      { "alt": "Catedral românica de mármore com fileiras de arcadas e uma cúpula, ao lado de um gramado", "caption": null },
-      { "alt": "Nave de colunas e arcos de mármore listrado sob um teto dourado de caixotões", "caption": "A nave." }
+      {
+        "alt": "Fachada de igreja em mármore com galerias arcadas sobrepostas sob um topo de empena, com uma cúpula atrás, vista de um gramado sob céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Catedral românica de mármore com fileiras de arcadas e uma cúpula, ao lado de um gramado",
+        "caption": null
+      },
+      {
+        "alt": "Vista próxima de fileiras de colunas esguias e arcos redondos em mármore branco e cinza, com faixas decorativas embutidas.",
+        "caption": null
+      },
+      {
+        "alt": "Nave de colunas e arcos de mármore listrado sob um teto dourado de caixotões",
+        "caption": "A nave."
+      },
+      {
+        "alt": "Teto de cúpula oval pintado com nuvens em espiral e anjos em torno de uma figura central de manto vermelho.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi paga com os despojos de uma luta na Sicília em 1064.",
@@ -167,8 +231,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Mesquita_Azul",
     "drawings": [],
     "photos": [
-      { "alt": "Mesquita com uma cascata de cúpulas e seis esbeltos minaretes, vista do outro lado de um parque com palmeiras", "caption": null },
-      { "alt": "Salão de oração sob grandes cúpulas sobre pilares maciços, iluminado por anéis de lâmpadas pendentes", "caption": "O salão de oração." }
+      {
+        "alt": "Cascata de cúpulas e meias-cúpulas ladeada por seis minaretes esguios, erguendo-se sobre árvores verdes contra um céu pálido e suave.",
+        "caption": null
+      },
+      {
+        "alt": "Amplo pátio pavimentado cercado por uma arcada de vãos com cúpulas, com dois altos minaretes ao fundo e muitos visitantes caminhando.",
+        "caption": null
+      },
+      {
+        "alt": "Mesquita com uma cascata de cúpulas e seis esbeltos minaretes, vista do outro lado de um parque com palmeiras",
+        "caption": null
+      },
+      {
+        "alt": "Salão de oração sob grandes cúpulas sobre pilares maciços, iluminado por anéis de lâmpadas pendentes",
+        "caption": "O salão de oração."
+      },
+      {
+        "alt": "Vista para cima de uma enorme cúpula central e meias-cúpulas em volta, cobertas de padrões azuis e dourados e rodeadas de pequenas janelas.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construída entre 1609 e 1617, ao lado de um antigo hipódromo bizantino.",
@@ -203,8 +285,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Mesquita_de_Selim",
     "drawings": [],
     "photos": [
-      { "alt": "Grande mesquita com cúpula, emoldurada por altos minaretes, vista além de um muro de pedra", "caption": null },
-      { "alt": "Vasto salão de oração com cúpula, cercado por arcadas e galerias, com um anel de lâmpadas", "caption": "O salão de oração." }
+      {
+        "alt": "Grande cúpula central rodeada por cúpulas menores e quatro altos minaretes, acima de um muro de pátio de pedra listrada e árvores sem folhas.",
+        "caption": null
+      },
+      {
+        "alt": "Vista através de arcos listrados de vermelho e branco de uma arcada de pátio em direção a uma sala de oração com cúpula e minaretes esguios.",
+        "caption": null
+      },
+      {
+        "alt": "Grande mesquita com cúpula, emoldurada por altos minaretes, vista além de um muro de pedra",
+        "caption": null
+      },
+      {
+        "alt": "Vasto salão de oração com cúpula, cercado por arcadas e galerias, com um anel de lâmpadas",
+        "caption": "O salão de oração."
+      },
+      {
+        "alt": "Vista direta para cima de uma vasta cúpula cercada de janelas, com arcos em faixas vermelhas e brancas e um centro pintado de azul.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi encomendada pelo sultão Selim II e construída entre 1568 e 1575.",
@@ -240,8 +340,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Mesquita_de_R%C3%BCstem_Pax%C3%A1",
     "drawings": [],
     "photos": [
-      { "alt": "Cúpula e semicúpulas cobertas de chumbo de uma mesquita de pedra com um minarete, contra um céu azul", "caption": null },
-      { "alt": "Salão de oração com paredes cobertas de azulejos florais azuis e vermelhos", "caption": "O salão de oração." }
+      {
+        "alt": "Cúpula e semicúpulas cobertas de chumbo de uma mesquita de pedra com um minarete, contra um céu azul",
+        "caption": null
+      },
+      {
+        "alt": "Pórtico coberto com esguias colunas de pedra e arcos ogivais, com a parede de fundo revestida de azulejos azuis e brancos, e arbustos em vasos no chão.",
+        "caption": null
+      },
+      {
+        "alt": "Pequena mesquita de cúpula cinzenta com um único minarete esguio, situada entre edifícios densos de uma cidade em uma encosta.",
+        "caption": null
+      },
+      {
+        "alt": "Salão de oração com paredes cobertas de azulejos florais azuis e vermelhos",
+        "caption": "O salão de oração."
+      },
+      {
+        "alt": "Parede de azulejos de cerâmica com flores azuis, turquesa e vermelhas e folhas enroladas repetidas sobre fundo branco.",
+        "caption": null
+      }
     ],
     "hints": [
       "Tem o nome de um grão-vizir que era casado com a filha do sultão.",
@@ -281,8 +399,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pal%C3%A1cio_de_Topkap%C4%B1",
     "drawings": [],
     "photos": [
-      { "alt": "Longo pavilhão com arcadas e um beiral profundo, ao lado de um pátio ajardinado", "caption": null },
-      { "alt": "Passagem revestida de azulejos, com arcos, lâmpadas pendentes e um portão dourado", "caption": "Dentro do palácio." }
+      {
+        "alt": "Alta muralha de tijolo de fortaleza perfurada por um portal de mármore em arco ogival com painéis de caligrafia e nichos cegos, com visitantes passando abaixo.",
+        "caption": null
+      },
+      {
+        "alt": "Longo pavilhão com arcadas e um beiral profundo, ao lado de um pátio ajardinado",
+        "caption": null
+      },
+      {
+        "alt": "Pavilhão baixo e branco com altas portas em arco e telhado plano, em um gramado ao lado de uma grande árvore perene.",
+        "caption": null
+      },
+      {
+        "alt": "Pequeno pavilhão com cúpula e base arcada, com remate dourado, emoldurado por ciprestes e um caminho de jardim aparado.",
+        "caption": null
+      },
+      {
+        "alt": "Passagem revestida de azulejos, com arcos, lâmpadas pendentes e um portão dourado",
+        "caption": "Dentro do palácio."
+      }
     ],
     "hints": [
       "Sua construção começou em 1459, seis anos depois da conquista da cidade.",
@@ -323,8 +459,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Mosteiro_de_Santa_Cruz",
     "drawings": [],
     "photos": [
-      { "alt": "Frente de igreja de pedra clara ornamentada, com pináculos e um portal entalhado, acima de uma praça com uma fonte", "caption": null },
-      { "alt": "Nave sob uma abóbada nervurada, com painéis de azulejos azuis, um púlpito dourado e um retábulo dourado", "caption": "A igreja." }
+      {
+        "alt": "Frente de igreja de pedra clara ornamentada, com pináculos e um portal entalhado, acima de uma praça com uma fonte",
+        "caption": null
+      },
+      {
+        "alt": "Nave sob uma abóbada nervurada, com painéis de azulejos azuis, um púlpito dourado e um retábulo dourado",
+        "caption": "A igreja."
+      },
+      {
+        "alt": "Claustro de pedra de dois pisos com arcos ogivais e uma fonte de pedra no centro de um relvado, sob um céu azul limpo.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi fundado em 1131 e foi o mosteiro mais importante do reino nascente.",
@@ -359,8 +505,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pal%C3%A1cio_Nacional_de_Sintra",
     "drawings": [],
     "photos": [
-      { "alt": "Duas enormes chaminés cônicas brancas acima de uma ala do palácio com janelas de estilo mourisco", "caption": null },
-      { "alt": "Sala de palácio com teto de madeira, um lustre, portas vermelhas e um biombo laqueado", "caption": "Uma sala do palácio." }
+      {
+        "alt": "Vista aérea de um palácio branco e labiríntico com paredes debruadas a laranja, telhados de telha e duas enormes chaminés cónicas, entre colinas arborizadas.",
+        "caption": null
+      },
+      {
+        "alt": "Duas enormes chaminés cônicas brancas acima de uma ala do palácio com janelas de estilo mourisco",
+        "caption": null
+      },
+      {
+        "alt": "Sala de palácio com teto de madeira, um lustre, portas vermelhas e um biombo laqueado",
+        "caption": "Uma sala do palácio."
+      }
     ],
     "hints": [
       "É a residência real medieval mais bem preservada de seu país, habitada do início do século XV ao fim do XIX.",
@@ -396,8 +552,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/S%C3%A9_do_Funchal",
     "drawings": [],
     "photos": [
-      { "alt": "Igreja branca com bordas de pedra escura, um rosetão e um portal ogival, ao lado de uma torre sineira quadrada", "caption": null },
-      { "alt": "Capela-mor dourada sob um teto de madeira entalhada e pintada", "caption": "A capela-mor." }
+      {
+        "alt": "Igreja branca com bordas de pedra escura, um rosetão e um portal ogival, ao lado de uma torre sineira quadrada",
+        "caption": null
+      },
+      {
+        "alt": "Capela-mor dourada sob um teto de madeira entalhada e pintada",
+        "caption": "A capela-mor."
+      },
+      {
+        "alt": "Nave comprida com filas de bancos de madeira, arcadas de pedra e um teto de madeira escura que conduz a um altar dourado ao fundo.",
+        "caption": null
+      }
     ],
     "hints": [
       "Fica em uma ilha atlântica e foi iniciada em 1486 sob o duque que depois se tornou o rei D. Manuel I.",
@@ -432,8 +598,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Igreja_Matriz_da_Goleg%C3%A3",
     "drawings": [],
     "photos": [
-      { "alt": "Igreja branca com um portal de pedra elaboradamente entalhado e uma alta torre com flecha pontiaguda", "caption": null },
-      { "alt": "Nave com teto de madeira que leva a um arco triunfal gótico nervurado e uma capela azulejada", "caption": "A nave." }
+      {
+        "alt": "Igreja branca com um portal de pedra ricamente esculpido, colunas torcidas e uma alta torre sineira com agulha revestida, vista de frente.",
+        "caption": null
+      },
+      {
+        "alt": "Nave com teto de madeira que leva a um arco triunfal gótico nervurado e uma capela azulejada",
+        "caption": "A nave."
+      },
+      {
+        "alt": "Vista oblíqua de um portal de pedra esculpido com colunas torcidas e um óculo, ao lado de uma torre branca com cunhais de pedra.",
+        "caption": null
+      },
+      {
+        "alt": "Pequena igreja branca com uma torre alta no fim de uma rua empedrada, com casas baixas e um pelourinho na praça em frente.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construída na primeira metade do século XVI, substituindo uma pequena igreja paroquial gótica.",

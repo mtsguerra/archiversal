@@ -26,6 +26,10 @@
         "caption": null
       },
       {
+        "alt": "Torre de vidro com treliças de aço e estrutura suspensa aparente, erguendo-se entre outros arranha-céus, vista de uma praça com árvores.",
+        "caption": null
+      },
+      {
         "alt": "Vista para cima por um vasto átrio de pisos de vidro, travamentos em cruz e escadas rolantes, com escritórios em varandas de todos os lados",
         "caption": "Escadas rolantes sobem por um vasto átrio."
       }
@@ -75,7 +79,19 @@
         "caption": null
       },
       {
+        "alt": "Grande casca curva prateada sobre uma fachada envidraçada com janelas redondas, numa encosta gramada com um terraço pavimentado abaixo.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada curva de vidro emoldurada por um espesso arco metálico com finos tirantes diagonais, acima de largos degraus e de um pátio pavimentado.",
+        "caption": null
+      },
+      {
         "alt": "Vista de cima de um café com pequenas mesas redondas num piso escuro, diante de uma parede de vidro alta com uma faixa verde e azul e uma vista da cidade do outro lado do rio",
+        "caption": null
+      },
+      {
+        "alt": "Sala de concertos revestida de madeira clara, com balcões curvos em camadas acima de um palco vazio e de fileiras de poltronas.",
         "caption": null
       }
     ],
@@ -120,7 +136,19 @@
     "drawings": [],
     "photos": [
       {
+        "alt": "Longo edifício em forma de caixa cujo topo é uma parede de vidro emoldurada por uma treliça de aço branca, sobre um gramado verde.",
+        "caption": null
+      },
+      {
         "alt": "Longo edifício em caixa revestido de metal com uma ponta envidraçada emoldurada por uma treliça de aço, num relvado sob um céu roxo com um arco-íris",
+        "caption": null
+      },
+      {
+        "alt": "Parede de vidro em moldura de treliça branca ao lado de uma lateral de painéis metálicos, com esculturas vermelhas e brancas no gramado.",
+        "caption": null
+      },
+      {
+        "alt": "Canto de um longo edifício revestido de painéis quadrados cinza, com o topo envidraçado emoldurado por uma treliça, sob nuvens escuras de tempestade.",
         "caption": null
       },
       {
@@ -170,12 +198,16 @@
     "drawings": [],
     "photos": [
       {
-        "alt": "Vista aérea de uma longa pista com um complexo compacto de terminal de edifícios baixos e posições de aeronaves ao lado, em terreno agrícola",
+        "alt": "Vista aérea de um grande terminal quadrado de cobertura plana, com longos braços que avançam até muitas aeronaves estacionadas no pátio.",
         "caption": null
       },
       {
         "alt": "Amplo salão sob uma cobertura de árvores de aço cujos ramos sustentam clarabóias, com bancos de madeira e tapetes de bagagem",
         "caption": "Esbeltas árvores de aço sustentam a cobertura e a sua luz."
+      },
+      {
+        "alt": "Pequeno trem sem condutor numa plataforma ao lado de uma alta parede de vidro, sob um teto de leves escoras de aço e uma cobertura em grelha.",
+        "caption": null
       }
     ],
     "hints": [

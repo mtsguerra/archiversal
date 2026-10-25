@@ -14,6 +14,14 @@
     "drawings": [],
     "photos": [
       {
+        "alt": "Casa cúbica branca e simples, com pequenas janelas quadradas de caixilho amarelo e uma parede coberta de hera, atrás de uma cerca verde sob céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Casa branca em blocos vista de uma escada abaixo, com pequenas janelas dispostas de modo irregular e um guarda-corpo verde ao longo de um terraço.",
+        "caption": null
+      },
+      {
         "alt": "Casa branca cúbica e simples, com janelas pequenas e irregulares, parcialmente coberta de hera, num jardim em declive",
         "caption": null
       },
@@ -69,12 +77,24 @@
     ],
     "photos": [
       {
-        "alt": "Casa branca com cobertura escura arredondada em abóbada de berço, atrás de uma cerca marrom baixa e árvores sem folhas",
+        "alt": "Casa branca com telhado escuro em abóbada de berço curva e pequenas janelas, atrás de uma cerca e portão de madeira em uma rua tranquila.",
+        "caption": null
+      },
+      {
+        "alt": "Vista de esquina de uma casa branca cujo telhado escuro curvo desce de um lado, com parede plana lisa e pequenas janelas quadradas do outro.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada posterior plana e branca de uma casa, com grade regular de pequenas janelas retangulares, vista do jardim entre árvores.",
         "caption": null
       },
       {
         "alt": "Vista histórica em preto e branco de uma sala de estar com teto de vigas, lareira e cortinas pesadas",
         "caption": "Uma vista histórica da sala de estar."
+      },
+      {
+        "alt": "Casa branca com cobertura escura arredondada em abóbada de berço, atrás de uma cerca marrom baixa e árvores sem folhas",
+        "caption": null
       }
     ],
     "hints": [

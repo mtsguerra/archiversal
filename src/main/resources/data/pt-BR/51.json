@@ -23,6 +23,10 @@
     "style": "Barroco, revestida de azulejos",
     "photos": [
       {
+        "alt": "Pequena capela numa esquina de rua, com empena sineira e longas paredes totalmente cobertas de azulejos pintados em azul e branco, sob um céu claro.",
+        "caption": null
+      },
+      {
         "alt": "Pequena igreja de pedra com empena sineira, com as paredes cobertas por painéis de azulejos azuis e brancos",
         "caption": null
       },
@@ -72,6 +76,18 @@
         "caption": null
       },
       {
+        "alt": "Parede de granito com janelas em arco e retangulares inseridas num painel de azulejos azuis e brancos com volutas, e uma porta de madeira abaixo.",
+        "caption": null
+      },
+      {
+        "alt": "Vista de baixo para cima de uma frontaria de igreja em granito esculpido, com empena curva, estátuas, uma cruz e um nicho com uma imagem da Virgem.",
+        "caption": null
+      },
+      {
+        "alt": "Nave de igreja com abóbada de berço apainelada, paredes de pedra clara e um retábulo dourado brilhando ao fundo sob um lustre.",
+        "caption": null
+      },
+      {
         "alt": "Pormenor de um painel de azulejos azuis e brancos com figuras de hábito reunidas numa encosta",
         "caption": "Pormenor do painel da parede lateral."
       }
@@ -112,6 +128,18 @@
     "city": "Lisboa",
     "style": "Barroco",
     "photos": [
+      {
+        "alt": "Casa senhorial vermelha e branca com loggia de arcos no piso superior, atrás de um jardim de buxo aparado, um longo tanque com balaustrada e um muro de azulejos azuis.",
+        "caption": null
+      },
+      {
+        "alt": "Vista mais próxima da fachada vermelha do jardim, com vãos em arco e pilastras acima de sebes formais, estátuas e um muro de azulejos.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada simétrica vermelha de pátio, com loggia central de arcos sobre uma arcada aberta no piso térreo e um pátio calçado.",
+        "caption": null
+      },
       {
         "alt": "Galeria de jardim com nichos com bustos, paredes de azulejo azul, um longo tanque verde e sebes de buxo aparadas",
         "caption": null
@@ -157,6 +185,10 @@
     "city": "Lisboa",
     "style": "Manuelino, maneirista e barroco",
     "photos": [
+      {
+        "alt": "Longa frontaria caiada de igreja e convento com uma torre sineira quadrada de pedra, pináculos ao longo do beiral e uma pequena porta de estilo gótico.",
+        "caption": null
+      },
       {
         "alt": "Vista a preto e branco de uma fileira de colunas de pedra esbeltas com arcos esculpidos e vazados em torno de um claustro",
         "caption": null
@@ -205,6 +237,10 @@
     "photos": [
       {
         "alt": "Igreja caiada com torre do relógio, escada exterior e um painel de azulejo azul no frontão curvo",
+        "caption": null
+      },
+      {
+        "alt": "Vista frontal de uma fachada de igreja caiada com pilastras de pedra, empena curva, painel de azulejos azuis e uma cruz, com dois vasos de palmeiras.",
         "caption": null
       },
       {

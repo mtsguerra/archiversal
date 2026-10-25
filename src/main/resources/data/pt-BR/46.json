@@ -17,11 +17,23 @@
     "style": "Neoclássico",
     "photos": [
       {
+        "alt": "Fachada neoclássica cor de creme com um frontão central, uma sacada sobre três aberturas em arco no térreo e um poste de luz à frente.",
+        "caption": null
+      },
+      {
         "alt": "Fachada neoclássica sóbria cor de creme, com frontão e pórtico de arcos no térreo, diante de uma praça pavimentada",
         "caption": null
       },
       {
         "alt": "Plateia em ferradura com fileiras de camarotes, poltronas vermelhas, cortina vermelha e um lustre",
+        "caption": null
+      },
+      {
+        "alt": "Vista dos andares superiores sobre fileiras de camarotes estofados de vermelho e a plateia, em direção a um palco emoldurado por cortina vermelha.",
+        "caption": null
+      },
+      {
+        "alt": "Vista para cima de um teto oval de caixotões com um grande lustre central acima dos camarotes curvos de um auditório.",
         "caption": null
       }
     ],
@@ -76,11 +88,23 @@
     "style": "Eclético",
     "photos": [
       {
+        "alt": "Frente simétrica de uma casa de ópera cor de creme com frontão central, pilastras duplas, janelas em arco e uma bandeira acima da marquise de entrada.",
+        "caption": null
+      },
+      {
         "alt": "Grande casa de ópera cor de creme com janelas em arco, pilastras, frisos esculpidos e um pórtico de esquina",
         "caption": null
       },
       {
+        "alt": "Vista em preto e branco do frontão e do sótão de um grande edifício, com relevos esculpidos, pequenas janelas redondas e uma janela semicircular.",
+        "caption": null
+      },
+      {
         "alt": "Plateia dourada em ferradura com andares de balcões voltados para um palco iluminado e um proscênio de veludo drapeado",
+        "caption": null
+      },
+      {
+        "alt": "Auditório em ferradura com vários andares de camarotes iluminados que sobem até um teto em cúpula pintado e um lustre central acima da plateia.",
         "caption": null
       }
     ],
@@ -126,6 +150,10 @@
     "city": "Poissy",
     "style": "Modernismo",
     "photos": [
+      {
+        "alt": "Casa branca em forma de caixa elevada sobre esbeltos pilares redondos, com uma longa janela corrida, um anteparo curvo no terraço e portas verdes de garagem embaixo.",
+        "caption": null
+      },
       {
         "alt": "Caixa branca erguida sobre colunas redondas esbeltas acima de um muro de arrimo de pedra, com uma escultura de anéis metálicos no gramado",
         "caption": null
@@ -239,6 +267,14 @@
         "caption": null
       },
       {
+        "alt": "Vista próxima da frente de um grande palácio de pedra com colunas gigantes, uma balaustrada com estátuas no topo e um portal central em arco.",
+        "caption": null
+      },
+      {
+        "alt": "Um longo palácio com centro encimado por cúpula, visto por cima de um espelho d'água retangular, sebes aparadas, estátuas e altas árvores perenes.",
+        "caption": null
+      },
+      {
         "alt": "Hall de escadaria monumental de mármore, com lampadários dourados, estuques e teto abobadado pintado",
         "caption": null
       }
@@ -292,7 +328,15 @@
     "style": "Neoclássico",
     "photos": [
       {
+        "alt": "Ampla frente de palácio em pedra clara com frontão e pórtico centrais, portões dourados, estátuas de bronze e um pátio vazio ao amanhecer.",
+        "caption": null
+      },
+      {
         "alt": "Longa fachada de palácio em pedra clara, com frontão central, vista além de uma rotatória, canteiros de flores e uma estátua dourada de um monumento",
+        "caption": null
+      },
+      {
+        "alt": "O lado do jardim de um grande palácio de pedra com uma janela saliente central e cúpula verde, visto de um amplo gramado com tendas brancas.",
         "caption": null
       },
       {

@@ -19,8 +19,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pal%C3%A1cio_de_Westminster",
     "drawings": [],
     "photos": [
-      { "alt": "Longo palácio neogótico com torres ao longo de um rio, visto da água", "caption": null },
-      { "alt": "Salão gótico octogonal com piso de ladrilhos, estátuas, altas janelas e um grande lustre", "caption": "O Central Lobby." }
+      {
+        "alt": "Palácio neogótico muito comprido, de pedra clara, com uma alta torre de relógio quadrada numa das pontas, visto do outro lado de um rio largo.",
+        "caption": null
+      },
+      {
+        "alt": "Maciça torre gótica quadrada com altas janelas ogivais e uma bandeira no topo, vista do outro lado de um relvado com árvores, em luz quente de fim de tarde.",
+        "caption": null
+      },
+      {
+        "alt": "Salão gótico octogonal com piso de ladrilhos, estátuas, altas janelas e um grande lustre",
+        "caption": "O Central Lobby."
+      }
     ],
     "hints": [
       "Um incêndio em 1834, provocado por um forno superaquecido que queimava varetas de contagem, destruiu a maior parte de seu antecessor.",
@@ -61,8 +71,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Castelo_de_Neuschwanstein",
     "drawings": [],
     "photos": [
-      { "alt": "Castelo branco com torres em um penhasco arborizado, acima de uma ampla planície", "caption": null },
-      { "alt": "Fotografia antiga de uma sala ornamentada com madeira entalhada e paredes pintadas", "caption": "Uma sala, fotografia histórica." }
+      {
+        "alt": "Castelo branco-acinzentado com torreões esguios e telhado escuro, no alto de uma crista rochosa sobre um pinhal, sob um céu azul limpo.",
+        "caption": null
+      },
+      {
+        "alt": "Castelo branco com torres em um penhasco arborizado, acima de uma ampla planície",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea lateral de um castelo branco com torres redondas, junto a uma escarpa arborizada e a uma garganta rochosa.",
+        "caption": null
+      },
+      {
+        "alt": "Fotografia antiga de uma sala ornamentada com madeira entalhada e paredes pintadas",
+        "caption": "Uma sala, fotografia histórica."
+      },
+      {
+        "alt": "Antiga estampa a cores de um salão de estilo bizantino com cúpula pintada e abside dourada, colunas, murais e um pavimento de mosaico decorado.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construído a partir de 1869 para um rei, pago com sua fortuna pessoal e empréstimos, e não com dinheiro público.",
@@ -98,8 +126,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Museu_Estatal_de_Amesterd%C3%A3o",
     "drawings": [],
     "photos": [
-      { "alt": "Grande museu de tijolos vermelhos com torres de telhado íngreme e uma passagem em arco, atrás de floreiras", "caption": null },
-      { "alt": "Galeria com paredes estampadas e arcos, cheia de visitantes diante de um grande quadro escuro", "caption": "Uma galeria principal." }
+      {
+        "alt": "Grande museu de tijolos vermelhos com torres de telhado íngreme e uma passagem em arco, atrás de floreiras",
+        "caption": null
+      },
+      {
+        "alt": "Galeria com paredes estampadas e arcos, cheia de visitantes diante de um grande quadro escuro",
+        "caption": "Uma galeria principal."
+      },
+      {
+        "alt": "Átrio luminoso entre antigas paredes de tijolo vermelho, com cobertura de aço e vidro, paredes de pedra clara, uma escultura e visitantes nas varandas.",
+        "caption": null
+      }
     ],
     "hints": [
       "O museu nacional que abriga foi fundado em Haia em 1798 e transferido em 1808.",
@@ -139,8 +177,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_St_Pancras",
     "drawings": [],
     "photos": [
-      { "alt": "Frente de hotel gótico de tijolo vermelho ornamentado, com torres e janelas ogivais", "caption": null },
-      { "alt": "Vasta cobertura em arco de ferro e vidro sobre as plataformas, com uma longa plataforma", "caption": "A cobertura das plataformas." }
+      {
+        "alt": "Longa fachada neogótica de tijolo vermelho com uma alta torre de relógio, janelas ogivais e agulhas, vista de uma esquina movimentada.",
+        "caption": null
+      },
+      {
+        "alt": "Vista próxima de ricas paredes góticas de tijolo vermelho com fileiras de janelas ogivais, pináculos, empenas e telhados de ardósia sob um céu nublado.",
+        "caption": null
+      },
+      {
+        "alt": "Vasta cobertura em arco de ferro e vidro sobre as plataformas, com uma longa plataforma",
+        "caption": "A cobertura das plataformas."
+      }
     ],
     "hints": [
       "Foi inaugurada em 1.º de outubro de 1868, no local de um cortiço chamado Agar Town.",
@@ -175,8 +223,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Casa-Museu_Horta",
     "drawings": [],
     "photos": [
-      { "alt": "Frente estreita de casa urbana Art Nouveau, com sacadas de ferro e janelas salientes", "caption": null },
-      { "alt": "Escada que sobe sob uma claraboia curva de ferro e vidro", "caption": "A escada." }
+      {
+        "alt": "Frente estreita de casa urbana Art Nouveau, com sacadas de ferro e janelas salientes",
+        "caption": null
+      },
+      {
+        "alt": "Rua de casas estreitas geminadas, com uma casa de pedra clara e varandas de ferro em curvas a destacar-se entre vizinhas de tijolo às riscas.",
+        "caption": null
+      },
+      {
+        "alt": "Escada que sobe sob uma claraboia curva de ferro e vidro",
+        "caption": "A escada."
+      },
+      {
+        "alt": "Vista para cima através de uma caixa de escadas até uma clarabóia de vidro com armação de ferro curva, vitrais e candeeiros em globo.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construída entre 1898 e 1901 como casa e ateliê do próprio arquiteto.",
@@ -210,8 +272,18 @@
     "style": "Secessão de Viena",
     "drawings": [],
     "photos": [
-      { "alt": "Pavilhão cúbico branco coroado por uma cúpula dourada vazada, atrás de árvores", "caption": null },
-      { "alt": "Luminoso salão de exposições branco sob um teto de vidro", "caption": "Um salão de exposições." }
+      {
+        "alt": "Edifício branco cúbico e simétrico, de paredes lisas, com uma cúpula dourada de folhas de louro, pequenas árvores em vasos à entrada e um curto lanço de degraus.",
+        "caption": null
+      },
+      {
+        "alt": "Pavilhão cúbico branco coroado por uma cúpula dourada vazada, atrás de árvores",
+        "caption": null
+      },
+      {
+        "alt": "Luminoso salão de exposições branco sob um teto de vidro",
+        "caption": "Um salão de exposições."
+      }
     ],
     "hints": [
       "Foi construído em 1898 como manifesto de um grupo de artistas que rompeu com a academia estabelecida.",
@@ -245,8 +317,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Hospital_da_Santa_Cruz_e_S%C3%A3o_Paulo",
     "drawings": [],
     "photos": [
-      { "alt": "Pavilhão de tijolos vermelhos com cúpulas de azulejos e uma torre de canto, em meio a jardins", "caption": null },
-      { "alt": "Abóbada de teto coberta de azulejos de cerâmica azuis e dourados", "caption": "Uma abóbada azulejada." }
+      {
+        "alt": "Complexo simétrico de tijolo vermelho com uma alta torre central de agulha e relógio, arcos decorados e palmeiras, visto da rua.",
+        "caption": null
+      },
+      {
+        "alt": "Pavilhão de tijolos vermelhos com cúpulas de azulejos e uma torre de canto, em meio a jardins",
+        "caption": null
+      },
+      {
+        "alt": "Pavilhão de tijolo vermelho com remate de empena, painéis de azulejos azuis e brancos, varandas e águias esculpidas contra um céu azul limpo.",
+        "caption": null
+      },
+      {
+        "alt": "Abóbada de teto coberta de azulejos de cerâmica azuis e dourados",
+        "caption": "Uma abóbada azulejada."
+      }
     ],
     "hints": [
       "A instituição que abrigava foi fundada em 1401 pela fusão de seis hospitais medievais.",
@@ -285,8 +371,22 @@
     "style": "Art Nouveau",
     "drawings": [],
     "photos": [
-      { "alt": "Edifício amarelo ornamentado, com uma entrada de esquina com cúpula e um mosaico em seu arco, em uma praça", "caption": null },
-      { "alt": "Salão com um arco pintado de azul e decoração dourada sobre um palco", "caption": "Um salão." }
+      {
+        "alt": "Edifício amarelo ornamentado, com uma entrada de esquina com cúpula e um mosaico em seu arco, em uma praça",
+        "caption": null
+      },
+      {
+        "alt": "Salão com um arco pintado de azul e decoração dourada sobre um palco",
+        "caption": "Um salão."
+      },
+      {
+        "alt": "Sala de concertos vista do balcão, com uma clarabóia circular envidraçada, nervuras curvas cravejadas de luzes, murais e uma orquestra no palco.",
+        "caption": null
+      },
+      {
+        "alt": "Salão de café com altas janelas, teto de estuque decorado e filas de lustres de cristal suspensos sobre clientes às mesas.",
+        "caption": null
+      }
     ],
     "hints": [
       "É um edifício cívico cujo salão principal tem o nome de um compositor nacional.",
@@ -321,8 +421,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Empire_State_Building",
     "drawings": [],
     "photos": [
-      { "alt": "Esbelto arranha-céu de calcário com recuos e um mastro contra um céu azul", "caption": null },
-      { "alt": "Relevo de metal dourado de um arranha-céu em um saguão de mármore", "caption": "O saguão." }
+      {
+        "alt": "Arranha-céus esguio de calcário com recuos escalonados e um alto mastro, cujos pilares verticais apanham luz quente contra um céu azul profundo.",
+        "caption": null
+      },
+      {
+        "alt": "Vista da rua para o alto da torre de calcário escalonada, com os pilares verticais e os recuos a estreitarem-se em direção ao céu.",
+        "caption": null
+      },
+      {
+        "alt": "Arranha-céus iluminado com um mastro aceso que se ergue acima de um denso horizonte urbano e de um porto, sob um céu laranja de fim de tarde.",
+        "caption": null
+      },
+      {
+        "alt": "Relevo de metal dourado de um arranha-céu em um saguão de mármore",
+        "caption": "O saguão."
+      }
     ],
     "hints": [
       "Foi construído em cerca de treze meses e meio, sendo inaugurado em 1.º de maio de 1931.",
@@ -361,8 +475,26 @@
     "style": "Art Déco",
     "drawings": [],
     "photos": [
-      { "alt": "Alta torre Art Déco de pedra, com recuos e telhado inclinado, acima de uma rua", "caption": null },
-      { "alt": "Teto abobadado de uma arcada pintado com vivos padrões geométricos", "caption": "A arcada." }
+      {
+        "alt": "Alta torre Art Déco de pedra, com recuos e telhado inclinado, acima de uma rua",
+        "caption": null
+      },
+      {
+        "alt": "Base de uma alta torre de pedra com uma grande entrada em arco, pilares nervurados que sobem acima dela e montras ao nível da rua.",
+        "caption": null
+      },
+      {
+        "alt": "Pormenor de uma fachada de granito com altas janelas em arco, águias de cobre verde, rostos esculpidos e medalhões redondos.",
+        "caption": null
+      },
+      {
+        "alt": "Teto abobadado de uma arcada pintado com vivos padrões geométricos",
+        "caption": "A arcada."
+      },
+      {
+        "alt": "Longa galeria com piso de mármore e teto abobadado pintado, candeeiros suspensos, paredes de tom bronze e uma faixa vermelha à esquerda.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construído por uma família de irmãos em frente à sede da montadora que havia comprado seu negócio de carrocerias.",
@@ -397,8 +529,22 @@
     "style": "Art Déco",
     "drawings": [],
     "photos": [
-      { "alt": "Arranha-céu Art Déco de tijolos alaranjados com coroa escalonada, visto de baixo", "caption": null },
-      { "alt": "Saguão abobadado coberto de azulejos coloridos, com um vitral", "caption": "O saguão." }
+      {
+        "alt": "Arranha-céu Art Déco de tijolos alaranjados com coroa escalonada, visto de baixo",
+        "caption": null
+      },
+      {
+        "alt": "Arranha-céus escalonado de tijolo cor de laranja entre torres de escritórios de vidro e betão, numa rua da cidade com bandeiras e árvores sem folhas.",
+        "caption": null
+      },
+      {
+        "alt": "Saguão abobadado coberto de azulejos coloridos, com um vitral",
+        "caption": "O saguão."
+      },
+      {
+        "alt": "Átrio alto com um teto abobadado de padrões coloridos, uma grande janela de treliça ao fundo e pilares geométricos escalonados dos dois lados.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construído em 1928–1929 para um banco e recebeu inicialmente o nome dele.",
@@ -433,8 +579,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pal%C3%A1cio_de_Eltham",
     "drawings": [],
     "photos": [
-      { "alt": "Longa casa de tijolo e pedra ao lado de um grande salão medieval, atrás de um gramado", "caption": null },
-      { "alt": "Salão circular de paredes revestidas de madeira sob uma cúpula envidraçada de pequenas luzes", "caption": "O hall de entrada." }
+      {
+        "alt": "Longa casa de tijolo e pedra ao lado de um grande salão medieval, atrás de um gramado",
+        "caption": null
+      },
+      {
+        "alt": "Casa de tijolo e pedra em faixas, com telhado de quatro águas, altas chaminés e uma janela em arco ao centro, vista por cima de um muro de jardim.",
+        "caption": null
+      },
+      {
+        "alt": "Salão circular de paredes revestidas de madeira sob uma cúpula envidraçada de pequenas luzes",
+        "caption": "O hall de entrada."
+      },
+      {
+        "alt": "Sala de jantar com paredes folheadas cor de mel, uma longa mesa polida, cadeiras vermelhas, altas janelas com cortinas e um teto luminoso.",
+        "caption": null
+      },
+      {
+        "alt": "Salão medieval visto de uma galeria, com altas janelas ogivais, cortinas vermelhas e um teto de madeira à vista sobre um estrado.",
+        "caption": null
+      }
     ],
     "hints": [
       "Une o grande salão medieval de uma residência real a uma casa construída na década de 1930.",

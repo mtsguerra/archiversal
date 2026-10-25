@@ -16,12 +16,20 @@
     "style": "Barroco português",
     "photos": [
       {
+        "alt": "Fachada inteira de um edifício baixo de pedra branca e ocre, com portal de colunas sob um brasão esculpido, vista de uma praça pavimentada ao sol",
+        "caption": null
+      },
+      {
         "alt": "Edifício alto de pedra branca e ocre com janelas em arco, pinhas decorativas e uma estátua numa escadaria",
         "caption": null
       },
       {
         "alt": "Salão de estantes douradas e pintadas de dois pisos com um retrato real emoldurado por talha ornamentada",
         "caption": "Um dos três salões, separados por arcos decorados."
+      },
+      {
+        "alt": "Canto de uma sala forrada de altas estantes de madeira escura com colunas douradas e galeria, e uma mesa polida em primeiro plano",
+        "caption": null
       }
     ],
     "drawings": [],
@@ -67,6 +75,14 @@
       },
       {
         "alt": "Edifício circular de pedra cor de mel com base rusticada e cúpula, visto do outro lado de um gramado",
+        "caption": null
+      },
+      {
+        "alt": "Edifício circular de pedra cor de mel com cúpula de chumbo ao lado de um salão gótico com pináculos, visto de um gramado sob céu azul",
+        "caption": null
+      },
+      {
+        "alt": "Vista elevada de um edifício circular de pedra com cúpula, numa praça cercada por edifícios universitários com pináculos e uma rua",
         "caption": null
       }
     ],
@@ -116,6 +132,14 @@
       {
         "alt": "Salão muito longo com abóbada de madeira, dois níveis de estantes escuras e bustos de mármore ao longo do corredor",
         "caption": "O salão tem cerca de 65 metros de comprimento."
+      },
+      {
+        "alt": "Estantes de madeira escura com bustos de mármore sobre pedestais que se afastam por um longo salão, com visitantes caminhando entre eles",
+        "caption": null
+      },
+      {
+        "alt": "Olhando para cima, um teto de madeira em abóbada de berço curva sobre duas galerias cheias de livros antigos",
+        "caption": null
       }
     ],
     "drawings": [],
@@ -174,7 +198,19 @@
         "caption": null
       },
       {
+        "alt": "Vista aérea de um grande edifício de pedra cinza com cúpula central de cobre e alas em torno de pátios, entre gramados e ruas",
+        "caption": null
+      },
+      {
         "alt": "Grande salão de mármore com painéis de vitral no teto, abóbadas pintadas, escadarias e piso de mosaico",
+        "caption": null
+      },
+      {
+        "alt": "Sala de leitura octogonal vista de cima, com mesas de madeira curvas em torno de uma mesa central sob altos arcos e uma cúpula elevada",
+        "caption": null
+      },
+      {
+        "alt": "Esculturas de bronze de um deus do mar e cavalos-marinhos numa bacia de fonte de pedra, em um muro de granito com arcos sob uma fachada clássica",
         "caption": null
       }
     ],
@@ -217,11 +253,19 @@
     "style": "Classicismo nórdico rumo ao funcionalismo",
     "photos": [
       {
+        "alt": "Bloco de estuque laranja coroado por um grande tambor cilíndrico liso, visto além de um lago e árvores sob céu azul parcialmente nublado",
+        "caption": null
+      },
+      {
+        "alt": "Edifício laranja com um alto cilindro sobre uma ampla ala de pequenas janelas regulares, emoldurado por árvores sob um céu claro com nuvens",
+        "caption": null
+      },
+      {
         "alt": "Edifício cor de ocre com um alto cilindro erguendo-se de um bloco, iluminado ao anoitecer ao lado de um espelho d'água",
         "caption": null
       },
       {
-        "alt": "Bloco de reboco alaranjado com um grande tambor cilíndrico liso no topo, visto de cima à noite",
+        "alt": "Vista próxima do tambor curvo laranja e do bloco abaixo, com janelas retangulares espaçadas regularmente e árvores escuras à frente",
         "caption": null
       }
     ],
@@ -263,7 +307,15 @@
     "style": "Desconstrutivismo",
     "photos": [
       {
+        "alt": "Edifício inteiro angular de vidro e aço, com caixas inclinadas empilhadas numa pele em treliça de losangos, ao lado de uma torre alta numa esquina",
+        "caption": null
+      },
+      {
         "alt": "Edifício anguloso de vidro e aço com pele em treliça de losangos e plataformas salientes que parecem flutuar",
+        "caption": null
+      },
+      {
+        "alt": "Olhando para baixo num vasto átrio iluminado sob um teto de treliça de losangos de aço e vidro, com áreas de leitura, arquibancada e pisos acarpetados",
         "caption": null
       },
       {

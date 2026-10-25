@@ -36,6 +36,10 @@
     ],
     "photos": [
       {
+        "alt": "Imenso edifício de pedra de dez andares com fileiras de janelas em arco pleno, base robusta de pedra rústica e uma torre quadrada em uma das pontas.",
+        "caption": null
+      },
+      {
         "alt": "Esquina de um edifício de dez andares em granito e calcário com filas de janelas em arco e retangulares e uma torre atrás",
         "caption": null
       },
@@ -89,8 +93,20 @@
         "caption": null
       },
       {
+        "alt": "Edifício quadrado de tijolo marrom com duas enormes janelas em arco de vitral emolduradas por faixas de terracota verde, em uma esquina.",
+        "caption": null
+      },
+      {
+        "alt": "Parte inferior do beiral de uma parede de tijolo, com fileiras de ornamentos fundidos e pequenos painéis em arco em um friso escuro de terracota.",
+        "caption": null
+      },
+      {
         "alt": "Sala de atendimento sob um enorme arco decorado com um mural de nuvens e um relógio, com balcões de caixas e lustres dourados",
         "caption": "Um mural e um relógio ficam sob o grande arco da sala do banco."
+      },
+      {
+        "alt": "Relógio redondo ornamentado, cercado por folhagens verdes, em uma parede de tijolo sob um mural pintado de nuvens amarelas.",
+        "caption": null
       }
     ],
     "hints": [
@@ -135,6 +151,14 @@
     "photos": [
       {
         "alt": "Edifício alto e branco com amplas janelas horizontais em grelha, uma esquina curva e uma base ornamental escura ao nível da rua",
+        "caption": null
+      },
+      {
+        "alt": "Vista de baixo para cima de um edifício alto e branco com grade regular de amplas janelas e uma torre de esquina arredondada acima de uma base escura ornamentada.",
+        "caption": null
+      },
+      {
+        "alt": "Painéis de ferro fundido escuros cobertos de densa ornamentação de folhagens em espiral, emoldurando grandes vitrines sob uma fachada superior clara.",
         "caption": null
       },
       {

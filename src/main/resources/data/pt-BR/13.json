@@ -14,8 +14,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Casa_de_Edith_Farnsworth",
     "drawings": [],
     "photos": [
-      { "alt": "Caixa de vidro com estrutura de aço branco elevada acima de um gramado entre árvores", "caption": null },
-      { "alt": "Sala de paredes de vidro com um núcleo de madeira e cadeiras Barcelona", "caption": "A área de estar." }
+      {
+        "alt": "Caixa de vidro com estrutura de aço branca, erguida sobre colunas esbeltas acima de um terreno coberto de folhas, com um terraço flutuante e escadas entre árvores nuas.",
+        "caption": null
+      },
+      {
+        "alt": "Pavilhão baixo de vidro com cobertura plana branca numa clareira coberta de neve, visto através dos ramos nus de uma grande árvore.",
+        "caption": null
+      },
+      {
+        "alt": "Pavilhão de paredes de vidro com uma cobertura plana e fina que avança sobre um alpendre aberto, visto do grande terraço em luz suave de fim de tarde.",
+        "caption": null
+      },
+      {
+        "alt": "Sala de paredes de vidro com um núcleo de madeira e cadeiras Barcelona",
+        "caption": "A área de estar."
+      }
     ],
     "hints": [
       "Foi construída como refúgio de fim de semana para uma médica, ao lado de um rio que transborda.",
@@ -55,8 +69,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Vila_Tugendhat",
     "drawings": [],
     "photos": [
-      { "alt": "Casa modernista branca com longas janelas horizontais em um gramado inclinado", "caption": null },
-      { "alt": "Sala de estar aberta com uma parede de ônix e grandes janelas com vista para a cidade", "caption": "A área de estar." }
+      {
+        "alt": "Casa modernista branca com um térreo longo e envidraçado e telhados planos, vista de um jardim em declive com arbustos e árvores.",
+        "caption": null
+      },
+      {
+        "alt": "Casa modernista branca com longas janelas horizontais em um gramado inclinado",
+        "caption": null
+      },
+      {
+        "alt": "Terraço coberto e pavimentado sob uma laje plana, com uma parede de vidro curva à esquerda e um único pilar esbelto.",
+        "caption": null
+      },
+      {
+        "alt": "Sala de estar aberta com uma parede de ônix e grandes janelas com vista para a cidade",
+        "caption": "A área de estar."
+      }
     ],
     "hints": [
       "Foi construída em 1928–1930 para um casal judeu rico, Fritz e Greta.",
@@ -96,8 +124,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Sanat%C3%B3rio_de_Paimio",
     "drawings": [],
     "photos": [
-      { "alt": "Longas alas de hospital modernista branco em meio a uma floresta de pinheiros, vistas de cima", "caption": null },
-      { "alt": "Sala de estar luminosa com uma parede de vidro curva, claraboias redondas e poltronas", "caption": "Uma sala de estar." }
+      {
+        "alt": "Longo bloco hospitalar branco com fileiras de janelas pequenas e uma ala curva de varandas sobrepostas na ponta, junto a pinheiros altos.",
+        "caption": null
+      },
+      {
+        "alt": "Longas alas de hospital modernista branco em meio a uma floresta de pinheiros, vistas de cima",
+        "caption": null
+      },
+      {
+        "alt": "Entrada branca com uma marquise escura em forma de rim sobre portas duplas de vidro, alguns degraus e grandes janelas.",
+        "caption": null
+      },
+      {
+        "alt": "Terraço curvo de cobertura com guarda-corpo vermelho de metal e colunas brancas, voltado para uma floresta de pinheiros sob céu limpo.",
+        "caption": null
+      },
+      {
+        "alt": "Sala de estar luminosa com uma parede de vidro curva, claraboias redondas e poltronas",
+        "caption": "Uma sala de estar."
+      }
     ],
     "hints": [
       "Foi construído para pacientes com tuberculose, depois de um concurso vencido em 1929.",
@@ -136,8 +182,22 @@
     "style": "Modernismo",
     "drawings": [],
     "photos": [
-      { "alt": "Vila branca com um volume superior revestido de madeira entre pinheiros", "caption": null },
-      { "alt": "Canto de biblioteca com estantes de madeira e um teto de madeira escura", "caption": "A biblioteca." }
+      {
+        "alt": "Casa branca com revestimento de madeira, uma marquise curva de madeira sobre a entrada e janelas em caixa salientes, entre pinheiros.",
+        "caption": null
+      },
+      {
+        "alt": "Vila branca com um volume superior revestido de madeira entre pinheiros",
+        "caption": null
+      },
+      {
+        "alt": "Piscina em forma de rim num jardim, com um pequeno pavilhão de madeira de cobertura vegetal ao fundo, cercado por floresta de pinheiros.",
+        "caption": null
+      },
+      {
+        "alt": "Canto de biblioteca com estantes de madeira e um teto de madeira escura",
+        "caption": "A biblioteca."
+      }
     ],
     "hints": [
       "Foi construída em 1938–1939 para um casal de industriais ricos, cuja esposa lhe dá o nome.",
@@ -172,8 +232,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Habitat_67",
     "drawings": [],
     "photos": [
-      { "alt": "Caixas de concreto empilhadas formando uma colina de apartamentos com terraços", "caption": null },
-      { "alt": "Sala de apartamento com uma parede de concreto e uma grande janela", "caption": "Um apartamento." }
+      {
+        "alt": "Caixas de concreto empilhadas formando uma colina de apartamentos com terraços",
+        "caption": null
+      },
+      {
+        "alt": "Aglomerado de caixas de concreto empilhadas formando um volume em terraços com vegetação nos topos, visto de um gramado sob céu azul limpo.",
+        "caption": null
+      },
+      {
+        "alt": "Vista próxima de módulos de concreto encaixados, com janelas, terraços plantados e vãos que deixam ver o céu entre as caixas.",
+        "caption": null
+      },
+      {
+        "alt": "Sala de apartamento com uma parede de concreto e uma grande janela",
+        "caption": "Um apartamento."
+      }
     ],
     "hints": [
       "Começou como tese de mestrado de seu arquiteto, em uma universidade da mesma cidade.",
@@ -208,8 +282,22 @@
     "style": "Brutalismo",
     "drawings": [],
     "photos": [
-      { "alt": "Torres residenciais de concreto subindo acima de blocos mais baixos", "caption": null },
-      { "alt": "Estufa de teto de vidro cheia de plantas tropicais entre sacadas de concreto", "caption": "A estufa." }
+      {
+        "alt": "Longo bloco de habitação de concreto em terraços, com coberturas em arco, atrás de um lago verde com ilhas plantadas e uma passarela.",
+        "caption": null
+      },
+      {
+        "alt": "Três torres altas de concreto afuniladas, com varandas recortadas, acima de um bloco baixo de telhados em arco, contra o horizonte da cidade.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de longos blocos de habitação de concreto que cercam um pátio com um jardim aquático no centro de uma cidade densa.",
+        "caption": null
+      },
+      {
+        "alt": "Estufa de teto de vidro cheia de plantas tropicais entre sacadas de concreto",
+        "caption": "A estufa."
+      }
     ],
     "hints": [
       "Foi construído entre 1965 e 1976 em um terreno na City de Londres.",
@@ -244,8 +332,18 @@
     "style": "Brutalismo",
     "drawings": [],
     "photos": [
-      { "alt": "Maciço edifício de concreto com um andar superior projetado acima de uma praça de tijolos", "caption": null },
-      { "alt": "Saguão com piso de tijolo e escadas sob um teto de concreto com caixotões", "caption": "O saguão." }
+      {
+        "alt": "Maciço edifício de concreto com um andar superior projetado acima de uma praça de tijolos",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de um pesado edifício cívico de concreto, com pavimentos superiores escalonados em pirâmide invertida, sobre uma vasta praça de tijolo vermelho.",
+        "caption": null
+      },
+      {
+        "alt": "Saguão com piso de tijolo e escadas sob um teto de concreto com caixotões",
+        "caption": "O saguão."
+      }
     ],
     "hints": [
       "Foi proposta em 1956 como parte de um projeto de renovação urbana chamado Government Center.",
@@ -280,8 +378,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Royal_National_Theatre",
     "drawings": [],
     "photos": [
-      { "alt": "Terraços de concreto em camadas e torres de cenário ao lado de um calçadão à beira-rio", "caption": null },
-      { "alt": "Assentos da plateia em vermelho e laranja em volta de um palco avançado", "caption": "Uma plateia." }
+      {
+        "alt": "Vista em preto e branco de um complexo cultural de concreto bruto em camadas, com terraços escalonados, duas torres de palco altas e uma pequena praça arborizada.",
+        "caption": null
+      },
+      {
+        "alt": "Longo edifício horizontal de concreto com uma torre alta em blocos atrás, visto por entre uma fileira de árvores sob luz cinzenta.",
+        "caption": null
+      },
+      {
+        "alt": "Duas torres de palco em caixa de concreto atrás de um longo muro baixo, vistas de uma esquina de rua ao lado de um guindaste.",
+        "caption": null
+      },
+      {
+        "alt": "Assentos da plateia em vermelho e laranja em volta de um palco avançado",
+        "caption": "Uma plateia."
+      }
     ],
     "hints": [
       "Sua companhia foi fundada em 1963 por um famoso ator, que se tornou seu primeiro diretor artístico.",
@@ -325,8 +437,26 @@
     "style": "Pós-modernismo",
     "drawings": [],
     "photos": [
-      { "alt": "Aglomerado de pavilhões coloridos, incluindo uma torre amarela, erguido em um canal", "caption": null },
-      { "alt": "Caixa de escada revestida de azulejos azuis e amarelos, com luminárias de parede", "caption": "Uma caixa de escada." }
+      {
+        "alt": "Pavilhões coloridos e desconstruídos, de metal inclinado e azulejos estampados, que emergem de um canal ao lado de uma alta torre dourada.",
+        "caption": null
+      },
+      {
+        "alt": "Alta torre quadrada dourada vista de frente a partir de uma ponte, ladeada por edifícios baixos em tons pastel sob um céu azul intenso.",
+        "caption": null
+      },
+      {
+        "alt": "Pavilhão redondo prateado sobre uma base de tijolo num canal, com uma torre amarela ao fundo num dia de sol.",
+        "caption": null
+      },
+      {
+        "alt": "Longo corredor de paredes rosa, janelas altas em arco e teto roxo, que leva a uma porta dourada ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Caixa de escada revestida de azulejos azuis e amarelos, com luminárias de parede",
+        "caption": "Uma caixa de escada."
+      }
     ],
     "hints": [
       "Fica em um canal em frente à estação ferroviária da cidade.",
@@ -365,8 +495,22 @@
     "style": "Pós-modernismo",
     "drawings": [],
     "photos": [
-      { "alt": "Paredes de arenito e travertino com marquises de aço verdes e corrimãos vivos", "caption": null },
-      { "alt": "Pátio circular aberto de paredes de pedra, com vegetação e uma estátua", "caption": "A rotunda aberta." }
+      {
+        "alt": "Muros de arenito e travertino com uma parede de vidro verde inclinada, uma marquise vermelha e azul e um amplo terraço pavimentado.",
+        "caption": null
+      },
+      {
+        "alt": "Paredes de arenito e travertino com marquises de aço verdes e corrimãos vivos",
+        "caption": null
+      },
+      {
+        "alt": "Fachada curva de vidro com estrutura de aço verde encaixada num maciço muro de pedra, com mesas de café e degraus à frente.",
+        "caption": null
+      },
+      {
+        "alt": "Pátio circular aberto de paredes de pedra, com vegetação e uma estátua",
+        "caption": "A rotunda aberta."
+      }
     ],
     "hints": [
       "Foi construída em 1979–1984 ao lado de uma galeria neoclássica mais antiga.",
@@ -406,8 +550,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/National_Gallery_(Londres)",
     "drawings": [],
     "photos": [
-      { "alt": "Ampliação de galeria em pedra, com pilastras, ao lado de um museu de construção clássica", "caption": null },
-      { "alt": "Salas de galeria com arcos de pedra e retábulos renascentistas", "caption": "Uma galeria." }
+      {
+        "alt": "Fachada pós-moderna de pedra clara com canto arredondado, pilastras clássicas, grandes aberturas escuras de entrada e bandeiras, ao lado de um gramado.",
+        "caption": null
+      },
+      {
+        "alt": "Ampliação de galeria em pedra, com pilastras, ao lado de um museu de construção clássica",
+        "caption": null
+      },
+      {
+        "alt": "Rua de pedestres que passa por um edifício clássico de pedra em direção a uma longa fachada clara de galeria e uma torre alta.",
+        "caption": null
+      },
+      {
+        "alt": "Salas de galeria com arcos de pedra e retábulos renascentistas",
+        "caption": "Uma galeria."
+      }
     ],
     "hints": [
       "É uma ampliação de 1991, a oeste de um museu nacional de arte em uma famosa praça.",
@@ -446,8 +604,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/550_Madison_Avenue",
     "drawings": [],
     "photos": [
-      { "alt": "Arranha-céu de granito visto de baixo, com uma alta entrada em arco", "caption": null },
-      { "alt": "Retícula de um alto arco envidraçado com uma janela redonda acima, vista de baixo", "caption": "O arco de entrada." }
+      {
+        "alt": "Arranha-céu de granito rosa coroado por um frontão triangular quebrado com uma abertura redonda, cercado por torres de vidro mais altas.",
+        "caption": null
+      },
+      {
+        "alt": "Arranha-céu de granito visto de baixo, com uma alta entrada em arco",
+        "caption": null
+      },
+      {
+        "alt": "Três aberturas envidraçadas muito altas, emolduradas por maciços pilares de granito, formando uma base de entrada monumental.",
+        "caption": null
+      },
+      {
+        "alt": "Retícula de um alto arco envidraçado com uma janela redonda acima, vista de baixo",
+        "caption": "O arco de entrada."
+      }
     ],
     "hints": [
       "Foi concluído em 1984 como sede de uma companhia telefônica e depois abrigou uma empresa de eletrônicos.",
@@ -482,8 +654,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Museu_Guggenheim_Bilbao",
     "drawings": [],
     "photos": [
-      { "alt": "Museu curvo revestido de titânio, ao lado de um rio e uma ponte", "caption": null },
-      { "alt": "Átrio elevado de paredes curvas e estruturas de aço envidraçadas", "caption": "O átrio." }
+      {
+        "alt": "Conjunto de volumes curvos revestidos de titânio à beira de um rio, com o arco vermelho de uma ponte e um bloco de calcário à direita.",
+        "caption": null
+      },
+      {
+        "alt": "Formas onduladas revestidas de metal que emergem de um espelho d água, com uma escultura de aranha gigante, uma torre de vidro e colinas ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Museu curvo revestido de titânio, ao lado de um rio e uma ponte",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de pétalas curvas de cobertura de titânio sobrepostas ao redor de uma claraboia envidraçada, com telhados planos de calcário ao lado.",
+        "caption": null
+      },
+      {
+        "alt": "Átrio elevado de paredes curvas e estruturas de aço envidraçadas",
+        "caption": "O átrio."
+      }
     ],
     "hints": [
       "Foi inaugurado por um rei em 18 de outubro de 1997.",

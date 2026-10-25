@@ -27,6 +27,8 @@ final class BuildingValidator {
     private static final String REMOTE_ASSETS = "https://upload.wikimedia.org/";
     private static final Pattern WIKIPEDIA = Pattern.compile("https://(en|pt)\\.wikipedia\\.org/wiki/\\S+");
     private static final String REMOTE_SOURCES = "https://commons.wikimedia.org/";
+    // Fallback for a locally stored photo when Commons has none (e.g. French freedom-of-panorama gaps).
+    private static final String FLICKR_SOURCES = "https://www.flickr.com/photos/";
 
     private BuildingValidator() {
     }
@@ -182,7 +184,7 @@ final class BuildingValidator {
         }
 
         void optionalSource(String source, String field) {
-            if (source != null && !source.startsWith(REMOTE_SOURCES)) add(field + " must start with '" + REMOTE_SOURCES + "'");
+            if (source != null && !source.startsWith(REMOTE_SOURCES) && !source.startsWith(FLICKR_SOURCES)) add(field + " must start with '" + REMOTE_SOURCES + "' or '" + FLICKR_SOURCES + "'");
         }
     }
 }

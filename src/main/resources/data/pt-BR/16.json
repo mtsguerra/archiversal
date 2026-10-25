@@ -22,7 +22,15 @@
     "drawings": [],
     "photos": [
       {
-        "alt": "Pirâmide escalonada de pedra com um pequeno templo no topo, vista de um canto sob um céu azul",
+        "alt": "Uma pirâmide de pedra escalonada e de base quadrada, com escadaria em cada lado e um pequeno templo no topo, sobre uma praça gramada plana sob um céu azul.",
+        "caption": null
+      },
+      {
+        "alt": "Vista de canto de uma pirâmide de pedra escalonada, com uma larga escadaria em uma das faces e o pequeno templo no topo, contra um céu azul intenso.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de uma pirâmide de pedra escalonada em uma clareira, com outro edifício de colunas ao lado e floresta densa se estendendo até o horizonte.",
         "caption": null
       },
       {
@@ -75,15 +83,23 @@
     ],
     "photos": [
       {
+        "alt": "Uma alta fachada com colunas, frontão e um pavilhão circular central está talhada em uma parede de arenito rosado, com uma porta escura na base.",
+        "caption": null
+      },
+      {
+        "alt": "Vista oblíqua de uma fachada de colunas talhada na rocha, que se ergue de um pátio arenoso entre imponentes penhascos vermelhos, com pequenos visitantes ao pé.",
+        "caption": null
+      },
+      {
         "alt": "Alta fachada escavada na rocha, com colunas, frontão e uma tholos redonda, vislumbrada por um desfiladeiro estreito",
         "caption": null
       },
       {
-        "alt": "Fachada talhada em tom rosado num cânion à noite, com fileiras de velas no chão à frente",
+        "alt": "Câmara quadrada e simples, escavada em arenito de faixas laranja e vermelhas, com uma pequena porta numa das paredes",
         "caption": null
       },
       {
-        "alt": "Câmara quadrada e simples, escavada em arenito de faixas laranja e vermelhas, com uma pequena porta numa das paredes",
+        "alt": "Fachada talhada em tom rosado num cânion à noite, com fileiras de velas no chão à frente",
         "caption": null
       }
     ],
@@ -147,7 +163,14 @@
         "alt": "Santuário octogonal de paredes de azulejos azuis sob uma cúpula dourada, sobre uma plataforma elevada",
         "caption": null
       },
-      { "alt": "Anel de colunas e pilares com arcos listrados e uma cúpula dourada no alto", "caption": null },
+      {
+        "alt": "Vista aproximada de uma parede octogonal revestida de azulejos azuis, verdes e amarelos, com janelas em arco ogival e uma faixa de escrita fluida acima.",
+        "caption": null
+      },
+      {
+        "alt": "Anel de colunas e pilares com arcos listrados e uma cúpula dourada no alto",
+        "caption": null
+      },
       {
         "alt": "Vista para cima de uma cúpula coberta de padrões geométricos e florais em dourado e vermelho",
         "caption": null
@@ -198,10 +221,17 @@
         "caption": null
       },
       {
+        "alt": "Um complexo de palácio branco e vermelho coroa uma colina rochosa acima de uma ampla avenida urbana, com uma estupa branca em degraus em primeiro plano e montanhas ao fundo.",
+        "caption": null
+      },
+      {
         "alt": "Longos muros caiados com fileiras de pequenas janelas erguendo-se sobre uma encosta rochosa",
         "caption": null
       },
-      { "alt": "Cômodo ricamente pintado, com uma cama coberta de seda, um tapete e móveis dourados", "caption": null },
+      {
+        "alt": "Cômodo ricamente pintado, com uma cama coberta de seda, um tapete e móveis dourados",
+        "caption": null
+      },
       {
         "alt": "Pintura mural de uma figura guardiã colorida tocando um alaúde",
         "caption": "Murais cobrem as paredes dos santuários."
@@ -255,9 +285,16 @@
         "alt": "Pátio palaciano amarelo com arcadas e uma fachada renascentista, ao lado de um jardim de sebes aparadas",
         "caption": null
       },
-      { "alt": "Pátio com colunas esbeltas, arcos recortados, gesso entalhado e um tanque no centro", "caption": null },
       {
-        "alt": "Salão com arcos de gesso trabalhado que se abrem para um pequeno pátio com jardim, com uma fonte no chão",
+        "alt": "Um pórtico de pátio com arcos de treliça entalhada e um arco ogival central em tijolo e gesso de tons quentes, atrás de uma sebe baixa aparada.",
+        "caption": null
+      },
+      {
+        "alt": "Pátio com colunas esbeltas, arcos recortados, gesso entalhado e um tanque no centro",
+        "caption": null
+      },
+      {
+        "alt": "Olhando diretamente para cima, uma cúpula redonda dourada com padrão de estrelas entrelaçadas, emoldurada por um quadrado de paredes pintadas e revestidas de azulejos.",
         "caption": null
       }
     ],
@@ -306,7 +343,18 @@
         "alt": "Uma esbelta torre escalonada de vidro e aço erguendo-se muito acima dos edifícios ao redor",
         "caption": null
       },
-      { "alt": "Elegante sala de estar curva, com sofás baixos, tapete estampado e teto luminoso", "caption": null }
+      {
+        "alt": "Vista aérea sobre quarteirões baixos cor de areia em direção a um grupo de arranha-céus, com uma torre muito esbelta que se eleva muito acima de todas as outras.",
+        "caption": null
+      },
+      {
+        "alt": "Uma torre escalonada fina como uma agulha se destaca acima de um horizonte enevoado de arranha-céus de vidro, vista através de águas calmas.",
+        "caption": null
+      },
+      {
+        "alt": "Elegante sala de estar curva, com sofás baixos, tapete estampado e teto luminoso",
+        "caption": null
+      }
     ],
     "hints": [
       "É a estrutura mais alta do mundo, com quase 830 metros.",
@@ -359,6 +407,10 @@
       {
         "alt": "Enorme lustre dourado de cristais pendurado num salão com cúpula",
         "caption": "Um dos maiores lustres do mundo pende do salão de oração."
+      },
+      {
+        "alt": "Dois capitéis dourados em forma de folhas de palmeira e pinhas, sobre painéis de mármore branco com janelas estreitas emolduradas de cada lado.",
+        "caption": null
       }
     ],
     "hints": [
@@ -402,11 +454,15 @@
     ],
     "photos": [
       {
+        "alt": "Arranha-céus gêmeos brilhando ao entardecer em meio a um aglomerado de outras torres",
+        "caption": null
+      },
+      {
         "alt": "Duas torres idênticas de aço e vidro com topos pontiagudos, unidas por uma ponte, vistas de baixo",
         "caption": null
       },
       {
-        "alt": "Arranha-céus gêmeos brilhando ao entardecer em meio a um aglomerado de outras torres",
+        "alt": "Duas altas torres pontiagudas de aço e vidro erguem-se lado a lado acima de prédios de escritórios mais baixos e copas de árvores, sob um céu cinzento carregado.",
         "caption": null
       },
       {

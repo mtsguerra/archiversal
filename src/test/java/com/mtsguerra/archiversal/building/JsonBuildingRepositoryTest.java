@@ -96,7 +96,7 @@ class JsonBuildingRepositoryTest {
         var files = resolver.getResources("classpath*:data/pt-BR/*.json");
         var repository = new JsonBuildingRepository(jsonMapper, new ClassPathResource("data/buildings.json"), files);
         var article = java.util.regex.Pattern.compile("https://(en|pt)\\.wikipedia\\.org/wiki/\\S+");
-        var commons = java.util.regex.Pattern.compile("https://commons\\.wikimedia\\.org/wiki/\\S+");
+        var commons = java.util.regex.Pattern.compile("https://(commons\\.wikimedia\\.org/wiki|www\\.flickr\\.com/photos)/\\S+");
 
         for (var lang : new String[] {null, "pt-BR"}) {
             for (var b : repository.findAll(lang)) {

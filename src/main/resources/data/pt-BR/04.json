@@ -14,8 +14,18 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Theatro_da_Paz",
     "drawings": [],
     "photos": [
-      { "alt": "Fachada cor de salmão com colunas brancas, medalhões com retratos e aberturas em arco", "caption": null },
-      { "alt": "Plateia vermelha e dourada com fileiras de camarotes voltadas para uma cortina de palco", "caption": "A plateia." }
+      {
+        "alt": "Esquina de um teatro neoclássico vermelho-terracota com altas colunas brancas, uma galeria com balaustrada e um andar térreo de arcadas.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada cor de salmão com colunas brancas, medalhões com retratos e aberturas em arco",
+        "caption": null
+      },
+      {
+        "alt": "Plateia vermelha e dourada com fileiras de camarotes voltadas para uma cortina de palco",
+        "caption": "A plateia."
+      }
     ],
     "hints": [
       "Foi construído durante a era de ouro da borracha na bacia amazônica.",
@@ -51,8 +61,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_da_Luz",
     "drawings": [],
     "photos": [
-      { "alt": "Longo edifício de tijolos creme e vermelhos, com telhados íngremes de ardósia e uma torre de relógio", "caption": null },
-      { "alt": "Plataformas de trem sob uma longa cobertura em arco de ferro e vidro", "caption": "A cobertura das plataformas." }
+      {
+        "alt": "Longo edifício de tijolos creme e vermelhos, com telhados íngremes de ardósia e uma torre de relógio",
+        "caption": null
+      },
+      {
+        "alt": "Plataformas de trem sob uma longa cobertura em arco de ferro e vidro",
+        "caption": "A cobertura das plataformas."
+      },
+      {
+        "alt": "Plataformas de trem sob um enorme telhado em arco de treliças de ferro e vidro, ladeadas por paredes de tijolo vermelho com janelas em arco.",
+        "caption": null
+      },
+      {
+        "alt": "Saguão de estação com piso de mármore, altas colunas, janelas em arco e lampiões pendurados, com viajantes caminhando.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi projetada na Grã-Bretanha para uma companhia ferroviária sediada em Londres.",
@@ -88,8 +112,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Ilha_Fiscal",
     "drawings": [],
     "photos": [
-      { "alt": "Pequeno castelo neogótico verde, com uma torre pontiaguda, em uma ilha na baía", "caption": null },
-      { "alt": "Abóbada pintada de azul, com nervuras que se encontram em uma lanterna", "caption": "Uma abóbada pintada dentro da torre." }
+      {
+        "alt": "Pequeno castelo neogótico verde-claro com uma alta torre de relógio central e palmeiras, em uma ilhota numa grande baía.",
+        "caption": null
+      },
+      {
+        "alt": "Pequeno castelo neogótico verde, com uma torre pontiaguda, em uma ilha na baía",
+        "caption": null
+      },
+      {
+        "alt": "Torre central com relógio, flecha pontiaguda e arcos abertos, ladeada por longas alas baixas e palmeiras altas sob um céu nublado.",
+        "caption": null
+      },
+      {
+        "alt": "Vista de baixo de uma parede verde de torre com janelas góticas, guarnições de pedra, torreões ameados e um brasão esculpido.",
+        "caption": null
+      },
+      {
+        "alt": "Abóbada pintada de azul, com nervuras que se encontram em uma lanterna",
+        "caption": "Uma abóbada pintada dentro da torre."
+      }
     ],
     "hints": [
       "Foi construído como posto alfandegário em uma pequena ilha na baía.",
@@ -127,8 +169,26 @@
       { "label": "Projeto da fachada", "alt": "Frente de catedral neogótica com duas altas torres, um rosetão e um frontão central" }
     ],
     "photos": [
-      { "alt": "Catedral neogótica de pedra cinzenta com altas torres, vista de baixo", "caption": null },
-      { "alt": "Longa nave gótica com colunas agrupadas e abóbadas ogivais", "caption": "A nave." }
+      {
+        "alt": "Fachada neogótica de pedra cinzenta com duas altas torres verdes e um rosetão, vista de uma praça ladeada por altas palmeiras.",
+        "caption": null
+      },
+      {
+        "alt": "Catedral neogótica de pedra cinzenta com altas torres, vista de baixo",
+        "caption": null
+      },
+      {
+        "alt": "Grande cúpula verde de cobre coroada por uma pequena lanterna, erguendo-se atrás de pináculos e muros de pedra esculpida contra um céu azul profundo.",
+        "caption": null
+      },
+      {
+        "alt": "Longa nave gótica com colunas agrupadas e abóbadas ogivais",
+        "caption": "A nave."
+      },
+      {
+        "alt": "Vista ampla de uma nave com colunas de pedra agrupadas, bancos de madeira e lustres pendentes, sobre um piso de mármore com padrões.",
+        "caption": null
+      }
     ],
     "hints": [
       "É uma catedral neogótica coroada por uma cúpula de estilo renascentista.",
@@ -164,8 +224,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Museu_do_Ipiranga",
     "drawings": [],
     "photos": [
-      { "alt": "Longo palácio ocre com um pavilhão central de colunas, atrás de jardins e palmeiras", "caption": null },
-      { "alt": "Olhando para cima, através de um hall de escada dourado, até uma claraboia de caixotões", "caption": "O grande hall de escada." }
+      {
+        "alt": "Longo palácio ocre com um pavilhão central de colunas e uma fonte, em jardins formais, com o horizonte de uma cidade ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Longo palácio ocre com um pavilhão central de colunas, atrás de jardins e palmeiras",
+        "caption": null
+      },
+      {
+        "alt": "Palácio ocre com um corpo central em frontão, visto por cima de um gramado e sebes aparadas, emoldurado por palmeiras e ciprestes altos.",
+        "caption": null
+      },
+      {
+        "alt": "Olhando para cima, através de um hall de escada dourado, até uma claraboia de caixotões",
+        "caption": "O grande hall de escada."
+      }
     ],
     "hints": [
       "Foi construído como monumento no local onde a independência de um país foi proclamada.",
@@ -204,8 +278,22 @@
       { "label": "Corte pela plateia", "alt": "Corte colorido de uma plateia em ferradura com fileiras de camarotes vermelhos sob uma cúpula pintada" }
     ],
     "photos": [
-      { "alt": "Teatro ornamentado com cúpula de cobre verde e estátuas douradas, visto sobre os telhados de Paris", "caption": null },
-      { "alt": "Grande escadaria de mármore que se divide em dois lances sob fileiras de balcões", "caption": "A Grande Escadaria." }
+      {
+        "alt": "Fachada de pedra ornamentada e simétrica, com colunas geminadas, grupos escultóricos, cúpula verde e duas estátuas douradas nos cantos do telhado.",
+        "caption": null
+      },
+      {
+        "alt": "Teatro ornamentado com cúpula de cobre verde e estátuas douradas, visto sobre os telhados de Paris",
+        "caption": null
+      },
+      {
+        "alt": "Grande escadaria de mármore que se divide em dois lances sob fileiras de balcões",
+        "caption": "A Grande Escadaria."
+      },
+      {
+        "alt": "Poste ornamentado de ferro fundido com globos de luz diante de uma arcada de pedra, esculturas entalhadas e altas colunas.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi encomendado por um imperador e vencido em concurso por um arquiteto pouco conhecido.",
@@ -242,8 +330,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pal%C3%A1cio_da_M%C3%BAsica_Catal%C3%A3",
     "drawings": [],
     "photos": [
-      { "alt": "Fachada de esquina de tijolo vermelho, mosaico e colunas esculpidas acima de entradas em arco, em uma rua estreita", "caption": null },
-      { "alt": "Sala de concertos sob uma cúpula invertida de vitral, com fileiras de assentos e paredes de vitral", "caption": "A sala de concertos e sua claraboia invertida." }
+      {
+        "alt": "Fachada de esquina de tijolo vermelho, mosaico e colunas esculpidas acima de entradas em arco, em uma rua estreita",
+        "caption": null
+      },
+      {
+        "alt": "Esquina arredondada de tijolo com um grupo escultórico acima de uma entrada em arco, colunas revestidas de mosaico e uma torre esguia ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Sala de concertos sob uma cúpula invertida de vitral, com fileiras de assentos e paredes de vitral",
+        "caption": "A sala de concertos e sua claraboia invertida."
+      },
+      {
+        "alt": "Vista para cima de uma enorme claraboia de vitral em forma de cúpula invertida, rodeada por rosas de cerâmica e um teto de caixotões.",
+        "caption": null
+      },
+      {
+        "alt": "Musas esculpidas em meio corpo emergindo de uma parede curva coberta de mosaico laranja, rosa e azul com guirlandas de flores.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construído para uma sociedade coral que liderou um renascimento da cultura de sua região.",
@@ -282,8 +388,22 @@
       { "label": "Corte pelo salão de atendimento", "alt": "Corte de um salão sob uma cobertura curva de vidro, com colunas finas e tirantes suspensos" }
     ],
     "photos": [
-      { "alt": "Fachada de placas quadradas de mármore pontilhadas de parafusos metálicos, acima de uma entrada com marquise", "caption": null },
-      { "alt": "Salão de atendimento sob uma cobertura curva de vidro sobre colunas esbeltas, com piso de vidro", "caption": "O salão de atendimento (Kassenhalle)." }
+      {
+        "alt": "Fachada de placas quadradas de mármore pontilhadas de parafusos metálicos, acima de uma entrada com marquise",
+        "caption": null
+      },
+      {
+        "alt": "Salão de atendimento sob uma cobertura curva de vidro sobre colunas esbeltas, com piso de vidro",
+        "caption": "O salão de atendimento (Kassenhalle)."
+      },
+      {
+        "alt": "Pátio de luz cercado por paredes brancas revestidas de ladrilhos com fileiras de janelas quadradas, fechado no alto por uma cobertura plana de vidro e uma passarela envidraçada.",
+        "caption": null
+      },
+      {
+        "alt": "Vista direta de cima de uma escada em espiral com guarda-corpos brancos e esbeltos, vigas de aço brancas rebitadas e degraus de pedra cinza.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construído em 1904–06 com um material então completamente novo: o concreto armado.",
@@ -320,8 +440,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Museu_Solomon_R._Guggenheim",
     "drawings": [],
     "photos": [
-      { "alt": "Edifício branco em espiral curva, que se alarga ao subir, na esquina de uma rua da cidade", "caption": null },
-      { "alt": "Olhando para cima por uma rampa espiral branca em volta de um átrio, em direção a uma claraboia de vidro", "caption": "O átrio em espiral." }
+      {
+        "alt": "Tambor espiral branco que se alarga para cima em faixas horizontais, visto de uma esquina de rua entre prédios altos e árvores.",
+        "caption": null
+      },
+      {
+        "alt": "Rotunda branca curva ao lado de uma torre retangular bege mais alta, vista através de um cruzamento movimentado com semáforos.",
+        "caption": null
+      },
+      {
+        "alt": "Edifício branco em espiral curva, que se alarga ao subir, na esquina de uma rua da cidade",
+        "caption": null
+      },
+      {
+        "alt": "Olhando para cima por uma rampa espiral branca em volta de um átrio, em direção a uma claraboia de vidro",
+        "caption": "O átrio em espiral."
+      }
     ],
     "hints": [
       "Levou 15 anos para ser projetado e construído, e abriu em 1959.",
@@ -358,8 +492,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Chrysler_Building",
     "drawings": [],
     "photos": [
-      { "alt": "Arranha-céu com uma coroa de aço inoxidável afunilada e em degraus, visto da rua entre torres", "caption": null },
-      { "alt": "Saguão com paredes de mármore, teto com embutidos e luminárias Art Déco", "caption": "O saguão triangular." }
+      {
+        "alt": "Arranha-céu esguio coroado por um remate prateado escalonado e afilado, com uma agulha, erguendo-se contra um céu azul profundo e limpo.",
+        "caption": null
+      },
+      {
+        "alt": "Arranha-céu claro e afilado com uma coroa pontiaguda erguendo-se ao lado de uma torre escura de vidro, visto do nível da rua contra as nuvens.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aproximada de uma coroa de arcos de metal sobrepostos com janelas triangulares, com uma ponte de aço em balanço ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Cabeça de águia de aço inoxidável projetando-se de um canto alto de uma torre, com uma cidade e um rio muito abaixo.",
+        "caption": null
+      },
+      {
+        "alt": "Saguão com paredes de mármore, teto com embutidos e luminárias Art Déco",
+        "caption": "O saguão triangular."
+      }
     ],
     "hints": [
       "Foi brevemente o edifício mais alto do mundo, por 11 meses depois de concluído, em 1930.",
@@ -397,8 +549,26 @@
       { "label": "Planta no nível das cúpulas", "alt": "Planta de um salão de oração quadrado sob uma grande cúpula central ladeada por semicúpulas e cúpulas menores" }
     ],
     "photos": [
-      { "alt": "Arcada de pátio com pequenas cúpulas diante de uma mesquita com uma grande cúpula central", "caption": null },
-      { "alt": "Vasto salão de oração sob uma cúpula central com anéis de janelas e lâmpadas penduradas", "caption": "Sob a cúpula central." }
+      {
+        "alt": "Grande mesquita de cúpula cinzenta com quatro minaretes esbeltos e uma cascata de cúpulas menores sobre um pátio com arcadas, acima de uma baía.",
+        "caption": null
+      },
+      {
+        "alt": "Mesquita iluminada com cúpula e altos minaretes coroando uma encosta de casas acima de uma orla, sob um céu rosa e violeta ao entardecer.",
+        "caption": null
+      },
+      {
+        "alt": "Arcada de pátio com pequenas cúpulas diante de uma mesquita com uma grande cúpula central",
+        "caption": null
+      },
+      {
+        "alt": "Fachada de pedra com um alto portal esculpido e um painel de inscrição, ladeada por dois minaretes e por postes de luz ao longo de um caminho pavimentado.",
+        "caption": null
+      },
+      {
+        "alt": "Vasto salão de oração sob uma cúpula central com anéis de janelas e lâmpadas penduradas",
+        "caption": "Sob a cúpula central."
+      }
     ],
     "hints": [
       "Foi construída para um sultão conhecido como «o Magnífico».",
@@ -436,8 +606,26 @@
       { "label": "Planta (gravura do século XVIII)", "alt": "Planta de catedral em forma de cruz, com um grande cruzeiro coberto por cúpula e extremidades arredondadas do transepto" }
     ],
     "photos": [
-      { "alt": "Grande catedral com cúpula e uma lanterna no topo, vista do outro lado de uma praça", "caption": null },
-      { "alt": "Vista para cima de uma cúpula pintada acima do cruzeiro, com arcos dourados", "caption": "O cruzeiro sob a cúpula interna." }
+      {
+        "alt": "Grande catedral de pedra com uma cúpula cinzenta de chumbo e lanterna, uma alta torre sineira à direita e um gramado verde à frente.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada oeste clássica de duas torres, iluminada, com pórtico de colunas e frontão, brilhando contra um céu noturno escuro.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de uma igreja de pedra com cúpula e torre ocidental, cercada por quarteirões densos e telhados da cidade.",
+        "caption": null
+      },
+      {
+        "alt": "Longa nave com fileiras de cadeiras sobre um piso xadrez preto e branco, lustres dourados e uma cúpula de caixotões à frente.",
+        "caption": null
+      },
+      {
+        "alt": "Vista para cima de uma cúpula pintada acima do cruzeiro, com arcos dourados",
+        "caption": "O cruzeiro sob a cúpula interna."
+      }
     ],
     "hints": [
       "Substituiu uma catedral gótica destruída em um grande incêndio em 1666.",

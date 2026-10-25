@@ -35,11 +35,15 @@
     "style": "Modernismo brasileiro",
     "photos": [
       {
+        "alt": "Vista aérea de um enorme estádio oval com um anel de cobertura de membrana clara em volta do gramado verde, cercado por quarteirões da cidade.",
+        "caption": null
+      },
+      {
         "alt": "Estádio curvo de concreto cinza com cobertura branca, visto de uma rua com árvores novas",
         "caption": null
       },
       {
-        "alt": "Vista enevoada, de um morro coberto de mata, de um enorme estádio oval com anel branco de cobertura e um ginásio com cúpula ao lado",
+        "alt": "Vista aérea próxima do anel de cobertura branco tensionado do estádio em volta de um campo sem grama e de arquibancadas de assentos azuis e amarelos.",
         "caption": null
       }
     ],
@@ -79,6 +83,10 @@
     "city": "Munique",
     "style": "Contemporâneo",
     "photos": [
+      {
+        "alt": "Parede curva de estádio revestida de almofadas infladas brancas em forma de losango, vista de uma passarela com neve sob um céu azul limpo.",
+        "caption": null
+      },
       {
         "alt": "Detalhe de uma fachada branca brilhante feita de centenas de almofadas infladas em forma de losango",
         "caption": null
@@ -142,6 +150,10 @@
         "caption": null
       },
       {
+        "alt": "Longa frontaria baixa de estádio com fachada envidraçada de tom azulado sob uma cobertura plana em balanço, vista de uma praça pavimentada vazia.",
+        "caption": null
+      },
+      {
         "alt": "Arquibancadas lotadas em três anéis curvos em volta de um gramado verde",
         "caption": null
       }
@@ -188,6 +200,10 @@
       },
       {
         "alt": "Vista grande-angular de cadeiras azuis, um gramado verde e uma cobertura translúcida apoiada em pilares de concreto",
+        "caption": null
+      },
+      {
+        "alt": "Bacia de estádio iluminada à noite, com uma treliça de aço em arco sobre a borda da cobertura, um gramado verde e arquibancadas cheias de espectadores.",
         "caption": null
       }
     ],
@@ -236,6 +252,10 @@
       },
       {
         "alt": "Arcos de aço vermelhos erguendo-se atrás de palmeiras e de uma fonte",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de um estádio oval com arcos de aço vermelhos e cobertura, cercado por ruas, blocos de apartamentos e um centro comercial.",
         "caption": null
       }
     ],

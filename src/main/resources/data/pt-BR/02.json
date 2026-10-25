@@ -14,8 +14,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Museu_de_Arte_Contempor%C3%A2nea_de_Niter%C3%B3i",
     "drawings": [],
     "photos": [
-      { "alt": "Vista aérea de um edifício branco em forma de disco, sobre uma ponta rochosa acima de uma praia", "caption": null },
-      { "alt": "Galeria redonda com obras de arte nas paredes sob um teto circular", "caption": "A galeria redonda dentro do disco." }
+      {
+        "alt": "Edifício branco em forma de disco sobre uma haste esguia acima do mar, alcançado por uma rampa vermelha curva, com árvores em primeiro plano.",
+        "caption": null
+      },
+      {
+        "alt": "Vista baixa de um largo disco branco sobre uma haste estreita de concreto, com um anel de vidro escuro e uma rampa, sobre uma praça pavimentada.",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de um edifício branco em forma de disco, sobre uma ponta rochosa acima de uma praia",
+        "caption": null
+      },
+      {
+        "alt": "Galeria redonda com obras de arte nas paredes sob um teto circular",
+        "caption": "A galeria redonda dentro do disco."
+      }
     ],
     "hints": [
       "Sua galeria é um único volume em forma de disco apoiado em um só suporte cilíndrico.",
@@ -51,8 +65,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Museu_Oscar_Niemeyer",
     "drawings": [],
     "photos": [
-      { "alt": "Edifício em forma de olho sobre um pilar amarelo, ao lado de um longo bloco baixo, com uma rampa curva", "caption": null },
-      { "alt": "Esculturas sobre divisórias brancas sob uma abóbada de vidro curva", "caption": "Dentro do «olho»." }
+      {
+        "alt": "Edifício em forma de olho sobre um pilar amarelo, ao lado de um longo bloco baixo, com uma rampa curva",
+        "caption": null
+      },
+      {
+        "alt": "Vista baixa e próxima de um enorme volume em forma de olho com face de vidro escuro sobre um pilar amarelo pintado com um pássaro, e uma rampa curva.",
+        "caption": null
+      },
+      {
+        "alt": "Edifício em forma de olho sobre um pilar amarelo iluminado por baixo à noite, com uma longa rampa e um bloco baixo luminoso ao lado de um espelho d'água.",
+        "caption": null
+      },
+      {
+        "alt": "Esculturas sobre divisórias brancas sob uma abóbada de vidro curva",
+        "caption": "Dentro do «olho»."
+      }
     ],
     "hints": [
       "Sua parte mais conhecida é uma galeria em forma de olho erguida sobre um único pilar amarelo.",
@@ -90,8 +118,22 @@
       { "label": "Planta do térreo (1883)", "alt": "Planta do térreo desenhada à mão, de uma casa compacta, com uma fonte redonda no jardim" }
     ],
     "photos": [
-      { "alt": "Casa com azulejos xadrez verdes e brancos e uma torre de esquina decorada", "caption": null },
-      { "alt": "Sala com tetos entalhados, paredes de azulejos, treliças e uma pequena fonte", "caption": "Por dentro: tetos entalhados, azulejos e uma pequena fonte." }
+      {
+        "alt": "Frente de uma casa com azulejos xadrez verdes e brancos, painéis de pedra bruta marrom, faixas de tijolo vermelho e pequenas torres de canto com sacadas.",
+        "caption": null
+      },
+      {
+        "alt": "Casa com azulejos xadrez verdes e brancos e uma torre de esquina decorada",
+        "caption": null
+      },
+      {
+        "alt": "Lado do jardim de uma casa revestida de azulejos, com uma janela saliente poligonal de madeira sob uma faixa de azulejos estampados, com ferragens e vegetação ao redor.",
+        "caption": null
+      },
+      {
+        "alt": "Sala com tetos entalhados, paredes de azulejos, treliças e uma pequena fonte",
+        "caption": "Por dentro: tetos entalhados, azulejos e uma pequena fonte."
+      }
     ],
     "hints": [
       "Suas paredes são xadrez de azulejos verdes e brancos, inspirados na arte islâmica e japonesa.",
@@ -127,8 +169,26 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Pal%C3%A1cio_G%C3%BCell",
     "drawings": [],
     "photos": [
-      { "alt": "Canto de um terraço com chaminés revestidas de cacos de cerâmica coloridos", "caption": null },
-      { "alt": "Ornamentado teto de madeira em caixotões, visto de baixo", "caption": "Tetos entalhados em caixotões enchem as salas de recepção." }
+      {
+        "alt": "Alta fachada de pedra vista de baixo, com dois arcos parabólicos de portões de ferro, uma fileira de janelas com treliça e chaminés na linha do telhado.",
+        "caption": null
+      },
+      {
+        "alt": "Rua estreita vista em ângulo, com uma mansão de pedra erguendo-se sobre duas entradas em arco e chaminés coloridas revestidas de azulejos no topo.",
+        "caption": null
+      },
+      {
+        "alt": "Canto de um terraço com chaminés revestidas de cacos de cerâmica coloridos",
+        "caption": null
+      },
+      {
+        "alt": "Ornamentado teto de madeira em caixotões, visto de baixo",
+        "caption": "Tetos entalhados em caixotões enchem as salas de recepção."
+      },
+      {
+        "alt": "Vista para cima de uma cúpula de tijolo perfurada por pequenas luzes redondas, ladeada por galerias de treliça dourada e lâmpadas.",
+        "caption": null
+      }
     ],
     "hints": [
       "É uma mansão urbana construída para um industrial que foi o maior mecenas de seu arquiteto.",
@@ -164,8 +224,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Parque_G%C3%BCell",
     "drawings": [],
     "photos": [
-      { "alt": "Guarita de conto de fadas com telhado coberto de mosaico e uma alta torre revestida de azulejos", "caption": null },
-      { "alt": "Teto de mosaico branco de cacos de cerâmica com um grande medalhão redondo multicolorido", "caption": "Medalhões de mosaico no teto da sala das colunas." }
+      {
+        "alt": "Duas escadarias com uma fonte de mosaico entre muros curvos revestidos de azulejos, levando a um salão de colunas robustas em um jardim.",
+        "caption": null
+      },
+      {
+        "alt": "Guarita de conto de fadas com telhado coberto de mosaico e uma alta torre revestida de azulejos",
+        "caption": null
+      },
+      {
+        "alt": "Escultura de lagarto em mosaico colorido de cacos de azulejo embutida em um corrimão branco de escada, com degraus subindo ao lado.",
+        "caption": null
+      },
+      {
+        "alt": "Teto de mosaico branco de cacos de cerâmica com um grande medalhão redondo multicolorido",
+        "caption": "Medalhões de mosaico no teto da sala das colunas."
+      }
     ],
     "hints": [
       "Seus caminhos são sustentados por colunatas inclinadas de pedra bruta.",
@@ -203,8 +277,22 @@
       { "label": "Fachada e corte (1904)", "alt": "Elevação desenhada à mão da frente estreita de uma casa com janelas abauladas, ao lado do seu corte" }
     ],
     "photos": [
-      { "alt": "Fachada de mosaico colorido com sacadas que parecem ossos, em forma de máscaras", "caption": null },
-      { "alt": "Parede curva de gesso perfurada por duas janelas arredondadas de vitral com chumbo", "caption": "Janelas arredondadas ao longo da caixa de escada." }
+      {
+        "alt": "Fachada coberta de mosaico com sacadas em forma de caveira, colunas em forma de osso ao redor de grandes janelas inferiores e telhado arqueado escamoso coroado por uma cruz.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada de mosaico colorido com sacadas que parecem ossos, em forma de máscaras",
+        "caption": null
+      },
+      {
+        "alt": "Terraço de telhado com piso de ladrilho vermelho em espinha de peixe, chaminés esculpidas revestidas de mosaico e uma cumeeira em dorso de dragão sob céu nublado.",
+        "caption": null
+      },
+      {
+        "alt": "Parede curva de gesso perfurada por duas janelas arredondadas de vitral com chumbo",
+        "caption": "Janelas arredondadas ao longo da caixa de escada."
+      }
     ],
     "hints": [
       "Não era um edifício novo: seu arquiteto transformou uma casa existente de 1877.",
@@ -243,8 +331,26 @@
       { "label": "Corte (1906)", "alt": "Corte desenhado à mão de um edifício de vários andares com um sótão em arco" }
     ],
     "photos": [
-      { "alt": "Prédio de apartamentos de esquina com fachada ondulada de pedra clara e sacadas de ferro retorcido", "caption": null },
-      { "alt": "Escada de entrada com paredes pintadas, como uma caverna, e uma porta de madeira entalhada", "caption": "Um vestíbulo de entrada pintado." }
+      {
+        "alt": "Edifício de apartamentos de esquina com curvas, de pedra clara ondulante, com sacadas de ferro forjado e chaminés esculpidas no telhado, atrás de árvores de rua.",
+        "caption": null
+      },
+      {
+        "alt": "Prédio de apartamentos de esquina com fachada ondulada de pedra clara e sacadas de ferro retorcido",
+        "caption": null
+      },
+      {
+        "alt": "Grupo de altas chaminés de pedra abstratas com tampas em forma de capacete e fendas como olhos, contra um céu claro e nublado.",
+        "caption": null
+      },
+      {
+        "alt": "Escada de terraço passando sob um arco rústico revestido de cacos, com a silhueta da cidade e nuvens rosadas ao fundo.",
+        "caption": null
+      },
+      {
+        "alt": "Escada de entrada com paredes pintadas, como uma caverna, e uma porta de madeira entalhada",
+        "caption": "Um vestíbulo de entrada pintado."
+      }
     ],
     "hints": [
       "Sua fachada de pedra não carrega peso: colunas sustentam os pisos, então as paredes internas podiam ir a qualquer lugar.",
@@ -283,8 +389,26 @@
       { "label": "Planta", "alt": "Planta de uma grande igreja em forma de cruz, com nave de várias naves laterais, abside arredondada e amplas escadarias na frente" }
     ],
     "photos": [
-      { "alt": "Fachada de figuras esculpidas e angulosas sob altas torres pontiagudas", "caption": null },
-      { "alt": "Colunas altas e ramificadas como uma floresta, subindo até uma abóbada, com luz colorida", "caption": "As colunas se ramificam como árvores para sustentar as abóbadas." }
+      {
+        "alt": "Enorme igreja com grupos de altas torres rendilhadas e uma fachada como renda, vista do outro lado de um lago, com guindastes de obra ao lado.",
+        "caption": null
+      },
+      {
+        "alt": "Fachada de figuras esculpidas e angulosas sob altas torres pontiagudas",
+        "caption": null
+      },
+      {
+        "alt": "Vista de baixo para cima de uma fachada de pedra que parece derreter, repleta de figuras e plantas esculpidas, sob quatro altas torres em favo e guindastes.",
+        "caption": null
+      },
+      {
+        "alt": "Colunas altas e ramificadas como uma floresta, subindo até uma abóbada, com luz colorida",
+        "caption": "As colunas se ramificam como árvores para sustentar as abóbadas."
+      },
+      {
+        "alt": "Nave vista de uma galeria, com colunas de pedra em forma de árvore sustentando luzes redondas e piso de ladrilhos vermelhos, laranja e creme.",
+        "caption": null
+      }
     ],
     "hints": [
       "Iniciada em 1882, continua em construção, paga inteiramente por doações.",
@@ -321,8 +445,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Casa_Tassel",
     "drawings": [],
     "photos": [
-      { "alt": "Frente estreita de casa urbana de pedra, com uma janela saliente de ferro e vidro", "caption": null },
-      { "alt": "Escada curva com ferragens em forma de chicote, esbelta coluna de ferro e paredes pintadas com volutas", "caption": "A caixa de escada no coração da casa." }
+      {
+        "alt": "Frente estreita de casa urbana de pedra, com uma janela saliente de ferro e vidro",
+        "caption": null
+      },
+      {
+        "alt": "Fachada de casa de pedra com janela saliente curva, esbeltas colunas de ferro e uma sacada de ferro em linhas sinuosas acima de uma porta de madeira.",
+        "caption": null
+      },
+      {
+        "alt": "Escada curva com ferragens em forma de chicote, esbelta coluna de ferro e paredes pintadas com volutas",
+        "caption": "A caixa de escada no coração da casa."
+      },
+      {
+        "alt": "Piso do saguão de entrada em mosaico com curvas sinuosas vermelhas e cinzas, ao lado de uma escada com balaústre de ferro enrolado e paredes pintadas.",
+        "caption": null
+      }
     ],
     "hints": [
       "Foi construída para um cientista e professor universitário e é contada entre os primeiros edifícios de seu estilo.",
@@ -363,8 +501,22 @@
     "wikipedia": "https://pt.wikipedia.org/wiki/Escola_de_Arte_de_Glasgow",
     "drawings": [],
     "photos": [
-      { "alt": "Fachada de pedra com grandes janelas de ateliê, uma entrada descentralizada e grades de ferro curvas", "caption": null },
-      { "alt": "Sala em preto e branco com cadeiras escuras de encosto alto em volta de uma longa mesa", "caption": "A Sala do Conselho, fotografada em 1964." }
+      {
+        "alt": "Fachada de arenito com uma ampla escadaria até uma porta escura, uma sacada sob um arco, uma janela saliente e altas janelas de ateliê.",
+        "caption": null
+      },
+      {
+        "alt": "Longa parede lateral de arenito ao longo de uma rua, com fileiras de altas janelas de ateliê sobre um muro baixo com grades e claraboias.",
+        "caption": null
+      },
+      {
+        "alt": "Vista próxima de altas janelas com estrutura de aço e uma fileira de esbeltos suportes de ferro terminando em ornamentos de anel e disco.",
+        "caption": null
+      },
+      {
+        "alt": "Sala em preto e branco com cadeiras escuras de encosto alto em volta de uma longa mesa",
+        "caption": "A Sala do Conselho, fotografada em 1964."
+      }
     ],
     "hints": [
       "Foi construída em duas fases, concluídas em 1899 e 1909.",
@@ -402,8 +554,26 @@
       { "label": "Corte longitudinal e elevação sul", "alt": "Casa longa e baixa em corte e elevação, com amplos telhados em balanço" }
     ],
     "photos": [
-      { "alt": "Casa de tijolos longa e baixa, com telhados profundamente em balanço e faixas de janelas", "caption": null },
-      { "alt": "Quarto com móveis de madeira e uma fileira de janelas de vitral com chumbo", "caption": "Um quarto iluminado por janelas de vitral." }
+      {
+        "alt": "Casa baixa e longa de tijolos com amplo telhado plano em balanço, uma grande massa de chaminé e um muro baixo de jardim, entre árvores de outono.",
+        "caption": null
+      },
+      {
+        "alt": "Vista oblíqua próxima de longos tijolos vermelhos finos em faixas horizontais, um muro com topo de pedra e jardineiras, e telhados em grande balanço.",
+        "caption": null
+      },
+      {
+        "alt": "Casa de tijolos longa e baixa, com telhados profundamente em balanço e faixas de janelas",
+        "caption": null
+      },
+      {
+        "alt": "Sala de estar aberta com teto de madeira em faixas, luminárias embutidas, janelas de vitral e móveis baixos vermelhos sobre um tapete claro.",
+        "caption": null
+      },
+      {
+        "alt": "Quarto com móveis de madeira e uma fileira de janelas de vitral com chumbo",
+        "caption": "Um quarto iluminado por janelas de vitral."
+      }
     ],
     "hints": [
       "Seus telhados avançam em balanço muito além das paredes, e suas longas linhas horizontais ecoam a planície do Meio-Oeste.",
@@ -443,8 +613,18 @@
       { "label": "Corte", "alt": "Corte de um edifício de vários andares: uma loja embaixo e pavimentos de apartamentos lisos em cima" }
     ],
     "photos": [
-      { "alt": "Edifício de esquina com base revestida de mármore verde e andares superiores brancos e lisos, com floreiras nas janelas", "caption": null },
-      { "alt": "Passagem de entrada revestida de mármore, com portas de vidro", "caption": "Mármore rico reveste a entrada do térreo." }
+      {
+        "alt": "Edifício de esquina com base revestida de mármore verde e andares superiores brancos e lisos, com floreiras nas janelas",
+        "caption": null
+      },
+      {
+        "alt": "Quatro altas colunas de mármore de veios verdes diante de uma entrada envidraçada escura, com relevos heráldicos e luminárias na parede de pedra.",
+        "caption": null
+      },
+      {
+        "alt": "Passagem de entrada revestida de mármore, com portas de vidro",
+        "caption": "Mármore rico reveste a entrada do térreo."
+      }
     ],
     "hints": [
       "Seus andares superiores lisos causaram tamanho escândalo que o arquiteto teve de acrescentar floreiras às janelas.",

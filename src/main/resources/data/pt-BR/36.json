@@ -22,6 +22,14 @@
       {
         "alt": "Pátio coberto com blocos brancos, largos degraus e um canal de água sob uma cúpula escura perfurada com um padrão rendado que lança pontos de luz pelo chão",
         "caption": null
+      },
+      {
+        "alt": "Galerias cúbicas brancas ao lado de largos degraus que descem até uma água rasa, tudo sob um teto de metal entrelaçado em padrão de estrelas.",
+        "caption": null
+      },
+      {
+        "alt": "Plataformas que flutuam em água calma sob a borda de uma cúpula rendilhada, com o mar aberto e a margem distante ao fundo.",
+        "caption": null
       }
     ],
     "hints": [
@@ -70,6 +78,18 @@
         "caption": null
       },
       {
+        "alt": "Ampla cobertura branca ondulada sobre uma estrutura de madeira trançada, com um mastro no topo, vista do outro lado de uma praça listrada em tons pastel.",
+        "caption": null
+      },
+      {
+        "alt": "Cobertura branca de membrana que se curva até um alto mastro, com uma galeria em caixa saindo de sua lateral, contra um céu claro e nublado.",
+        "caption": null
+      },
+      {
+        "alt": "Vista de baixo para cima de uma grossa coluna em forma de árvore, feita de vigas curvas de madeira que se ramificam numa treliça hexagonal entrelaçada.",
+        "caption": null
+      },
+      {
         "alt": "Vista para cima de curvas vigas de madeira lamelada que formam aberturas hexagonais, ao lado de uma caixa de galeria branca saliente com grandes tubos",
         "caption": null
       }
@@ -115,12 +135,24 @@
     "drawings": [],
     "photos": [
       {
+        "alt": "Domo em forma de ovo feito de triângulos de vidro verde, com um painel em forma de vela, ao lado de uma encosta gramada e do rio sob céu azul.",
+        "caption": null
+      },
+      {
         "alt": "Cúpula em treliça em forma de ovo a brilhar à noite sobre um longo edifício branco e um mastro de madeira, junto ao rio",
+        "caption": null
+      },
+      {
+        "alt": "Domo revestido de vidro na borda de uma cobertura gramada, acima de uma larga curva do rio, com colinas arborizadas e uma ponte ao fundo.",
         "caption": null
       },
       {
         "alt": "Sala de concertos com um palco rodeado por bancadas de madeira e um teto com padrão hexagonal",
         "caption": "Um teatro em forma de ovo, com palco central, para música clássica."
+      },
+      {
+        "alt": "Escada branca que sobe em espiral por uma treliça de vigas de madeira clara e vidro, com guarda-corpo de painéis transparentes.",
+        "caption": null
       }
     ],
     "hints": [
@@ -158,7 +190,19 @@
     "drawings": [],
     "photos": [
       {
-        "alt": "Bloco pesado de degraus invertidos revestido de granito cinzento, com algumas janelas de forma estranha, numa esquina de rua de Manhattan",
+        "alt": "Pesado bloco escalonado invertido revestido de granito cinza, com algumas janelas anguladas de forma incomum, sobre uma esquina arborizada.",
+        "caption": null
+      },
+      {
+        "alt": "Bloco de pedra cinza de perfil escalonado em balanço e uma janela inclinada, entre um sobrado marrom-avermelhado e torres de apartamentos brancas.",
+        "caption": null
+      },
+      {
+        "alt": "Vista próxima de uma parede de granito cinza com caixilhos trapezoidais profundos que se projetam em ângulos diferentes.",
+        "caption": null
+      },
+      {
+        "alt": "Ponte de concreto que atravessa um fosso rebaixado até uma entrada envidraçada recuada sob o bloco de pedra em balanço.",
         "caption": null
       },
       {

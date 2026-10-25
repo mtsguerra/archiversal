@@ -24,11 +24,19 @@
     "style": "Viaduto estaiado",
     "photos": [
       {
+        "alt": "Uma longuíssima ponte estaiada sobre pilares altos e esbeltos, com pilones brancos, atravessa um vale largo acima de campos e uma pequena cidade.",
+        "caption": null
+      },
+      {
         "alt": "Altos e esbeltos pilares de concreto erguendo-se sobre campos agrícolas",
         "caption": null
       },
       {
         "alt": "Uma longa ponte branca atravessando um vale distante, vista de uma colina acima de uma cidade",
+        "caption": null
+      },
+      {
+        "alt": "Vista aérea de uma longa ponte branca cruzando um vale profundo, com estradas sinuosas, campos em mosaico e uma cidade do outro lado.",
         "caption": null
       }
     ],
@@ -76,11 +84,19 @@
     "style": "Ponte de aço em balanços",
     "photos": [
       {
+        "alt": "Grandes braços de aço vermelho em balanço erguendo-se de pilares de pedra sobre a água da maré, com um pequeno barco",
+        "caption": null
+      },
+      {
         "alt": "Uma longa ponte de aço vermelho em balanços no horizonte, sobre um estuário azul",
         "caption": null
       },
       {
-        "alt": "Grandes braços de aço vermelho em balanço erguendo-se de pilares de pedra sobre a água da maré, com um pequeno barco",
+        "alt": "Ponte cantilever de aço vermelho atravessando um estuário azul além de telhados e árvores, com uma pequena ilha rochosa com um forte ao lado.",
+        "caption": null
+      },
+      {
+        "alt": "Vista próxima de grossos tirantes tubulares de aço vermelho e vigas treliçadas que se erguem de um pilar de pedra de uma grande ponte cantilever.",
         "caption": null
       }
     ],
@@ -120,11 +136,23 @@
     "style": "Ponte-aqueduto romano",
     "photos": [
       {
-        "alt": "Três níveis de arcos de pedra clara formando uma ponte-aqueduto antiga sobre um rio",
+        "alt": "Três níveis de arcos de pedra clara formando uma ponte-aqueduto romana sobre um rio turquesa, com margens rochosas em primeiro plano.",
         "caption": null
       },
       {
         "alt": "Uma alta arcada romana de blocos de pedra talhados atravessando um vale de rio",
+        "caption": null
+      },
+      {
+        "alt": "Vista baixa, da água calma do rio, para um alto aqueduto de pedra com arcos sobrepostos, com banhistas e canoas perto das margens.",
+        "caption": null
+      },
+      {
+        "alt": "Vista de baixo para cima da parte interna de um grande arco feito de grandes blocos de pedra cortados com precisão contra um céu claro.",
+        "caption": null
+      },
+      {
+        "alt": "Três níveis de arcos de pedra clara formando uma ponte-aqueduto antiga sobre um rio",
         "caption": null
       }
     ],
@@ -177,11 +205,23 @@
     "style": "Era espacial / Googie",
     "photos": [
       {
-        "alt": "Altas pernas cor de creme e a parte de baixo de um mirante em forma de disco, com um poço de elevador entre elas",
+        "alt": "Esbelta torre branca sobre pernas abertas com um deck em forma de disco voador no topo, erguendo-se acima de um gramado e de um muro colorido sob céu azul.",
         "caption": null
       },
       {
         "alt": "Uma torre esbelta com o topo em forma de disco voador erguendo-se acima das árvores em um céu azul nublado",
+        "caption": null
+      },
+      {
+        "alt": "Vista próxima de um deck de observação em forma de disco com um anel envidraçado, nervuras de cobertura radiais, uma antena central e pernas brancas embaixo.",
+        "caption": null
+      },
+      {
+        "alt": "Uma torre esguia com o topo em forma de disco ergue-se entre um conjunto de arranha-céus e prédios baixos sob um céu enevoado.",
+        "caption": null
+      },
+      {
+        "alt": "Altas pernas cor de creme e a parte de baixo de um mirante em forma de disco, com um poço de elevador entre elas",
         "caption": null
       }
     ],
@@ -228,7 +268,15 @@
     "style": "Ponte em arcos de aço assimétricos",
     "photos": [
       {
+        "alt": "Vista aérea de uma longa ponte rodoviária sustentada por três arcos de aço branco que cruzam uma ampla água calma em direção a uma margem verde.",
+        "caption": null
+      },
+      {
         "alt": "Três arcos de aço brancos cruzando um lago largo ao longe",
+        "caption": null
+      },
+      {
+        "alt": "Três arcos brancos que se erguem de uma ponte rodoviária sobre um grande lago, vistos de uma margem gramada sob um céu nublado.",
         "caption": null
       },
       {
