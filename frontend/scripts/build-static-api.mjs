@@ -132,7 +132,7 @@ for (const file of readdirSync(translationsDir).filter((f) => f.endsWith('.json'
 // The Java validator checks the English source, not the pt-BR overlay or this build, so check every
 // link that will ship: articles and file pages on Wikipedia and Wikimedia Commons, over https, only.
 const ARTICLE = /^https:\/\/(en|pt)\.wikipedia\.org\/wiki\/\S+$/
-const FILE_PAGE = /^https:\/\/commons\.wikimedia\.org\/wiki\/\S+$/
+const FILE_PAGE = /^https:\/\/(commons\.wikimedia\.org\/wiki|www\.flickr\.com\/photos)\/\S+$/
 for (const b of buildings) {
   for (const book of [b, translations[b.id] ? translate(b, translations[b.id]) : b]) {
     if (!ARTICLE.test(book.wikipedia)) throw new Error(`${b.id}: wikipedia link is not an https Wikipedia article: ${book.wikipedia}`)
