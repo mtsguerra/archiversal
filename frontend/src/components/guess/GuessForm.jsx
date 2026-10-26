@@ -116,6 +116,18 @@ function Field({ id, field, icon: Icon, status, attempts, revealed, answer, dial
           children({ id, 'aria-describedby': messageId, 'aria-invalid': status === 'wrong' || undefined })
         )}
 
+        {status === 'close' && !revealed && (
+          // Half the field painted: half a point, the rest needs the more specific answer.
+          <motion.span
+            key={attempts}
+            className={styles.half}
+            aria-hidden="true"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ type: 'spring', stiffness: 220, damping: 22 }}
+          />
+        )}
+
         <span className={styles.badge} aria-hidden="true">
           {locked && (
             <motion.span
@@ -202,6 +214,12 @@ export function GuessForm({ building, eras, centuries, phase, fields, attempts, 
       return setNothingToCheck(true)
     }
     onSubmit(values)
+  }
+
+  // Revealing with something typed but unchecked judges it first, so it counts.
+  function handleGiveUp() {
+    if (names.some((f) => fields[f] !== 'correct' && values[f].trim())) onSubmit(values)
+    onGiveUp()
   }
 
   const correctCount = names.filter((f) => fields[f] === 'correct').length
@@ -365,7 +383,7 @@ export function GuessForm({ building, eras, centuries, phase, fields, attempts, 
             <Button type="submit" icon={CheckIcon} className={styles.primary}>
               {strings.guess.submit}
             </Button>
-            <Button variant="quiet" icon={RevealIcon} data-sound="unveil" onClick={onGiveUp}>
+            <Button variant="quiet" icon={RevealIcon} data-sound="unveil" onClick={handleGiveUp}>
               {strings.guess.giveUp}
             </Button>
           </div>

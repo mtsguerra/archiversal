@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { resolveCountryCode, suggestCountries } from './countries.js'
-import { judgeEra, evaluateGuess, matchesName } from './matchGuess.js'
+import { judgeEra, evaluateGuess, scoreOf, matchesName } from './matchGuess.js'
 import { normalize } from './text.js'
 import { salk, santIvo, villaSavoye } from './testBuildings.js'
 
@@ -136,5 +136,11 @@ describe('judgeEra', () => {
     expect(evaluateGuess(salk, { era: 'BRUTALISM' }).era).toBe(true)
     expect(evaluateGuess(salk, { era: 'MODERNISM' }).era).toBe('close')
     expect(evaluateGuess(santIvo, { era: 'RENAISSANCE' }).era).toBe(false)
+  })
+})
+
+describe('scoreOf', () => {
+  it('gives 1 for correct, half for close, 0 otherwise', () => {
+    expect(scoreOf({ name: 'correct', architect: 'close', country: 'wrong', era: 'idle' })).toBe(1.5)
   })
 })

@@ -727,33 +727,63 @@
 
 /* Wide screens: the five figures become one row of small chips, and the filters share one row under them. */
 @media (min-width: 1025px) {
+  /* A title-block strip: five equal cells split by rules, the label over the figure, corner ticks. */
   .stats {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2);
-    border: 0;
-    background: none;
-  }
-
-  .stat {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: baseline;
-    gap: var(--space-2);
-    padding: var(--space-1) var(--space-3);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) auto;
+    align-items: stretch;
     border: var(--hairline) solid var(--paper-hairline);
-    border-radius: 999px;
     background: var(--paper-shade);
   }
 
-  .stat:last-child {
+  .stats::before,
+  .stats::after {
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 2px solid var(--camel);
+    pointer-events: none;
+  }
+
+  .stats::before {
+    left: -2px;
+    top: -2px;
+    border-right: 0;
+    border-bottom: 0;
+  }
+
+  .stats::after {
+    right: -2px;
+    bottom: -2px;
+    border-left: 0;
+    border-top: 0;
+  }
+
+  .stat {
+    display: grid;
+    align-content: center;
+    gap: 0.25rem;
+    padding: var(--space-2) var(--space-4);
+    border: 0;
+    border-right: var(--hairline) solid var(--paper-hairline);
+    border-radius: 0;
+    background: none;
+  }
+
+  .stat:last-child,
+  .stat:nth-last-child(2) {
     border-right: var(--hairline) solid var(--paper-hairline);
   }
 
   /* The share button fills the end of the row: a wide stamp-red pill that leans toward the cursor (Magnet) and presses in. */
   .shareWrap {
     grid-column: auto;
-    margin: 0 0 0 auto;
+    display: grid;
+    align-items: center;
+    margin: 0;
+    padding: var(--space-2) var(--space-3);
   }
 
   .shareInner,
@@ -788,6 +818,7 @@
   .statValue {
     font-size: var(--text-md);
   }
+
 
 
   .tools .field:first-child {

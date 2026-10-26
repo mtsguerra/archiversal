@@ -165,6 +165,16 @@
   color: var(--russet);
 }
 
+.half {
+  position: absolute;
+  inset: 0 50% 0 0;
+  width: auto;
+  transform-origin: left;
+  border-radius: var(--radius-2, 6px) 0 0 var(--radius-2, 6px);
+  background: color-mix(in srgb, var(--camel) 28%, transparent);
+  pointer-events: none;
+}
+
 .message[data-kind='close'],
 .message[data-kind='close'] svg {
   color: var(--russet);

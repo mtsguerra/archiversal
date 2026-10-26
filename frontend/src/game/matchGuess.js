@@ -87,3 +87,8 @@ export function evaluateGuess(building, values) {
     era: judge(values.era, (v) => judgeEra(v, building.era)),
   }
 }
+
+/** A round's points: 1 per correct field, half for a close one (a neighbouring era, century or decade). */
+export function scoreOf(fields, names = Object.keys(fields)) {
+  return names.reduce((sum, f) => sum + (fields[f] === 'correct' ? 1 : fields[f] === 'close' ? 0.5 : 0), 0)
+}

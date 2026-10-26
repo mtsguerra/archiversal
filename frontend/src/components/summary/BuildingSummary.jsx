@@ -4,6 +4,7 @@ import { Check, Eye } from 'lucide-react'
 import { ExternalIcon } from '../ui/icons.jsx'
 import { guessText } from '../../game/guessText.js'
 import { centuryOf, decadeOf } from '../../game/dates.js'
+import { scoreOf } from '../../game/matchGuess.js'
 import { eraName, formatYear } from '../../game/useEras.js'
 import { duration, easeOut } from '../../motion.js'
 import { useLanguage, useStrings } from '../../i18n.js'
@@ -394,7 +395,7 @@ export function BuildingSummary({ building, eras, fields, log, onOpenBoard, play
   const [lede, rest] = splitLede(building.summary.description)
   const viewing = !fields // opened from the Library: nothing was guessed, so no score, level or recap
   const total = viewing ? 0 : Object.keys(fields).length
-  const score = viewing ? 0 : Object.values(fields).filter((s) => s === 'correct').length
+  const score = viewing ? 0 : scoreOf(fields)
   const signedOff = !viewing && score === total
   const facts = [...building.hints.map((h) => h.text), ...building.summary.funFacts]
 

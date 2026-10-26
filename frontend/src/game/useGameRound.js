@@ -95,7 +95,7 @@ export function useGameRound(mode = 'normal', day) {
       const seen = readSeen()
       const hold = await dailyHold()
       const building = await fetchRandomBuilding(hold ? [...seen, hold] : seen, controller.signal, langRef.current)
-      recordSeen(building.id, seen)
+      recordSeen(building.id)
       dispatch({ type: 'load/success', building })
     } catch (error) {
       if (error.name !== 'AbortError') dispatch({ type: 'load/failure', error })

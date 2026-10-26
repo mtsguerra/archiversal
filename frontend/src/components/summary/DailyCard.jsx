@@ -1,6 +1,6 @@
 import { Eye } from 'lucide-react'
 import { motion } from 'motion/react'
-import { GUESS_FIELDS } from '../../game/matchGuess.js'
+import { GUESS_FIELDS, scoreOf } from '../../game/matchGuess.js'
 import { dailyNumber, shareText } from '../../game/daily.js'
 import { useCountdown } from '../../game/useCountdown.js'
 import { useStrings } from '../../i18n.js'
@@ -24,7 +24,7 @@ export function DailyCard({ daily, play = true }) {
   const reduce = useReducedMotion()
   const left = useCountdown()
   const text = shareText({ number, fields: daily.fields, hintsUsed: daily.hintsUsed, title: strings.daily.shareTitle, url: window.location.origin })
-  const got = GUESS_FIELDS.filter((f) => daily.fields[f] === 'correct').length
+  const got = scoreOf(daily.fields, GUESS_FIELDS)
 
   return (
     <section className={styles.block} aria-label={strings.daily.preview}>

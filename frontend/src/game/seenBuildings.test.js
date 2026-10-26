@@ -12,17 +12,10 @@ function memoryStorage() {
 describe('seen buildings', () => {
   beforeEach(() => vi.stubGlobal('sessionStorage', memoryStorage()))
 
-  it('appends new ids', () => {
-    recordSeen('a', readSeen())
-    recordSeen('b', readSeen())
-    expect(readSeen()).toEqual(['a', 'b'])
-  })
-
-  it('restarts the list when the backend repeats a building', () => {
-    recordSeen('a', [])
-    recordSeen('b', readSeen())
-    recordSeen('a', readSeen())
-    expect(readSeen()).toEqual(['a'])
+  it('keeps only the last served building', () => {
+    recordSeen('a')
+    recordSeen('b')
+    expect(readSeen()).toEqual(['b'])
   })
 
   it('survives broken or blocked storage', () => {
@@ -33,6 +26,6 @@ describe('seen buildings', () => {
       },
     })
     expect(readSeen()).toEqual([])
-    expect(() => recordSeen('a', [])).not.toThrow()
+    expect(() => recordSeen('a')).not.toThrow()
   })
 })

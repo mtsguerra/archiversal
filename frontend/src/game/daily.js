@@ -105,6 +105,6 @@ const ICONS = { name: '🏛️', architect: '👤', country: '🌍', era: '⏳' 
 
 /** The copyable result: never names the building. */
 export function shareText({ number, fields, hintsUsed, title, url }) {
-  const row = GUESS_FIELDS.map((f) => `${ICONS[f]}${fields[f] === 'correct' ? '✅' : '❌'}`).join(' ')
+  const row = GUESS_FIELDS.map((f) => `${ICONS[f]}${fields[f] === 'correct' ? '✅' : fields[f] === 'close' ? '🟨' : '❌'}`).join(' ')
   return `${title} #${number}\n${row}${hintsUsed ? ` · 💡${hintsUsed}` : ''}\n${url}`
 }

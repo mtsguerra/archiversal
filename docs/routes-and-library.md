@@ -13,6 +13,6 @@ Moved out of `CLAUDE.md` to keep it short. The short versions there are the summ
 - Collections: the Themed themes (ids from the catalogue), progress counted by `collectionProgress`; a rail card.
 - Stamps: `EraStamp.jsx`, a different ring, tilt and drawing for each era, earned when the era is complete (rail card "Ex libris", era header).
 - Study sheet: `EraSheet.jsx`, only from unlocked buildings plus the "Close!" neighbours (`eraFacts`).
-- Daily lore: `game/lore.js` picks an unlocked building and a fun fact by day number; fact fetched from the building summary.
+- Daily lore: `game/lore.js` picks a fun fact by day number for the building of Daily № n (veiled until unlocked); fact fetched from the building summary.
 - Share my shelf: `game/shelf.js` text (totals and stamps, never names); Web Share, else clipboard.
 - Compare shows both years on one axis (`Timeline` in `Detail.jsx`).

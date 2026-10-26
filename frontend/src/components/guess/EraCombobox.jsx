@@ -27,10 +27,11 @@ export function EraCombobox({ id, eras, value, onChange, className, ...inputProp
   const [typed, setTyped] = useState('')
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState(0)
+  const [filtering, setFiltering] = useState(false) // true while the player is typing, so an exactly typed name keeps narrowing the list
   const text = chosen && typed === '' ? eraName(chosen, strings) : typed
   const options = useMemo(
-    () => (open && eras ? suggest(eras, chosen ? '' : typed, strings) : []),
-    [open, eras, chosen, typed, strings],
+    () => (open && eras ? suggest(eras, chosen && !filtering ? '' : typed, strings) : []),
+    [open, eras, chosen, filtering, typed, strings],
   )
   const expanded = open && options.length > 0
   const { ref, placement } = useListPlacement(expanded)
@@ -38,12 +39,14 @@ export function EraCombobox({ id, eras, value, onChange, className, ...inputProp
   function choose(era) {
     setTyped(eraName(era, strings))
     onChange(era.id)
+    setFiltering(false)
     setOpen(false)
   }
 
   function handleChange(event) {
     const next = event.target.value
     setTyped(next)
+    setFiltering(true)
     setOpen(true)
     setActive(0)
     const exact = eras?.find((era) => normalize(eraName(era, strings)) === normalize(next))
@@ -67,6 +70,7 @@ export function EraCombobox({ id, eras, value, onChange, className, ...inputProp
 
   function handleBlur() {
     setOpen(false)
+    setFiltering(false)
     // A lone match is taken as the answer, so a half-typed name isn't silently dropped.
     if (!chosen && typed.trim()) {
       const matches = suggest(eras ?? [], typed, strings)

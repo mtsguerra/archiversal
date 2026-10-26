@@ -1,4 +1,4 @@
-// Ids of buildings already shown in this tab, so rounds don't repeat.
+// The building shown last in this tab, so a round never repeats the one before.
 // sessionStorage can throw (privacy modes, blocked storage); the game then just forgets.
 const KEY = 'archiversal:seen'
 
@@ -19,10 +19,7 @@ function write(ids) {
   }
 }
 
-/**
- * Records a served building. If it was already seen, the backend has run out
- * of unseen buildings and started over, so the list restarts from this one.
- */
-export function recordSeen(id, seenBefore) {
-  write(seenBefore.includes(id) ? [id] : [...seenBefore, id])
+/** Records the served building; only the last one is kept, so the next round is never the same but any other can come back. */
+export function recordSeen(id) {
+  write([id])
 }

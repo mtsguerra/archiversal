@@ -2,9 +2,9 @@ import { ArrowRight, ChevronDown, Stamp } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { fetchBuilding, fetchCatalogue, fetchLibrary } from '../../api/buildings.js'
 import { countryName } from '../../game/countries.js'
-import { dailyNumber } from '../../game/daily.js'
+import { dailyId, dailyNumber } from '../../game/daily.js'
 import { FEATURES } from '../../game/features.js'
-import { loreFact, loreId } from '../../game/lore.js'
+import { loreFact } from '../../game/lore.js'
 import { readReading, toggleReading } from '../../game/readingList.js'
 import { playBuilding, readLibrary } from '../../game/library.js'
 import { collectionProgress, eraProgress, groupRows, joinRows, libraryStats, neighbourEras, passes, pickLocked } from '../../game/libraryView.js'
@@ -100,9 +100,10 @@ export function Library() {
   const eraOrder = useMemo(() => (eras ?? []).map((e) => e.id), [eras])
   const stats = useMemo(() => libraryStats(joined), [joined])
   const collections = useMemo(() => collectionProgress(joined, themesOf), [joined, themesOf])
-  // Daily lore: today's building among the unlocked ones, and a fact from its summary.
+  // Daily lore: the building of Daily № n and a fact from its summary; until it is unlocked the card stays veiled.
   const day = dailyNumber()
-  const loreRowId = useMemo(() => loreId(joined.filter((r) => r.open).map((r) => r.id), day), [joined, day])
+  const dailyRowId = useMemo(() => (joined.length ? dailyId(joined.map((r) => r.id), day) : null), [joined, day])
+  const loreRowId = joined.find((r) => r.id === dailyRowId)?.open ? dailyRowId : null
   useEffect(() => {
     if (!loreRowId) return undefined
     const controller = new AbortController()
@@ -199,7 +200,7 @@ export function Library() {
             ) : (
               <div className={styles.loreBody}>
                 <span className={styles.loreTitle}>{t.lore.title}</span>
-                <p className={styles.loreFact}>{t.lore.none}</p>
+                <p className={styles.loreFact}>{dailyRowId ? t.lore.locked(day) : t.lore.none}</p>
               </div>
             )}
           </aside>
