@@ -49,6 +49,7 @@ export default {
 
   places: { normal: 'Guesser · Normal', custom: 'Guesser · Custom', themed: 'Guesser · Themed', library: 'Library' },
 
+  move: { label: 'New address', text: 'Archiversal has moved to archiversal.vercel.app.', move: 'Move my progress', open: 'Open the new site', dismiss: 'Dismiss' },
   theme: { toDark: 'Switch to the dark theme', toLight: 'Switch to the light theme' },
   sound: { turnOn: 'Turn sound on', turnOff: 'Turn sound off' },
   options: { label: 'Options', done: 'Done', sound: 'Sound', theme: 'Theme', motion: 'Reduce motion' },
@@ -69,8 +70,7 @@ export default {
     title: (n) => `Daily #${n}`,
     past: {
       button: 'Other days',
-      note: 'Earlier Dailies. Playing one later does not count for the streak.',
-      day: (n, state) => `Daily #${n}, ${state === 'done' ? 'played' : state === 'late' ? 'played late' : 'not played yet'}`,
+      found: (n) => `${n} found`,
     },
     play: 'Play today’s building',
     done: (time) => `Done · next in ${time}`,
@@ -238,7 +238,9 @@ export default {
     country: 'Country',
     allCountries: 'All countries',
     show: 'Show',
-    shows: { all: 'All', open: 'Unlocked', mastered: 'Mastered', locked: 'Locked', reading: 'Reading list' },
+    dailyPlay: 'Play',
+    toTop: 'Back to the top',
+    shows: { all: 'All', open: 'Unlocked', mastered: 'Mastered', locked: 'Locked', daily: 'Dailies', reading: 'Reading list' },
     progress: 'Progress by era',
     cols: { sheet: 'Sheet', building: 'Building', architect: 'Architect', country: 'Country', year: 'Year', marks: 'Marks' },
     revealed: 'Revealed',

@@ -12,6 +12,44 @@ const GENERIC_WORDS = new Set([
   'studies', 'library', 'school', 'pavilion',
 ])
 
+// Building types, saints and places shared by several buildings: never enough alone for a building
+// (people keep only GENERIC_WORDS, since "White" or "Park" can be a surname).
+const GENERIC_BUILDING_WORDS = new Set([
+  'abbey', 'architecture', 'arquitetura', 'arte', 'arts', 'atelier', 'avenue', 'bank', 'basilica', 'berlin', 'biblioteca',
+  'brazil', 'bridge', 'camii', 'castelo', 'castle', 'catedral', 'cathedrale', 'cattedrale', 'kathedrale', 'central', 'centro', 'chateau', 'christ', 'cite', 'city',
+  'coimbra', 'complex', 'contemporanea', 'contemporary', 'convent', 'convento', 'cultural', 'dame', 'duomo', 'edificio',
+  'estacao', 'estadio', 'foundation', 'francis', 'francisco', 'fundacao', 'gallery', 'gardens', 'gare', 'golden', 'grand',
+  'great', 'heart', 'holy', 'hospital', 'hotel', 'igreja', 'iron', 'island', 'janeiro', 'jesus', 'lady', 'london', 'maria',
+  'mary', 'memorial', 'metropolitana', 'milan', 'milano', 'modern', 'monastery', 'monte', 'mosque', 'mosteiro', 'most',
+  'municipal', 'museu', 'music', 'musica', 'nacional', 'national', 'nossa', 'nova', 'olympic', 'opera', 'palacio', 'paris',
+  'park', 'parliament', 'paulo', 'peter', 'plaza', 'ponte', 'porto', 'portugal', 'pyramid', 'railway', 'real', 'residence',
+  'royal', 'sacred', 'sainte', 'schloss', 'senhora', 'stadium', 'state', 'station', 'studio', 'sultan', 'teatro', 'temples',
+  'terminal', 'theatre', 'torre', 'towers', 'university', 'vienna', 'vila', 'white', 'york',
+])
+
+// Words that name more than one building ("hagia", "louvre", "guell"): a whole alias such as "Louvre" still counts,
+// but the word alone is not picked out of another building's name.
+const AMBIGUOUS_WORDS = new Set([
+  // a city that only prefixes a generic building ("Sydney" for the Sydney Opera House)
+  'antwerp', 'boston', 'chicago', 'detroit', 'glasgow', 'helsinki', 'houston', 'munich', 'oslo', 'philadelphia', 'seattle',
+  'stockholm', 'sydney', 'vyborg',
+  'aalto', 'alcazar', 'alvar', 'american', 'andrea', 'andrew', 'apartments', 'artes', 'assis', 'assisi',
+  'assumption', 'barcelona', 'basilique', 'batalha', 'baths', 'beijing', 'belem', 'bento', 'blessed', 'block',
+  'braga', 'buddha', 'candi', 'carlos', 'charles', 'club', 'coliseu', 'coliseum', 'college', 'cologne', 'company',
+  'concert', 'congress', 'conjunto', 'copan', 'cristo', 'cross', 'crown', 'crystal', 'dawn', 'degli', 'dhabi',
+  'dome', 'estado', 'factory', 'faculdade', 'faculty', 'florence', 'fortress', 'galleria', 'gate', 'genevieve',
+  'george', 'german', 'giza', 'glass', 'gran', 'grande', 'guell', 'guggenheim', 'guimaraes', 'hagia', 'headquarters',
+  'hill', 'housing', 'imperial', 'instituto', 'intercession', 'international', 'johnson', 'julio', 'light', 'lisbon',
+  'loos', 'louvre', 'luis', 'madison', 'madrid', 'mandir', 'mantua', 'marco', 'mares', 'masjed', 'masjid',
+  'metropolitan', 'mexico', 'monumento', 'mortuary', 'mosquee', 'munchen', 'musee', 'neue', 'notre',
+  'olympiastadion', 'order', 'osios', 'ouro', 'pagoda', 'palais', 'palau', 'pantheon', 'parque', 'paul', 'pavilhao',
+  'peace', 'pietro', 'piramide', 'pisa', 'pompidou', 'portuguese', 'pousada', 'praca', 'presidential', 'public',
+  'puerta', 'queen', 'ramesses', 'residenz', 'rock', 'rome', 'sagrada', 'sagrado', 'sainsbury', 'salvador',
+  'serralves', 'sheikh', 'sobor', 'sophia', 'sullivan', 'technology', 'terme', 'theatro', 'thermae', 'tomar', 'town',
+  'transfiguration', 'trinity', 'viana', 'vicente', 'virgin', 'visual', 'vitoria', 'water', 'westminster', 'whitney',
+  'wisdom', 'zumthor',
+])
+
 const MIN_WORD = 4
 
 /**
@@ -50,7 +88,9 @@ export function judgeEra(guess, answer) {
 function distinctiveWords(name, person) {
   const words = normalize(name).split(' ')
   const candidates = person ? words.slice(-1) : words
-  return candidates.filter((w) => w.length >= MIN_WORD && !GENERIC_WORDS.has(w))
+  return candidates.filter(
+    (w) => w.length >= MIN_WORD && !GENERIC_WORDS.has(w) && (person || !(GENERIC_BUILDING_WORDS.has(w) || AMBIGUOUS_WORDS.has(w))),
+  )
 }
 
 /**
@@ -60,6 +100,8 @@ function distinctiveWords(name, person) {
 export function matchesName(guess, names, { person = false } = {}) {
   const g = normalize(guess)
   if (g.length < 3) return false
+  // "tower", "the library", "alla": only generic words, so nothing to identify (and a typo could land on another name)
+  if (g.split(' ').every((w) => GENERIC_WORDS.has(w) || (!person && GENERIC_BUILDING_WORDS.has(w)))) return false
   return names.some((name) => {
     const target = normalize(name)
     return isCloseTo(g, target) || distinctiveWords(name, person).some((word) => isCloseTo(g, word))

@@ -298,6 +298,109 @@
 }
 
 /* One building is one framed plate on the drafting grid: sheet number, drawing, name, country and year. */
+.drawer {
+  overflow: hidden;
+}
+
+.flag {
+  margin-right: 0.15rem;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+.dayCell {
+  display: grid;
+  gap: var(--space-1);
+  align-content: start;
+}
+
+/* The stamp of the shared postcard (postcard.js drawStamp), at half size: a solid ink body with half circles bitten out of every edge, a cream sheet inside a ring of ink, and a ruled frame (the sheet is the same colour for every state). --stamp is the day's ink. */
+.dayCell,
+.dayTile {
+  --r: 5px;
+  --s: 13px;
+  --band: 6.5px;
+  position: relative;
+  isolation: isolate;
+  padding: 15px;
+  background: var(--stamp, var(--accent));
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.28));
+  mask:
+    linear-gradient(#000 0 0) center / calc(100% - 2 * var(--r)) calc(100% - 2 * var(--r)) no-repeat,
+    radial-gradient(circle var(--r) at 50% 0, #0000 97%, #000) 0 0 / var(--s) var(--r) round no-repeat,
+    radial-gradient(circle var(--r) at 50% 100%, #0000 97%, #000) 0 100% / var(--s) var(--r) round no-repeat,
+    radial-gradient(circle var(--r) at 0 50%, #0000 97%, #000) 0 0 / var(--r) var(--s) no-repeat round,
+    radial-gradient(circle var(--r) at 100% 50%, #0000 97%, #000) 100% 0 / var(--r) var(--s) no-repeat round;
+}
+
+.dayCell::before {
+  content: '';
+  position: absolute;
+  inset: var(--band);
+  z-index: -1;
+  background: var(--paper);
+}
+
+.dayCell::after,
+.dayTile::after {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  z-index: -1;
+  border: 2px solid var(--stamp, var(--accent));
+}
+
+.dayTile::before {
+  content: '';
+  position: absolute;
+  inset: var(--band);
+  z-index: -1;
+  background: var(--paper);
+}
+
+.dayCell {
+  display: grid;
+  gap: var(--space-1);
+  align-content: start;
+}
+
+.dayNo,
+.dayTileNo {
+  font-size: var(--text-2xs);
+  font-weight: 800;
+  letter-spacing: var(--tracking-caps);
+  color: var(--accent);
+}
+
+/* A Daily not found yet: a bare numbered sheet, ruled like the locked plates, that opens that day. */
+.dayTile {
+  display: grid;
+  place-content: center;
+  gap: var(--space-1);
+  min-height: 9rem;
+  color: var(--ink);
+  text-align: center;
+  text-decoration: none;
+}
+
+.dayTile:hover,
+.dayTile:focus-visible {
+  transform: translateY(-2px);
+}
+
+.dayTileNo {
+  font-size: var(--text-xl);
+  color: var(--ink);
+}
+
+.dayTilePlay {
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
 .plates {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
@@ -567,6 +670,11 @@
 
   .stat {
     border-bottom: var(--hairline) solid var(--paper-hairline);
+  }
+
+  /* Five figures in two columns: the odd one fills its row, stacked like the others. */
+  .stat:nth-last-child(2) {
+    grid-column: 1 / -1;
   }
 
   /* The group headers carry each era's count, and the Era menu filters, so the list steps aside. */
@@ -1008,5 +1116,49 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-2);
     padding: var(--space-2);
+  }
+}
+
+/* Phones: a round button, bottom right, back to the top of the register. */
+.toTop {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .toTop {
+    position: fixed;
+    right: var(--space-4);
+    bottom: calc(var(--space-4) + env(safe-area-inset-bottom, 0px));
+    z-index: 20;
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    border: 2px solid var(--ink);
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--paper);
+    box-shadow: 0 2px 0 var(--ink);
+    opacity: 0;
+    transform: translateY(0.75rem);
+    pointer-events: none;
+    transition: opacity 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+  }
+
+  .toTop[data-shown] {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .toTop:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+
+  .toTop svg {
+    width: 1.35rem;
+    height: 1.35rem;
   }
 }

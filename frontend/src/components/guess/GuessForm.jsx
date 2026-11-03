@@ -178,6 +178,7 @@ export function GuessForm({ building, eras, centuries, phase, fields, attempts, 
   const reduce = useReducedMotion()
   const [nothingToCheck, setNothingToCheck] = useState(false)
   const [nudges, setNudges] = useState(0)
+  const [clears, setClears] = useState({}) // per field, bumped when a wrong guess empties it: remounts the combobox so its typed text goes too
   const revealed = phase === 'revealed'
 
   const wasRevealed = useRef(revealed)
@@ -193,6 +194,7 @@ export function GuessForm({ building, eras, centuries, phase, fields, attempts, 
   useEffect(() => {
     const cleared = names.filter((f) => fields[f] === 'wrong' && prevFields.current[f] !== 'wrong')
     prevFields.current = fields
+    if (cleared.length) setClears((c) => ({ ...c, ...Object.fromEntries(cleared.map((f) => [f, (c[f] ?? 0) + 1])) }))
     if (cleared.length) setValues((v) => ({ ...v, ...Object.fromEntries(cleared.map((f) => [f, ''])) }))
   }, [fields]) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -279,6 +281,7 @@ export function GuessForm({ building, eras, centuries, phase, fields, attempts, 
           <Field {...fieldProps('country')} icon={GlobeIcon}>
             {(props) => (
               <CountryCombobox
+                key={clears.country}
                 {...props}
                 className={styles.input}
                 placeholder={strings.guess.placeholders.country}
@@ -293,6 +296,7 @@ export function GuessForm({ building, eras, centuries, phase, fields, attempts, 
           <Field {...fieldProps('era')} icon={HourglassIcon}>
             {(props) => (
               <EraCombobox
+                key={clears.era}
                 {...props}
                 className={styles.input}
                 eras={eras}

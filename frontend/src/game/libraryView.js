@@ -23,11 +23,12 @@ export function joinRows(rows, unlocks) {
  * Whether a row passes the filters. A locked building shows only its era, so it never matches a name or
  * country search: a search can never be used to find out what is still locked.
  */
-export function passes(row, { era = '', country = '', show = 'all', query = '', feature = '', reading = [] }) {
+export function passes(row, { era = '', country = '', show = 'all', query = '', feature = '', reading = [], dailies = new Set() }) {
   if (era && row.era !== era) return false
   if (show === 'open' && !row.open) return false
   if (show === 'mastered' && !row.mastered) return false
   if (show === 'locked' && row.open) return false
+  if (show === 'daily' && !(row.open && dailies.has(row.id))) return false // a Daily not found yet stays hidden
   if (show === 'reading' && (row.open || !reading.includes(row.id))) return false
   if ((query || country || feature) && !row.open) return false
   if (feature && !row.features.includes(feature)) return false

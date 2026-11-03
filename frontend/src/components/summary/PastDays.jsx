@@ -1,61 +1,29 @@
-import { useId, useState } from 'react'
+import { ArrowRight } from 'lucide-react'
 import { dailyNumber, readLate, readPlayed } from '../../game/daily.js'
 import { readProgress } from '../../game/progress.js'
 import { useStrings } from '../../i18n.js'
-import { CalendarIcon } from '../ui/icons.jsx'
 import styles from './PastDays.module.css'
 
-const SHOWN = 30 // the most recent days offered
-
 /**
- * "Other days" beside the countdown: opens the earlier Dailies, newest first, each with its state.
- * Days played after their day are marked differently and never count for the streak.
+ * "Other days" beside the countdown: opens the Library on its Dailies filter, where only the Dailies
+ * already found are listed. The calendar's page flips on hover.
  */
-export function PastDays({ current }) {
+export function PastDays() {
   const t = useStrings().daily.past
-  const [open, setOpen] = useState(false)
-  const listId = useId()
   const today = dailyNumber()
-  const [ontime] = useState(() => new Set(readProgress().days))
-  const [late] = useState(() => new Set(readLate()))
-  const [saved] = useState(() => new Set(readPlayed()))
-  const days = Array.from({ length: Math.min(SHOWN, today - 1) }, (_, i) => today - 1 - i)
-  if (!days.length) return null
-
-  const stateOf = (n) => (late.has(n) ? 'late' : ontime.has(n) || saved.has(n) ? 'done' : 'open')
+  if (today <= 1) return null
+  const found = new Set([...readProgress().days, ...readLate(), ...readPlayed()].filter((n) => n < today)).size
 
   return (
-    <>
-      <button type="button" className={styles.toggle} aria-expanded={open} aria-controls={listId} onClick={() => setOpen((o) => !o)}>
-        <CalendarIcon aria-hidden="true" />
-        {t.button}
-      </button>
-      {open && (
-        <div id={listId} className={styles.panel}>
-          <p className={styles.note}>{t.note}</p>
-          <ul className={styles.list}>
-            {days.map((n) => {
-              const state = stateOf(n)
-              // An on-time day from before results were kept per day has nothing to open again.
-              const reopen = state !== 'done' || saved.has(n)
-              const label = t.day(n, state)
-              return (
-                <li key={n}>
-                  {reopen ? (
-                    <a className={styles.day} data-state={state} data-current={n === current || undefined} href={`#/daily/${n}`} aria-label={label} title={label}>
-                      #{n}
-                    </a>
-                  ) : (
-                    <span className={styles.day} data-state={state} aria-label={label} title={label}>
-                      #{n}
-                    </span>
-                  )}
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-      )}
-    </>
+    <a className={styles.toggle} href="#/library?show=daily">
+      <svg className={styles.cal} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect width="18" height="18" x="3" y="4" rx="2" />
+        <path d="M16 2v4M8 2v4M3 10h18" />
+        <rect className={styles.leaf} x="6.5" y="12.5" width="11" height="6" rx="1" />
+      </svg>
+      {t.button}
+      {found > 0 && <span className={styles.count}>· {t.found(found)}</span>}
+      <ArrowRight className={styles.arrow} aria-hidden="true" strokeWidth={2} />
+    </a>
   )
 }

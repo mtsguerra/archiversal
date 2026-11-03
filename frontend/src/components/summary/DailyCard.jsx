@@ -91,7 +91,7 @@ export function DailyCard({ daily, play = true }) {
           </span>
           <span className="visually-hidden">{strings.daily.nextIn(left)}</span>
         </div>
-        <PastDays current={number} />
+        <PastDays />
         </div>
         <ShareMenu text={text} />
       </footer>

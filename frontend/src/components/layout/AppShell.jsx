@@ -4,6 +4,7 @@ import { springSoft } from '../../motion.js'
 import { useStrings } from '../../i18n.js'
 import { LanguageSwitch } from './LanguageSwitch.jsx'
 import { Options } from './Options.jsx'
+import { MoveBanner } from './MoveBanner.jsx'
 import { MotionNote } from './MotionNote.jsx'
 import { MotionToggle } from './MotionToggle.jsx'
 import { SoundToggle } from './SoundToggle.jsx'
@@ -102,6 +103,7 @@ export function AppShell({ actions, place, brand = 'always', floating = false, s
     <div className={styles.shell} data-slim={slim || undefined} data-floating={floating || undefined} data-bottom-bar={bottomBar}>
       <PageBackground />
       <MotionNote />
+      <MoveBanner />
       {header}
       {!slim && <header className={styles.rail} data-scrolled={scrolled || undefined}>
         {place && <span className={styles.place}>{place}</span>}

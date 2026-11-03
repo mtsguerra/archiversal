@@ -49,6 +49,7 @@ export default {
 
   places: { normal: 'Adivinhar · Normal', custom: 'Adivinhar · Personalizado', themed: 'Adivinhar · Temático', library: 'Biblioteca' },
 
+  move: { label: 'Novo endereço', text: 'O Archiversal mudou para archiversal.vercel.app.', move: 'Levar meu progresso', open: 'Abrir o novo site', dismiss: 'Dispensar' },
   theme: { toDark: 'Mudar para o tema escuro', toLight: 'Mudar para o tema claro' },
   sound: { turnOn: 'Ligar o som', turnOff: 'Desligar o som' },
   options: { label: 'Opções', done: 'Concluir', sound: 'Som', theme: 'Tema', motion: 'Reduzir movimento' },
@@ -69,8 +70,7 @@ export default {
     title: (n) => `Diário #${n}`,
     past: {
       button: 'Outros dias',
-      note: 'Diários anteriores. Jogar um depois não conta para a sequência.',
-      day: (n, state) => `Diário #${n}, ${state === 'done' ? 'jogado' : state === 'late' ? 'jogado depois' : 'ainda não jogado'}`,
+      found: (n) => `${n} encontrados`,
     },
     play: 'Jogue o edifício de hoje',
     done: (time) => `Concluído · próximo em ${time}`,
@@ -234,7 +234,9 @@ export default {
     country: 'País',
     allCountries: 'Todos os países',
     show: 'Mostrar',
-    shows: { all: 'Todos', open: 'Desbloqueados', mastered: 'Dominados', locked: 'Trancados', reading: 'Lista de leitura' },
+    dailyPlay: 'Jogar',
+    toTop: 'Voltar ao topo',
+    shows: { all: 'Todos', open: 'Desbloqueados', mastered: 'Dominados', locked: 'Trancados', daily: 'Diários', reading: 'Lista de leitura' },
     progress: 'Progresso por era',
     cols: { sheet: 'Folha', building: 'Edifício', architect: 'Arquiteto', country: 'País', year: 'Ano', marks: 'Marcas' },
     revealed: 'Revelado',

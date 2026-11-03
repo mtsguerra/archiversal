@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { resolveCountryCode, suggestCountries } from './countries.js'
 import { judgeEra, evaluateGuess, scoreOf, matchesName } from './matchGuess.js'
@@ -143,4 +144,30 @@ describe('scoreOf', () => {
   it('gives 1 for correct, half for close, 0 otherwise', () => {
     expect(scoreOf({ name: 'correct', architect: 'close', country: 'wrong', era: 'idle' })).toBe(1.5)
   })
+})
+
+describe('vague answers against the whole catalogue', () => {
+  const buildings = JSON.parse(
+    readFileSync(new URL('../../../src/main/resources/data/buildings.json', import.meta.url), 'utf8'),
+  )
+  const accepts = (b, g) => matchesName(g, [b.name, ...b.aliases])
+
+  it('rejects bare building types and shared places', () => {
+    const vague = ['tower', 'library', 'museum', 'cathedral', 'station', 'bridge', 'palace', 'church', 'mosque', 'temple',
+      'castle', 'stadium', 'theatre', 'pyramid', 'opera house', 'paris', 'london', 'sydney', 'oslo', 'seattle', 'parliament', 'old bridge', 'duomo']
+    for (const g of vague) expect(buildings.filter((b) => accepts(b, g)).map((b) => b.id), g).toEqual([])
+  })
+
+  it('never accepts one name or alias word for two different buildings', () => {
+    const clashes = []
+    for (const b of buildings) {
+      const words = new Set([b.name, ...b.aliases].flatMap((n) => normalize(n).split(' ')))
+      for (const w of words) {
+        const hits = buildings.filter((o) => accepts(o, w) && [o.name, ...o.aliases].some((n) => normalize(n).split(' ').includes(w))).map((o) => o.id)
+        if (hits.length > 1) clashes.push(`"${w}": ${hits.join(', ')}`)
+      }
+    }
+    // Rome and Paris are both "Pantheon" and the typo allowance joins Coliseum/Coliseu: inherent, not a vague answer.
+    expect([...new Set(clashes)].filter((c) => !/^"(pantheon|coliseum)"/.test(c))).toEqual([])
+  }, 60000)
 })

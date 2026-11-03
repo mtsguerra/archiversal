@@ -1,16 +1,19 @@
-import { ArrowRight, ChevronDown, Stamp } from 'lucide-react'
+import { ArrowRight, ArrowUp, ChevronDown, Stamp } from 'lucide-react'
+import { AnimatePresence, motion } from 'motion/react'
 import { useEffect, useMemo, useState } from 'react'
 import { fetchBuilding, fetchCatalogue, fetchLibrary } from '../../api/buildings.js'
 import { countryName } from '../../game/countries.js'
-import { dailyId, dailyNumber } from '../../game/daily.js'
+import { dailyId, dailyNumber, readLate, readPlayed } from '../../game/daily.js'
+import { readProgress } from '../../game/progress.js'
 import { FEATURES } from '../../game/features.js'
 import { loreFact } from '../../game/lore.js'
 import { readReading, toggleReading } from '../../game/readingList.js'
 import { playBuilding, readLibrary } from '../../game/library.js'
 import { collectionProgress, eraProgress, groupRows, joinRows, libraryStats, neighbourEras, passes, pickLocked } from '../../game/libraryView.js'
-import { libraryEraFrom } from '../../route.js'
+import { libraryEraFrom, libraryShowFrom } from '../../route.js'
 import { formatYear, useEras } from '../../game/useEras.js'
 import { useLanguage, useStrings } from '../../i18n.js'
+import { useReducedMotion } from '../../motionPref.js'
 import { AppShell } from '../layout/AppShell.jsx'
 import { menuSlots } from '../layout/menuSlots.jsx'
 import { Button } from '../ui/Button.jsx'
@@ -28,7 +31,13 @@ import { EraStamp } from './EraStamp.jsx'
 import { Plate } from './Plate.jsx'
 import styles from './Library.module.css'
 
-const SHOWS = ['all', 'open', 'mastered', 'locked', 'reading']
+/** The flag emoji of an ISO 3166 alpha-2 code. */
+const flagOf = (code) => [...code].map((c) => String.fromCodePoint(127397 + c.charCodeAt(0))).join('')
+
+// A group folds like a drawer: the plates lift into the header one after another, then the panel closes.
+const plateFold = { open: { opacity: 1, y: 0, scale: 1 }, closed: { opacity: 0, y: -28, scale: 0.88 } }
+
+const SHOWS = ['all', 'open', 'mastered', 'locked', 'daily', 'reading']
 
 function Stat({ label, value, total }) {
   return (
@@ -54,7 +63,7 @@ export function Library() {
   const [group, setGroup] = useState('era')
   const [era, setEra] = useState(() => libraryEraFrom(window.location.hash))
   const [country, setCountry] = useState('')
-  const [show, setShow] = useState('all')
+  const [show, setShow] = useState(() => libraryShowFrom(window.location.hash) || 'all')
   const [feature, setFeature] = useState('')
   const [reading, setReading] = useState(readReading) // locked ids to find
   const [themesOf, setThemesOf] = useState({}) // building id -> theme ids (the collections)
@@ -124,8 +133,31 @@ export function Library() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [joined, lang],
   )
-  const filtered = useMemo(() => joined.filter((r) => passes(r, { era, country, show, query, feature, reading })), [joined, era, country, show, query, feature, reading])
-  const groups = useMemo(() => groupRows(filtered, group, eraOrder), [filtered, group, eraOrder])
+  const dailyIds = useMemo(() => {
+    const ids = joined.map((r) => r.id)
+    return ids.length ? Array.from({ length: day }, (_, i) => dailyId(ids, i + 1)) : [] // index n - 1 is Daily № n
+  }, [joined, day])
+  const dailies = useMemo(() => new Set(dailyIds), [dailyIds])
+  // A Daily's stamp ink: one for a day not found, one for a day played on its day, one for a day played another day.
+  const [onTime] = useState(() => new Set([...readProgress().days, ...readPlayed()]))
+  const [late] = useState(() => new Set(readLate()))
+  const stampOf = (n, found) => (!found ? 'var(--ink-soft)' : onTime.has(n) && !late.has(n) ? 'var(--accent)' : 'var(--russet)')
+  const reduce = useReducedMotion()
+  const [scrolled, setScrolled] = useState(false) // phones: a button back to the top once the page is scrolled
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 600)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+  const filtered = useMemo(() => joined.filter((r) => passes(r, { era, country, show, query, feature, reading, dailies })), [joined, era, country, show, query, feature, reading, dailies])
+  const groups = useMemo(() => (show === 'daily' ? [] : groupRows(filtered, group, eraOrder)), [filtered, group, eraOrder, show])
+  // Dailies: newest first; a day not found shows only its number and is played from here. Filters hide the unfound ones.
+  const filtering = Boolean(era || country || query || feature)
+  const dailyDays = useMemo(() => {
+    if (show !== 'daily') return []
+    const shown = new Set(filtered.map((r) => r.id))
+    return dailyIds.map((id, i) => ({ n: i + 1, id })).reverse().filter(({ id }) => shown.has(id) || (!filtering && !joined.find((r) => r.id === id)?.open))
+  }, [show, filtered, dailyIds, joined, filtering])
   const unlockedByCountry = useMemo(() => {
     const out = {}
     for (const r of joined) if (r.open) out[r.countryCode] = (out[r.countryCode] ?? 0) + 1
@@ -362,6 +394,39 @@ export function Library() {
               </section>
             </div>
             <div className={styles.tableWrap}>
+              {show === 'daily' && (
+                <div className={styles.plates}>
+                  {dailyDays.map(({ n, id }) => {
+                    const r = joined.find((x) => x.id === id)
+                    return r?.open ? (
+                      <div key={n} className={styles.dayCell} style={{ '--stamp': stampOf(n, true) }}>
+                        <span className={styles.dayNo}>#{n}</span>
+                        <Plate
+                          row={r}
+                          t={t}
+                          meta={`${countryLabel(r.countryCode)} · ${r.yearCompleted == null ? '–' : formatYear(r.yearCompleted, strings.years)}`}
+                          eraLabel={eraLabel(r.era)}
+                          selected={selected === r.id}
+                          inCompare={pair.includes(r.id)}
+                          inReading={reading.includes(r.id)}
+                          onReading={() => setReading((l) => toggleReading(l, r.id))}
+                          onOpen={(el) => {
+                            const box = el.getBoundingClientRect()
+                            setPanelSide(box.left + box.width / 2 > window.innerWidth / 2 ? 'left' : 'right')
+                            setSelected(r.id)
+                          }}
+                          onCompare={() => toggleCompare(r.id)}
+                        />
+                      </div>
+                    ) : (
+                      <a key={n} className={styles.dayTile} style={{ '--stamp': stampOf(n, false) }} href={n === day ? '#/daily' : `#/daily/${n}`}>
+                        <span className={styles.dayTileNo}>#{n}</span>
+                        <span className={styles.dayTilePlay}>{t.dailyPlay}</span>
+                      </a>
+                    )
+                  })}
+                </div>
+              )}
               {groups.map((g) => {
                 const complete = group === 'era' && progress[g.key]?.complete
                 return (
@@ -369,6 +434,7 @@ export function Library() {
                     <div className={styles.groupHead} onClick={() => toggleGroup(g.key)}>
                       <button type="button" className={styles.groupButton} aria-expanded={!folded.has(g.key)}>
                         <ChevronDown className={styles.groupIcon} aria-hidden="true" strokeWidth={2} />
+                        {group === 'country' && g.key !== '~' && <span className={styles.flag} aria-hidden="true">{flagOf(g.key)}</span>}
                         {title(g)}
                         <span className={styles.groupCount}>{group === 'era' ? t.of(progress[g.key].open, progress[g.key].total) : g.items.length}</span>
                         {complete && (
@@ -391,9 +457,25 @@ export function Library() {
                         </button>
                       )}
                     </div>
-                    {!folded.has(g.key) && (
+                    <AnimatePresence initial={false}>
+                      {!folded.has(g.key) && (
+                        <motion.div
+                          key="plates"
+                          className={styles.drawer}
+                          initial={reduce ? false : { height: 0 }}
+                          animate={{ height: 'auto', transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1], when: 'beforeChildren' } }}
+                          exit={reduce ? { height: 0, transition: { duration: 0 } } : { height: 0, transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1], when: 'afterChildren' } }}
+                        >
                       <div className={styles.plates}>
-                        {g.items.map((r) => (
+                        {g.items.map((r, i) => (
+                          <motion.div
+                            key={r.id}
+                            variants={plateFold}
+                            initial={reduce ? false : 'closed'}
+                            animate="open"
+                            exit="closed"
+                            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1], delay: reduce ? 0 : Math.min(i * 0.025, 0.3) }}
+                          >
                           <Plate
                             key={r.id}
                             row={r}
@@ -411,17 +493,31 @@ export function Library() {
                             }}
                             onCompare={() => toggleCompare(r.id)}
                           />
+                          </motion.div>
                         ))}
                       </div>
-                    )}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </section>
                 )
               })}
-              {rows && groups.length === 0 && <p className={styles.empty}>{t.none}</p>}
+              {rows && show !== 'daily' && groups.length === 0 && <p className={styles.empty}>{t.none}</p>}
             </div>
           </div>
         </div>
       </div>
+
+      <button
+        type="button"
+        className={styles.toTop}
+        data-shown={scrolled || undefined}
+        aria-label={t.toTop}
+        tabIndex={scrolled ? 0 : -1}
+        onClick={() => window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' })}
+      >
+        <ArrowUp aria-hidden="true" strokeWidth={2.25} />
+      </button>
 
       {open && (
         <Detail

@@ -364,6 +364,13 @@
   gap: var(--space-2);
 }
 
+/* Long labels wrap instead of clipping in the narrow columns. */
+.actions > * {
+  white-space: normal;
+  line-height: 1.2;
+  text-align: center;
+}
+
 /* Compare */
 .dialog {
   width: min(52rem, calc(100vw - 2 * var(--space-4)));
@@ -386,6 +393,7 @@
 }
 
 .shareDialog[open] {
+  align-content: start;
   animation: cardIn 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.15) both;
 }
 

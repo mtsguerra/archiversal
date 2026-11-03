@@ -456,7 +456,7 @@
   },
   "biblioteca-nacional-de-portugal": {
     "name": "Biblioteca Nacional de Portugal",
-    "aliases": ["BNP", "Biblioteca Nacional"],
+    "aliases": ["BNP"],
     "architects": [
       {
         "aliases": [],

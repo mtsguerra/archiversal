@@ -32,6 +32,8 @@ describe('libraryView', () => {
     expect(found({ era: 'CLASSICAL' })).toEqual(['a-pantheon', 'd-parthenon'])
     expect(found({ show: 'locked' })).toEqual(['a-pantheon', 'c-unite'])
     expect(found({ show: 'mastered' })).toEqual(['b-villa'])
+    // Dailies: only a Daily already found is listed; a locked one stays hidden
+    expect(found({ show: 'daily', dailies: new Set(['a-pantheon', 'b-villa']) })).toEqual(['b-villa'])
   })
 
   it('matches accents and every word of the query', () => {

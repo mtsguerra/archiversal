@@ -455,7 +455,7 @@
   {
     "id": "theatro-municipal-rio",
     "name": "Theatro Municipal do Rio de Janeiro",
-    "aliases": ["Theatro Municipal", "Teatro Municipal", "Municipal Theatre of Rio de Janeiro"],
+    "aliases": ["Theatro Municipal", "Municipal Theatre of Rio de Janeiro"],
     "architects": [
       {
         "name": "Francisco de Oliveira Passos",
@@ -1606,7 +1606,7 @@
   {
     "id": "sagrada-familia",
     "name": "Sagrada Família",
-    "aliases": ["Basílica de la Sagrada Família", "Temple Expiatori de la Sagrada Família", "Sagrada Familia"],
+    "aliases": ["Basílica de la Sagrada Família", "Temple Expiatori de la Sagrada Família", "Sagrada Familia", "Sagrada"],
     "architects": [
       {
         "name": "Antoni Gaudí",
@@ -2544,7 +2544,7 @@
   {
     "id": "florence-cathedral-dome",
     "name": "Dome of Florence Cathedral",
-    "aliases": ["Florence Cathedral", "Santa Maria del Fiore", "Brunelleschi's Dome", "Il Duomo di Firenze", "Duomo"],
+    "aliases": ["Florence Cathedral", "Santa Maria del Fiore", "Brunelleschi's Dome", "Il Duomo di Firenze"],
     "architects": [
       {
         "name": "Filippo Brunelleschi",
@@ -2811,7 +2811,7 @@
   {
     "id": "sydney-opera-house",
     "name": "Sydney Opera House",
-    "aliases": ["Opera House", "Sydney Opera"],
+    "aliases": ["Sydney Opera"],
     "architects": [
       {
         "name": "Jørn Utzon",
@@ -3140,7 +3140,7 @@
   {
     "id": "estacao-da-luz",
     "name": "Estação da Luz",
-    "aliases": ["Luz Station", "Luz", "Estação da Luz de São Paulo"],
+    "aliases": ["Luz Station", "Estação da Luz de São Paulo"],
     "architects": [
       {
         "name": "Charles Henry Driver",
@@ -6221,7 +6221,7 @@
   {
     "id": "estacao-do-rossio",
     "name": "Estação do Rossio",
-    "aliases": ["Rossio railway station", "Rossio station", "Estação Central", "Rossio"],
+    "aliases": ["Rossio railway station", "Rossio station", "Rossio"],
     "architects": [
       {
         "name": "José Luís Monteiro",
@@ -6843,7 +6843,7 @@
   {
     "id": "biblioteca-nacional-de-portugal",
     "name": "Biblioteca Nacional de Portugal",
-    "aliases": ["National Library of Portugal", "BNP", "Biblioteca Nacional"],
+    "aliases": ["National Library of Portugal", "BNP"],
     "architects": [
       {
         "name": "Porfírio Pardal Monteiro",
@@ -7180,7 +7180,7 @@
   {
     "id": "casa-de-cha-da-boa-nova",
     "name": "Casa de Chá da Boa Nova",
-    "aliases": ["Boa Nova Tea House", "Casa de Chá", "Boa Nova", "Boa Nova Teahouse"],
+    "aliases": ["Boa Nova Tea House", "Boa Nova", "Boa Nova Teahouse"],
     "architects": [
       {
         "name": "Álvaro Siza Vieira",
@@ -9437,7 +9437,7 @@
   {
     "id": "topkapi-palace",
     "name": "Topkapı Palace",
-    "aliases": ["Topkapi Palace", "Topkapı Sarayı", "The Seraglio", "New Palace"],
+    "aliases": ["Topkapi Palace", "Topkapı Sarayı", "The Seraglio"],
     "architects": [
       {
         "name": "Acem Ali",
@@ -10458,7 +10458,7 @@
   {
     "id": "altes-museum",
     "name": "Altes Museum",
-    "aliases": ["Old Museum", "Königliches Museum", "Altes Museum Berlin"],
+    "aliases": ["Königliches Museum", "Altes Museum Berlin"],
     "architects": [
       {
         "name": "Karl Friedrich Schinkel",
@@ -10676,7 +10676,7 @@
   {
     "id": "palace-of-westminster",
     "name": "Palace of Westminster",
-    "aliases": ["Houses of Parliament", "Westminster Palace", "Parliament"],
+    "aliases": ["Houses of Parliament", "Westminster Palace"],
     "architects": [
       {
         "name": "Charles Barry",
@@ -15089,7 +15089,6 @@
     "aliases": [
       "Tower of London",
       "White Tower",
-      "The Tower",
       "HM Tower of London",
       "Her Majesty’s Royal Palace and Fortress of the Tower of London"
     ],
@@ -19325,7 +19324,7 @@
   {
     "id": "modern-art-museum-of-fort-worth",
     "name": "Modern Art Museum of Fort Worth",
-    "aliases": ["The Modern", "The Modern Fort Worth", "Modern Art Museum Fort Worth", "Fort Worth Modern"],
+    "aliases": ["The Modern Fort Worth", "Modern Art Museum Fort Worth", "Fort Worth Modern"],
     "architects": [
       {
         "name": "Tadao Ando",
@@ -25085,7 +25084,6 @@
     "name": "Royal Palace of Madrid",
     "aliases": [
       "Palacio Real de Madrid",
-      "Palacio Real",
       "Madrid Royal Palace"
     ],
     "architects": [
@@ -25794,7 +25792,7 @@
     "id": "ponte-vecchio",
     "name": "Ponte Vecchio",
     "aliases": [
-      "Old Bridge"
+      
     ],
     "architects": [
       {
@@ -36942,8 +36940,6 @@
       "Copán Hieroglyphic Stairway",
       "Copan Hieroglyphic Stairway",
       "Escalinata de los Jeroglíficos",
-      "Copán",
-      "Copan",
       "Copán Ruinas",
       "Structure 10L-26"
     ],
@@ -38247,7 +38243,6 @@
     "id": "stari-most",
     "name": "Stari Most",
     "aliases": [
-      "Old Bridge",
       "Mostar Bridge",
       "Old Bridge of Mostar",
       "Mostar Old Bridge"
@@ -39743,7 +39738,6 @@
     "name": "Biblioteca Nacional do Brasil",
     "aliases": [
       "National Library of Brazil",
-      "Biblioteca Nacional",
       "Biblioteca Nacional do Rio de Janeiro",
       "Fundação Biblioteca Nacional"
     ],

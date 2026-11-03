@@ -14,6 +14,9 @@ const LIBRARY_ERA = /^#\/library\?era=([A-Z_]+)$/
 /** The era id in `#/library?era=<ERA>` (the Archive's links), or '' for any other hash. */
 export const libraryEraFrom = (hash) => LIBRARY_ERA.exec(hash)?.[1] ?? ''
 
+/** 'daily' for `#/library?show=daily` (the Daily card's "Other days"), else ''. */
+export const libraryShowFrom = (hash) => (hash === '#/library?show=daily' ? 'daily' : '')
+
 const PAST_DAILY = /^#\/daily\/(\d+)$/
 
 /** The number in `#/daily/<n>` when it names a day before today, else null. */
@@ -23,7 +26,7 @@ export const pastDailyFrom = (hash, today = dailyNumber()) => {
 }
 
 /** The hash picks the screen; anything unknown is the homepage. */
-export const routeFrom = (hash) => ROUTES[hash] ?? (libraryEraFrom(hash) ? 'library' : null) ?? (libraryIdFrom(hash) ? 'libraryBuilding' : pastDailyFrom(hash) ? 'dailyPast' : 'home')
+export const routeFrom = (hash) => ROUTES[hash] ?? (libraryEraFrom(hash) || libraryShowFrom(hash) ? 'library' : null) ?? (libraryIdFrom(hash) ? 'libraryBuilding' : pastDailyFrom(hash) ? 'dailyPast' : 'home')
 
 const subscribe = (notify) => {
   const onChange = () => withTransition(notify)
