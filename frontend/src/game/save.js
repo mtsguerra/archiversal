@@ -29,9 +29,11 @@ const unb64 = (code) => new TextDecoder().decode(Uint8Array.from(atob(code.repla
 
 export const hasSave = () => Object.values(KEYS).some((k) => localStorage.getItem(k) !== null)
 
+/** This device's progress as one object (the account sync sends it; the hand-off code is this, encoded). */
+export const localSave = () => ({ v: 1, progress: read(KEYS.progress), library: read(KEYS.library), reading: read(KEYS.reading), days: read(KEYS.days) })
+
 /** The code for this device's progress. */
-export const exportSave = () =>
-  b64(JSON.stringify({ v: 1, progress: read(KEYS.progress), library: read(KEYS.library), reading: read(KEYS.reading), days: read(KEYS.days) }))
+export const exportSave = () => b64(JSON.stringify(localSave()))
 
 /** Merges a code into this device; returns how many buildings it brought in, or null when the code is unusable. */
 export function importSave(code) {
@@ -42,7 +44,11 @@ export function importSave(code) {
   } catch {
     return null
   }
-  if (data?.v !== 1) return null
+  return data?.v === 1 ? mergeSave(data) : null
+}
+
+/** Merges a save object (a decoded code, or the account's copy) into this device; same return as importSave. */
+export function mergeSave(data) {
   const mine = sanitizeLibrary(read(KEYS.library))
   const theirs = sanitizeLibrary(data.library)
   const library = { ...theirs, ...mine }

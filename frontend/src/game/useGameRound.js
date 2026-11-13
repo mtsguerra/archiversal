@@ -13,6 +13,7 @@ import { advanceThemedSession, erasIn, fieldsFor, readThemedSession, themePool }
 import { GUESS_FIELDS, evaluateGuess } from './matchGuess.js'
 import { turn } from './sound.js'
 import { readSeen, recordSeen } from './seenBuildings.js'
+import { queueSync } from '../social/account.js'
 
 /**
  * @param {'normal' | 'daily' | 'custom' | 'themed'} mode  daily plays today's fixed building once, then shows its saved result;
@@ -136,6 +137,7 @@ export function useGameRound(mode = 'normal', day) {
     if (phase === 'revealed' && buildingRef.current?.id === currentId && currentId) {
       const before = readLibrary()
       const after = recordLibrary(currentId, { mode, mastered: fields.name === 'correct', attempts })
+      queueSync() // signed in: the account gets it too (a moment later, once the Daily result is saved)
       // Unlocking the last building of an era says so.
       fetchCatalogue()
         .then((catalogue) => {
