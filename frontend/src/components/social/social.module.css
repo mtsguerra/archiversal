@@ -1,0 +1,316 @@
+/* Account, profile and friends screens: one centred column of drafting sheets. */
+.page {
+  display: grid;
+  gap: var(--space-5);
+  align-content: start;
+  width: min(100%, 44rem);
+  margin-inline: auto;
+  padding-block: var(--space-5);
+}
+
+/* A sheet with plotted corner marks, like the Custom setup. */
+.sheet {
+  position: relative;
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 2px solid var(--paper-rule);
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0.25rem 0.25rem 0 color-mix(in oklab, var(--accent) 18%, transparent);
+}
+
+.sheet::before,
+.sheet::after {
+  content: '';
+  position: absolute;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 2px solid var(--accent);
+  pointer-events: none;
+}
+
+.sheet::before {
+  top: -0.5rem;
+  left: -0.5rem;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.sheet::after {
+  right: -0.5rem;
+  bottom: -0.5rem;
+  border-left: 0;
+  border-top: 0;
+}
+
+.sheet[data-quiet] {
+  border-width: var(--hairline);
+  box-shadow: none;
+}
+
+.sheet[data-quiet]::before,
+.sheet[data-quiet]::after {
+  display: none;
+}
+
+.heading {
+  font-size: var(--text-xl);
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+  font-weight: 750;
+  font-stretch: var(--stretch-wide);
+  overflow-wrap: anywhere;
+}
+
+.subheading {
+  font-size: var(--text-md);
+  font-weight: 700;
+  font-stretch: var(--stretch-semi);
+}
+
+.points {
+  display: grid;
+  gap: var(--space-2);
+  padding-left: var(--space-5);
+  color: var(--ink-soft);
+}
+
+.actions,
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.row > * {
+  flex: 1 1 12rem;
+  min-width: 0;
+}
+
+.link {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+
+.link:hover {
+  color: var(--accent);
+}
+
+.field {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  font-stretch: var(--stretch-wide);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.hint {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+.input {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: var(--space-2) var(--space-3);
+  border: var(--hairline) solid var(--paper-rule);
+  border-radius: var(--radius-sm);
+  background: var(--paper-shade);
+  color: var(--ink);
+  font: inherit;
+  /* 16px keeps Safari on phones from zooming into the field. */
+  font-size: max(1rem, 16px);
+}
+
+textarea.input {
+  resize: vertical;
+}
+
+.input[aria-invalid] {
+  border-color: var(--accent);
+}
+
+.error {
+  padding: var(--space-2) var(--space-3);
+  border-left: 3px solid var(--accent);
+  background: color-mix(in oklab, var(--accent) 10%, var(--paper));
+  font-weight: 600;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Avatars: a line drawing in a ring. */
+.avatar {
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.avatar circle {
+  fill: var(--paper-shade);
+  stroke: var(--paper-rule);
+  stroke-width: 1;
+}
+
+.avatars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.avatarChoice {
+  position: relative;
+  display: grid;
+  border-radius: 50%;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.avatarChoice input,
+.choice input {
+  position: absolute;
+  opacity: 0;
+}
+
+.avatarChoice:has(input:checked) {
+  color: var(--accent);
+}
+
+.avatarChoice:has(input:checked) circle {
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+.avatarChoice:has(input:focus-visible),
+.choice:has(input:focus-visible) {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* A radio drawn as a ruled row: the chosen one gets the accent edge. */
+.choice {
+  position: relative;
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  border: var(--hairline) solid var(--paper-hairline);
+  border-left: 3px solid var(--paper-hairline);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.choice:has(input:checked) {
+  border-color: var(--accent);
+  background: color-mix(in oklab, var(--accent) 7%, var(--paper));
+}
+
+/* The public page */
+.identity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.bio {
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+/* Stats as the cells of a title block. */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  border: var(--hairline) solid var(--paper-rule);
+}
+
+.stats > div {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  box-shadow: 0 0 0 0.5px var(--paper-rule);
+}
+
+.stats dt {
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  font-stretch: var(--stretch-wide);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.stats dd {
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+}
+
+/* The header's way in: round on the rail, text in the phone's Options sheet. */
+.accountRound {
+  composes: hit from '../../styles/hit.module.css';
+  display: grid;
+  width: var(--toggle-size, 2.25rem);
+  height: var(--toggle-size, 2.25rem);
+  border-radius: 50%;
+  color: var(--rail-ink);
+  transition: scale 120ms var(--ease-out);
+}
+
+.accountRound circle {
+  fill: transparent;
+  stroke: color-mix(in oklab, var(--rail-ink) 28%, transparent);
+}
+
+.accountRound:hover circle {
+  fill: rgb(255 230 167 / 0.12);
+}
+
+.accountRound:active {
+  scale: 0.94;
+}
+
+.accountRound:focus-visible {
+  outline-color: var(--rail-ink);
+}
+
+.accountText {
+  composes: link;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding-block: var(--space-4);
+  }
+
+  .sheet {
+    padding: var(--space-4);
+  }
+}

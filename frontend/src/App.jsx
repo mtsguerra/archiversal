@@ -8,6 +8,9 @@ import { ThemedSetup } from './components/themed/ThemedSetup.jsx'
 import { Home } from './components/home/Home.jsx'
 import { Library } from './components/library/Library.jsx'
 import { LibraryBuilding } from './components/library/LibraryBuilding.jsx'
+import { ProfilePage } from './components/social/ProfilePage.jsx'
+import { UserPage } from './components/social/UserPage.jsx'
+import { useAccount } from './social/account.js'
 import { ToastHost } from './components/ui/ToastHost.jsx'
 
 // A custom game needs the session the setup screen starts; without one, go back to the setup.
@@ -30,6 +33,8 @@ function ThemedPlay() {
 
 function Screen({ route }) {
   if (route === 'home') return <Home />
+  if (route === 'profile') return <ProfilePage />
+  if (route === 'user') return <UserPage key={window.location.hash} />
   if (route === 'library') return <Library />
   if (route === 'libraryBuilding') return <LibraryBuilding key={libraryIdFrom(window.location.hash)} />
   if (route === 'custom') return <CustomSetup />
@@ -41,10 +46,15 @@ function Screen({ route }) {
   return <Game key={route} mode={route === 'daily' ? 'daily' : 'normal'} />
 }
 
+// Screens that read saved progress when they open; they are opened again when the account brings progress in.
+const READS_PROGRESS = ['home', 'library', 'profile', 'user']
+
 export default function App() {
+  const route = useRoute()
+  const { synced } = useAccount()
   return (
     <>
-      <Screen route={useRoute()} />
+      <Screen key={READS_PROGRESS.includes(route) ? synced : 0} route={route} />
       <ToastHost />
     </>
   )

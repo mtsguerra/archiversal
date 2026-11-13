@@ -5,11 +5,14 @@ import { MotionToggle } from './MotionToggle.jsx'
 import { SoundToggle } from './SoundToggle.jsx'
 import { ThemeToggle } from './ThemeToggle.jsx'
 import { Button } from '../ui/Button.jsx'
+import { AccountLink } from '../social/AccountLink.jsx'
+import { useAccount } from '../../social/account.js'
 import styles from './Options.module.css'
 
 /** Phones: one round button opens a bottom sheet holding sound, language, theme and motion (wider screens show them in the header). */
 export function Options() {
-  const { options, language } = useStrings()
+  const { options, language, account } = useStrings()
+  const accounts = useAccount().status !== 'off'
   const sheet = useRef(null)
   const button = useRef(null)
   const [moved, setMoved] = useState(false) // the knobs slide once per tap
@@ -18,6 +21,7 @@ export function Options() {
     [language.label, <LanguageSwitch key="l" />],
     [options.theme, <ThemeToggle key="t" />],
     [options.motion, <MotionToggle key="m" />],
+    ...(accounts ? [[account.nav, <AccountLink key="a" text />]] : []),
   ]
   return (
     <>
