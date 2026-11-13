@@ -20,9 +20,13 @@ describe('deploy headers', () => {
     expect(policy['default-src']).toEqual(["'self'"])
   })
 
-  it('loads images only from the site and Wikimedia, and talks only to itself', () => {
+  it('loads images only from the site and Wikimedia, and talks only to itself and the accounts service', () => {
+    // Avatars are drawings in the page, so accounts add no image source (no Google or Supabase pictures).
     expect(policy['img-src']).toEqual(["'self'", 'data:', 'https://upload.wikimedia.org'])
-    expect(policy['connect-src']).toEqual(["'self'"])
+    expect(policy['connect-src']).toEqual(["'self'", 'https://*.supabase.co'])
+    // Signing in is a full-page visit to Google and back: no frame, no form post and no foreign script is needed.
+    expect(policy['frame-src']).toBeUndefined()
+    expect(policy['form-action']).toEqual(["'self'"])
   })
 
   it('blocks plugins, framing and base-tag tricks, and allows only its own manifest', () => {
@@ -73,6 +77,41 @@ describe('repository hygiene', () => {
   it('keeps secrets and local data out of git', () => {
     const rules = read('.gitignore').split('\n').map((line) => line.trim())
     for (const rule of ['.env', '.env.*', '*.pem', '*.key', '*.db', '*.log']) expect(rules).toContain(rule)
+  })
+
+  it('ships no Supabase secret: only the public key is read, and only from the environment', () => {
+    let files
+    try {
+      files = execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard'], { cwd: root, encoding: 'utf8' }).split('\n').filter(Boolean)
+    } catch {
+      return // not a git checkout
+    }
+    const text = files.filter((f) => /\.(js|jsx|mjs|json|md|sql|html|example|properties|toml|ya?ml)$/.test(f) && !f.includes('package-lock'))
+    const leaks = text.filter((f) => {
+      let body
+      try {
+        body = read(f)
+      } catch {
+        return false // listed but deleted in the working tree
+      }
+      // A JWT (the old anon and service-role keys are JWTs) or a new-style secret key, written out anywhere.
+      return /eyJ[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{10,}|sb_secret_[A-Za-z0-9_]{8,}|SERVICE_ROLE_KEY\s*=\s*\S/.test(body)
+    })
+    expect(leaks).toEqual([])
+    expect(read('frontend/.env.example')).toMatch(/^VITE_SUPABASE_URL=$/m)
+    expect(read('frontend/.env.example')).toMatch(/^VITE_SUPABASE_ANON_KEY=$/m)
+  })
+
+  it('never renders text as markup', () => {
+    const sources = execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', 'frontend/src'], { cwd: root, encoding: 'utf8' }).split('\n').filter((f) => /\.jsx?$/.test(f) && !f.endsWith('.test.js'))
+    const risky = sources.filter((f) => {
+      try {
+        return /dangerouslySetInnerHTML|\.innerHTML\s*=|\beval\(|document\.write/.test(read(f))
+      } catch {
+        return false
+      }
+    })
+    expect(risky).toEqual([])
   })
 
   it('has no secret-looking file under version control', () => {
