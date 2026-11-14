@@ -16,3 +16,7 @@ Moved out of `CLAUDE.md` to keep it short. The short versions there are the summ
 - Daily lore: `game/lore.js` picks a fun fact by day number for the building of Daily № n (veiled until unlocked); fact fetched from the building summary.
 - Share my shelf: `game/shelf.js` text (totals and stamps, never names); Web Share, else clipboard.
 - Compare shows both years on one axis (`Timeline` in `Detail.jsx`).
+
+## Accounts
+
+`#/profile`, `#/u/<username>`, `#/friends` and `#/invite/<code>` are described in `docs/accounts.md`. A username or invite code in the hash is matched against a strict pattern in `social/username.js`; anything else is the homepage. `useHash` (in `route.js`) makes the app draw again when only the name in the hash changes.

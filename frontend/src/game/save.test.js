@@ -1,10 +1,11 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { codeFromHash, exportSave, importSave } from './save.js'
+import { claimSave, codeFromHash, exportSave, importSave } from './save.js'
 
 const store = new Map()
 globalThis.localStorage = {
   getItem: (k) => (store.has(k) ? store.get(k) : null),
   setItem: (k, v) => store.set(k, String(v)),
+  removeItem: (k) => store.delete(k),
   clear: () => store.clear(),
 }
 
@@ -36,5 +37,18 @@ describe('save code', () => {
   it('reads the code from the hash', () => {
     expect(codeFromHash('#/import=abc')).toBe('abc')
     expect(codeFromHash('#/play')).toBeNull()
+  })
+})
+
+describe('claimSave', () => {
+  beforeEach(() => localStorage.clear())
+
+  it('keeps guest progress for the first account and clears it for a different one', () => {
+    localStorage.setItem('archiversal:library', JSON.stringify({ a: entry }))
+    expect(claimSave('u1')).toBe(false)
+    expect(localStorage.getItem('archiversal:library')).not.toBeNull()
+    expect(claimSave('u1')).toBe(false)
+    expect(claimSave('u2')).toBe(true)
+    expect(localStorage.getItem('archiversal:library')).toBeNull()
   })
 })

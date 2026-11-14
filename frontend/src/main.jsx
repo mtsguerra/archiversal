@@ -9,6 +9,7 @@ import App from './App.jsx'
 import { MotionProvider } from './MotionProvider.jsx'
 import { initUiSounds } from './game/sound.js'
 import { codeFromHash, importSave } from './game/save.js'
+import { initAccount } from './social/account.js'
 
 initUiSounds()
 
@@ -18,6 +19,8 @@ if (handOff !== null) {
   importSave(handOff)
   history.replaceState(null, '', window.location.pathname)
 }
+
+initAccount()
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

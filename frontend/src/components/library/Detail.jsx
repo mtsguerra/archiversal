@@ -147,17 +147,35 @@ export function Detail({ side = 'right', row, eraLabel, countryLabel, neighbours
   )
 }
 
-/** Two unlocked buildings side by side at one scale, and how they relate. A native dialog: focus stays inside, Escape closes. */
-export function Compare({ a, b, eraLabel, countryLabel, onClose }) {
-  const strings = useStrings()
-  const { lang } = useLanguage()
-  const t = strings.library
+/**
+ * The Compare dialog's frame, shared by the two comparisons (two buildings here, two profiles in
+ * social/Social.jsx). A native dialog: focus stays inside, Escape closes.
+ */
+export function CompareDialog({ label, eyebrow, onClose, children }) {
+  const { library: t } = useStrings()
   const dialog = useRef(null)
   useEffect(() => {
     const el = dialog.current
     if (!el.open) el.showModal()
     return () => el.open && el.close()
   }, [])
+  return (
+    // A close event from a dialog that is open again (React's development double-mount) is not a close.
+    <dialog ref={dialog} className={styles.dialog} aria-label={label} onClose={() => !dialog.current?.open && onClose()}>
+      <button type="button" className={styles.close} onClick={onClose} aria-label={t.close}>
+        ×
+      </button>
+      <span className={styles.eyebrow}>{eyebrow}</span>
+      {children}
+    </dialog>
+  )
+}
+
+/** Two unlocked buildings side by side at one scale, and how they relate. */
+export function Compare({ a, b, eraLabel, countryLabel, onClose }) {
+  const strings = useStrings()
+  const { lang } = useLanguage()
+  const t = strings.library
   const facts = compareFacts(a, b)
   const yes = (v) => (v ? t.compare.yes : t.compare.no)
   const side = (r) => (
@@ -176,13 +194,7 @@ export function Compare({ a, b, eraLabel, countryLabel, onClose }) {
     </div>
   )
   return (
-    <dialog ref={dialog} className={styles.dialog} aria-label={t.compare.pick} onClose={onClose}>
-      <button type="button" className={styles.close} onClick={onClose} aria-label={t.close}>
-        ×
-      </button>
-      <span className={styles.eyebrow}>
-        {t.compare.title} · {t.compare.same}
-      </span>
+    <CompareDialog label={t.compare.pick} eyebrow={`${t.compare.title} · ${t.compare.same}`} onClose={onClose}>
       <div className={styles.cols}>
         {side(a)}
         <div className={styles.mid}>
@@ -210,7 +222,7 @@ export function Compare({ a, b, eraLabel, countryLabel, onClose }) {
       </div>
       <Timeline a={a} b={b} label={t.timeline.label} years={strings.years} />
       <p className={styles.text}>{t.compare.note}</p>
-    </dialog>
+    </CompareDialog>
   )
 }
 
