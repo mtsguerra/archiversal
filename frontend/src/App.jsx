@@ -10,6 +10,10 @@ import { Library } from './components/library/Library.jsx'
 import { LibraryBuilding } from './components/library/LibraryBuilding.jsx'
 import { ProfilePage } from './components/social/ProfilePage.jsx'
 import { UserPage } from './components/social/UserPage.jsx'
+import { FriendsPage, InvitePage } from './components/social/Friends.jsx'
+import { badgeName } from './social/badges.js'
+import { showToast } from './components/ui/toast.js'
+import { useStrings } from './i18n.js'
 import { useAccount } from './social/account.js'
 import { ToastHost } from './components/ui/ToastHost.jsx'
 
@@ -35,6 +39,8 @@ function Screen({ route }) {
   if (route === 'home') return <Home />
   if (route === 'profile') return <ProfilePage />
   if (route === 'user') return <UserPage key={window.location.hash} />
+  if (route === 'friends') return <FriendsPage />
+  if (route === 'invite') return <InvitePage />
   if (route === 'library') return <Library />
   if (route === 'libraryBuilding') return <LibraryBuilding key={libraryIdFrom(window.location.hash)} />
   if (route === 'custom') return <CustomSetup />
@@ -49,9 +55,22 @@ function Screen({ route }) {
 // Screens that read saved progress when they open; they are opened again when the account brings progress in.
 const READS_PROGRESS = ['home', 'library', 'profile', 'user']
 
+// A sync that earned badges says so, with a way to go and see them.
+function useBadgeToast(newBadges) {
+  const strings = useStrings()
+  useEffect(() => {
+    if (!newBadges.length) return
+    const t = strings.badges
+    showToast({ text: newBadges.length === 1 ? t.toast(badgeName(strings, newBadges[0])) : t.toastMany(newBadges.length), actionLabel: t.view, onAction: () => (window.location.hash = '#/profile') })
+    // Only a new set of badges speaks; switching language does not repeat it.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [newBadges])
+}
+
 export default function App() {
   const route = useRoute()
-  const { synced } = useAccount()
+  const { synced, newBadges } = useAccount()
+  useBadgeToast(newBadges)
   return (
     <>
       <Screen key={READS_PROGRESS.includes(route) ? synced : 0} route={route} />

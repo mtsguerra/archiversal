@@ -9,17 +9,32 @@ import { menuSlots } from '../layout/menuSlots.jsx'
 import { Button } from '../ui/Button.jsx'
 import { showToast } from '../ui/toast.js'
 import { AVATARS } from '../../social/avatars.js'
+import { Badges } from './Badges.jsx'
 import { Avatar } from './Avatar.jsx'
 import styles from './social.module.css'
 
 const PRIVACY = ['private', 'friends', 'public']
 
-/** The frame every account screen shares: the slim header and one centred column. */
+/** The frame every account screen shares: the slim header, tabs once there is a profile, and one centred column. */
 export function SocialShell({ children }) {
   const strings = useStrings()
+  const { profile } = useAccount()
+  const here = window.location.hash
+  const tabs = profile ? [['#/profile', strings.friends.tabs.profile], ['#/friends', strings.friends.tabs.friends], [`#/u/${profile.username}`, strings.friends.tabs.page]] : []
   return (
     <AppShell place={strings.account.place} slim {...menuSlots(strings.menu)}>
-      <div className={styles.page}>{children}</div>
+      <div className={styles.page}>
+        {tabs.length > 0 && (
+          <nav className={styles.tabs} aria-label={strings.account.nav}>
+            {tabs.map(([href, label]) => (
+              <a key={href} href={href} aria-current={here === href ? 'page' : undefined}>
+                {label}
+              </a>
+            ))}
+          </nav>
+        )}
+        {children}
+      </div>
     </AppShell>
   )
 }
@@ -254,8 +269,8 @@ function Danger() {
   )
 }
 
-/** `#/profile`: sign in, choose a username, or edit the profile. `extras` are the sections later batches add (badges). */
-export function ProfilePage({ extras = null }) {
+/** `#/profile`: sign in, choose a username, or edit the profile and pin badges. */
+export function ProfilePage() {
   const { account: t } = useStrings()
   const { status, profile } = useAccount()
   return (
@@ -266,7 +281,7 @@ export function ProfilePage({ extras = null }) {
       {status === 'in' && (
         <>
           <ProfileForm key={profile?.username ?? ''} profile={profile} />
-          {profile && extras}
+          {profile && <Badges username={profile.username} editable />}
           <Danger />
         </>
       )}

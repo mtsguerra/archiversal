@@ -6,6 +6,8 @@ import { useAccount } from '../../social/account.js'
 import { accountsEnabled, rpc } from '../../social/client.js'
 import { usernameFrom } from '../../social/username.js'
 import { Avatar } from './Avatar.jsx'
+import { Badges } from './Badges.jsx'
+import { FriendActions } from './Friends.jsx'
 import { Notice, SocialShell } from './ProfilePage.jsx'
 import styles from './social.module.css'
 
@@ -48,8 +50,8 @@ function Favorite({ kind, value }) {
   )
 }
 
-/** `#/u/<username>`: what that player lets the viewer see. `extras(profile)` are the sections later batches add. */
-export function UserPage({ extras }) {
+/** `#/u/<username>`: what that player lets the viewer see. */
+export function UserPage() {
   const { account: t } = useStrings()
   const username = usernameFrom(window.location.hash)
   const { status, profile: me, synced } = useAccount()
@@ -118,7 +120,8 @@ export function UserPage({ extras }) {
           </p>
         )}
       </section>
-      {extras?.(profile)}
+      {!profile.mine && <FriendActions username={profile.username} />}
+      <Badges username={profile.username} />
     </SocialShell>
   )
 }

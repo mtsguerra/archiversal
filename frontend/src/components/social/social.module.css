@@ -314,3 +314,176 @@ textarea.input {
     padding: var(--space-4);
   }
 }
+
+/* The tabs above the account screens. */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  border-bottom: var(--hairline) solid var(--paper-rule);
+}
+
+.tabs a {
+  padding: var(--space-2) 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  color: var(--ink-soft);
+  font-weight: 700;
+  font-stretch: var(--stretch-semi);
+  text-decoration: none;
+}
+
+.tabs a:hover {
+  color: var(--ink);
+}
+
+.tabs a[aria-current] {
+  border-color: var(--accent);
+  color: var(--ink);
+}
+
+/* Badges */
+.badges,
+.showcase,
+.people {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.badges {
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  margin-top: var(--space-2);
+}
+
+.badge {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2);
+  border: var(--hairline) dashed var(--paper-hairline);
+  border-radius: var(--radius-sm);
+}
+
+.badge[data-earned] {
+  border-style: solid;
+  border-color: var(--paper-rule);
+}
+
+.badgeArt {
+  width: 4rem;
+}
+
+.badgeText {
+  display: grid;
+  gap: var(--space-1);
+  justify-items: start;
+  min-width: 0;
+}
+
+.badgeMark {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: var(--paper-hairline);
+  opacity: 0.7;
+}
+
+.badgeMark[data-earned] {
+  color: var(--accent);
+  opacity: 1;
+}
+
+.badgeMark[data-earned][data-kind='explorer'] {
+  color: var(--link);
+}
+
+.badgeMark circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+}
+
+.badgeMark text {
+  fill: currentColor;
+  font-size: 40px;
+  font-weight: 800;
+  font-stretch: var(--stretch-wide);
+  font-variant-numeric: tabular-nums;
+}
+
+.showcase {
+  grid-template-columns: repeat(3, minmax(0, 7rem));
+  margin-top: var(--space-2);
+}
+
+.showcase li {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-align: center;
+}
+
+.showcase .badgeArt {
+  width: 100%;
+}
+
+.pin {
+  composes: hit from '../../styles/hit.module.css';
+  padding: 0.125rem var(--space-2);
+  border: var(--hairline) solid var(--paper-rule);
+  border-radius: 999px;
+  background: none;
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.pin[aria-pressed='true'] {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* People */
+.person {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  padding-block: var(--space-2);
+  border-bottom: var(--hairline) solid var(--paper-hairline);
+}
+
+.personName {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+a.personName:hover {
+  color: var(--accent);
+}
+
+.personActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-left: auto;
+}
+
+.fit {
+  flex: 0 0 auto !important;
+}
