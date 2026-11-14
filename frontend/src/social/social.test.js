@@ -2,7 +2,9 @@ import { beforeEach, describe, expect, it } from 'vitest'
 import { mergeSave } from '../game/save.js'
 import { isProjectUrl, isPublicKey } from './client.js'
 import { outgoing } from './sync.js'
-import { usernameFrom, usernameProblem } from './username.js'
+import { inviteCodeFromHash, inviteFrom, usernameFrom, usernameProblem } from './username.js'
+import { badgeHint, badgeName, eraOfBadge, togglePin } from './badges.js'
+import { bundles } from '../strings/index.js'
 
 const jwt = (role) => `x.${btoa(JSON.stringify({ role }))}.y`
 
@@ -82,5 +84,38 @@ describe('merging the account into the browser', () => {
     expect(Object.keys(sent.library)).toEqual(['fine'])
     expect(sent.days).toEqual({})
     expect(sent.progress.days).toEqual([1])
+  })
+})
+
+describe('invite codes', () => {
+  const code = '0123456789abcdef0123'
+  it('are read from a link, a hash or alone, and from nothing else', () => {
+    expect(inviteFrom(code)).toBe(code)
+    expect(inviteFrom(` https://archiversal.vercel.app/#/invite/${code} `)).toBe(code)
+    expect(inviteFrom('not a code')).toBeNull()
+    expect(inviteCodeFromHash(`#/invite/${code}`)).toBe(code)
+    expect(inviteCodeFromHash(`#/invite/${code}x`)).toBeNull()
+    expect(inviteCodeFromHash('#/invite/<script>')).toBeNull()
+  })
+})
+
+describe('badges', () => {
+  it('names era badges from the era and the rest from the catalogue copy', () => {
+    expect(eraOfBadge('era-art-nouveau')).toBe('ART_NOUVEAU')
+    expect(eraOfBadge('first-sheet')).toBeNull()
+    for (const lang of ['en', 'pt-BR']) {
+      expect(badgeName(bundles[lang], 'era-baroque')).toContain(bundles[lang].eras.BAROQUE)
+      expect(badgeHint(bundles[lang], 'era-baroque')).toContain(bundles[lang].eras.BAROQUE)
+      expect(badgeName(bundles[lang], 'first-sheet')).toBe(bundles[lang].badges.names['first-sheet'])
+    }
+    expect(badgeName(bundles.en, 'unknown-badge')).toBe('unknown-badge')
+  })
+
+  it('pins at most three, only earned ones, and unpins', () => {
+    const earned = ['a', 'b', 'c', 'd']
+    expect(togglePin([], 'a', earned)).toEqual(['a'])
+    expect(togglePin(['a'], 'a', earned)).toEqual([])
+    expect(togglePin(['a', 'b', 'c'], 'd', earned)).toEqual(['a', 'b', 'c'])
+    expect(togglePin([], 'x', earned)).toEqual([])
   })
 })

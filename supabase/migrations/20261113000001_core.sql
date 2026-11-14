@@ -52,6 +52,34 @@ language sql immutable set search_path = pg_catalog as $$
 $$;
 
 -- ---------------------------------------------------------------------------------------------
+-- Rate limits: a counter per user, action and day.
+-- ---------------------------------------------------------------------------------------------
+create table public.rate_limits (
+  user_id uuid not null references auth.users (id) on delete cascade,
+  action text not null,
+  day date not null default current_date,
+  count int not null default 1,
+  primary key (user_id, action, day)
+);
+alter table public.rate_limits enable row level security;
+revoke all on public.rate_limits from anon, authenticated;
+
+/** Counts one use of `what` today and refuses (HTTP 429 through PostgREST) past `most`. */
+create function public.hit_limit(what text, most int) returns void
+language plpgsql security definer set search_path = public, pg_temp as $$
+declare
+  n int;
+begin
+  delete from rate_limits where user_id = auth.uid() and day < current_date - 7;
+  insert into rate_limits as r (user_id, action) values (auth.uid(), what)
+  on conflict (user_id, action, day) do update set count = r.count + 1
+  returning r.count into n;
+  if n > most then
+    raise exception 'too many requests today' using errcode = 'PT429';
+  end if;
+end $$;
+
+-- ---------------------------------------------------------------------------------------------
 -- buildings: the catalogue ids, so synced progress and favourites can be checked in the database.
 -- Filled by the next migration (generated from buildings.json). Clients never read it.
 -- ---------------------------------------------------------------------------------------------
@@ -101,11 +129,36 @@ create trigger profiles_check before insert or update on public.profiles for eac
 alter table public.profiles enable row level security;
 revoke all on public.profiles from anon, authenticated;
 grant select on public.profiles to authenticated;
-grant insert (id, username, avatar, bio, favorite_kind, favorite, privacy) on public.profiles to authenticated;
-grant update (username, avatar, bio, favorite_kind, favorite, privacy) on public.profiles to authenticated;
+-- No insert and no username column here: a profile is created, and renamed, only by set_username().
+grant update (avatar, bio, favorite_kind, favorite, privacy) on public.profiles to authenticated;
 create policy profiles_select_own on public.profiles for select to authenticated using (id = auth.uid());
-create policy profiles_insert_own on public.profiles for insert to authenticated with check (id = auth.uid());
 create policy profiles_update_own on public.profiles for update to authenticated using (id = auth.uid()) with check (id = auth.uid());
+
+/**
+ * Creates the caller's profile with this username, or renames it. Returns false when the name cannot be
+ * had: taken, reserved and badly formed all give the same answer, and tries are limited to 10 a day, so
+ * this cannot be used to find out which private usernames exist. (It returns false instead of raising so
+ * that the counted try is kept: an error would roll it back.)
+ */
+create function public.set_username(name text) returns boolean
+language plpgsql security definer set search_path = public, pg_temp as $$
+declare
+  uid uuid := auth.uid();
+begin
+  if uid is null then
+    raise exception 'not signed in' using errcode = '28000';
+  end if;
+  if exists (select 1 from profiles where id = uid and username = name) then
+    return true;
+  end if;
+  perform hit_limit('username', 10);
+  begin
+    insert into profiles (id, username) values (uid, name) on conflict (id) do update set username = excluded.username;
+  exception when unique_violation or check_violation then
+    return false;
+  end;
+  return true;
+end $$;
 
 -- ---------------------------------------------------------------------------------------------
 -- Synced progress: the same three things the browser keeps (Library unlocks, Daily results, and the
@@ -255,5 +308,6 @@ end $$;
 revoke execute on all functions in schema public from public, anon, authenticated;
 grant execute on function public.get_profile(text) to anon, authenticated;
 grant execute on function public.sync_progress(jsonb), public.delete_account() to authenticated;
--- The table checks and policies call these as the signed-in user.
+grant execute on function public.set_username(text) to authenticated;
+-- Every update of a profile re-runs its checks as the signed-in user, so the username check must be callable.
 grant execute on function public.username_ok(text) to authenticated;

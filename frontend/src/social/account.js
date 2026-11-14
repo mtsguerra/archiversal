@@ -4,11 +4,12 @@ import { useSyncExternalStore } from 'react'
 import { accountsEnabled, rpc, supabase } from './client.js'
 import { syncProgress } from './sync.js'
 
-const FIELDS = 'username, avatar, bio, favorite_kind, favorite, privacy'
+const FIELDS = 'username, avatar, bio, favorite_kind, favorite, privacy, showcase'
 
 // status: 'off' (no accounts in this build) | 'loading' | 'out' | 'in'; profile is null until a username is chosen.
 // `synced` goes up whenever the account brought progress into this browser, so screens can read it again.
-let state = { status: accountsEnabled ? 'loading' : 'off', profile: null, synced: 0 }
+// `newBadges` are the ids the last sync earned (App shows them as a toast).
+let state = { status: accountsEnabled ? 'loading' : 'off', profile: null, synced: 0, newBadges: [] }
 const listeners = new Set()
 const set = (patch) => {
   state = { ...state, ...patch }
@@ -25,19 +26,18 @@ let userId = null
 const AFTER = 'archiversal:after-sign-in'
 let timer
 
-/** Sends progress to the account and takes the account's back; safe to call at any time. */
+/** Sends progress to the account, takes the account's back, then lets the database grant any badge it earned. */
 export async function syncNow() {
   if (state.status !== 'in') return
   try {
     const added = await syncProgress()
     if (added) set({ synced: state.synced + 1 })
-    afterSync.forEach((run) => run())
+    const fresh = await rpc('award_badges')
+    if (fresh.length) set({ newBadges: fresh })
   } catch {
     // offline or the service is down: the browser keeps everything and the next sync sends it
   }
 }
-/** Hooks that run after each sync (the badge check registers itself here). */
-export const afterSync = new Set()
 
 /** A sync a moment from now (after a reveal has been saved). */
 export function queueSync() {
@@ -82,10 +82,11 @@ export function initAccount() {
     .catch(() => set({ status: 'out' }))
 }
 
-export async function signIn() {
-  // Back to the site's own address; the page then finishes the sign-in and returns to the profile.
+/** `after` is the screen to come back to (the profile, or the invite that asked for the sign-in). */
+export async function signIn(after = '#/profile') {
+  // Google sends the player back to the site's bare address; the page then goes on to `after`.
   try {
-    sessionStorage.setItem(AFTER, '#/profile')
+    sessionStorage.setItem(AFTER, after)
   } catch {
     // no storage: the player lands on the home page instead
   }
@@ -98,19 +99,20 @@ export async function signOut() {
 }
 
 /**
- * Creates or changes the signed-in player's profile. Returns null, or what went wrong:
- * 'taken' (username in use), 'refused' (a rule in the database said no) or 'failed'.
+ * Creates or changes the signed-in player's profile. A `username` goes through the database's
+ * set_username (which also creates the profile); the other fields are a plain update of the own row.
+ * Returns null, or what went wrong: 'refused' (the name cannot be had, or a rule said no),
+ * 'limit' (too many tries today) or 'failed'.
  */
-export async function saveProfile(fields) {
+export async function saveProfile({ username, ...fields }) {
   try {
-    const table = (await supabase()).from('profiles')
-    const query = state.profile ? table.update(fields).eq('id', userId) : table.insert({ id: userId, ...fields })
-    const { data, error } = await query.select(FIELDS).single()
-    if (error) return error.code === '23505' ? 'taken' : error.code === '23514' ? 'refused' : 'failed'
+    if (username !== undefined && username !== state.profile?.username && !(await rpc('set_username', { name: username }))) return 'refused'
+    const { data, error } = await (await supabase()).from('profiles').update(fields).eq('id', userId).select(FIELDS).single()
+    if (error) return error.code === '23514' ? 'refused' : 'failed'
     set({ profile: data })
     return null
-  } catch {
-    return 'failed'
+  } catch (error) {
+    return error?.code === 'PT429' ? 'limit' : 'failed'
   }
 }
 
