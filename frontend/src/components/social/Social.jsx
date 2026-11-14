@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { fetchLibrary } from '../../api/buildings.js'
+import { readLibrary } from '../../game/library.js'
 import { useLanguage, useStrings } from '../../i18n.js'
 import { useAccount } from '../../social/account.js'
 import { badgeName, fetchBadges } from '../../social/badges.js'
@@ -84,6 +85,7 @@ export function Challenges({ version }) {
   const t = strings.social.challenge
   const list = useRpc('list_challenges', undefined, version)
   const names = useBuildingNames()
+  const unlocked = readLibrary()
   if (!list) return null
   const mark = (named) => (
     <td data-named={named || undefined}>
@@ -126,9 +128,14 @@ export function Challenges({ version }) {
                 {c.buildings.map((id) => (
                   <tr key={id}>
                     <th scope="row">
-                      <a className={styles.link} href={`#/library/${id}`}>
-                        {names[id] ?? '…'}
-                      </a>
+                      {/* A building skipped without a reveal is still locked: it is not named here either. */}
+                      {unlocked[id] ? (
+                        <a className={styles.link} href={`#/library/${id}`}>
+                          {names[id] ?? '…'}
+                        </a>
+                      ) : (
+                        <em>{strings.account.page.lockedFavorite}</em>
+                      )}
                     </th>
                     {mark(c.mine[id] === true)}
                     {c.theirs ? mark(c.theirs[id] === true) : <td>·</td>}

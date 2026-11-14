@@ -37,3 +37,6 @@ const subscribe = (notify) => {
 
 export const useRoute = () =>
   useSyncExternalStore(subscribe, () => routeFrom(window.location.hash), () => 'home')
+
+/** The hash itself, for screens whose content is named in it (`#/u/<username>`): two such hashes are one route. */
+export const useHash = () => useSyncExternalStore(subscribe, () => window.location.hash, () => '')

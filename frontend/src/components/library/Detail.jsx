@@ -160,7 +160,8 @@ export function CompareDialog({ label, eyebrow, onClose, children }) {
     return () => el.open && el.close()
   }, [])
   return (
-    <dialog ref={dialog} className={styles.dialog} aria-label={label} onClose={onClose}>
+    // A close event from a dialog that is open again (React's development double-mount) is not a close.
+    <dialog ref={dialog} className={styles.dialog} aria-label={label} onClose={() => !dialog.current?.open && onClose()}>
       <button type="button" className={styles.close} onClick={onClose} aria-label={t.close}>
         ×
       </button>

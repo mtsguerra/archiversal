@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { libraryIdFrom, pastDailyFrom, useRoute } from './route.js'
+import { libraryIdFrom, pastDailyFrom, useHash, useRoute } from './route.js'
 import { readSession } from './game/custom.js'
 import { readThemedSession } from './game/themed.js'
 import Game from './Game.jsx'
@@ -69,6 +69,7 @@ function useBadgeToast(newBadges) {
 
 export default function App() {
   const route = useRoute()
+  useHash() // going from one profile to another keeps the route but must draw the other page
   const { synced, newBadges } = useAccount()
   useBadgeToast(newBadges)
   return (
