@@ -270,21 +270,22 @@ export function InvitePage() {
 export function FriendActions({ username }) {
   const { friends: t, social } = useStrings()
   const { ready, lists, error, act } = useFriends()
+  const [failed, setFailed] = useState(null)
   if (!ready || !lists) return null
   const has = (list) => lists[list].some((f) => f.username === username)
   const name = { name: username }
   return (
     <section className={styles.sheet} data-quiet>
-      {error && (
+      {(error || failed) && (
         <p className={styles.error} role="alert">
-          {t.errors[error]}
+          {t.errors[error ?? failed]}
         </p>
       )}
       <div className={styles.actions}>
         {has('friends') ? (
           <>
             <span className={styles.label}>{t.isFriend}</span>
-            <Button variant="ghost" data-sound="start" onClick={() => sendChallenge(username).catch(() => {})}>{social.challenge.send}</Button>
+            <Button variant="ghost" data-sound="start" onClick={() => (setFailed(null), sendChallenge(username).catch((e) => setFailed(e?.code === 'PT429' ? 'limit' : 'failed')))}>{social.challenge.send}</Button>
             <ConfirmButton onConfirm={() => act('friend_remove', name)}>{t.remove}</ConfirmButton>
           </>
         ) : has('incoming') ? (

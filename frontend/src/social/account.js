@@ -2,6 +2,7 @@
 // touch the network here.
 import { useSyncExternalStore } from 'react'
 import { accountsEnabled, rpc, supabase } from './client.js'
+import { claimSave } from '../game/save.js'
 import { syncProgress } from './sync.js'
 
 const FIELDS = 'username, avatar, bio, favorite_kind, favorite, privacy, showcase'
@@ -57,7 +58,7 @@ async function onSession(session) {
   try {
     const { data, error } = await (await supabase()).from('profiles').select(FIELDS).maybeSingle()
     if (error) throw error
-    set({ status: 'in', profile: data })
+    set({ status: 'in', profile: data, ...(claimSave(userId) && { synced: state.synced + 1 }) })
     // Coming back from Google lands on the bare address: go on to where the sign-in was started.
     try {
       const next = sessionStorage.getItem(AFTER)

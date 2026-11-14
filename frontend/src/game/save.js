@@ -69,6 +69,25 @@ export function mergeSave(data) {
   return Object.keys(library).length - Object.keys(mine).length
 }
 
+const OWNER = 'archiversal:owner'
+/**
+ * Records whose progress this browser holds. When a different account signs in, the previous person's
+ * progress is cleared first (it already lives in their account), so it never merges into the newcomer.
+ * Guest progress (no owner yet) still merges into the first account. Returns true when it cleared.
+ * shortcut: guest play after one account signs out is cleared when another account signs in.
+ */
+export function claimSave(id) {
+  try {
+    const previous = localStorage.getItem(OWNER)
+    const other = Boolean(previous) && previous !== id
+    if (other) Object.values(KEYS).forEach((k) => localStorage.removeItem(k))
+    localStorage.setItem(OWNER, id)
+    return other
+  } catch {
+    return false
+  }
+}
+
 const PREFIX = '#/import='
 /** The code in `#/import=<code>` (the hand-off link), or null. */
 export const codeFromHash = (hash) => (hash.startsWith(PREFIX) ? hash.slice(PREFIX.length) : null)
