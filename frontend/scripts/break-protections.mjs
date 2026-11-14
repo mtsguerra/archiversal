@@ -41,11 +41,24 @@ const cases = [
   // The database rules (run in a real Postgres by src/social/sql.test.js).
   ['profiles can be read by other users', join(sql, '20261113000001_core.sql'), 'for select to authenticated using (id = auth.uid());', 'for select to authenticated using (true);', 'src/social/sql.test.js'],
   ['a profile can be edited by another user', join(sql, '20261113000001_core.sql'), 'for update to authenticated using (id = auth.uid()) with check (id = auth.uid());', 'for update to authenticated using (true) with check (true);', 'src/social/sql.test.js'],
-  ['a private profile is shown to anyone', join(sql, '20261113000001_core.sql'), "where id = target and privacy = 'public')", 'where id = target)', 'src/social/sql.test.js'],
+  ['a private profile is shown to anyone', join(sql, '20261113000003_badges_friends.sql'), "      and (privacy = 'public' or (privacy = 'friends' and are_friends(target, auth.uid())))\n", '', 'src/social/sql.test.js'],
+  ['a friends-only profile is shown to strangers', join(sql, '20261113000003_badges_friends.sql'), "(privacy = 'friends' and are_friends(target, auth.uid()))", "privacy = 'friends'", 'src/social/sql.test.js'],
+  ['a blocked player can still open the profile', join(sql, '20261113000003_badges_friends.sql'), '      and not blocked_between(target, auth.uid())\n', '', 'src/social/sql.test.js'],
+  ['a blocked player still shows up in search', join(sql, '20261113000003_badges_friends.sql'), 'and id <> uid and not blocked_between(id, uid)', 'and id <> uid', 'src/social/sql.test.js'],
+  ['search finds private profiles', join(sql, '20261113000003_badges_friends.sql'), "where privacy = 'public' and left(username", 'where left(username', 'src/social/sql.test.js'],
+  ['usernames can be tried without limit', join(sql, '20261113000001_core.sql'), "perform hit_limit('username', 10);", '', 'src/social/sql.test.js'],
+  ['a client can write its own badges', join(sql, '20261113000003_badges_friends.sql'), 'grant select on public.user_badges to authenticated;', 'grant all on public.user_badges to authenticated;', 'src/social/sql.test.js'],
+  ['badges of other players can be read', join(sql, '20261113000003_badges_friends.sql'), 'user_badges for select to authenticated using (user_id = auth.uid());', 'user_badges for select to authenticated using (true);', 'src/social/sql.test.js'],
+  ['the showcase can pin a badge that was not earned', join(sql, '20261113000003_badges_friends.sql'), 'create trigger showcase_check before insert or update of showcase on public.profiles for each row execute function public.showcase_check();', '', 'src/social/sql.test.js'],
+  ['friendships, blocks and invites are open to clients', join(sql, '20261113000003_badges_friends.sql'), 'revoke all on public.friendships, public.blocks, public.invite_codes from anon, authenticated;', '', 'src/social/sql.test.js'],
+  ['a friend request can be accepted by its sender', join(sql, '20261113000003_badges_friends.sql'), "update friendships set status = 'accepted' where a = least(uid, target) and b = greatest(uid, target) and status = 'pending' and asker = target;", "update friendships set status = 'accepted' where a = least(uid, target) and b = greatest(uid, target) and status = 'pending';", 'src/social/sql.test.js'],
+  ['an invite code works twice', join(sql, '20261113000003_badges_friends.sql'), 'where i.code = invite and used_at is null and', 'where i.code = invite and', 'src/social/sql.test.js'],
+  ['an expired invite code works', join(sql, '20261113000003_badges_friends.sql'), 'and expires_at > now() and user_id <> uid', 'and user_id <> uid', 'src/social/sql.test.js'],
+  ['an invite gets around a block', join(sql, '20261113000003_badges_friends.sql'), 'and user_id <> uid and not blocked_between(user_id, uid)', 'and user_id <> uid', 'src/social/sql.test.js'],
   ['username rules are not enforced by the database', join(sql, '20261113000001_core.sql'), 'check (public.username_ok(username))', 'check (true)', 'src/social/sql.test.js'],
   ['synced progress can be read by other users', join(sql, '20261113000001_core.sql'), 'library_unlocks for select to authenticated using (user_id = auth.uid());', 'library_unlocks for select to authenticated using (true);', 'src/social/sql.test.js'],
   ['synced progress can be written without the sync function', join(sql, '20261113000001_core.sql'), 'revoke all on public.library_unlocks, public.daily_results, public.player_progress from anon, authenticated;', '', 'src/social/sql.test.js'],
-  ['signed-out visitors can sync progress', join(sql, '20261113000001_core.sql'), 'grant execute on function public.sync_progress(jsonb), public.delete_account() to authenticated;', 'grant execute on function public.sync_progress(jsonb), public.delete_account() to anon, authenticated;', 'src/social/sql.test.js'],
+  ['signed-out visitors can call the signed-in functions', join(sql, '20261113000003_badges_friends.sql'), '\n  to authenticated;\n', '\n  to anon, authenticated;\n', 'src/social/sql.test.js'],
 ]
 
 let originals = []
