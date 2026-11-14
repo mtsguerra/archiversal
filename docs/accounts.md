@@ -72,8 +72,11 @@ and functions to the client roles by default, so each migration revokes first an
 | Table | Client may | Everything else |
 |---|---|---|
 | `buildings` | nothing | catalogue ids for checks; filled by the generated migration |
-| `profiles` | read, insert and update **its own row** (column grants: no `id` or `created_at` changes) | other profiles only through `get_profile(username)` |
+| `profiles` | read and update **its own row** (column grants: not `id`, `username` or `created_at`) | created and renamed only by `set_username()`; other profiles only through `get_profile(username)` |
 | `library_unlocks`, `daily_results`, `player_progress` | read its own rows | written only by `sync_progress()` |
+| `badges` (catalogue) | read (public) | fixed rows from the migration |
+| `user_badges` | read its own rows | granted only by `award_badges()`; others' through `get_badges(username)` |
+| `friendships`, `blocks`, `invite_codes`, `rate_limits`, `events`, `challenges` | nothing | only through the functions below |
 
 - Cross-user reads go through security-definer functions that return usernames, never ids or emails. This is
   a deliberate difference from "a select policy per privacy level": a table policy would have to expose the
@@ -81,10 +84,63 @@ and functions to the client roles by default, so each migration revokes first an
 - `get_profile` returns null both for "no such user" and "you may not see it".
 - Username rules (`username_ok`): 3 to 20 characters, `a-z 0-9 _`, starts with a letter, a reserved list and
   a short profanity list. The client checks only the shape; the database decides.
+- `set_username()` gives one answer ("not available") for taken, reserved and malformed names and allows 10
+  tries a day, so it cannot be used to find out which private usernames exist.
 - Bio: at most 160 characters, no control characters, stored as typed and rendered by React as text.
 - Favourite: a building id or architect name that exists in `buildings`. The public page names a favourite
   building only to a viewer who has unlocked it (the Library never spoils a locked building).
 - `delete_account()` removes the auth user; every table cascades.
+
+### Badges
+
+- `award_badges()` (called by the client after each sync) checks every rule against the caller's synced
+  progress and inserts what is newly earned; it returns the new ids, which the site shows as a toast.
+  Clients have no insert, update or delete right on `user_badges`. Not tamper-proof (a player can sync
+  progress they did not earn, since answers ship in the page) and that is accepted: nothing is competitive.
+- Catalogue: one badge per era (every building of the era unlocked: drawn with `EraStamp`), milestones
+  (1, 10, 50, 100, 250 unlocked; 10, 50, 100 named; 7 and 30 Dailies played on any days: no streak pressure)
+  and explorer badges (5, 15, 30 countries; 10 eras and every era seen; 1 and 5 complete collections;
+  every building). Names and "how to earn it" hints are in `strings.badges`, keyed by id; a test checks
+  that the catalogue and both languages agree.
+- Showcase: `profiles.showcase`, up to 3 ids; a trigger refuses a badge the player has not earned.
+- After adding an era to the building data, run the era insert at the end of the badges section of
+  `20261113000003_badges_friends.sql` again (it only adds).
+
+### Friends
+
+- One row per pair in `friendships` (`pending` or `accepted`). Blocks are a separate table, so two players
+  can block each other and one unblocking does not undo the other's block. (The prompt suggested a
+  `blocked` status on the friendship; a row per direction is the better fit.)
+- `find_user(name)` is how every function finds a player: it answers null when either side has blocked
+  the other, so a block hides both players from each other in profiles, badges, search, requests,
+  invites, compare, the feed and challenges.
+- `friend_request` works by name only for public profiles; everyone else shares an invite code.
+- `search_users`: signed-in only, 3+ characters, prefix match, 8 results, public profiles only.
+- Invite codes: 80 random bits, single use, 7 days, at most 5 open and 10 created a day; 30 redeem tries a
+  day (a wrong code returns null instead of an error, so the try is counted).
+- Daily limits (`hit_limit`): 30 friend requests (and 20 pending at once), 300 searches, 100 blocks,
+  10 challenges, 10 username tries. Past the limit the function answers HTTP 429.
+- `can_view`: the owner; or not blocked and (public, or friends-only and an accepted friend). A private
+  profile is closed even to friends.
+
+### Compare, feed, challenges
+
+- `compare_with(name)`: badges both have and buildings both **named**, so nothing names a building the
+  viewer has not unlocked. Shown in the Library's Compare dialog frame (`CompareDialog` in `Detail.jsx`).
+- `events` are written only in the database: a trigger on `user_badges` (so every badge the award
+  function grants is an event) and `challenge_submit`. `friends_feed()` returns the latest 30 from accepted
+  friends whose profile the caller may see. Building names never appear in the feed.
+- Challenges: `challenge_create(name, ids)` takes ten different catalogue ids for an accepted friend. The
+  site picks ten at random and starts a Custom session carrying the challenge id (`social/challenges.js`);
+  the recap sends `{ building id: named? }` with `challenge_submit`, once per side. `list_challenges()`
+  hides the other side's result until the caller has answered. Both results are shown side by side with
+  no total and no winner. A building skipped without a reveal stays unnamed in the table.
+
+### Screens
+
+`#/profile` (edit, badges, showcase, sign out, delete), `#/u/<username>` (public page, friend actions,
+Compare with me, badges), `#/friends` (requests, friends, challenges, feed, search, invite link, blocked),
+`#/invite/<code>` (accept an invite link). All in `frontend/src/components/social/`.
 
 ## Tests
 
@@ -92,3 +148,9 @@ and functions to the client roles by default, so each migration revokes first an
 dependency) with Supabase's roles and default grants, and runs every rule as two users and as a signed-out
 visitor. `break-protections.mjs` weakens the policies one at a time and checks that these tests fail.
 Not covered by tests: Supabase Auth itself and the Google round trip (they need the real project).
+
+On 2026-11-14 the signed-in screens were also walked through in Playwright's WebKit against a throwaway
+local stub (the same migrations in PGlite behind a PostgREST-shaped server, kept outside the repo): sign-in
+state, username refusal, guest merge, badges and showcase, friend request and accept, search, invite link,
+compare, challenge play to recap and results, the phone layout and the dark theme. The real Supabase
+project, the Google redirect and Safari were not tested.
