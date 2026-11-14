@@ -60,12 +60,14 @@ async function onSession(session) {
     if (error) throw error
     set({ status: 'in', profile: data, ...(claimSave(userId) && { synced: state.synced + 1 }) })
     // Coming back from Google lands on the bare address: go on to where the sign-in was started.
+    // A new account has no username yet: that page comes first, unless the sign-in was started for somewhere else.
     try {
       const next = sessionStorage.getItem(AFTER)
       sessionStorage.removeItem(AFTER)
-      if (next) window.location.hash = next
+      if (next?.startsWith('#/')) window.location.hash = next
+      else if (!data) window.location.hash = '#/profile'
     } catch {
-      // no storage: stay on the home page
+      if (!data) window.location.hash = '#/profile'
     }
     syncNow() // the first sign-in on this browser merges the guest progress into the account
   } catch {

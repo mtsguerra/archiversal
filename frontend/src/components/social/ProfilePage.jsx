@@ -30,7 +30,7 @@ function SignedOut() {
         ))}
       </ul>
       <div className={styles.actions}>
-        <Button onClick={signIn}>{t.signInGoogle}</Button>
+        <Button onClick={() => signIn()}>{t.signInGoogle}</Button>
       </div>
     </section>
   )
