@@ -104,7 +104,8 @@ describe('synced progress', () => {
     const second = await call(db, 1, 'sync_progress', { library: { 'villa-rotonda': entry({ at: '2026-11-01', mastered: false }), 'sant-ivo-alla-sapienza': entry() }, progress: { days: [5] } })
     expect(second.library['villa-rotonda']).toMatchObject({ at: '2026-10-20', mastered: true })
     expect(Object.keys(second.library).sort()).toEqual(['sant-ivo-alla-sapienza', 'villa-rotonda'])
-    expect(second.progress.days.sort()).toEqual([3, 5])
+    await call(db, 1, 'sync_progress', { progress: { days: [10] } })
+    expect((await call(db, 1, 'sync_progress', {})).progress.days).toEqual([3, 5, 10]) // in number order, not '10' before '3'
     expect((await call(db, 0, 'get_profile', 'ana')).stats).toMatchObject({ unlocked: 2, mastered: 1, countries: 1, dailies: 1 })
   })
 
@@ -387,8 +388,8 @@ describe('challenges and the feed', () => {
 
   it('the feed shows friends only: their badges and finished challenges', async () => {
     const feed = async (n) => (await call(db, n, 'friends_feed')).map((e) => `${e.username} ${e.kind} ${e.ref}`)
-    expect(await feed(4)).toEqual(['ana challenge dani', 'ana badge first-sheet'])
-    expect(await feed(1)).toEqual(['dani challenge ana'])
+    expect(await feed(4)).toEqual(['ana challenge null', 'ana badge first-sheet']) // the other player of a challenge is not named
+    expect(await feed(1)).toEqual(['dani challenge null'])
     expect(await feed(3)).toEqual([]) // Carla is nobody's friend, though Ana is public
     expect(JSON.stringify(await call(db, 4, 'friends_feed'))).not.toMatch(/0000-0000|example\.com/)
     await expect(call(db, 0, 'friends_feed')).rejects.toThrow(/permission denied/)

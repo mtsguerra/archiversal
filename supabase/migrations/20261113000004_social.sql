@@ -72,7 +72,8 @@ create trigger badge_event after insert on public.user_badges for each row execu
  */
 create function public.friends_feed() returns jsonb
 language sql stable security definer set search_path = public, pg_temp as $$
-  select coalesce(jsonb_agg(jsonb_build_object('username', username, 'avatar', avatar, 'kind', kind, 'ref', ref, 'at', created_at) order by id desc), '[]')
+  -- `ref` is given only for a badge: a challenge's other player may be private or blocked for this caller.
+  select coalesce(jsonb_agg(jsonb_build_object('username', username, 'avatar', avatar, 'kind', kind, 'ref', case when kind = 'badge' then ref end, 'at', created_at) order by id desc), '[]')
   from (
     select e.id, p.username, p.avatar, e.kind, e.ref, e.created_at
     from events e join profiles p on p.id = e.user_id

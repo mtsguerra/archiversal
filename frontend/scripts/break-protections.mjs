@@ -70,6 +70,7 @@ const cases = [
   ['the other side of a challenge shows before answering', join(sql, '20261113000004_social.sql'), 'case when mine is null then null else theirs end', 'theirs', 'src/social/sql.test.js'],
   ['challenges with a blocked player stay visible', join(sql, '20261113000004_social.sql'), 'where me() in (c.sender, c.recipient) and not blocked_between(c.sender, c.recipient)', 'where me() in (c.sender, c.recipient)', 'src/social/sql.test.js'],
   ['a forged challenge id is kept in the session', join(frontend, 'src/game/custom.js'), 'CHALLENGE_ID.test(s.challenge) ?', 's.challenge ?', 'src/social/social.test.js'],
+  ['the feed names the other player of a challenge', join(sql, '20261113000004_social.sql'), "'ref', case when kind = 'badge' then ref end", "'ref', ref", 'src/social/sql.test.js'],
 ]
 
 let originals = []

@@ -248,7 +248,7 @@ begin
   return jsonb_build_object(
     'library', coalesce((select jsonb_object_agg(building_id, jsonb_build_object('at', at, 'mode', mode, 'mastered', mastered, 'attempts', attempts)) from library_unlocks where user_id = uid), '{}'),
     'days', coalesce((select jsonb_object_agg(number::text, jsonb_build_object('number', number, 'id', building_id, 'outcome', outcome, 'fields', fields, 'attempts', attempts, 'hintsUsed', hints_used, 'late', late)) from daily_results where user_id = uid), '{}'),
-    'progress', (select jsonb_build_object('days', (select coalesce(jsonb_agg(d::int), '[]') from unnest(days) d), 'eras', to_jsonb(eras), 'countries', to_jsonb(countries)) from player_progress where user_id = uid)
+    'progress', (select jsonb_build_object('days', (select coalesce(jsonb_agg(d::int order by d::int), '[]') from unnest(days) d), 'eras', to_jsonb(eras), 'countries', to_jsonb(countries)) from player_progress where user_id = uid)
   );
 end $$;
 
