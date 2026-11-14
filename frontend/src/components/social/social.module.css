@@ -315,31 +315,210 @@ textarea.input {
   }
 }
 
-/* The tabs above the account screens. */
-.tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-4);
-  border-bottom: var(--hairline) solid var(--paper-rule);
+/* The signed-in profile: the furnished plan beside its rooms' content (above it on narrow screens). */
+.rooms {
+  display: grid;
+  grid-template-columns: minmax(0, 30rem) minmax(0, 44rem);
+  justify-content: center;
+  align-items: start;
+  gap: var(--space-5);
+  padding-block: var(--space-5);
 }
 
-.tabs a {
-  padding: var(--space-2) 0;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
-  color: var(--ink-soft);
+.rooms > .page {
+  padding-block: 0;
+}
+
+.plan {
+  position: sticky;
+  top: calc(var(--rail-h) + var(--space-3));
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 2px solid var(--paper-rule);
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0.25rem 0.25rem 0 color-mix(in oklab, var(--accent) 18%, transparent);
+}
+
+.plan svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.planPoche,
+.planWall,
+.planLine,
+.planThin,
+.planBook,
+.planMark {
+  fill: none;
+  stroke: var(--ink);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.planPoche {
+  stroke-width: 6;
+  stroke-linejoin: miter;
+  pointer-events: none;
+}
+
+.planWall {
+  stroke-width: 3.5;
+  pointer-events: none;
+}
+
+/* The way in: a gap in the outer wall. */
+.planEntry {
+  stroke: var(--paper);
+  stroke-width: 8;
+  pointer-events: none;
+}
+
+.planLine {
+  stroke-width: 1.5;
+}
+
+.planThin {
+  stroke: var(--ink-soft);
+  stroke-width: 0.8;
+}
+
+.planBook {
+  stroke: var(--accent);
+  stroke-width: 4;
+  stroke-linecap: butt;
+}
+
+.planMark {
+  stroke: var(--accent);
+  stroke-width: 1.4;
+}
+
+.planFill {
+  fill: var(--paper-shade);
+  stroke: var(--paper-rule);
+}
+
+.planHit {
+  fill: transparent;
+  transition: fill var(--dur-fast) var(--ease-out);
+}
+
+.planRoom {
+  cursor: pointer;
+}
+
+.planRoom:hover .planHit {
+  fill: color-mix(in oklab, var(--accent) 7%, transparent);
+}
+
+.planRoom[aria-current] .planHit {
+  fill: color-mix(in oklab, var(--accent) 14%, transparent);
+}
+
+.planRoom:focus-visible {
+  outline: none;
+}
+
+.planRoom:focus-visible .planHit {
+  stroke: var(--focus);
+  stroke-width: 2;
+}
+
+.planName,
+.planNote {
+  font-size: 9px;
   font-weight: 700;
-  font-stretch: var(--stretch-semi);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  fill: var(--ink-soft);
+}
+
+.planNote {
+  font-size: 7.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.planRoom[aria-current] .planName {
+  fill: var(--accent);
+}
+
+.planHung circle {
+  fill: var(--paper);
+  stroke: var(--accent);
+  stroke-width: 1.4;
+}
+
+.planHung text,
+.planSeat text {
+  font-size: 8px;
+  font-weight: 800;
+  fill: var(--accent);
+}
+
+.planHook,
+.planHook circle {
+  fill: none;
+  stroke: var(--paper-hairline);
+  stroke-width: 1.2;
+  stroke-dasharray: 2 3;
+}
+
+.planSeat circle {
+  fill: var(--paper-shade);
+  stroke: var(--ink);
+  stroke-width: 1;
+}
+
+.planSeat text {
+  fill: var(--ink);
+  text-transform: uppercase;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.chips a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem; /* a comfortable tap target */
+  padding: 0 var(--space-3);
+  border: var(--hairline) solid var(--paper-rule);
+  border-radius: 999px;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  font-weight: 700;
   text-decoration: none;
 }
 
-.tabs a:hover {
+.chips a:hover {
   color: var(--ink);
 }
 
-.tabs a[aria-current] {
-  border-color: var(--accent);
-  color: var(--ink);
+.chips a[aria-current] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+@media (max-width: 1024px) {
+  .rooms {
+    grid-template-columns: minmax(0, 44rem);
+  }
+
+  .plan {
+    position: static;
+    max-width: 30rem;
+    width: 100%;
+    justify-self: center;
+  }
 }
 
 /* Badges */

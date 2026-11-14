@@ -6,8 +6,8 @@ import { inviteCodeFromHash, inviteFrom } from '../../social/username.js'
 import { Button } from '../ui/Button.jsx'
 import { showToast } from '../ui/toast.js'
 import { Avatar } from './Avatar.jsx'
-import { Notice, SocialShell } from './ProfilePage.jsx'
-import { Challenges, CompareProfiles, Feed } from './Social.jsx'
+import { Notice, SocialShell } from './Shell.jsx'
+import { CompareProfiles, Feed } from './Social.jsx'
 import { sendChallenge } from '../../social/challenges.js'
 import styles from './social.module.css'
 
@@ -161,22 +161,15 @@ export function NeedProfile({ after }) {
   )
 }
 
-/** `#/friends`: requests, friends (challenge, remove, block), the feed, challenges, search, invites and blocks. */
-export function FriendsPage() {
+/** The Salon: requests, friends (challenge, remove, block), what they are up to, search, invites and blocks. */
+export function FriendsRoom() {
   const { friends: t, social } = useStrings()
-  const { ready, lists, error, act } = useFriends()
+  const { lists, error, act } = useFriends()
   const [failed, setFailed] = useState(null)
   // Sets ten buildings for a friend and starts this player's own go at them.
   const challenge = (username) => sendChallenge(username).catch((e) => setFailed(e?.code === 'PT429' ? 'limit' : 'failed'))
-  if (!ready) {
-    return (
-      <SocialShell>
-        <NeedProfile after="#/friends" />
-      </SocialShell>
-    )
-  }
   return (
-    <SocialShell>
+    <>
       {(error || failed) && (
         <p className={styles.error} role="alert">
           {t.errors[error ?? failed]}
@@ -215,7 +208,6 @@ export function FriendsPage() {
           </ul>
         )}
       </section>
-      <Challenges />
       <Feed />
       {lists && <Search lists={lists} act={act} />}
       <Invite act={act} />
@@ -235,7 +227,7 @@ export function FriendsPage() {
           </ul>
         </section>
       )}
-    </SocialShell>
+    </>
   )
 }
 

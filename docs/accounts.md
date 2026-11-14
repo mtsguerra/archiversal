@@ -3,8 +3,9 @@
 Accounts are optional. The site is still a static build on Vercel; the only backend is a Supabase project
 (Postgres with Row Level Security, and Google sign-in through Supabase Auth). The Spring Boot API is unchanged.
 
-With no Supabase project configured the site is exactly the guest game: no sign-in button, no request to
-Supabase, and the Supabase client is never downloaded (it is a separate chunk loaded on first use).
+With no Supabase project configured the site is the guest game: no request to Supabase, and the Supabase
+client is never downloaded (it is a separate chunk loaded on first use). The account button is still shown
+(header on wide screens, Options on phones); it opens `#/profile`, which says accounts are not set up.
 
 ## What you must set up by hand
 
@@ -138,9 +139,22 @@ and functions to the client roles by default, so each migration revokes first an
 
 ### Screens
 
-`#/profile` (edit, badges, showcase, sign out, delete), `#/u/<username>` (public page, friend actions,
-Compare with me, badges), `#/friends` (requests, friends, challenges, feed, search, invite link, blocked),
-`#/invite/<code>` (accept an invite link). All in `frontend/src/components/social/`.
+The signed-in player's profile is a furnished floor plan (`Plan` in `components/social/Shell.jsx`, chosen
+from three mocked directions on 2026-11-14). What each room holds is drawn in it and each room is a link:
+
+| Room | Address | Shows | Drawn in the plan |
+|---|---|---|---|
+| Hall | `#/profile` | edit profile, sign out, delete account | avatar and username |
+| Archive | `#/profile/archive` | your card as others see it (stats) | shelves, sheets unlocked |
+| Gallery | `#/profile/gallery` | badges and showcase | earned badges on the wall, free hooks |
+| Salon | `#/profile/salon` (also `#/friends`) | requests, friends, feed, search, invites, blocked | friends at the table, requests at the door |
+| Studio | `#/profile/studio` | challenges and both results | an open challenge on the board |
+
+The plan sits beside the room on wide screens and above it at 1024px and narrower; the same rooms are
+repeated as plain links under it. Its numbers come from `usePlanData` (`social/usePlan.js`). Nothing in it
+moves on its own. Other screens: `#/u/<username>` (another player's page: friend actions, Compare with me,
+badges) and `#/invite/<code>` (accept an invite link). Signed out or without a username, `#/profile` shows
+the sign-in or the username form without the plan.
 
 ## Tests
 

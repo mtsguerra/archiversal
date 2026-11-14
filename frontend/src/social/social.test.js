@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, it } from 'vitest'
 import { mergeSave } from '../game/save.js'
 import { isProjectUrl, isPublicKey } from './client.js'
 import { outgoing } from './sync.js'
-import { inviteCodeFromHash, inviteFrom, usernameFrom, usernameProblem } from './username.js'
+import { inviteCodeFromHash, inviteFrom, roomFrom, usernameFrom, usernameProblem } from './username.js'
 import { badgeHint, badgeName, eraOfBadge, togglePin } from './badges.js'
 import { bundles } from '../strings/index.js'
 import { challengeResult } from './challenges.js'
@@ -86,6 +86,17 @@ describe('merging the account into the browser', () => {
     expect(Object.keys(sent.library)).toEqual(['fine'])
     expect(sent.days).toEqual({})
     expect(sent.progress.days).toEqual([1])
+  })
+})
+
+describe('rooms of the profile plan', () => {
+  it('reads the room from the hash and nothing else', () => {
+    expect(roomFrom('#/profile')).toBe('hall')
+    expect(roomFrom('#/friends')).toBe('salon')
+    expect(roomFrom('#/profile/studio')).toBe('studio')
+    expect(roomFrom('#/profile/hall')).toBeNull() // one address per room
+    expect(roomFrom('#/profile/<script>')).toBeNull()
+    expect(roomFrom('#/play')).toBeNull()
   })
 })
 

@@ -8,7 +8,7 @@ import { usernameFrom } from '../../social/username.js'
 import { Avatar } from './Avatar.jsx'
 import { Badges } from './Badges.jsx'
 import { FriendActions } from './Friends.jsx'
-import { Notice, SocialShell } from './ProfilePage.jsx'
+import { Notice, SocialShell } from './Shell.jsx'
 import styles from './social.module.css'
 
 const STATS = ['unlocked', 'mastered', 'eras', 'countries', 'dailies']
@@ -47,6 +47,41 @@ function Favorite({ kind, value }) {
         <em>{t.page.lockedFavorite}</em>
       )}
     </p>
+  )
+}
+
+/** A player's card: avatar, name, bio, favourite and learning stats (a profile from get_profile). */
+export function ProfileCard({ profile }) {
+  const { account: t } = useStrings()
+  return (
+      <section className={styles.sheet}>
+      <header className={styles.identity}>
+        <Avatar id={profile.avatar} size="4.5rem" />
+        <div>
+          <h1 className={styles.heading}>{profile.username}</h1>
+          <p className={styles.hint}>{t.page.joined(profile.joined)}</p>
+        </div>
+      </header>
+      {/* Typed by the player: React renders it as text, never as markup. */}
+      {profile.bio && <p className={styles.bio}>{profile.bio}</p>}
+      {profile.favorite_kind && <Favorite kind={profile.favorite_kind} value={profile.favorite} />}
+      <dl className={styles.stats}>
+        {STATS.map((key) => (
+          <div key={key}>
+            <dt>{t.stats[key]}</dt>
+            <dd>{profile.stats[key]}</dd>
+          </div>
+        ))}
+      </dl>
+      {profile.mine && (
+        <p className={styles.hint}>
+          {t.page.yours} {t.page.privacyNote[profile.privacy]}{' '}
+          <a className={styles.link} href="#/profile">
+            {t.page.edit}
+          </a>
+        </p>
+      )}
+    </section>
   )
 }
 
@@ -92,34 +127,7 @@ export function UserPage() {
   }
   return (
     <SocialShell>
-      <section className={styles.sheet}>
-        <header className={styles.identity}>
-          <Avatar id={profile.avatar} size="4.5rem" />
-          <div>
-            <h1 className={styles.heading}>{profile.username}</h1>
-            <p className={styles.hint}>{t.page.joined(profile.joined)}</p>
-          </div>
-        </header>
-        {/* Typed by the player: React renders it as text, never as markup. */}
-        {profile.bio && <p className={styles.bio}>{profile.bio}</p>}
-        {profile.favorite_kind && <Favorite kind={profile.favorite_kind} value={profile.favorite} />}
-        <dl className={styles.stats}>
-          {STATS.map((key) => (
-            <div key={key}>
-              <dt>{t.stats[key]}</dt>
-              <dd>{profile.stats[key]}</dd>
-            </div>
-          ))}
-        </dl>
-        {profile.mine && (
-          <p className={styles.hint}>
-            {t.page.yours} {t.page.privacyNote[profile.privacy]}{' '}
-            <a className={styles.link} href="#/profile">
-              {t.page.edit}
-            </a>
-          </p>
-        )}
-      </section>
+      <ProfileCard profile={profile} />
       {!profile.mine && <FriendActions username={profile.username} />}
       <Badges username={profile.username} />
     </SocialShell>

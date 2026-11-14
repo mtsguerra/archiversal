@@ -68,7 +68,7 @@ export function Feed() {
               <a className={styles.personName} href={`#/u/${e.username}`} aria-label={e.username}>
                 <Avatar id={e.avatar} size="2.25rem" />
               </a>
-              <span>{e.kind === 'badge' ? t.badge(e.username, badgeName(strings, e.ref)) : t.challenge(e.username, e.ref)}</span>
+              <span>{e.kind === 'badge' ? t.badge(e.username, badgeName(strings, e.ref)) : t.challenge(e.username)}</span>
               <span className={`${styles.hint} ${styles.personActions}`}>{day(e.at, lang)}</span>
             </li>
           ))}

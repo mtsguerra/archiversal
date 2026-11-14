@@ -4,53 +4,19 @@ import { readLibrary } from '../../game/library.js'
 import { useLanguage, useStrings } from '../../i18n.js'
 import { deleteAccount, saveProfile, signIn, signOut, useAccount } from '../../social/account.js'
 import { MAX_BIO, usernameProblem } from '../../social/username.js'
-import { AppShell } from '../layout/AppShell.jsx'
-import { menuSlots } from '../layout/menuSlots.jsx'
 import { Button } from '../ui/Button.jsx'
 import { showToast } from '../ui/toast.js'
 import { AVATARS } from '../../social/avatars.js'
 import { Badges } from './Badges.jsx'
+import { FriendsRoom } from './Friends.jsx'
+import { Notice, Plan, SocialShell } from './Shell.jsx'
+import { Challenges } from './Social.jsx'
+import { ProfileCard } from './UserPage.jsx'
+import { usePlanData } from '../../social/usePlan.js'
 import { Avatar } from './Avatar.jsx'
 import styles from './social.module.css'
 
 const PRIVACY = ['private', 'friends', 'public']
-
-/** The frame every account screen shares: the slim header, tabs once there is a profile, and one centred column. */
-export function SocialShell({ children }) {
-  const strings = useStrings()
-  const { profile } = useAccount()
-  const here = window.location.hash
-  const tabs = profile ? [['#/profile', strings.friends.tabs.profile], ['#/friends', strings.friends.tabs.friends], [`#/u/${profile.username}`, strings.friends.tabs.page]] : []
-  return (
-    <AppShell place={strings.account.place} slim {...menuSlots(strings.menu)}>
-      <div className={styles.page}>
-        {tabs.length > 0 && (
-          <nav className={styles.tabs} aria-label={strings.account.nav}>
-            {tabs.map(([href, label]) => (
-              <a key={href} href={href} aria-current={here === href ? 'page' : undefined}>
-                {label}
-              </a>
-            ))}
-          </nav>
-        )}
-        {children}
-      </div>
-    </AppShell>
-  )
-}
-
-/** A short message in place of a screen (accounts off, still loading, nothing to show). */
-export function Notice({ children }) {
-  const { account: t } = useStrings()
-  return (
-    <section className={styles.sheet}>
-      <p role="status">{children}</p>
-      <a className={styles.link} href="#/">
-        {t.home}
-      </a>
-    </section>
-  )
-}
 
 function SignedOut() {
   const { account: t } = useStrings()
@@ -222,11 +188,6 @@ function ProfileForm({ profile }) {
         <Button type="submit" disabled={busy}>
           {profile ? t.edit.save : t.setup.create}
         </Button>
-        {profile && (
-          <a className={styles.link} href={`#/u/${profile.username}`}>
-            {t.edit.view}
-          </a>
-        )}
       </div>
     </form>
   )
@@ -269,22 +230,41 @@ function Danger() {
   )
 }
 
-/** `#/profile`: sign in, choose a username, or edit the profile and pin badges. */
-export function ProfilePage() {
+/**
+ * `#/profile` and its rooms (`#/profile/<room>`, `#/friends`): sign in, choose a username, then the plan.
+ * Hall: edit the profile. Archive: your card as others see it. Gallery: badges. Salon: friends. Studio: challenges.
+ */
+export function ProfilePage({ room }) {
   const { account: t } = useStrings()
   const { status, profile } = useAccount()
+  const data = usePlanData(room)
+  if (status !== 'in' || !profile) {
+    return (
+      <SocialShell>
+        {status === 'off' && <Notice>{t.off}</Notice>}
+        {status === 'loading' && <Notice>{t.loading}</Notice>}
+        {status === 'out' && <SignedOut />}
+        {status === 'in' && (
+          <>
+            <ProfileForm key="new" profile={null} />
+            <Danger />
+          </>
+        )}
+      </SocialShell>
+    )
+  }
   return (
-    <SocialShell>
-      {status === 'off' && <Notice>{t.off}</Notice>}
-      {status === 'loading' && <Notice>{t.loading}</Notice>}
-      {status === 'out' && <SignedOut />}
-      {status === 'in' && (
+    <SocialShell plan={<Plan room={room} profile={profile} data={data} />}>
+      {room === 'hall' && (
         <>
-          <ProfileForm key={profile?.username ?? ''} profile={profile} />
-          {profile && <Badges username={profile.username} editable />}
+          <ProfileForm key={profile.username} profile={profile} />
           <Danger />
         </>
       )}
+      {room === 'archive' && (data?.card ? <ProfileCard profile={data.card} /> : <Notice>{t.loading}</Notice>)}
+      {room === 'gallery' && <Badges username={profile.username} editable />}
+      {room === 'salon' && <FriendsRoom />}
+      {room === 'studio' && <Challenges />}
     </SocialShell>
   )
 }

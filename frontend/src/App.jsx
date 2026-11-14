@@ -10,7 +10,8 @@ import { Library } from './components/library/Library.jsx'
 import { LibraryBuilding } from './components/library/LibraryBuilding.jsx'
 import { ProfilePage } from './components/social/ProfilePage.jsx'
 import { UserPage } from './components/social/UserPage.jsx'
-import { FriendsPage, InvitePage } from './components/social/Friends.jsx'
+import { InvitePage } from './components/social/Friends.jsx'
+import { roomFrom } from './social/username.js'
 import { badgeName } from './social/badges.js'
 import { showToast } from './components/ui/toast.js'
 import { useStrings } from './i18n.js'
@@ -37,9 +38,8 @@ function ThemedPlay() {
 
 function Screen({ route }) {
   if (route === 'home') return <Home />
-  if (route === 'profile') return <ProfilePage />
+  if (route === 'profile') return <ProfilePage room={roomFrom(window.location.hash)} />
   if (route === 'user') return <UserPage key={window.location.hash} />
-  if (route === 'friends') return <FriendsPage />
   if (route === 'invite') return <InvitePage />
   if (route === 'library') return <Library />
   if (route === 'libraryBuilding') return <LibraryBuilding key={libraryIdFrom(window.location.hash)} />

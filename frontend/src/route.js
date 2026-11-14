@@ -1,9 +1,9 @@
 import { useSyncExternalStore } from 'react'
 import { dailyNumber } from './game/daily.js'
-import { inviteCodeFromHash, usernameFrom } from './social/username.js'
+import { inviteCodeFromHash, roomFrom, usernameFrom } from './social/username.js'
 import { withTransition } from './viewTransition.js'
 
-const ROUTES = { '#/play': 'play', '#/daily': 'daily', '#/custom': 'custom', '#/custom/play': 'customPlay', '#/themed': 'themed', '#/themed/play': 'themedPlay', '#/library': 'library', '#/profile': 'profile', '#/friends': 'friends' }
+const ROUTES = { '#/play': 'play', '#/daily': 'daily', '#/custom': 'custom', '#/custom/play': 'customPlay', '#/themed': 'themed', '#/themed/play': 'themedPlay', '#/library': 'library' }
 
 const LIBRARY_BUILDING = /^#\/library\/([a-z0-9-]+)$/
 
@@ -27,7 +27,7 @@ export const pastDailyFrom = (hash, today = dailyNumber()) => {
 }
 
 /** The hash picks the screen; anything unknown is the homepage. */
-export const routeFrom = (hash) => ROUTES[hash] ?? (libraryEraFrom(hash) || libraryShowFrom(hash) ? 'library' : null) ?? (libraryIdFrom(hash) ? 'libraryBuilding' : usernameFrom(hash) ? 'user' : inviteCodeFromHash(hash) ? 'invite' : pastDailyFrom(hash) ? 'dailyPast' : 'home')
+export const routeFrom = (hash) => ROUTES[hash] ?? (libraryEraFrom(hash) || libraryShowFrom(hash) ? 'library' : null) ?? (libraryIdFrom(hash) ? 'libraryBuilding' : roomFrom(hash) ? 'profile' : usernameFrom(hash) ? 'user' : inviteCodeFromHash(hash) ? 'invite' : pastDailyFrom(hash) ? 'dailyPast' : 'home')
 
 const subscribe = (notify) => {
   const onChange = () => withTransition(notify)

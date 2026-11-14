@@ -51,7 +51,7 @@ export function Recap({ onAgain }) {
 
       <div className={styles.actions}>
         {challenge ? (
-          <Button onClick={() => (window.location.hash = '#/friends')}>{social.challenge.results}</Button>
+          <Button onClick={() => (window.location.hash = '#/profile/studio')}>{social.challenge.results}</Button>
         ) : (
           <>
             {session && (

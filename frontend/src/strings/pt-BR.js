@@ -599,8 +599,6 @@ export default {
   },
 
   friends: {
-    nav: 'Amigos',
-    tabs: { profile: 'Perfil', friends: 'Amigos', page: 'Minha página' },
     heading: 'Amigos',
     needProfile: 'Entre e escolha um nome de usuário para adicionar amigos.',
     toProfile: 'Ir para sua conta',
@@ -650,7 +648,7 @@ export default {
       heading: 'O que os amigos andam fazendo',
       empty: 'Nada ainda. As insígnias que seus amigos conquistam e os desafios que terminam aparecem aqui.',
       badge: (name, badge) => `${name} conquistou a insígnia “${badge}”`,
-      challenge: (name, other) => `${name} terminou um desafio com ${other}`,
+      challenge: (name) => `${name} terminou um desafio`,
     },
     challenge: {
       heading: 'Desafios',
@@ -680,5 +678,16 @@ export default {
       none: 'Nada em comum ainda.',
       note: 'Só aparecem edifícios cujo nome você mesmo acertou, então nada aqui estraga sua Biblioteca.',
     },
+  },
+  plan: {
+    label: 'Seu perfil como uma planta baixa. Cada cômodo abre uma parte dele.',
+    caption: 'Planta · nível 0 · escolha um cômodo',
+    nav: 'Cômodos',
+    rooms: { hall: 'Átrio', archive: 'Arquivo', gallery: 'Galeria', salon: 'Salão', studio: 'Ateliê' },
+    parts: { hall: 'Perfil', archive: 'Estatísticas', gallery: 'Insígnias', salon: 'Amigos', studio: 'Desafios' },
+    hung: (n, free) => `${n} penduradas · ${free} ganchos livres`,
+    seated: (n, door) => (door ? `${n} à mesa · ${door} à porta` : `${n} à mesa`),
+    sheets: (n) => (n === 1 ? '1 prancha' : `${n} pranchas`),
+    board: (n) => (n ? `${n} na prancheta` : 'Prancheta livre'),
   },
 }

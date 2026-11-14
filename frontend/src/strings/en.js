@@ -597,8 +597,6 @@ export default {
   },
 
   friends: {
-    nav: 'Friends',
-    tabs: { profile: 'Profile', friends: 'Friends', page: 'My page' },
     heading: 'Friends',
     needProfile: 'Sign in and choose a username to add friends.',
     toProfile: 'Go to your account',
@@ -648,7 +646,7 @@ export default {
       heading: 'What friends are up to',
       empty: 'Nothing yet. Badges your friends earn and challenges they finish appear here.',
       badge: (name, badge) => `${name} earned the badge “${badge}”`,
-      challenge: (name, other) => `${name} finished a challenge with ${other}`,
+      challenge: (name) => `${name} finished a challenge`,
     },
     challenge: {
       heading: 'Challenges',
@@ -678,5 +676,16 @@ export default {
       none: 'Nothing in common yet.',
       note: 'Only buildings you have named yourself are listed, so nothing here spoils your Library.',
     },
+  },
+  plan: {
+    label: 'Your profile as a floor plan. Each room opens a part of it.',
+    caption: 'Plan · level 0 · pick a room',
+    nav: 'Rooms',
+    rooms: { hall: 'Hall', archive: 'Archive', gallery: 'Gallery', salon: 'Salon', studio: 'Studio' },
+    parts: { hall: 'Profile', archive: 'Stats', gallery: 'Badges', salon: 'Friends', studio: 'Challenges' },
+    hung: (n, free) => `${n} hung · ${free} hooks free`,
+    seated: (n, door) => (door ? `${n} seated · ${door} at the door` : `${n} seated`),
+    sheets: (n) => (n === 1 ? '1 sheet' : `${n} sheets`),
+    board: (n) => (n ? `${n} on the board` : 'Board is clear'),
   },
 }

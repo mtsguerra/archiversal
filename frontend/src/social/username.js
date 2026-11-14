@@ -19,3 +19,12 @@ const INVITE = /([0-9a-f]{20})\s*$/
 /** The invite code in `#/invite/<code>`, in a pasted link, or typed alone; null when there is none. */
 export const inviteFrom = (text) => INVITE.exec(text.trim())?.[1] ?? null
 export const inviteCodeFromHash = (hash) => /^#\/invite\/([0-9a-f]{20})$/.exec(hash)?.[1] ?? null
+
+export const ROOMS = ['hall', 'archive', 'gallery', 'salon', 'studio']
+/** The room of the profile plan a hash opens (`#/profile` is the hall, `#/friends` the salon), or null. */
+export function roomFrom(hash) {
+  if (hash === '#/profile') return 'hall'
+  if (hash === '#/friends') return 'salon'
+  const room = /^#\/profile\/([a-z]+)$/.exec(hash)?.[1]
+  return room !== 'hall' && ROOMS.includes(room) ? room : null
+}
