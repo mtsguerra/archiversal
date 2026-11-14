@@ -7,6 +7,8 @@ import { Button } from '../ui/Button.jsx'
 import { showToast } from '../ui/toast.js'
 import { Avatar } from './Avatar.jsx'
 import { Notice, SocialShell } from './ProfilePage.jsx'
+import { Challenges, CompareProfiles, Feed } from './Social.jsx'
+import { sendChallenge } from '../../social/challenges.js'
 import styles from './social.module.css'
 
 /** A button that asks twice before something that is not easily undone (remove, block). */
@@ -159,10 +161,13 @@ export function NeedProfile({ after }) {
   )
 }
 
-/** `#/friends`: requests, friends, search, invites and blocks. `extras` are the sections later batches add. */
-export function FriendsPage({ extras = null }) {
-  const { friends: t } = useStrings()
+/** `#/friends`: requests, friends (challenge, remove, block), the feed, challenges, search, invites and blocks. */
+export function FriendsPage() {
+  const { friends: t, social } = useStrings()
   const { ready, lists, error, act } = useFriends()
+  const [failed, setFailed] = useState(null)
+  // Sets ten buildings for a friend and starts this player's own go at them.
+  const challenge = (username) => sendChallenge(username).catch((e) => setFailed(e?.code === 'PT429' ? 'limit' : 'failed'))
   if (!ready) {
     return (
       <SocialShell>
@@ -172,9 +177,9 @@ export function FriendsPage({ extras = null }) {
   }
   return (
     <SocialShell>
-      {error && (
+      {(error || failed) && (
         <p className={styles.error} role="alert">
-          {t.errors[error]}
+          {t.errors[error ?? failed]}
         </p>
       )}
       <section className={styles.sheet}>
@@ -202,7 +207,7 @@ export function FriendsPage({ extras = null }) {
           <ul className={styles.people}>
             {lists.friends.map((person) => (
               <Person key={person.username} person={person}>
-                {extras?.friendActions?.(person)}
+                <Button variant="ghost" data-sound="start" onClick={() => challenge(person.username)}>{social.challenge.send}</Button>
                 <ConfirmButton onConfirm={() => act('friend_remove', { name: person.username })}>{t.remove}</ConfirmButton>
                 <ConfirmButton onConfirm={() => act('block_user', { name: person.username })}>{t.block}</ConfirmButton>
               </Person>
@@ -210,7 +215,8 @@ export function FriendsPage({ extras = null }) {
           </ul>
         )}
       </section>
-      {extras?.sections}
+      <Challenges />
+      <Feed />
       {lists && <Search lists={lists} act={act} />}
       <Invite act={act} />
       {lists?.blocked.length > 0 && (
@@ -269,8 +275,8 @@ export function InvitePage() {
 }
 
 /** On another player's page: add, answer, remove or block, depending on how the two stand. */
-export function FriendActions({ username, extras = null }) {
-  const { friends: t } = useStrings()
+export function FriendActions({ username }) {
+  const { friends: t, social } = useStrings()
   const { ready, lists, error, act } = useFriends()
   if (!ready || !lists) return null
   const has = (list) => lists[list].some((f) => f.username === username)
@@ -286,7 +292,7 @@ export function FriendActions({ username, extras = null }) {
         {has('friends') ? (
           <>
             <span className={styles.label}>{t.isFriend}</span>
-            {extras}
+            <Button variant="ghost" data-sound="start" onClick={() => sendChallenge(username).catch(() => {})}>{social.challenge.send}</Button>
             <ConfirmButton onConfirm={() => act('friend_remove', name)}>{t.remove}</ConfirmButton>
           </>
         ) : has('incoming') ? (
@@ -303,6 +309,7 @@ export function FriendActions({ username, extras = null }) {
         ) : (
           <Button onClick={() => act('friend_request', name)}>{t.add}</Button>
         )}
+        <CompareProfiles username={username} />
         <ConfirmButton
           onConfirm={async () => {
             await act('block_user', name)
