@@ -8,7 +8,8 @@ import { usernameFrom } from '../../social/username.js'
 import { Avatar } from './Avatar.jsx'
 import { Badges } from './Badges.jsx'
 import { FriendActions } from './Friends.jsx'
-import { Notice, SocialShell } from './Shell.jsx'
+import { CompareProfiles } from './Social.jsx'
+import { Notice, SocialShell, VisitorPlan } from './Shell.jsx'
 import styles from './social.module.css'
 
 const STATS = ['unlocked', 'mastered', 'eras', 'countries', 'dailies']
@@ -87,8 +88,13 @@ export function ProfileCard({ profile }) {
 
 /** `#/u/<username>`: what that player lets the viewer see. */
 export function UserPage() {
-  const { account: t } = useStrings()
+  const { account: t, plan } = useStrings()
   const username = usernameFrom(window.location.hash)
+  // Both are tagged with the username they belong to, so moving to another player's page starts afresh.
+  const [picked, setRoom] = useState({ name: null, room: 'hall' })
+  const [shared, setCommon] = useState(null) // compare_with: what the viewer and this player share (null: signed out, or it failed)
+  const room = picked.name === username ? picked.room : 'hall'
+  const common = shared?.name === username ? shared.found : null
   const { status, profile: me, synced } = useAccount()
   const [profile, setProfile] = useState(undefined) // undefined: loading; null: hidden or missing
   // Asked again when the viewer signs in or out (a friends-only page may open) or edits their own profile.
@@ -103,6 +109,17 @@ export function UserPage() {
       live = false
     }
   }, [username, status, me, synced])
+  useEffect(() => {
+    if (!accountsEnabled || status !== 'in') return undefined
+    let live = true
+    rpc('compare_with', { name: username }).then(
+      (found) => live && setCommon({ name: username, found }),
+      () => {},
+    )
+    return () => {
+      live = false
+    }
+  }, [username, status, synced])
 
   if (!accountsEnabled) {
     return (
@@ -125,11 +142,36 @@ export function UserPage() {
       </SocialShell>
     )
   }
+  if (profile.mine) {
+    return (
+      <SocialShell>
+        <ProfileCard profile={profile} />
+        <Badges username={profile.username} />
+      </SocialShell>
+    )
+  }
+  const v = plan.visitor
+  const notes = {
+    hall: profile.username,
+    archive: common ? v.common(common.mastered.length) : v.sheets(profile.stats.unlocked),
+    gallery: common ? v.badges(common.badges.length) : plan.parts.gallery,
+  }
   return (
-    <SocialShell>
-      <ProfileCard profile={profile} />
-      {!profile.mine && <FriendActions username={profile.username} />}
-      <Badges username={profile.username} />
+    <SocialShell plan={<VisitorPlan name={profile.username} room={room} notes={notes} onRoom={(next) => setRoom({ name: username, room: next })} />}>
+      {room === 'hall' && (
+        <>
+          <ProfileCard profile={profile} />
+          <FriendActions username={profile.username} />
+        </>
+      )}
+      {room === 'archive' && (
+        <section className={styles.sheet}>
+          <h2 className={styles.subheading}>{plan.parts.archive}</h2>
+          <p className={styles.hint}>{notes.archive}</p>
+          <CompareProfiles username={profile.username} />
+        </section>
+      )}
+      {room === 'gallery' && <Badges username={profile.username} />}
     </SocialShell>
   )
 }

@@ -689,5 +689,6 @@ export default {
     seated: (n, door) => (door ? `${n} à mesa · ${door} à porta` : `${n} à mesa`),
     sheets: (n) => (n === 1 ? '1 prancha' : `${n} pranchas`),
     board: (n) => (n ? `${n} na prancheta` : 'Prancheta livre'),
+    visitor: { caption: (name) => `Planta de ${name} · escolha um cômodo`, label: (name) => `O perfil de ${name} como uma planta baixa. Cada cômodo abre uma parte dele.`, shut: 'não exibido', common: (n) => (n === 1 ? '1 acertada pelos dois' : `${n} acertadas pelos dois`), badges: (n) => (n === 1 ? '1 insígnia igual' : `${n} insígnias iguais`), hung: (n) => `${n} penduradas`, sheets: (n) => (n === 1 ? '1 prancha' : `${n} pranchas`) },
   },
 }

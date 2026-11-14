@@ -122,6 +122,41 @@ export function Plan({ room, profile, data }) {
   )
 }
 
+const OPEN = ['hall', 'archive', 'gallery'] // what a visitor can be shown; the Salon and Studio belong to their owner
+
+/**
+ * Another player's plan, read only. The three rooms a visitor can see are buttons; the Salon and Studio are
+ * hatched ("not shown"). `notes` are the captions (what the two of you have in common), `onRoom` picks a room.
+ */
+export function VisitorPlan({ name, room, notes, onRoom }) {
+  const { plan: t } = useStrings()
+  return (
+    <div className={styles.plan}>
+      <p className={styles.label}>{t.visitor.caption(name)}</p>
+      <svg viewBox="0 0 420 320" role="group" aria-label={t.visitor.label(name)}>
+        {ROOMS.map((id) => {
+          const [x, y, w, h] = BOX[id]
+          const open = OPEN.includes(id)
+          return (
+            <g key={id} className={open ? styles.planRoom : styles.planShut} role={open ? 'button' : undefined} tabIndex={open ? 0 : undefined} aria-pressed={open ? room === id : undefined} aria-current={open && room === id ? 'page' : undefined} aria-label={`${t.rooms[id]}: ${open ? notes[id] : t.visitor.shut}`} data-sound={open ? 'toggle' : undefined} onClick={open ? () => onRoom(id) : undefined} onKeyDown={open ? (e) => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), onRoom(id)) : undefined}>
+              <rect className={open ? styles.planHit : styles.planHatch} x={x} y={y} width={w} height={h} />
+              <text className={styles.planName} x={x + 12} y={y + 20}>
+                {t.rooms[id]}
+              </text>
+              <text className={styles.planNote} x={x + 12} y={y + h - 12}>
+                {open ? notes[id] : t.visitor.shut}
+              </text>
+            </g>
+          )
+        })}
+        <path className={styles.planPoche} d="M20 20H400V300H20Z" />
+        <path className={styles.planEntry} d="M64 300h32" />
+        <path className={styles.planWall} d={WALLS} />
+      </svg>
+    </div>
+  )
+}
+
 /**
  * The frame every account screen shares: the slim header and one centred column. With `plan` (the
  * signed-in player's own rooms) the plan sits beside the content on wide screens and above it on narrow ones.
