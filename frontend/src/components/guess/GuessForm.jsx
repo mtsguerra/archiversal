@@ -191,12 +191,31 @@ export function GuessForm({ building, eras, centuries, phase, fields, attempts, 
 
   // A wrong guess empties its field (the guess log keeps the text); a close one stays to be made more specific.
   const prevFields = useRef(fields)
+  const refocus = useRef(null)
+  const lastField = useRef(null) // the id of the field typed in last
   useEffect(() => {
     const cleared = names.filter((f) => fields[f] === 'wrong' && prevFields.current[f] !== 'wrong')
     prevFields.current = fields
+    // Whoever was typing keeps typing: the emptied input is made again, so focus goes back to it. After a click on
+    // "Check guess" (focus is on the button, or on nothing in Safari; not on a phone, where it would raise the
+    // keyboard) the field last typed in, or else the first emptied one, takes the focus.
+    const active = document.activeElement
+    const typing = cleared.find((f) => active?.id === `${idPrefix}-${f}`)
+    const idle = !active || active === document.body || active.type === 'submit'
+    const coarse = window.matchMedia?.('(pointer: coarse)').matches
+    const last = cleared.find((f) => lastField.current === `${idPrefix}-${f}`)
+    const target = typing ?? (idle && !coarse ? (last ?? cleared[0]) : undefined)
+    if (target) refocus.current = `${idPrefix}-${target}`
     if (cleared.length) setClears((c) => ({ ...c, ...Object.fromEntries(cleared.map((f) => [f, (c[f] ?? 0) + 1])) }))
     if (cleared.length) setValues((v) => ({ ...v, ...Object.fromEntries(cleared.map((f) => [f, ''])) }))
   }, [fields]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // The combobox of an emptied field was remounted by now: put the cursor back in it.
+  useEffect(() => {
+    if (!refocus.current) return
+    document.getElementById(refocus.current)?.focus()
+    refocus.current = null
+  }, [clears])
 
   function update(field, value) {
     // A new century clears the decade picked inside the old one.
@@ -373,7 +392,7 @@ export function GuessForm({ building, eras, centuries, phase, fields, attempts, 
         </span>
       </div>
 
-      <form id="guess-form" className={styles.form} onSubmit={handleSubmit} noValidate>
+      <form id="guess-form" className={styles.form} onFocus={(e) => e.target.matches?.('input') && (lastField.current = e.target.id)} onSubmit={handleSubmit} noValidate>
         {names.map((name) => (
           <Fragment key={name}>{inputs[name]}</Fragment>
         ))}

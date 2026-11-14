@@ -23,6 +23,11 @@ const ALIASES = {
   'ivory coast': 'CI',
   burma: 'MM',
   vatican: 'VA',
+  // Some browsers name CN "Mainland China" / "China continental", so plain "china" would match nothing.
+  china: 'CN',
+  'mainland china': 'CN',
+  "people's republic of china": 'CN',
+  prc: 'CN',
 }
 
 const LOCALES = ['en', 'pt-BR']

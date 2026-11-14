@@ -171,3 +171,7 @@ describe('vague answers against the whole catalogue', () => {
     expect([...new Set(clashes)].filter((c) => !/^"(pantheon|coliseum)"/.test(c))).toEqual([])
   }, 60000)
 })
+
+describe('country aliases', () => {
+  it.each(['china', 'China', 'mainland china', "People's Republic of China", 'PRC'])('%s is China', (guess) => expect(resolveCountryCode(guess)).toBe('CN'))
+})
