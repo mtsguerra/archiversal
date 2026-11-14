@@ -33,10 +33,12 @@ export function useGameRound(mode = 'normal', day) {
 
   const buildingRef = useRef(null)
   const solvedRef = useRef(false)
+  const namedRef = useRef(false)
   useEffect(() => {
     buildingRef.current = state.building
     solvedRef.current = state.outcome === 'solved'
-  }, [state.building, state.outcome])
+    namedRef.current = state.fields?.name === 'correct'
+  }, [state.building, state.outcome, state.fields])
 
   // Themed: the eras and centuries that occur in the theme, so the pickers offer nothing else.
   const [themed, setThemed] = useState(null)
@@ -53,7 +55,7 @@ export function useGameRound(mode = 'normal', day) {
       if (mode === 'custom') {
         let session = readSession()
         if (!session) throw new Error('No custom session')
-        if (advance) session = advanceSession(session, buildingRef.current)
+        if (advance) session = advanceSession(session, buildingRef.current, namedRef.current)
         if (session.index >= session.ids.length) {
           dispatch({ type: 'session/done' })
           return

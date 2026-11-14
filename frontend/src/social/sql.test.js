@@ -323,3 +323,88 @@ describe('friends', () => {
     expect(await friendsOf(1)).not.toContain('carla') // unblocking does not bring the friendship back
   })
 })
+
+// From here on: Ana and Dani are friends (Dani is friends-only); nobody else is, and nobody is blocked.
+describe('comparing profiles', () => {
+  it('shows only what both have, and only for a profile the viewer may see', async () => {
+    await call(db, 3, 'sync_progress', { library: { 'villa-rotonda': { at: '2026-10-21', mode: 'normal', mastered: true }, 'sant-ivo-alla-sapienza': { at: '2026-10-21', mode: 'normal', mastered: true } } })
+    await call(db, 3, 'award_badges')
+    const seen = await call(db, 1, 'compare_with', 'carla')
+    expect(seen).toMatchObject({ username: 'carla', badges: ['first-sheet'], mastered: ['villa-rotonda'] }) // Ana unlocked Sant'Ivo but did not name it
+    expect(seen.theirs.unlocked).toBe(2)
+    expect(JSON.stringify(seen)).not.toMatch(/0000-0000|example\.com/)
+    expect(await call(db, 1, 'compare_with', 'bruno')).toBeNull() // private
+    expect(await call(db, 3, 'compare_with', 'dani')).toBeNull() // friends only, and Carla is not one
+    expect((await call(db, 1, 'compare_with', 'dani')).username).toBe('dani')
+    expect(await call(db, 1, 'compare_with', 'ana')).toBeNull()
+    await expect(call(db, 0, 'compare_with', 'carla')).rejects.toThrow(/permission denied/)
+    await call(db, 3, 'block_user', 'ana')
+    expect(await call(db, 1, 'compare_with', 'carla')).toBeNull()
+    await call(db, 3, 'unblock_user', 'ana')
+  })
+})
+
+describe('challenges and the feed', () => {
+  let ten
+  let id
+  const answers = (value) => Object.fromEntries(ten.map((b) => [b, value]))
+
+  beforeAll(async () => {
+    ten = (await db.query('select id from buildings order by id limit 10')).rows.map((r) => r.id)
+  })
+
+  it('keeps events and challenges closed to every client', async () => {
+    for (const table of ['events', 'challenges']) {
+      for (const who of [0, 1]) await expect(as(db, who, `select * from ${table}`), table).rejects.toThrow(/permission denied/)
+    }
+    await expect(as(db, 1, "insert into events (user_id, kind, ref) values ($1, 'badge', 'complete-works')", [userId(1)])).rejects.toThrow(/permission denied/)
+  })
+
+  it('a challenge is ten different buildings, between friends', async () => {
+    await expect(call(db, 1, 'challenge_create', 'carla', ten)).rejects.toThrow(/no such friend/)
+    await expect(call(db, 3, 'challenge_create', 'dani', ten)).rejects.toThrow(/no such friend/)
+    await expect(call(db, 1, 'challenge_create', 'dani', ten.slice(1))).rejects.toThrow(/ten different/)
+    await expect(call(db, 1, 'challenge_create', 'dani', [...ten.slice(1), ten[1]])).rejects.toThrow(/ten different/)
+    await expect(call(db, 1, 'challenge_create', 'dani', [...ten.slice(1), 'not-a-building'])).rejects.toThrow(/ten different/)
+    id = await call(db, 1, 'challenge_create', 'dani', ten)
+    expect(await call(db, 4, 'list_challenges')).toMatchObject([{ id, sent: false, with: 'ana', buildings: ten, mine: null, theirs: null, answered: false }])
+    expect(await call(db, 3, 'list_challenges')).toEqual([])
+    await db.query("update rate_limits set count = 10 where user_id = $1 and action = 'challenge'", [userId(1)])
+    await expect(call(db, 1, 'challenge_create', 'dani', ten)).rejects.toThrow(/too many requests/)
+  })
+
+  it('each side answers once, in the right shape, and sees the other only after answering', async () => {
+    expect(await call(db, 3, 'challenge_submit', id, answers(true))).toBe(false) // not a member
+    expect(await call(db, 4, 'challenge_submit', id, { ...answers(true), extra: true })).toBe(false)
+    expect(await call(db, 4, 'challenge_submit', id, { [ten[0]]: true })).toBe(false)
+    expect(await call(db, 4, 'challenge_submit', id, answers('yes'))).toBe(false)
+    expect(await call(db, 4, 'challenge_submit', id, answers(true))).toBe(true)
+    expect(await call(db, 4, 'challenge_submit', id, answers(false))).toBe(false) // once
+    expect((await call(db, 1, 'list_challenges'))[0]).toMatchObject({ sent: true, mine: null, theirs: null, answered: true })
+    expect(await call(db, 1, 'challenge_submit', id, answers(false))).toBe(true)
+    expect((await call(db, 1, 'list_challenges'))[0]).toMatchObject({ mine: answers(false), theirs: answers(true) })
+  })
+
+  it('the feed shows friends only: their badges and finished challenges', async () => {
+    const feed = async (n) => (await call(db, n, 'friends_feed')).map((e) => `${e.username} ${e.kind} ${e.ref}`)
+    expect(await feed(4)).toEqual(['ana challenge dani', 'ana badge first-sheet'])
+    expect(await feed(1)).toEqual(['dani challenge ana'])
+    expect(await feed(3)).toEqual([]) // Carla is nobody's friend, though Ana is public
+    expect(JSON.stringify(await call(db, 4, 'friends_feed'))).not.toMatch(/0000-0000|example\.com/)
+    await expect(call(db, 0, 'friends_feed')).rejects.toThrow(/permission denied/)
+    // A friend who turns private drops out of the feed.
+    await as(db, 1, "update profiles set privacy = 'private'")
+    expect(await feed(4)).toEqual([])
+    await as(db, 1, "update profiles set privacy = 'public'")
+  })
+
+  it('a block empties the feed and hides the challenges on both sides', async () => {
+    await call(db, 4, 'block_user', 'ana')
+    for (const who of [1, 4]) {
+      expect(await call(db, who, 'friends_feed'), String(who)).toEqual([])
+      expect(await call(db, who, 'list_challenges'), String(who)).toEqual([])
+    }
+    await db.exec("delete from rate_limits where action = 'challenge'")
+    await expect(call(db, 1, 'challenge_create', 'dani', ten)).rejects.toThrow(/no such friend/)
+  })
+})

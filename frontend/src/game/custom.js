@@ -104,6 +104,8 @@ export function startSession(pool, config, random) {
   return session
 }
 
+const CHALLENGE_ID = /^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$/
+
 export function readSession() {
   const s = read(sessionStorage, SESSION_KEY)
   if (!s || !Array.isArray(s.ids) || !s.ids.every(isId) || !Number.isInteger(s.index) || s.index < 0) return null
@@ -111,7 +113,9 @@ export function readSession() {
   const played = (Array.isArray(s.played) ? s.played : []).filter(
     (p) => p && isId(p.id) && typeof p.name === 'string' && typeof p.wikipedia === 'string' && p.wikipedia.startsWith('https://'),
   )
-  return { config: sanitizeConfig(s.config), ids: s.ids, index: s.index, played }
+  const session = { config: sanitizeConfig(s.config), ids: s.ids, index: s.index, played: played.map((p) => ({ id: p.id, name: p.name, wikipedia: p.wikipedia, named: p.named === true })) }
+  // A friend's challenge being played (social/challenges.js): its id travels with the session.
+  return CHALLENGE_ID.test(s.challenge) ? { ...session, challenge: s.challenge } : session
 }
 /** Puts back a session that was cleared a moment ago (Undo after leaving). */
 export const restoreSession = (session) => write(sessionStorage, SESSION_KEY, session)
@@ -123,9 +127,9 @@ export const clearSession = () => {
   }
 }
 
-/** Moves on from `building`, recording it for the recap. Returns the saved session. */
-export function advanceSession(session, building) {
-  const played = building ? [...session.played, { id: building.id, name: building.name, wikipedia: building.wikipedia }] : session.played
+/** Moves on from `building`, recording it (and whether its name was guessed) for the recap. Returns the saved session. */
+export function advanceSession(session, building, named = false) {
+  const played = building ? [...session.played, { id: building.id, name: building.name, wikipedia: building.wikipedia, named }] : session.played
   const next = { ...session, played, index: session.index + 1 }
   write(sessionStorage, SESSION_KEY, next)
   return next

@@ -5,6 +5,8 @@ import { outgoing } from './sync.js'
 import { inviteCodeFromHash, inviteFrom, usernameFrom, usernameProblem } from './username.js'
 import { badgeHint, badgeName, eraOfBadge, togglePin } from './badges.js'
 import { bundles } from '../strings/index.js'
+import { challengeResult } from './challenges.js'
+import { advanceSession, readSession } from '../game/custom.js'
 
 const jwt = (role) => `x.${btoa(JSON.stringify({ role }))}.y`
 
@@ -117,5 +119,31 @@ describe('badges', () => {
     expect(togglePin(['a'], 'a', earned)).toEqual([])
     expect(togglePin(['a', 'b', 'c'], 'd', earned)).toEqual(['a', 'b', 'c'])
     expect(togglePin([], 'x', earned)).toEqual([])
+  })
+})
+
+describe('a challenge session', () => {
+  const store = new Map()
+  beforeEach(() => {
+    store.clear()
+    globalThis.sessionStorage = { getItem: (k) => store.get(k) ?? null, setItem: (k, v) => store.set(k, v) }
+  })
+  const building = (id) => ({ id, name: id, wikipedia: 'https://en.wikipedia.org/wiki/X' })
+  const id = '0f8fad5b-d9cb-469f-a165-70867728950e'
+
+  it('remembers which buildings were named and reports every one of the ten', () => {
+    let session = { config: {}, ids: ['a', 'b', 'c'], index: 0, played: [], challenge: id }
+    session = advanceSession(session, building('a'), true)
+    advanceSession(session, building('b'), false)
+    const saved = readSession()
+    expect(saved.challenge).toBe(id)
+    expect(challengeResult(saved)).toEqual({ a: true, b: false, c: false }) // c was never reached: not named
+  })
+
+  it('drops a challenge id that is not one, and a forged "named"', () => {
+    store.set('archiversal:custom-session', JSON.stringify({ ids: ['a'], index: 1, challenge: '<script>', played: [{ ...building('a'), named: 'yes' }] }))
+    const saved = readSession()
+    expect(saved.challenge).toBeUndefined()
+    expect(challengeResult(saved)).toEqual({ a: false })
   })
 })
