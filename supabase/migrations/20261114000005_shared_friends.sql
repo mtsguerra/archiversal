@@ -4,7 +4,8 @@
 
 /**
  * The players who are friends with both the caller and `name`. Everyone listed is already the caller's
- * friend, so nobody new is revealed to the caller. A player either of them blocked is left out.
+ * friend, so nobody new is revealed to the caller. A player either of them blocked is left out, and so is one
+ * whose own profile the caller may not see (a private player's friendships stay private).
  * Null when the profile is not visible to the caller (or is the caller's own), like compare_with.
  */
 create function public.shared_friends(name text) returns jsonb
@@ -24,7 +25,7 @@ begin
     )
     select jsonb_agg(jsonb_build_object('username', p.username, 'avatar', p.avatar) order by p.username)
     from mine join theirs using (x) join profiles p on p.id = x
-    where not blocked_between(x, uid) and not blocked_between(x, target)
+    where not blocked_between(x, uid) and not blocked_between(x, target) and can_view(x)
   ), '[]');
 end $$;
 
