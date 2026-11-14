@@ -39,6 +39,7 @@ Nothing below can be done from the repository.
    `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`. Redeploy.
 2. Optional hardening: in `vercel.json` replace `https://*.supabase.co` in `connect-src` with your exact
    project host (`https://<project-ref>.supabase.co`) and update the expectation in `frontend/src/deploy.test.js`.
+   (Done: `connect-src` names this project's host. A new Supabase project needs both lines changed.)
 
 ### 4. Local development
 
@@ -60,9 +61,10 @@ A test fails while the file is out of date.
 - `frontend/src/social/sync.js`: on sign-in and a moment after every reveal, the browser's Library, Daily
   results and streak go to `sync_progress()` and the account's copy comes back and is merged with
   `mergeSave` (the same merge the hand-off link uses). Both sides only gain: nothing is overwritten.
-  Signing out leaves the browser's copy in place, so guest play continues. The browser remembers whose copy it
-  is (`archiversal:owner`); when a different account signs in, that copy is cleared first so it never merges
-  into the newcomer (guest play after a sign-out is lost in that case).
+  Signing out first syncs once more and then empties the device (`releaseSave`), so the next player starts as
+  a guest and what they play before signing in joins their own account. If that last sync fails (offline, or
+  the account was just deleted) nothing is wiped, so no play is lost; the browser remembers whose copy it is
+  (`archiversal:owner`) and clears it when a different account signs in.
 - Screens: `#/profile` (sign in, choose a username, edit, sign out, delete account) and `#/u/<username>`
   (the public page), in `frontend/src/components/social/`. The header shows a round account button on wide
   screens; on phones it is a row in `Options`.

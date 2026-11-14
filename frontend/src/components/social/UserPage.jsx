@@ -95,6 +95,8 @@ export function UserPage() {
   const [shared, setCommon] = useState(null) // compare_with: what the viewer and this player share (null: signed out, or it failed)
   const room = picked.name === username ? picked.room : 'hall'
   const common = shared?.name === username ? shared.found : null
+  const [friendsIn, setFriendsIn] = useState(null) // shared_friends: the friends both have (null: signed out, or it could not be read)
+  const inCommon = friendsIn?.name === username ? friendsIn.list : null
   const { status, profile: me, synced } = useAccount()
   const [profile, setProfile] = useState(undefined) // undefined: loading; null: hidden or missing
   // Asked again when the viewer signs in or out (a friends-only page may open) or edits their own profile.
@@ -114,6 +116,11 @@ export function UserPage() {
     let live = true
     rpc('compare_with', { name: username }).then(
       (found) => live && setCommon({ name: username, found }),
+      () => {},
+    )
+    // Asked on its own: if this fails (an older database) the Salon simply stays shut.
+    rpc('shared_friends', { name: username }).then(
+      (list) => live && Array.isArray(list) && setFriendsIn({ name: username, list }),
       () => {},
     )
     return () => {
@@ -155,9 +162,10 @@ export function UserPage() {
     hall: profile.username,
     archive: common ? v.common(common.mastered.length) : v.sheets(profile.stats.unlocked),
     gallery: common ? v.badges(common.badges.length) : plan.parts.gallery,
+    salon: inCommon ? v.friends(inCommon.length) : '',
   }
   return (
-    <SocialShell plan={<VisitorPlan name={profile.username} room={room} notes={notes} onRoom={(next) => setRoom({ name: username, room: next })} />}>
+    <SocialShell plan={<VisitorPlan name={profile.username} room={room} notes={notes} salon={Boolean(inCommon)} onRoom={(next) => setRoom({ name: username, room: next })} />}>
       {room === 'hall' && (
         <>
           <ProfileCard profile={profile} />
@@ -172,6 +180,24 @@ export function UserPage() {
         </section>
       )}
       {room === 'gallery' && <Badges username={profile.username} />}
+      {room === 'salon' && inCommon && (
+        <section className={styles.sheet}>
+          <h2 className={styles.subheading}>{plan.parts.salon}</h2>
+          <p className={styles.hint}>{inCommon.length ? v.friends(inCommon.length) : v.noFriends}</p>
+          {inCommon.length > 0 && (
+            <ul className={styles.people}>
+              {inCommon.map((person) => (
+                <li key={person.username} className={styles.person}>
+                  <a className={styles.personName} href={`#/u/${person.username}`}>
+                    <Avatar id={person.avatar} size="2.25rem" />
+                    <span>{person.username}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      )}
     </SocialShell>
   )
 }

@@ -34,7 +34,7 @@ export function Options() {
         ref={sheet}
         className={styles.sheet}
         aria-labelledby="options-title"
-        onClick={(event) => event.target === sheet.current && sheet.current.close()} // a tap on the dimmed page
+        onClick={(event) => (event.target === sheet.current || event.target.closest?.('a')) && sheet.current.close()} // a tap on the dimmed page, or on a link (one to the page already open would leave the sheet up)
         onClose={() => button.current.focus({ preventScroll: true })} // Safari does not return focus to a tapped button
       >
         <span className={styles.handle} aria-hidden="true" />

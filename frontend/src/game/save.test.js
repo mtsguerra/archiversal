@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { claimSave, codeFromHash, exportSave, importSave } from './save.js'
+import { claimSave, releaseSave, codeFromHash, exportSave, importSave } from './save.js'
 
 const store = new Map()
 globalThis.localStorage = {
@@ -50,5 +50,17 @@ describe('claimSave', () => {
     expect(claimSave('u1')).toBe(false)
     expect(claimSave('u2')).toBe(true)
     expect(localStorage.getItem('archiversal:library')).toBeNull()
+  })
+})
+
+describe('releaseSave', () => {
+  it('empties the device so the next player starts as a guest and merges into their own account', () => {
+    localStorage.setItem('archiversal:library', JSON.stringify({ a: entry }))
+    claimSave('u1')
+    releaseSave()
+    expect(localStorage.getItem('archiversal:library')).toBeNull()
+    localStorage.setItem('archiversal:library', JSON.stringify({ b: entry })) // played as a guest afterwards
+    expect(claimSave('u2')).toBe(false) // no owner any more: nothing is cleared, it joins u2
+    expect(localStorage.getItem('archiversal:library')).not.toBeNull()
   })
 })

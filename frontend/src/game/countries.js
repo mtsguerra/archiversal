@@ -28,6 +28,9 @@ const ALIASES = {
   'mainland china': 'CN',
   "people's republic of china": 'CN',
   prc: 'CN',
+  'hong kong': 'HK',
+  macau: 'MO',
+  macao: 'MO',
 }
 
 const LOCALES = ['en', 'pt-BR']

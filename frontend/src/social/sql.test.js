@@ -345,6 +345,34 @@ describe('comparing profiles', () => {
   })
 })
 
+describe('friends in common', () => {
+  const link = (x, y) => db.query("insert into friendships (a, b, status, asker) values ($1, $2, 'accepted', $1)", [userId(x), userId(y)]) // x < y
+  const cleanup = () => db.exec("delete from friendships where status = 'accepted' and (a = '" + userId(1) + "' and b = '" + userId(5) + "' or a = '" + userId(3) + "' and b = '" + userId(4) + "' or a = '" + userId(3) + "' and b = '" + userId(5) + "' or a = '" + userId(1) + "' and b = '" + userId(2) + "' or a = '" + userId(2) + "' and b = '" + userId(3) + "')")
+
+  it('lists the players who are friends with both, never a blocked one, and only for a visible profile', async () => {
+    await link(1, 5) // Ana and Eve
+    await link(3, 5) // Carla and Eve: Eve is the friend Ana and Carla share
+    await link(1, 2) // Bruno (private) is a friend of both too, but a private player is not listed
+    await link(2, 3)
+    const eve = [{ username: 'eve', avatar: expect.any(String) }]
+    expect(await call(db, 1, 'shared_friends', 'carla')).toEqual(eve)
+    expect(JSON.stringify(await call(db, 1, 'shared_friends', 'carla'))).not.toMatch(/0000-0000|example\.com/)
+    expect(await call(db, 1, 'shared_friends', 'ana')).toBeNull() // your own page
+    expect(await call(db, 1, 'shared_friends', 'bruno')).toBeNull() // private
+    expect(await call(db, 4, 'shared_friends', 'carla')).toEqual([]) // Dani and Carla share nobody
+    await expect(call(db, 0, 'shared_friends', 'carla')).rejects.toThrow(/permission denied/)
+    // A block row with the friendship still in place (block_user would end the friendship): only the rule can hide Eve.
+    await db.query('insert into blocks (blocker, blocked) values ($1, $2)', [userId(5), userId(1)])
+    expect(await call(db, 1, 'shared_friends', 'carla')).toEqual([])
+    await db.query('delete from blocks')
+    await db.query('insert into blocks (blocker, blocked) values ($1, $2)', [userId(5), userId(3)]) // Eve blocked Carla, the one asked about
+    expect(await call(db, 1, 'shared_friends', 'carla')).toEqual([])
+    await db.query('delete from blocks')
+    expect(await call(db, 1, 'shared_friends', 'carla')).toEqual(eve)
+    await cleanup()
+  })
+})
+
 describe('challenges and the feed', () => {
   let ten
   let id

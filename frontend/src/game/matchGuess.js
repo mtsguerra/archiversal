@@ -125,10 +125,13 @@ export function evaluateGuess(building, values) {
     architect: judge(values.architect, (v) =>
       building.architects.some((a) => matchesName(v, [a.name, ...a.aliases], { person: true })),
     ),
-    country: judge(values.country, (v) => resolveCountryCode(v) === building.location.countryCode),
+    country: judge(values.country, (v) => countryMatches(resolveCountryCode(v), building.location.countryCode)),
     era: judge(values.era, (v) => judgeEra(v, building.era)),
   }
 }
+
+// Hong Kong and Macau are part of China: "China" is a right answer for a building there too.
+const countryMatches = (guess, code) => guess === code || (guess === 'CN' && (code === 'HK' || code === 'MO'))
 
 /** A round's points: 1 per correct field, half for a close one (a neighbouring era, century or decade). */
 export function scoreOf(fields, names = Object.keys(fields)) {

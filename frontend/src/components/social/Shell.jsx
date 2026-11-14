@@ -122,21 +122,22 @@ export function Plan({ room, profile, data }) {
   )
 }
 
-const OPEN = ['hall', 'archive', 'gallery'] // what a visitor can be shown; the Salon and Studio belong to their owner
+const OPEN = ['hall', 'archive', 'gallery'] // what a visitor is always shown; the Salon opens when the friends in common can be read, the Studio is the owner's alone
 
 /**
  * Another player's plan, read only. The three rooms a visitor can see are buttons; the Salon and Studio are
  * hatched ("not shown"). `notes` are the captions (what the two of you have in common), `onRoom` picks a room.
  */
-export function VisitorPlan({ name, room, notes, onRoom }) {
+export function VisitorPlan({ name, room, notes, onRoom, salon = false }) {
   const { plan: t } = useStrings()
+  const rooms = salon ? [...OPEN, 'salon'] : OPEN
   return (
     <div className={styles.plan}>
       <p className={styles.label}>{t.visitor.caption(name)}</p>
       <svg viewBox="0 0 420 320" role="group" aria-label={t.visitor.label(name)}>
         {ROOMS.map((id) => {
           const [x, y, w, h] = BOX[id]
-          const open = OPEN.includes(id)
+          const open = rooms.includes(id)
           return (
             <g key={id} className={open ? styles.planRoom : styles.planShut} role={open ? 'button' : undefined} tabIndex={open ? 0 : undefined} aria-pressed={open ? room === id : undefined} aria-current={open && room === id ? 'page' : undefined} aria-label={`${t.rooms[id]}: ${open ? notes[id] : t.visitor.shut}`} data-sound={open ? 'toggle' : undefined} onClick={open ? () => onRoom(id) : undefined} onKeyDown={open ? (e) => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), onRoom(id)) : undefined}>
               <rect className={open ? styles.planHit : styles.planHatch} x={x} y={y} width={w} height={h} />
@@ -156,7 +157,7 @@ export function VisitorPlan({ name, room, notes, onRoom }) {
       {/* The same rooms as buttons: easier to tap on a phone, and the closed ones say so. */}
       <nav className={styles.chips} aria-label={t.nav}>
         {ROOMS.map((id) => (
-          <button key={id} type="button" disabled={!OPEN.includes(id)} aria-pressed={OPEN.includes(id) ? room === id : undefined} aria-current={room === id ? 'page' : undefined} onClick={() => onRoom(id)}>
+          <button key={id} type="button" disabled={!rooms.includes(id)} aria-pressed={rooms.includes(id) ? room === id : undefined} aria-current={room === id ? 'page' : undefined} onClick={() => onRoom(id)}>
             {t.parts[id]}
           </button>
         ))}
