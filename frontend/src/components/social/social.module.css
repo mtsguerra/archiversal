@@ -305,6 +305,37 @@ textarea.input {
   font-weight: 700;
 }
 
+/* Phones only: "Login" beside the Options button, the same height and look. */
+.phoneLogin {
+  composes: hit from '../../styles/hit.module.css';
+  display: none;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: var(--space-2);
+  height: 2.75rem;
+  padding: 0 var(--space-4) 0 var(--space-2);
+  border: var(--hairline) solid var(--paper-rule);
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--paper) 82%, transparent);
+  backdrop-filter: blur(10px) saturate(1.2);
+  color: var(--ink);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.phoneAvatar {
+  width: 2.75rem;
+  padding: 0;
+  place-items: center;
+}
+
+@media (max-width: 640px) {
+  .phoneLogin {
+    display: inline-grid;
+  }
+}
+
 @media (max-width: 640px) {
   .page {
     padding-block: var(--space-4);
@@ -485,7 +516,8 @@ textarea.input {
   gap: var(--space-2);
 }
 
-.chips a {
+.chips a,
+.chips button {
   display: inline-flex;
   align-items: center;
   min-height: 2.25rem; /* a comfortable tap target */
@@ -498,11 +530,25 @@ textarea.input {
   text-decoration: none;
 }
 
-.chips a:hover {
+.chips button {
+  background: transparent;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.chips button:disabled {
+  opacity: 0.5;
+  border-style: dashed;
+  cursor: not-allowed;
+}
+
+.chips a:hover,
+.chips button:enabled:hover {
   color: var(--ink);
 }
 
-.chips a[aria-current] {
+.chips a[aria-current],
+.chips button[aria-current] {
   border-color: var(--ink);
   background: var(--ink);
   color: var(--paper);

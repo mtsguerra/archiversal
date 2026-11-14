@@ -17,3 +17,25 @@ export function AccountLink({ text = false }) {
     </a>
   )
 }
+
+/**
+ * Phones: the header hides the toggles, so the way to the account sits beside the Options button, written
+ * "Login" until signed in, then the player's avatar.
+ */
+export function PhoneLogin() {
+  const { account: t } = useStrings()
+  const { status, profile } = useAccount()
+  const signedIn = status === 'in' && profile
+  return (
+    <a className={signedIn ? `${styles.phoneLogin} ${styles.phoneAvatar}` : styles.phoneLogin} href="#/profile" aria-label={signedIn ? profile.username : undefined}>
+      {signedIn ? (
+        <Avatar id={profile.avatar} size="100%" />
+      ) : (
+        <>
+          <Avatar id="arch" size="1.5rem" />
+          {t.login}
+        </>
+      )}
+    </a>
+  )
+}
