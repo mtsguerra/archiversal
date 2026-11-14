@@ -23,7 +23,7 @@ describe('deploy headers', () => {
   it('loads images only from the site and Wikimedia, and talks only to itself and the accounts service', () => {
     // Avatars are drawings in the page, so accounts add no image source (no Google or Supabase pictures).
     expect(policy['img-src']).toEqual(["'self'", 'data:', 'https://upload.wikimedia.org'])
-    expect(policy['connect-src']).toEqual(["'self'", 'https://*.supabase.co'])
+    expect(policy['connect-src']).toEqual(["'self'", 'https://ysncbyofopifexkwejdc.supabase.co'])
     // Signing in is a full-page visit to Google and back: no frame, no form post and no foreign script is needed.
     expect(policy['frame-src']).toBeUndefined()
     expect(policy['form-action']).toEqual(["'self'"])

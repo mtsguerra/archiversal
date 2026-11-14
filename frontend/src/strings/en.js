@@ -506,6 +506,8 @@ export default {
       favoriteKinds: { none: 'None', building: 'A building', architect: 'An architect' },
       favoritePick: 'Choose one',
       favoriteBuildingHint: 'Only buildings you have unlocked are listed.',
+      favoriteFailed: 'The list could not be loaded. Check your connection and reopen this page.',
+      favoriteNoneUnlocked: 'You have not unlocked a building yet. Reveal one in a round and it appears here.',
       privacy: 'Who can see your profile',
     },
     privacy: {
@@ -688,6 +690,6 @@ export default {
     seated: (n, door) => (door ? `${n} seated · ${door} at the door` : `${n} seated`),
     sheets: (n) => (n === 1 ? '1 sheet' : `${n} sheets`),
     board: (n) => (n ? `${n} on the board` : 'Board is clear'),
-    visitor: { caption: (name) => `${name}’s plan · pick a room`, label: (name) => `${name}’s profile as a floor plan. Each room opens a part of it.`, shut: 'not shown', common: (n) => (n === 1 ? '1 named by both' : `${n} named by both`), badges: (n) => (n === 1 ? '1 badge alike' : `${n} badges alike`), hung: (n) => `${n} hung`, sheets: (n) => (n === 1 ? '1 sheet' : `${n} sheets`) },
+    visitor: { caption: (name) => `${name}’s plan · pick a room`, label: (name) => `${name}’s profile as a floor plan. Each room opens a part of it.`, friends: (n) => (n === 1 ? '1 friend in common' : `${n} friends in common`), noFriends: 'No friends in common yet.', shut: 'not shown', common: (n) => (n === 1 ? '1 named by both' : `${n} named by both`), badges: (n) => (n === 1 ? '1 badge alike' : `${n} badges alike`), hung: (n) => `${n} hung`, sheets: (n) => (n === 1 ? '1 sheet' : `${n} sheets`) },
   },
 }

@@ -508,6 +508,8 @@ export default {
       favoriteKinds: { none: 'Nenhum', building: 'Um edifício', architect: 'Um arquiteto' },
       favoritePick: 'Escolha um',
       favoriteBuildingHint: 'Só aparecem os edifícios que você já desbloqueou.',
+      favoriteFailed: 'Não foi possível carregar a lista. Verifique a conexão e abra esta página de novo.',
+      favoriteNoneUnlocked: 'Você ainda não desbloqueou nenhum edifício. Revele um em uma rodada e ele aparece aqui.',
       privacy: 'Quem pode ver seu perfil',
     },
     privacy: {
@@ -690,6 +692,6 @@ export default {
     seated: (n, door) => (door ? `${n} à mesa · ${door} à porta` : `${n} à mesa`),
     sheets: (n) => (n === 1 ? '1 prancha' : `${n} pranchas`),
     board: (n) => (n ? `${n} na prancheta` : 'Prancheta livre'),
-    visitor: { caption: (name) => `Planta de ${name} · escolha um cômodo`, label: (name) => `O perfil de ${name} como uma planta baixa. Cada cômodo abre uma parte dele.`, shut: 'não exibido', common: (n) => (n === 1 ? '1 acertada pelos dois' : `${n} acertadas pelos dois`), badges: (n) => (n === 1 ? '1 insígnia igual' : `${n} insígnias iguais`), hung: (n) => `${n} penduradas`, sheets: (n) => (n === 1 ? '1 prancha' : `${n} pranchas`) },
+    visitor: { caption: (name) => `Planta de ${name} · escolha um cômodo`, label: (name) => `O perfil de ${name} como uma planta baixa. Cada cômodo abre uma parte dele.`, friends: (n) => (n === 1 ? '1 amigo em comum' : `${n} amigos em comum`), noFriends: 'Nenhum amigo em comum ainda.', shut: 'não exibido', common: (n) => (n === 1 ? '1 acertada pelos dois' : `${n} acertadas pelos dois`), badges: (n) => (n === 1 ? '1 insígnia igual' : `${n} insígnias iguais`), hung: (n) => `${n} penduradas`, sheets: (n) => (n === 1 ? '1 prancha' : `${n} pranchas`) },
   },
 }

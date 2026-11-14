@@ -88,6 +88,16 @@ export function claimSave(id) {
   }
 }
 
+/** Empties this device's progress and forgets whose it was (after the account has kept its copy). */
+export function releaseSave() {
+  try {
+    Object.values(KEYS).forEach((k) => localStorage.removeItem(k))
+    localStorage.removeItem(OWNER)
+  } catch {
+    // storage blocked: nothing was kept here anyway
+  }
+}
+
 const PREFIX = '#/import='
 /** The code in `#/import=<code>` (the hand-off link), or null. */
 export const codeFromHash = (hash) => (hash.startsWith(PREFIX) ? hash.slice(PREFIX.length) : null)

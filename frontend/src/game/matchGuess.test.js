@@ -175,3 +175,15 @@ describe('vague answers against the whole catalogue', () => {
 describe('country aliases', () => {
   it.each(['china', 'China', 'mainland china', "People's Republic of China", 'PRC'])('%s is China', (guess) => expect(resolveCountryCode(guess)).toBe('CN'))
 })
+
+describe('China for Hong Kong and Macau', () => {
+  const at = (countryCode) => ({ ...salk, location: { ...salk.location, countryCode } })
+  it('accepts China and the place itself, nothing else', () => {
+    for (const code of ['HK', 'MO']) {
+      expect(evaluateGuess(at(code), { country: 'china' }).country).toBe(true)
+      expect(evaluateGuess(at(code), { country: 'japan' }).country).toBe(false)
+    }
+    expect(evaluateGuess(at('HK'), { country: 'hong kong' }).country).toBe(true)
+    expect(evaluateGuess(at('JP'), { country: 'china' }).country).toBe(false)
+  })
+})

@@ -38,7 +38,8 @@ function SignedOut() {
 
 /** The buildings this player may name as a favourite (the unlocked ones) and every architect, for the two pickers. */
 function useFavoriteChoices(lang) {
-  const [choices, setChoices] = useState({ building: [], architect: [] })
+  const { synced } = useAccount() // a sync can bring unlocked buildings from the account, so the list is read again
+  const [choices, setChoices] = useState({ building: [], architect: [], state: 'loading' })
   useEffect(() => {
     let live = true
     Promise.all([fetchLibrary(lang), fetchCatalogue()])
@@ -47,13 +48,13 @@ function useFavoriteChoices(lang) {
         const building = rows.filter((r) => unlocked[r.id]).map((r) => ({ value: r.id, label: r.name }))
         const architect = [...new Set(catalogue.flatMap((b) => b.architects))].map((name) => ({ value: name, label: name }))
         const byLabel = (a, b) => a.label.localeCompare(b.label)
-        if (live) setChoices({ building: building.sort(byLabel), architect: architect.sort(byLabel) })
+        if (live) setChoices({ building: building.sort(byLabel), architect: architect.sort(byLabel), state: 'ready' })
       })
-      .catch(() => {}) // no lists: the favourite simply cannot be changed right now
+      .catch(() => live && setChoices((c) => ({ ...c, state: 'failed' }))) // no lists: the favourite cannot be changed right now, and the form says so
     return () => {
       live = false
     }
-  }, [lang])
+  }, [lang, synced])
   return choices
 }
 
@@ -163,7 +164,14 @@ function ProfileForm({ profile }) {
             </select>
           )}
         </div>
-        {form.favorite_kind === 'building' && <span className={styles.hint}>{t.fields.favoriteBuildingHint}</span>}
+        {form.favorite_kind && choices.state === 'failed' && (
+          <span className={styles.hint} role="alert">
+            {t.fields.favoriteFailed}
+          </span>
+        )}
+        {form.favorite_kind === 'building' && choices.state === 'ready' && (
+          <span className={styles.hint}>{options.length ? t.fields.favoriteBuildingHint : t.fields.favoriteNoneUnlocked}</span>
+        )}
       </div>
 
       <fieldset className={styles.field}>

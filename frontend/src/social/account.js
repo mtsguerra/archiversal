@@ -2,7 +2,7 @@
 // touch the network here.
 import { useSyncExternalStore } from 'react'
 import { accountsEnabled, rpc, supabase } from './client.js'
-import { claimSave } from '../game/save.js'
+import { claimSave, releaseSave } from '../game/save.js'
 import { syncProgress } from './sync.js'
 
 const FIELDS = 'username, avatar, bio, favorite_kind, favorite, privacy, showcase'
@@ -96,9 +96,25 @@ export async function signIn(after = '#/profile') {
   await (await supabase()).auth.signInWithOAuth({ provider: 'google', options: { redirectTo: window.location.origin + '/' } })
 }
 
-/** Signs out here only; what was played stays in this browser, so guest play goes on. */
+/**
+ * Signs out here. What this device holds belongs to the account, so once the account has it (one last sync)
+ * the device is emptied: the next player starts as a guest, and whatever they play before signing in joins
+ * their own account. If that last sync fails (offline, or the account is gone) nothing is wiped, so no play
+ * is lost; claimSave then clears it when a different account signs in.
+ */
 export async function signOut() {
+  let kept = false
+  try {
+    await syncProgress()
+    kept = true
+  } catch {
+    // keep the device's copy
+  }
   await (await supabase()).auth.signOut({ scope: 'local' })
+  if (kept) {
+    releaseSave()
+    set({ synced: state.synced + 1 }) // screens read the (now empty) device again
+  }
 }
 
 /**
