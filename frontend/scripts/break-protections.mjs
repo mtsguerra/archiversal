@@ -58,7 +58,18 @@ const cases = [
   ['username rules are not enforced by the database', join(sql, '20261113000001_core.sql'), 'check (public.username_ok(username))', 'check (true)', 'src/social/sql.test.js'],
   ['synced progress can be read by other users', join(sql, '20261113000001_core.sql'), 'library_unlocks for select to authenticated using (user_id = auth.uid());', 'library_unlocks for select to authenticated using (true);', 'src/social/sql.test.js'],
   ['synced progress can be written without the sync function', join(sql, '20261113000001_core.sql'), 'revoke all on public.library_unlocks, public.daily_results, public.player_progress from anon, authenticated;', '', 'src/social/sql.test.js'],
-  ['signed-out visitors can call the signed-in functions', join(sql, '20261113000003_badges_friends.sql'), '\n  to authenticated;\n', '\n  to anon, authenticated;\n', 'src/social/sql.test.js'],
+  ['signed-out visitors can call the signed-in functions', join(sql, '20261113000004_social.sql'), '\n  to authenticated;\n', '\n  to anon, authenticated;\n', 'src/social/sql.test.js'],
+  // Compare, feed and challenges.
+  ['compare opens a profile the viewer may not see', join(sql, '20261113000004_social.sql'), 'if target is null or target = uid or not can_view(target) then', 'if target is null or target = uid then', 'src/social/sql.test.js'],
+  ['the feed shows players who are not friends', join(sql, '20261113000004_social.sql'), 'where are_friends(e.user_id, me()) and not blocked_between', 'where not blocked_between', 'src/social/sql.test.js'],
+  ['the feed shows a friend whose profile went private', join(sql, '20261113000004_social.sql'), ' and can_view(e.user_id)', '', 'src/social/sql.test.js'],
+  ['events and challenges are open to clients', join(sql, '20261113000004_social.sql'), 'revoke all on public.events from anon, authenticated;', '', 'src/social/sql.test.js'],
+  ['a stranger can be challenged', join(sql, '20261113000004_social.sql'), 'if target is null or not are_friends(uid, target) then', 'if target is null then', 'src/social/sql.test.js'],
+  ['someone outside a challenge can answer it', join(sql, '20261113000004_social.sql'), 'where id = challenge and uid in (sender, recipient) for update', 'where id = challenge for update', 'src/social/sql.test.js'],
+  ['a challenge can be answered twice', join(sql, '20261113000004_social.sql'), '\n    or (uid = c.recipient and c.recipient_result is not null) then', ' then', 'src/social/sql.test.js'],
+  ['the other side of a challenge shows before answering', join(sql, '20261113000004_social.sql'), 'case when mine is null then null else theirs end', 'theirs', 'src/social/sql.test.js'],
+  ['challenges with a blocked player stay visible', join(sql, '20261113000004_social.sql'), 'where me() in (c.sender, c.recipient) and not blocked_between(c.sender, c.recipient)', 'where me() in (c.sender, c.recipient)', 'src/social/sql.test.js'],
+  ['a forged challenge id is kept in the session', join(frontend, 'src/game/custom.js'), 'CHALLENGE_ID.test(s.challenge) ?', 's.challenge ?', 'src/social/social.test.js'],
 ]
 
 let originals = []
