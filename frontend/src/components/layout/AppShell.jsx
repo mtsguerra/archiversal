@@ -13,7 +13,7 @@ import { PageBackground } from './PageBackground.jsx'
 import { useAutoHide } from './autoHide.js'
 import styles from './AppShell.module.css'
 import { useHeaderTitle } from '../../headerTitle.js'
-import { AccountLink } from '../social/AccountLink.jsx'
+import { AccountLink, PhoneLogin } from '../social/AccountLink.jsx'
 
 function PlanMark() {
   return (
@@ -95,6 +95,7 @@ export function AppShell({ actions, place, brand = 'always', floating = false, s
             <LanguageSwitch />
             <AccountLink />
           </span>
+          <PhoneLogin />
           <Options />
         </div>
       </motion.header>
@@ -125,6 +126,7 @@ export function AppShell({ actions, place, brand = 'always', floating = false, s
             <LanguageSwitch />
             <AccountLink />
           </span>
+          <PhoneLogin />
           <Options />
         </div>
       </header>}

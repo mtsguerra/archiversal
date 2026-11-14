@@ -482,6 +482,7 @@ export default {
   account: {
     nav: 'Account',
     place: 'Account',
+    login: 'Login',
     signIn: 'Sign in',
     signInGoogle: 'Sign in with Google',
     signOut: 'Sign out',

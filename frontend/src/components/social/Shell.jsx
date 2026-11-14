@@ -153,6 +153,14 @@ export function VisitorPlan({ name, room, notes, onRoom }) {
         <path className={styles.planEntry} d="M64 300h32" />
         <path className={styles.planWall} d={WALLS} />
       </svg>
+      {/* The same rooms as buttons: easier to tap on a phone, and the closed ones say so. */}
+      <nav className={styles.chips} aria-label={t.nav}>
+        {ROOMS.map((id) => (
+          <button key={id} type="button" disabled={!OPEN.includes(id)} aria-pressed={OPEN.includes(id) ? room === id : undefined} aria-current={room === id ? 'page' : undefined} onClick={() => onRoom(id)}>
+            {t.parts[id]}
+          </button>
+        ))}
+      </nav>
     </div>
   )
 }

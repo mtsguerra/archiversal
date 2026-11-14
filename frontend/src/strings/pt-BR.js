@@ -484,6 +484,7 @@ export default {
   account: {
     nav: 'Conta',
     place: 'Conta',
+    login: 'Entrar',
     signIn: 'Entrar',
     signInGoogle: 'Entrar com o Google',
     signOut: 'Sair',
